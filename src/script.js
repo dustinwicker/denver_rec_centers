@@ -349,7 +349,8 @@
 
     const startHour = parseInt(startHourSel.value, 10) || 5;
     const endHour = parseInt(endHourSel.value, 10) || 22;
-    const hourHeight = 56;
+    // Get hour height from CSS variable (responsive - 56px desktop, 48px mobile)
+    const hourHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--hour-height')) || 56;
     const totalHeight = (endHour - startHour) * hourHeight;
 
     // Get current sort type for display

@@ -810,9 +810,14 @@
     .day-header{
       font-size:11px;
       padding:6px 4px;
+      min-height:50px;
     }
     .day-header .gym-distance{
       font-size:9px;
+    }
+    .time-header{
+      height:50px;
+      min-height:50px;
     }
     .event{
       padding:3px 4px;
