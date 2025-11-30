@@ -20,6 +20,9 @@ Thumbs.db
 *.tmp
 *.log
 
+# Logs directory
+logs/
+
 # Unused Python scripts (keep locally for data generation)
 src/fetch_json.py
 src/geocode_centers.py
