@@ -1068,7 +1068,7 @@
       "location": "Carla Madison",
       "category": "AOA",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": false
     },
     {
       "start_time": "10:30am",

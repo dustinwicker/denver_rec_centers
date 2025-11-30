@@ -26,6 +26,10 @@
   const nextWeekBtn = qs('#next-week');
   const distanceSortSel = qs('#distance-sort');
   const gymLimitSel = qs('#gym-limit');
+  
+  // Master manifest for multi-week navigation
+  let masterManifest = null;
+  let currentWeekIndex = 0;
 
   const startHourSel = qs('#start-hour');
   const endHourSel = qs('#end-hour');
@@ -861,27 +865,66 @@
     }
   }
 
-  async function loadWeekManifest() {
-    status('Loading schedule...');
+  async function loadMasterManifest() {
     try {
-      const response = await fetch('data/week_manifest.json');
+      const response = await fetch('data/master_manifest.json');
+      if (response.ok) {
+        masterManifest = await response.json();
+        
+        // Find current week index
+        if (masterManifest.current_week) {
+          currentWeekIndex = masterManifest.weeks.findIndex(w => w.file === masterManifest.current_week);
+          if (currentWeekIndex === -1) currentWeekIndex = 0;
+        }
+        
+        updateWeekNavButtons();
+        return true;
+      }
+    } catch(e) {
+      console.log('No master manifest found, using single week mode');
+    }
+    return false;
+  }
+  
+  function updateWeekNavButtons() {
+    if (!masterManifest || masterManifest.weeks.length <= 1) {
+      prevWeekBtn.disabled = true;
+      nextWeekBtn.disabled = true;
+      prevWeekBtn.style.opacity = '0.3';
+      nextWeekBtn.style.opacity = '0.3';
+    } else {
+      prevWeekBtn.disabled = currentWeekIndex <= 0;
+      nextWeekBtn.disabled = currentWeekIndex >= masterManifest.weeks.length - 1;
+      prevWeekBtn.style.opacity = prevWeekBtn.disabled ? '0.3' : '1';
+      nextWeekBtn.style.opacity = nextWeekBtn.disabled ? '0.3' : '1';
+    }
+  }
+  
+  async function loadWeekByIndex(index) {
+    if (!masterManifest || index < 0 || index >= masterManifest.weeks.length) return;
+    
+    currentWeekIndex = index;
+    const weekInfo = masterManifest.weeks[index];
+    
+    status(`Loading ${weekInfo.display_range}...`);
+    
+    try {
+      const response = await fetch(`data/${weekInfo.file}`);
       if (!response.ok) {
-        throw new Error('Failed to load week_manifest.json');
+        throw new Error(`Failed to load ${weekInfo.file}`);
       }
       weekManifest = await response.json();
       
-      // Find today's date and set as current day if available
+      // Reset to first day or today if in this week
       const today = new Date();
       const todayStr = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
       
       const todayIndex = weekManifest.days.findIndex(d => d.date === todayStr);
-      if (todayIndex !== -1) {
-        currentDayIndex = todayIndex;
-      }
+      currentDayIndex = todayIndex !== -1 ? todayIndex : 0;
       
       renderDayTabs();
+      updateWeekNavButtons();
       
-      // Load the first (or today's) day
       if (weekManifest.days.length > 0) {
         await loadDayData(weekManifest.days[currentDayIndex].file);
       }
@@ -891,13 +934,56 @@
     }
   }
 
-  // Week navigation (placeholder for future functionality)
-  prevWeekBtn.addEventListener('click', () => {
-    status('Previous week not available yet');
+  async function loadWeekManifest() {
+    status('Loading schedule...');
+    try {
+      // Try to load master manifest first for multi-week support
+      const hasMaster = await loadMasterManifest();
+      
+      if (hasMaster && masterManifest.weeks.length > 0) {
+        // Load the current week from master manifest
+        await loadWeekByIndex(currentWeekIndex);
+      } else {
+        // Fallback to single week_manifest.json
+        const response = await fetch('data/week_manifest.json');
+        if (!response.ok) {
+          throw new Error('Failed to load week_manifest.json');
+        }
+        weekManifest = await response.json();
+        
+        // Find today's date and set as current day if available
+        const today = new Date();
+        const todayStr = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+        
+        const todayIndex = weekManifest.days.findIndex(d => d.date === todayStr);
+        if (todayIndex !== -1) {
+          currentDayIndex = todayIndex;
+        }
+        
+        renderDayTabs();
+        
+        // Load the first (or today's) day
+        if (weekManifest.days.length > 0) {
+          await loadDayData(weekManifest.days[currentDayIndex].file);
+        }
+      }
+    } catch(e) {
+      status('Error: ' + e.message);
+      console.error(e);
+    }
+  }
+
+  // Week navigation
+  prevWeekBtn.addEventListener('click', async () => {
+    if (masterManifest && currentWeekIndex > 0) {
+      await loadWeekByIndex(currentWeekIndex - 1);
+    }
   });
   
-  nextWeekBtn.addEventListener('click', () => {
-    status('Next week not available yet');
+  nextWeekBtn.addEventListener('click', async () => {
+    if (masterManifest && currentWeekIndex < masterManifest.weeks.length - 1) {
+      await loadWeekByIndex(currentWeekIndex + 1);
+    }
   });
 
   // Initial load
