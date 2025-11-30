@@ -239,6 +239,29 @@
   function clearCalendar() {
     calendarRoot.innerHTML = '';
   }
+  
+  // Create Google Maps directions link based on travel mode
+  function createGoogleMapsDirectionsLink(destination, travelMode) {
+    const encodedDest = encodeURIComponent(destination);
+    let mode = 'driving';
+    
+    switch(travelMode) {
+      case 'walking':
+        mode = 'walking';
+        break;
+      case 'biking':
+        mode = 'bicycling';
+        break;
+      case 'transit':
+        mode = 'transit';
+        break;
+      default:
+        mode = 'driving';
+    }
+    
+    // Uses current location as origin (empty origin parameter)
+    return `https://www.google.com/maps/dir/?api=1&destination=${encodedDest}&travelmode=${mode}`;
+  }
 
   // Calculate columns for overlapping events
   function calculateEventColumns(items, startHour, endHour) {
@@ -397,7 +420,24 @@
         headerContent.appendChild(distDiv);
       }
       
+      // Add directions button if we have address info
+      if (distanceInfo && distanceInfo.full_address) {
+        const directionsBtn = el('a', 'directions-btn');
+        directionsBtn.href = createGoogleMapsDirectionsLink(distanceInfo.full_address, sortType);
+        directionsBtn.target = '_blank';
+        directionsBtn.title = 'Get directions';
+        directionsBtn.innerHTML = '📍';
+        directionsBtn.addEventListener('click', (e) => e.stopPropagation());
+        headerContent.appendChild(directionsBtn);
+      }
+      
       hd.appendChild(headerContent);
+      hd.style.cursor = 'pointer';
+      hd.addEventListener('click', () => {
+        if (distanceInfo && distanceInfo.full_address) {
+          window.open(createGoogleMapsDirectionsLink(distanceInfo.full_address, sortType), '_blank');
+        }
+      });
       col.appendChild(hd);
       
       const grid = el('div', 'hour-grid');

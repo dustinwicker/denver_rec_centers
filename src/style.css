@@ -418,6 +418,7 @@
   flex-direction:column;
   align-items:center;
   gap:2px;
+  width:100%;
 }
 .gym-name{
   font-weight:700;
@@ -427,6 +428,27 @@
   font-size:11px;
   font-weight:400;
   opacity:0.9;
+}
+.directions-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-size:12px;
+  text-decoration:none;
+  opacity:0.8;
+  transition:opacity 0.2s, transform 0.2s;
+  margin-top:2px;
+}
+.directions-btn:hover{
+  opacity:1;
+  transform:scale(1.2);
+}
+.day-header{
+  cursor:pointer;
+  transition:filter 0.2s;
+}
+.day-header:hover{
+  filter:brightness(1.1);
 }
 .hour-grid{
   position:relative;
