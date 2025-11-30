@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Denver Recreation Center Calendar</title>
+  <link rel="stylesheet" href="src/style.css?v=22" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Denver Recreation Center Calendar</div>
+    <div class="controls">
+      <button id="toggle-dark" type="button" title="Toggle dark mode">🌙</button>
+    </div>
+  </header>
+
+  <!-- Day Selector -->
+  <nav class="day-selector">
+    <button id="prev-week" class="nav-arrow" title="Previous week">&lt;</button>
+    <div class="week-header" id="week-header">November</div>
+    <div class="day-tabs" id="day-tabs">
+      <!-- Days will be populated by JavaScript -->
+    </div>
+    <button id="next-week" class="nav-arrow" title="Next week">&gt;</button>
+  </nav>
+
+  <section class="config">
+    <div class="filters-container">
+      <div class="filter-group time-group">
+        <label>Time range:</label>
+        <div class="time-selects">
+          <select id="start-hour" aria-label="Start hour"></select>
+          <span>—</span>
+          <select id="end-hour" aria-label="End hour"></select>
+        </div>
+      </div>
+      <div class="filter-group">
+        <label>Sort gyms by:</label>
+        <select id="distance-sort">
+          <option value="biking">🚴 Biking time</option>
+          <option value="driving">🚗 Driving time</option>
+          <option value="walking">🚶 Walking time</option>
+          <option value="transit">🚌 Transit time</option>
+          <option value="name">📍 Name (A-Z)</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Show top:</label>
+        <select id="gym-limit">
+          <option value="8" selected>8 gyms</option>
+          <option value="10">10 gyms</option>
+          <option value="15">15 gyms</option>
+          <option value="all">All gyms</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Filter by Gym:</label>
+        <div class="dropdown-container">
+          <button type="button" class="dropdown-toggle" id="gym-dropdown-toggle">Select Gyms <span class="dropdown-count" id="gym-count"></span></button>
+          <div class="dropdown-menu" id="gym-dropdown-menu"></div>
+        </div>
+        <button id="reset-gym-filter" type="button">Reset</button>
+      </div>
+      <div class="filter-group">
+        <label>Filter by Class:</label>
+        <div class="dropdown-container">
+          <button type="button" class="dropdown-toggle" id="class-dropdown-toggle">Select Classes <span class="dropdown-count" id="class-count"></span></button>
+          <div class="dropdown-menu" id="class-dropdown-menu"></div>
+        </div>
+        <button id="reset-class-filter" type="button">Reset</button>
+      </div>
+      <div class="filter-group search-group">
+        <input id="search-text" placeholder="Search..." autocomplete="off" aria-label="Search filter" />
+        <button id="reset-search" type="button">Clear</button>
+        <label class="hide-cancelled-label">
+          <input type="checkbox" id="hide-cancelled" checked />
+          Hide cancelled classes
+        </label>
+      </div>
+    </div>
+    <div class="status-bar">
+      <span id="status">Idle</span>
+    </div>
+  </section>
+
+  <main id="calendar-root" role="region" aria-label="Recreation center schedule calendar"></main>
+
+  <footer class="footer">
+    <small>Denver Recreation Center Schedule Viewer</small>
+  </footer>
+
+  <script src="src/script.js?v=17" defer></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+{
+  "days": [
+    {
+      "date": "2025-11-30",
+      "day_name": "Sunday",
+      "display_date": "Sunday, November 30, 2025",
+      "event_count": 36,
+      "file": "denver_2025_11_30.json"
+    },
+    {
+      "date": "2025-12-01",
+      "day_name": "Monday",
+      "display_date": "Monday, December 1, 2025",
+      "event_count": 219,
+      "file": "denver_2025_12_01.json"
+    },
+    {
+      "date": "2025-12-02",
+      "day_name": "Tuesday",
+      "display_date": "Tuesday, December 2, 2025",
+      "event_count": 245,
+      "file": "denver_2025_12_02.json"
+    },
+    {
+      "date": "2025-12-03",
+      "day_name": "Wednesday",
+      "display_date": "Wednesday, December 3, 2025",
+      "event_count": 228,
+      "file": "denver_2025_12_03.json"
+    },
+    {
+      "date": "2025-12-04",
+      "day_name": "Thursday",
+      "display_date": "Thursday, December 4, 2025",
+      "event_count": 240,
+      "file": "denver_2025_12_04.json"
+    },
+    {
+      "date": "2025-12-05",
+      "day_name": "Friday",
+      "display_date": "Friday, December 5, 2025",
+      "event_count": 175,
+      "file": "denver_2025_12_05.json"
+    },
+    {
+      "date": "2025-12-06",
+      "day_name": "Saturday",
+      "display_date": "Saturday, December 6, 2025",
+      "event_count": 102,
+      "file": "denver_2025_12_06.json"
+    }
+  ]
+}

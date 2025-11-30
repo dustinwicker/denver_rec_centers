@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+venv/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.log
+
+# Unused Python scripts (keep locally for data generation)
+src/fetch_json.py
+src/geocode_centers.py
+
+# Raw/intermediate data files (not needed for web app)
+data/schedule_raw.html
+data/schedule_*.txt
+data/schedule_parsed.json
+data/rec_centers.json
+data/rec_centers_distances.csv
+
