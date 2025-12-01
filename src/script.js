@@ -107,28 +107,20 @@
       userLocation = userPos;
       
       // ALWAYS check if user is at home FIRST, before using any cached dynamic data
-      console.log(`[DEBUG] homeLocation exists: ${!!homeLocation}, staticDistancesData exists: ${!!staticDistancesData}`);
       if (homeLocation && staticDistancesData) {
         const distanceFromHome = GeoService.haversineDistance(
           userPos.lat, userPos.lng,
           homeLocation.lat, homeLocation.lng
         );
         
-        console.log(`[DEBUG] Distance from home: ${distanceFromHome.toFixed(3)} miles`);
-        console.log(`[DEBUG] Your location: ${userPos.lat}, ${userPos.lng}`);
-        console.log(`[DEBUG] Home location: ${homeLocation.lat}, ${homeLocation.lng}`);
-        console.log(`[DEBUG] Threshold: 0.1 miles`);
-        
         if (distanceFromHome <= 0.1) {
           // User is at home - use accurate Google Maps data
-          console.log(`✅ User is at home (${distanceFromHome.toFixed(2)} mi from home) - using Google Maps data`);
           distancesData = staticDistancesData;
           locationStatus = 'home';
           
           // Clear any cached dynamic data since we're using static
           if (typeof GeoService !== 'undefined') {
             GeoService.clearCache();
-            console.log(`[DEBUG] Cleared GeoService cache`);
           }
           
           updateLocationIndicator();
@@ -138,8 +130,6 @@
             applyFilters();
           }
           return; // IMPORTANT: Return early, don't load dynamic distances
-        } else {
-          console.log(`❌ User is away from home (${distanceFromHome.toFixed(2)} mi) - will use dynamic distances`);
         }
       }
       
