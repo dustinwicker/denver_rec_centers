@@ -78,7 +78,8 @@
         
         // Parse home location from origin address
         // Origin is "1220 Lafayette St, Denver, CO 80218"
-        homeLocation = { lat: 39.7365, lng: -104.9775 }; // 1220 Lafayette St, Denver (Capitol Hill)
+        // Updated to match actual GPS location (was 0.38 mi off)
+        homeLocation = { lat: 39.7400, lng: -104.9800 }; // 1220 Lafayette St, Denver (adjusted for actual location)
         
         console.log('Loaded static Google Maps distances for', staticDistancesData.centers?.length, 'centers');
       }
@@ -116,9 +117,9 @@
         console.log(`[DEBUG] Distance from home: ${distanceFromHome.toFixed(3)} miles`);
         console.log(`[DEBUG] Your location: ${userPos.lat}, ${userPos.lng}`);
         console.log(`[DEBUG] Home location: ${homeLocation.lat}, ${homeLocation.lng}`);
-        console.log(`[DEBUG] Threshold: 0.5 miles`);
+        console.log(`[DEBUG] Threshold: 0.1 miles`);
         
-        if (distanceFromHome <= 0.5) {
+        if (distanceFromHome <= 0.1) {
           // User is at home - use accurate Google Maps data
           console.log(`✅ User is at home (${distanceFromHome.toFixed(2)} mi from home) - using Google Maps data`);
           distancesData = staticDistancesData;
