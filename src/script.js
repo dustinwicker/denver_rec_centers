@@ -78,8 +78,8 @@
         
         // Parse home location from origin address
         // Origin is "1220 Lafayette St, Denver, CO 80218"
-        // Updated to match actual GPS location (was 0.38 mi off)
-        homeLocation = { lat: 39.7400, lng: -104.9800 }; // 1220 Lafayette St, Denver (adjusted for actual location)
+        // Exact GPS coordinates from user's location
+        homeLocation = { lat: 39.735607, lng: -104.970528 }; // 1220 Lafayette St, Denver (exact coordinates)
         
         console.log('Loaded static Google Maps distances for', staticDistancesData.centers?.length, 'centers');
       }
