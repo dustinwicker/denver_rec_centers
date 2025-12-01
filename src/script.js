@@ -63,22 +63,70 @@
   let locationStatus = 'unknown'; // 'unknown', 'loading', 'granted', 'denied', 'cached'
   let userLocation = null;
 
-  // Load distances data - now uses geolocation service
+  // Store static (Google Maps) distances data
+  let staticDistancesData = null;
+  let homeLocation = null; // User's home location from static data
+  
+  // Load distances data - uses static Google Maps data when at home, dynamic when away
   async function loadDistancesData() {
-    // First try to load static data as fallback
+    // First load static Google Maps data (always available as fallback)
     try {
       const response = await fetch('data/rec_centers_distances.json');
       if (response.ok) {
-        distancesData = await response.json();
-        console.log('Loaded static distances data for', distancesData.centers?.length, 'centers');
+        staticDistancesData = await response.json();
+        distancesData = staticDistancesData; // Use as default
+        
+        // Parse home location from origin address
+        // Origin is "1220 Lafayette St, Denver, CO"
+        homeLocation = { lat: 39.7408, lng: -104.9625 }; // 1220 Lafayette St, Denver
+        
+        console.log('Loaded static Google Maps distances for', staticDistancesData.centers?.length, 'centers');
       }
     } catch(e) {
       console.log('No static distances data available');
     }
     
-    // Then try to get dynamic location-based distances
+    // Then check if user is away from home - if so, use dynamic distances
     if (typeof GeoService !== 'undefined') {
-      await loadDynamicDistances();
+      await checkLocationAndLoadDistances();
+    }
+  }
+  
+  // Check if user is at home or away, load appropriate distances
+  async function checkLocationAndLoadDistances() {
+    locationStatus = 'loading';
+    updateLocationIndicator();
+    
+    try {
+      const userPos = await GeoService.getCurrentPosition();
+      userLocation = userPos;
+      
+      // Check if user is within 0.25 miles of home
+      if (homeLocation && staticDistancesData) {
+        const distanceFromHome = GeoService.haversineDistance(
+          userPos.lat, userPos.lng,
+          homeLocation.lat, homeLocation.lng
+        );
+        
+        if (distanceFromHome <= 0.25) {
+          // User is at home - use accurate Google Maps data
+          console.log(`User is at home (${distanceFromHome.toFixed(2)} mi from home) - using Google Maps data`);
+          distancesData = staticDistancesData;
+          locationStatus = 'granted';
+          updateLocationIndicator();
+          return;
+        } else {
+          console.log(`User is away from home (${distanceFromHome.toFixed(2)} mi) - calculating dynamic distances`);
+        }
+      }
+      
+      // User is away from home - use dynamic distances
+      await loadDynamicDistances(false);
+      
+    } catch (e) {
+      console.log('Could not get location, using static data:', e.message);
+      locationStatus = 'denied';
+      updateLocationIndicator();
     }
   }
   
