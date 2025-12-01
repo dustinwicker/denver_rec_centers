@@ -657,10 +657,17 @@
     
     const now = new Date();
     const currentMins = now.getHours() * 60 + now.getMinutes();
-    const displayMins = userSelectedMinutes !== null ? userSelectedMinutes : currentMins;
+    let displayMins = userSelectedMinutes !== null ? userSelectedMinutes : currentMins;
     
-    // Check if time is within visible range
-    if (displayMins < startHour * 60 || displayMins > endHour * 60) return;
+    // Clamp displayMins to visible range (with small buffer)
+    const minMins = startHour * 60;
+    const maxMins = endHour * 60;
+    displayMins = Math.max(minMins, Math.min(maxMins, displayMins));
+    
+    // If user selected time is out of range, update it to be in range
+    if (userSelectedMinutes !== null) {
+      userSelectedMinutes = displayMins;
+    }
     
     const topPx = (displayMins - startHour * 60) / 60 * hourHeight;
     
@@ -689,7 +696,7 @@
         resetBtn.addEventListener('click', (e) => {
           e.stopPropagation();
           userSelectedMinutes = null;
-          renderCalendar();
+          applyFilters(); // Use applyFilters instead of renderCalendar to preserve data
         });
         timeDot.appendChild(resetBtn);
       }
@@ -718,13 +725,16 @@
     let isDragging = false;
     let startY = 0;
     let startTop = 0;
+    let lastValidTop = 0;
     
     const onMouseDown = (e) => {
       e.preventDefault();
+      e.stopPropagation();
       isDragging = true;
       startY = e.clientY || e.touches?.[0]?.clientY || 0;
       const timeLine = dot.parentElement;
       startTop = parseFloat(timeLine.style.top) || 0;
+      lastValidTop = startTop;
       
       document.body.style.userSelect = 'none';
       dot.classList.add('dragging');
@@ -738,10 +748,11 @@
       const deltaY = clientY - startY;
       let newTop = startTop + deltaY;
       
-      // Clamp to valid range
+      // Clamp to valid range (with a small buffer to prevent edge issues)
       const minTop = 0;
-      const maxTop = (currentEndHour - currentStartHour) * currentHourHeight;
+      const maxTop = (currentEndHour - currentStartHour) * currentHourHeight - 2;
       newTop = Math.max(minTop, Math.min(maxTop, newTop));
+      lastValidTop = newTop;
       
       // Update all time lines
       timeIndicatorElements.forEach(line => {
@@ -754,6 +765,9 @@
       if (timeLabel) {
         timeLabel.textContent = formatMinutesToTime(newMins);
       }
+      
+      // Update userSelectedMinutes in real-time (don't wait for mouseup)
+      userSelectedMinutes = newMins;
     };
     
     const onMouseUp = (e) => {
@@ -763,13 +777,27 @@
       document.body.style.userSelect = '';
       dot.classList.remove('dragging');
       
-      // Calculate final time from position
-      const timeLine = dot.parentElement;
-      const finalTop = parseFloat(timeLine.style.top) || 0;
-      userSelectedMinutes = Math.round((finalTop / currentHourHeight) * 60 + currentStartHour * 60);
+      // Use the last valid position
+      userSelectedMinutes = Math.round((lastValidTop / currentHourHeight) * 60 + currentStartHour * 60);
       
-      // Re-render to add reset button
-      renderCalendar();
+      // Clamp userSelectedMinutes to valid range
+      const minMins = currentStartHour * 60;
+      const maxMins = currentEndHour * 60;
+      userSelectedMinutes = Math.max(minMins, Math.min(maxMins, userSelectedMinutes));
+      
+      // Show reset button by adding it dynamically instead of full re-render
+      if (!dot.querySelector('.time-reset')) {
+        const resetBtn = document.createElement('div');
+        resetBtn.className = 'time-reset';
+        resetBtn.textContent = '↺';
+        resetBtn.title = 'Reset to current time';
+        resetBtn.addEventListener('click', (evt) => {
+          evt.stopPropagation();
+          userSelectedMinutes = null;
+          applyFilters(); // Use applyFilters instead of renderCalendar to preserve data
+        });
+        dot.appendChild(resetBtn);
+      }
     };
     
     // Mouse events
