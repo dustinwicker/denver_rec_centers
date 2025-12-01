@@ -840,6 +840,70 @@
   color:#22c55e !important;
   font-weight:500;
 }
+
+/* API Key Modal */
+.api-key-modal{
+  max-width:480px;
+}
+.api-key-info{
+  text-align:left;
+  margin:16px 0;
+}
+.api-key-info p{
+  margin:8px 0;
+  color:var(--muted);
+  font-size:14px;
+}
+.api-key-info ol{
+  margin:12px 0;
+  padding-left:20px;
+  color:var(--text);
+  font-size:13px;
+}
+.api-key-info ol li{
+  margin:6px 0;
+}
+.api-key-info a{
+  color:#0ea5e9;
+  text-decoration:underline;
+}
+.api-key-note{
+  background:#fef3c7;
+  padding:8px 12px;
+  border-radius:6px;
+  color:#92400e !important;
+  font-size:12px !important;
+}
+.api-key-free{
+  color:#22c55e !important;
+  font-weight:500;
+  font-size:12px !important;
+}
+.api-key-input-group{
+  margin:16px 0;
+}
+.api-key-input-group input{
+  width:100%;
+  padding:12px;
+  border:2px solid #e5e7eb;
+  border-radius:8px;
+  font-size:14px;
+  font-family:monospace;
+}
+.api-key-input-group input:focus{
+  outline:none;
+  border-color:#0ea5e9;
+}
+:root.dark .api-key-note{
+  background:#78350f;
+  color:#fef3c7 !important;
+}
+:root.dark .api-key-input-group input{
+  background:#1e293b;
+  border-color:#475569;
+  color:#e2e8f0;
+}
+
 .cancel-btn{
   background:#e5e7eb !important;
   color:#374151 !important;

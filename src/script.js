@@ -124,21 +124,25 @@
     let indicator = qs('#location-indicator');
     if (!indicator) return;
     
+    const hasApiKey = typeof GeoService !== 'undefined' && GeoService.hasApiKey();
+    
     switch (locationStatus) {
       case 'loading':
         indicator.innerHTML = '📍 <span>Getting location...</span>';
         indicator.className = 'location-indicator loading';
         break;
       case 'granted':
-        indicator.innerHTML = '📍 <span>Using your location</span> <button id="refresh-location" title="Refresh location">↻</button>';
+        indicator.innerHTML = '📍 <span>Your location</span> <button id="refresh-location" title="Refresh location">↻</button>' + 
+          (!hasApiKey ? ' <button id="setup-api-key" title="Add API key for accurate times">⚙️</button>' : '');
         indicator.className = 'location-indicator active';
         break;
       case 'cached':
-        indicator.innerHTML = '📍 <span>Cached location</span> <button id="refresh-location" title="Refresh location">↻</button>';
+        indicator.innerHTML = '📍 <span>Cached</span> <button id="refresh-location" title="Refresh location">↻</button>' +
+          (!hasApiKey ? ' <button id="setup-api-key" title="Add API key for accurate times">⚙️</button>' : '');
         indicator.className = 'location-indicator cached';
         break;
       case 'denied':
-        indicator.innerHTML = '📍 <span>Location unavailable</span> <button id="refresh-location" title="Try again">↻</button>';
+        indicator.innerHTML = '📍 <span>Location off</span> <button id="refresh-location" title="Try again">↻</button>';
         indicator.className = 'location-indicator denied';
         break;
       default:
@@ -154,6 +158,82 @@
         loadDynamicDistances(true);
       };
     }
+    
+    // Add click handler for API key setup
+    const apiKeyBtn = indicator.querySelector('#setup-api-key');
+    if (apiKeyBtn) {
+      apiKeyBtn.onclick = (e) => {
+        e.stopPropagation();
+        showApiKeyModal();
+      };
+    }
+  }
+  
+  // Show modal for API key setup
+  function showApiKeyModal() {
+    const existingModal = qs('.event-modal-overlay');
+    if (existingModal) existingModal.remove();
+    
+    const currentKey = typeof GeoService !== 'undefined' ? GeoService.getApiKey() || '' : '';
+    
+    const overlay = el('div', 'event-modal-overlay');
+    const modal = el('div', 'event-modal api-key-modal');
+    
+    modal.innerHTML = `
+      <button class="modal-close" title="Close">&times;</button>
+      <h2 class="modal-title">🔑 OpenRouteService API Key</h2>
+      <div class="api-key-info">
+        <p>For <strong>accurate</strong> driving/biking/walking times, add a free OpenRouteService API key.</p>
+        <p class="api-key-note">Without an API key, times are estimated from straight-line distances.</p>
+        <ol>
+          <li>Go to <a href="https://openrouteservice.org/dev/#/signup" target="_blank">openrouteservice.org</a></li>
+          <li>Sign up for a free account</li>
+          <li>Copy your API key from the dashboard</li>
+          <li>Paste it below</li>
+        </ol>
+        <p class="api-key-free">✓ Free tier: 2,000 requests/day (plenty for personal use)</p>
+      </div>
+      <div class="api-key-input-group">
+        <input type="text" id="api-key-input" placeholder="Paste your API key here" value="${currentKey}" />
+      </div>
+      <div class="modal-actions">
+        <button class="modal-btn primary" id="save-api-key">💾 Save Key</button>
+        ${currentKey ? '<button class="modal-btn secondary" id="clear-api-key">🗑️ Clear Key</button>' : ''}
+        <button class="modal-btn tertiary cancel-btn">Cancel</button>
+      </div>
+    `;
+    
+    overlay.appendChild(modal);
+    document.body.appendChild(overlay);
+    
+    // Save handler
+    modal.querySelector('#save-api-key').addEventListener('click', () => {
+      const key = modal.querySelector('#api-key-input').value.trim();
+      if (key) {
+        GeoService.setApiKey(key);
+        GeoService.clearCache(); // Clear cache to recalculate with new API
+        overlay.remove();
+        loadDynamicDistances(true); // Recalculate with new API key
+      }
+    });
+    
+    // Clear handler
+    const clearBtn = modal.querySelector('#clear-api-key');
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        GeoService.clearApiKey();
+        GeoService.clearCache();
+        overlay.remove();
+        loadDynamicDistances(true);
+      });
+    }
+    
+    // Close handlers
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) overlay.remove();
+    });
+    modal.querySelector('.modal-close').addEventListener('click', () => overlay.remove());
+    modal.querySelector('.cancel-btn').addEventListener('click', () => overlay.remove());
   }
 
   // Load class descriptions

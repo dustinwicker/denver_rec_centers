@@ -1,48 +1,69 @@
 /**
  * Geolocation and Distance Service
- * Uses browser geolocation + OSRM (free routing API) for dynamic distances
+ * Uses browser geolocation + OpenRouteService for accurate routing distances
+ * 
+ * OpenRouteService free tier: 2,000 requests/day
+ * Sign up at: https://openrouteservice.org/dev/#/signup
  */
 
 const GeoService = (() => {
   const CACHE_KEY = 'denver_rec_geo_cache';
+  const ORS_API_KEY_STORAGE = 'denver_rec_ors_api_key';
   const LOCATION_THRESHOLD_MILES = 0.25; // Recalculate if moved more than 0.25 miles
-  const OSRM_BASE_URL = 'https://router.project-osrm.org/table/v1';
+  const ORS_BASE_URL = 'https://api.openrouteservice.org';
   
-  // Recreation center coordinates (pre-computed from addresses)
+  // Recreation center coordinates (geocoded from addresses)
   const REC_CENTERS = [
-    { name: "Ashland", lat: 39.6789, lng: -104.9811, address: "1600 E 19th Ave, Denver, CO 80218" },
-    { name: "Athmar", lat: 39.6833, lng: -105.0167, address: "1200 S Hazel Ct, Denver, CO 80219" },
-    { name: "Barnum", lat: 39.7167, lng: -105.0333, address: "360 Hooker St, Denver, CO 80219" },
-    { name: "Carla Madison", lat: 39.7311, lng: -104.9528, address: "2401 E Colfax Ave, Denver, CO 80206" },
-    { name: "Central Park", lat: 39.7583, lng: -104.8833, address: "9651 E Martin Luther King Jr Blvd, Denver, CO 80238" },
-    { name: "Cook Park", lat: 39.6500, lng: -104.9333, address: "7100 S Cherry Creek Dr, Denver, CO 80224" },
-    { name: "Crestmoor Park", lat: 39.7000, lng: -104.9167, address: "700 Monaco Pkwy, Denver, CO 80220" },
-    { name: "Dunham", lat: 39.7833, lng: -104.9833, address: "1355 Osceola St, Denver, CO 80204" },
-    { name: "Eisenhower", lat: 39.7333, lng: -105.0000, address: "4300 W Dartmouth Ave, Denver, CO 80236" },
-    { name: "Glenarm", lat: 39.7394, lng: -104.9847, address: "2800 Glenarm Pl, Denver, CO 80205" },
-    { name: "Green Valley Ranch", lat: 39.8333, lng: -104.8000, address: "4890 Argonne St, Denver, CO 80249" },
-    { name: "Hampden Heights", lat: 39.6500, lng: -104.8833, address: "5765 S Jasmine St, Denver, CO 80120" },
-    { name: "Harvey Park", lat: 39.6833, lng: -105.0500, address: "2120 S Tennyson St, Denver, CO 80219" },
-    { name: "Hiawatha Davis", lat: 39.7500, lng: -104.9500, address: "3334 Holly St, Denver, CO 80207" },
+    { name: "Ashland", lat: 39.7433, lng: -104.9686, address: "1600 E 19th Ave, Denver, CO 80218" },
+    { name: "Athmar", lat: 39.6958, lng: -105.0206, address: "1200 S Hazel Ct, Denver, CO 80219" },
+    { name: "Barnum", lat: 39.7261, lng: -105.0297, address: "360 Hooker St, Denver, CO 80219" },
+    { name: "Carla Madison", lat: 39.7400, lng: -104.9528, address: "2401 E Colfax Ave, Denver, CO 80206" },
+    { name: "Central Park", lat: 39.7583, lng: -104.8686, address: "9651 E Martin Luther King Jr Blvd, Denver, CO 80238" },
+    { name: "Cook Park", lat: 39.6506, lng: -104.9336, address: "7100 S Cherry Creek Dr, Denver, CO 80224" },
+    { name: "Dunham", lat: 39.7486, lng: -105.0294, address: "1355 Osceola St, Denver, CO 80204" },
+    { name: "Glenarm", lat: 39.7528, lng: -104.9847, address: "2800 Glenarm Pl, Denver, CO 80205" },
+    { name: "Green Valley Ranch", lat: 39.8347, lng: -104.7697, address: "4890 Argonne St, Denver, CO 80249" },
+    { name: "Harvey Park", lat: 39.6761, lng: -105.0503, address: "2120 S Tennyson St, Denver, CO 80219" },
+    { name: "Hiawatha Davis", lat: 39.7597, lng: -104.9281, address: "3334 Holly St, Denver, CO 80207" },
     { name: "Highland", lat: 39.7667, lng: -105.0167, address: "2880 Osceola St, Denver, CO 80212" },
-    { name: "La Alma", lat: 39.7333, lng: -105.0000, address: "1325 W 11th Ave, Denver, CO 80204" },
-    { name: "La Familia", lat: 39.7667, lng: -104.9667, address: "65 S Elati St, Denver, CO 80223" },
-    { name: "Martin Luther King Jr", lat: 39.7500, lng: -104.9333, address: "3880 Newport St, Denver, CO 80207" },
+    { name: "La Alma", lat: 39.7333, lng: -105.0047, address: "1325 W 11th Ave, Denver, CO 80204" },
+    { name: "La Familia", lat: 39.7119, lng: -104.9869, address: "65 S Elati St, Denver, CO 80223" },
+    { name: "Martin Luther King Jr", lat: 39.7597, lng: -104.9119, address: "3880 Newport St, Denver, CO 80207" },
     { name: "Montbello", lat: 39.7833, lng: -104.8333, address: "15555 E 53rd Ave, Denver, CO 80239" },
     { name: "Montclair", lat: 39.7167, lng: -104.9167, address: "729 Ulster Way, Denver, CO 80220" },
-    { name: "Paco Sanchez", lat: 39.7167, lng: -105.0333, address: "4701 W 10th Ave, Denver, CO 80204" },
+    { name: "Paco Sanchez", lat: 39.7394, lng: -105.0456, address: "4701 W 10th Ave, Denver, CO 80204" },
     { name: "Platt Park", lat: 39.6833, lng: -104.9833, address: "1500 S Grant St, Denver, CO 80210" },
-    { name: "Rude", lat: 39.7500, lng: -104.9833, address: "2855 W Holden Pl, Denver, CO 80204" },
-    { name: "Scheitler", lat: 39.6500, lng: -105.0167, address: "5031 W 46th Ave, Denver, CO 80212" },
-    { name: "Sloan's Lake", lat: 39.7500, lng: -105.0333, address: "1700 N Quitman St, Denver, CO 80204" },
-    { name: "St. Charles", lat: 39.7500, lng: -104.9500, address: "3777 Lafayette St, Denver, CO 80205" },
+    { name: "Rude", lat: 39.7314, lng: -105.0078, address: "2855 W Holden Pl, Denver, CO 80204" },
+    { name: "Scheitler", lat: 39.7778, lng: -105.0461, address: "5031 W 46th Ave, Denver, CO 80212" },
+    { name: "St. Charles", lat: 39.7611, lng: -104.9542, address: "3777 Lafayette St, Denver, CO 80205" },
     { name: "Stapleton", lat: 39.7667, lng: -104.8833, address: "3815 N Magnolia St, Denver, CO 80207" },
-    { name: "Twentieth Street", lat: 39.7500, lng: -104.9833, address: "1011 20th St, Denver, CO 80205" },
+    { name: "Twentieth Street", lat: 39.7475, lng: -104.9867, address: "1011 20th St, Denver, CO 80205" },
     { name: "Virginia Village", lat: 39.6833, lng: -104.9167, address: "2250 S Dahlia St, Denver, CO 80222" },
     { name: "Washington Park", lat: 39.6972, lng: -104.9722, address: "701 S Franklin St, Denver, CO 80209" },
-    { name: "Wheat Ridge", lat: 39.7667, lng: -105.0833, address: "4005 Kipling St, Wheat Ridge, CO 80033" },
-    { name: "Woodbury", lat: 39.7000, lng: -104.9000, address: "3101 S Grape St, Denver, CO 80222" }
+    { name: "Woodbury", lat: 39.6850, lng: -104.9078, address: "3101 S Grape St, Denver, CO 80222" }
   ];
+
+  // ORS profile names
+  const ORS_PROFILES = {
+    driving: 'driving-car',
+    biking: 'cycling-regular',
+    walking: 'foot-walking'
+  };
+
+  /**
+   * Get or prompt for API key
+   */
+  function getApiKey() {
+    return localStorage.getItem(ORS_API_KEY_STORAGE);
+  }
+
+  function setApiKey(key) {
+    localStorage.setItem(ORS_API_KEY_STORAGE, key);
+  }
+
+  function clearApiKey() {
+    localStorage.removeItem(ORS_API_KEY_STORAGE);
+  }
 
   /**
    * Calculate distance between two coordinates in miles (Haversine formula)
@@ -89,30 +110,46 @@ const GeoService = (() => {
   }
 
   /**
-   * Calculate distances using OSRM Table API
+   * Calculate distances using OpenRouteService Matrix API
    * @param {number} userLat - User's latitude
    * @param {number} userLng - User's longitude
-   * @param {string} profile - 'driving', 'cycling', or 'walking'
+   * @param {string} profile - 'driving', 'biking', or 'walking'
    */
-  async function calculateDistancesOSRM(userLat, userLng, profile) {
-    // OSRM profile names
-    const osrmProfile = profile === 'biking' ? 'bike' : profile === 'driving' ? 'car' : 'foot';
+  async function calculateDistancesORS(userLat, userLng, profile) {
+    const apiKey = getApiKey();
+    if (!apiKey) {
+      console.warn('No ORS API key set');
+      return null;
+    }
+
+    const orsProfile = ORS_PROFILES[profile] || ORS_PROFILES.driving;
     
-    // Build coordinates string: user first, then all rec centers
-    const coords = [[userLng, userLat], ...REC_CENTERS.map(c => [c.lng, c.lat])];
-    const coordsStr = coords.map(c => c.join(',')).join(';');
+    // Build locations array: user first, then all rec centers
+    const locations = [[userLng, userLat], ...REC_CENTERS.map(c => [c.lng, c.lat])];
     
-    const url = `${OSRM_BASE_URL}/${osrmProfile}/${coordsStr}?sources=0&annotations=distance,duration`;
+    const url = `${ORS_BASE_URL}/v2/matrix/${orsProfile}`;
     
     try {
-      const response = await fetch(url);
-      if (!response.ok) throw new Error('OSRM request failed');
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Authorization': apiKey,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          locations: locations,
+          sources: [0], // Only from user location
+          metrics: ['distance', 'duration'],
+          units: 'm' // meters
+        })
+      });
+      
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error?.message || `ORS request failed: ${response.status}`);
+      }
       
       const data = await response.json();
-      
-      if (data.code !== 'Ok') {
-        throw new Error('OSRM returned error: ' + data.code);
-      }
       
       // Extract distances and durations from user (source 0) to all destinations
       const distances = data.distances[0].slice(1); // Skip first (user to user = 0)
@@ -130,7 +167,7 @@ const GeoService = (() => {
         [`${profile}_time`]: durations[i] ? formatDuration(durations[i]) : 'N/A'
       }));
     } catch (error) {
-      console.error(`OSRM ${profile} calculation failed:`, error);
+      console.error(`ORS ${profile} calculation failed:`, error);
       return null;
     }
   }
@@ -157,7 +194,7 @@ const GeoService = (() => {
       centers: []
     };
     
-    // Initialize centers with basic info
+    // Initialize centers with basic info and straight-line distances
     results.centers = REC_CENTERS.map(c => ({
       name: c.name,
       address: c.address,
@@ -166,14 +203,34 @@ const GeoService = (() => {
       straight_line_miles: haversineDistance(userLat, userLng, c.lat, c.lng).toFixed(1)
     }));
     
-    // Calculate for each travel mode
+    // Check if we have an API key
+    const apiKey = getApiKey();
+    if (!apiKey) {
+      console.log('No ORS API key - using straight-line distances only');
+      // Estimate times based on straight-line distance
+      results.centers.forEach(c => {
+        const dist = parseFloat(c.straight_line_miles);
+        c.driving_miles = c.straight_line_miles;
+        c.driving_minutes = Math.round(dist * 2.5); // ~24 mph average
+        c.driving_time = formatDuration(c.driving_minutes * 60);
+        c.biking_miles = c.straight_line_miles;
+        c.biking_minutes = Math.round(dist * 5); // ~12 mph average
+        c.biking_time = formatDuration(c.biking_minutes * 60);
+        c.walking_miles = c.straight_line_miles;
+        c.walking_minutes = Math.round(dist * 20); // ~3 mph average
+        c.walking_time = formatDuration(c.walking_minutes * 60);
+      });
+      return results;
+    }
+    
+    // Calculate for each travel mode using ORS
     const modes = ['driving', 'biking', 'walking'];
     
     for (let i = 0; i < modes.length; i++) {
       const mode = modes[i];
       if (onProgress) onProgress(`Calculating ${mode} distances...`, (i + 1) / modes.length * 100);
       
-      const modeResults = await calculateDistancesOSRM(userLat, userLng, mode);
+      const modeResults = await calculateDistancesORS(userLat, userLng, mode);
       
       if (modeResults) {
         // Merge results into centers
@@ -186,9 +243,9 @@ const GeoService = (() => {
         });
       }
       
-      // Small delay between requests to be nice to OSRM
+      // Small delay between requests to be nice to ORS
       if (i < modes.length - 1) {
-        await new Promise(r => setTimeout(r, 500));
+        await new Promise(r => setTimeout(r, 300));
       }
     }
     
@@ -295,6 +352,13 @@ const GeoService = (() => {
     );
   }
 
+  /**
+   * Check if API key is configured
+   */
+  function hasApiKey() {
+    return !!getApiKey();
+  }
+
   // Public API
   return {
     getDistances,
@@ -303,6 +367,10 @@ const GeoService = (() => {
     getCachedData,
     getRecCenterCoords,
     haversineDistance,
+    hasApiKey,
+    getApiKey,
+    setApiKey,
+    clearApiKey,
     REC_CENTERS
   };
 })();
@@ -311,4 +379,3 @@ const GeoService = (() => {
 if (typeof window !== 'undefined') {
   window.GeoService = GeoService;
 }
-
