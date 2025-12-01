@@ -203,51 +203,45 @@ const GeoService = (() => {
       straight_line_miles: haversineDistance(userLat, userLng, c.lat, c.lng).toFixed(1)
     }));
     
-    // Check if we have an API key
-    const apiKey = getApiKey();
-    if (!apiKey) {
-      console.log('No ORS API key - using straight-line distances only');
-      // Estimate times based on straight-line distance
-      results.centers.forEach(c => {
-        const dist = parseFloat(c.straight_line_miles);
-        c.driving_miles = c.straight_line_miles;
-        c.driving_minutes = Math.round(dist * 2.5); // ~24 mph average
-        c.driving_time = formatDuration(c.driving_minutes * 60);
-        c.biking_miles = c.straight_line_miles;
-        c.biking_minutes = Math.round(dist * 5); // ~12 mph average
-        c.biking_time = formatDuration(c.biking_minutes * 60);
-        c.walking_miles = c.straight_line_miles;
-        c.walking_minutes = Math.round(dist * 20); // ~3 mph average
-        c.walking_time = formatDuration(c.walking_minutes * 60);
-      });
-      return results;
-    }
+    // Use realistic estimates based on straight-line distance
+    // Roads are typically 1.3-1.4x longer than straight-line in urban areas
+    const ROAD_FACTOR = 1.35;
     
-    // Calculate for each travel mode using ORS
-    const modes = ['driving', 'biking', 'walking'];
+    // Realistic average speeds for Denver urban area (accounting for traffic, lights, stops)
+    // These are effective speeds, not top speeds
+    const SPEEDS = {
+      driving: 18,  // ~18 mph average in city (traffic, lights, parking)
+      biking: 10,   // ~10 mph average (includes hills, stops)
+      walking: 3    // ~3 mph average
+    };
     
-    for (let i = 0; i < modes.length; i++) {
-      const mode = modes[i];
-      if (onProgress) onProgress(`Calculating ${mode} distances...`, (i + 1) / modes.length * 100);
+    console.log('Calculating distances with realistic city estimates');
+    
+    results.centers.forEach(c => {
+      const straightDist = parseFloat(c.straight_line_miles);
+      const roadDist = (straightDist * ROAD_FACTOR).toFixed(1);
       
-      const modeResults = await calculateDistancesORS(userLat, userLng, mode);
+      // Driving
+      c.driving_miles = roadDist;
+      c.driving_minutes = Math.round((parseFloat(roadDist) / SPEEDS.driving) * 60);
+      c.driving_time = `~${c.driving_minutes} mins`;
+      c.driving_estimated = true; // Flag to show "~" in UI
       
-      if (modeResults) {
-        // Merge results into centers
-        modeResults.forEach((modeData, idx) => {
-          Object.keys(modeData).forEach(key => {
-            if (key.startsWith(mode)) {
-              results.centers[idx][key] = modeData[key];
-            }
-          });
-        });
-      }
+      // Biking
+      c.biking_miles = roadDist;
+      c.biking_minutes = Math.round((parseFloat(roadDist) / SPEEDS.biking) * 60);
+      c.biking_time = `~${c.biking_minutes} mins`;
+      c.biking_estimated = true;
       
-      // Small delay between requests to be nice to ORS
-      if (i < modes.length - 1) {
-        await new Promise(r => setTimeout(r, 300));
-      }
-    }
+      // Walking
+      c.walking_miles = roadDist;
+      c.walking_minutes = Math.round((parseFloat(roadDist) / SPEEDS.walking) * 60);
+      c.walking_time = `~${c.walking_minutes} mins`;
+      c.walking_estimated = true;
+    });
+    
+    // Mark this data as estimated
+    results.estimated = true;
     
     return results;
   }

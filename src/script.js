@@ -641,9 +641,10 @@
       }
       
       // Add directions button if we have address info
-      if (distanceInfo && distanceInfo.full_address) {
+      const gymAddress = distanceInfo?.full_address || distanceInfo?.address || `${gymName} Recreation Center, Denver, CO`;
+      if (gymAddress) {
         const directionsBtn = el('a', 'directions-btn');
-        directionsBtn.href = createGoogleMapsDirectionsLink(distanceInfo.full_address, sortType);
+        directionsBtn.href = createGoogleMapsDirectionsLink(gymAddress, sortType);
         directionsBtn.target = '_blank';
         directionsBtn.title = 'Get directions';
         directionsBtn.innerHTML = '📍';
@@ -654,9 +655,7 @@
       hd.appendChild(headerContent);
       hd.style.cursor = 'pointer';
       hd.addEventListener('click', () => {
-        if (distanceInfo && distanceInfo.full_address) {
-          window.open(createGoogleMapsDirectionsLink(distanceInfo.full_address, sortType), '_blank');
-        }
+        window.open(createGoogleMapsDirectionsLink(gymAddress, sortType), '_blank');
       });
       col.appendChild(hd);
       
