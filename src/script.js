@@ -112,7 +112,7 @@
         console.log(`Your location: ${userPos.lat}, ${userPos.lng}`);
         console.log(`Home location: ${homeLocation.lat}, ${homeLocation.lng}`);
         
-        if (distanceFromHome <= 0.5) {
+        if (distanceFromHome <= 0.75) {
           // User is at home - use accurate Google Maps data
           console.log(`User is at home (${distanceFromHome.toFixed(2)} mi from home) - using Google Maps data`);
           distancesData = staticDistancesData;
