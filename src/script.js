@@ -108,11 +108,21 @@
           homeLocation.lat, homeLocation.lng
         );
         
-        if (distanceFromHome <= 0.25) {
+        console.log(`Distance from home: ${distanceFromHome.toFixed(3)} miles`);
+        console.log(`Your location: ${userPos.lat}, ${userPos.lng}`);
+        console.log(`Home location: ${homeLocation.lat}, ${homeLocation.lng}`);
+        
+        if (distanceFromHome <= 0.5) {
           // User is at home - use accurate Google Maps data
           console.log(`User is at home (${distanceFromHome.toFixed(2)} mi from home) - using Google Maps data`);
           distancesData = staticDistancesData;
           locationStatus = 'home'; // New status for "at home"
+          
+          // Clear any cached dynamic data since we're using static
+          if (typeof GeoService !== 'undefined') {
+            GeoService.clearCache();
+          }
+          
           updateLocationIndicator();
           
           // Re-apply filters to update the display with Google Maps data
