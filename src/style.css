@@ -139,6 +139,7 @@
   transition:background 0.2s;
   border-bottom:3px solid transparent;
   min-width:80px;
+  flex-shrink:1;
 }
 .day-tab:hover{
   background:rgba(0,0,0,0.03);
@@ -1005,18 +1006,37 @@
     }
     
     .day-selector{
-      padding:8px;
-      gap:6px;
+      padding:6px 4px;
+      gap:4px;
     }
     .day-tabs{
-      gap:2px;
+      gap:1px;
+      flex-wrap:nowrap;
+      overflow-x:visible;
     }
     .day-tab{
-      padding:6px 8px;
-      font-size:11px;
+      padding:6px 4px;
+      min-width:0;
+      flex:1 1 0;
+      max-width:none;
+    }
+    .day-tab .day-name{
+      font-size:9px;
+      line-height:1.1;
     }
     .day-tab .day-num{
-      font-size:16px;
+      font-size:14px;
+      line-height:1.2;
+    }
+    .week-header{
+      font-size:13px;
+      padding:0 8px;
+      min-width:80px;
+    }
+    .nav-arrow{
+      padding:6px 10px;
+      font-size:14px;
+      min-width:36px;
     }
     
     .config{
@@ -1108,23 +1128,69 @@
     .topbar .brand{
       font-size:0.75rem;
     }
+    /* Make day selector more compact to fit all days */
+    .day-selector{
+      padding:4px 2px;
+      gap:2px;
+    }
+    .day-tabs{
+      gap:1px;
+      flex-wrap:nowrap;
+      overflow-x:visible;
+    }
     .day-tab{
-      padding:4px 6px;
+      padding:4px 3px;
+      min-width:0;
+      flex:1 1 0;
+      max-width:none;
     }
     .day-tab .day-name{
-      font-size:9px;
+      font-size:8px;
+      line-height:1;
+      margin-bottom:1px;
     }
     .day-tab .day-num{
-      font-size:14px;
+      font-size:12px;
+      line-height:1.1;
+      margin-top:1px;
+    }
+    .week-header{
+      font-size:10px;
+      padding:0 6px;
+      min-width:60px;
+    }
+    .nav-arrow{
+      padding:4px 6px;
+      font-size:12px;
+      min-width:32px;
     }
     .filter-group{
       flex:1 1 100%;
     }
+  }
+  
+  /* Extra small mobile - make even more compact */
+  @media (max-width:360px){
+    .day-selector{
+      padding:3px 1px;
+    }
+    .day-tab{
+      padding:3px 2px;
+    }
+    .day-tab .day-name{
+      font-size:7px;
+    }
+    .day-tab .day-num{
+      font-size:11px;
+    }
     .week-header{
-      font-size:12px;
+      font-size:9px;
+      padding:0 4px;
+      min-width:50px;
     }
     .nav-arrow{
-      padding:4px 8px;
-      font-size:14px;
+      padding:3px 4px;
+      font-size:11px;
+      min-width:28px;
     }
   }
