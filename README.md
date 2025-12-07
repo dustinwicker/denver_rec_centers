@@ -17,7 +17,7 @@ A web-based calendar for viewing Denver Recreation Center schedules with filteri
 
 ## Live Demo
 
-[View the calendar](https://dustinwicker.github.io/denver-rec-centers/)
+[View the website](https://dustinwicker.github.io/denver_rec_centers/)
 
 ## Quick Start
 
