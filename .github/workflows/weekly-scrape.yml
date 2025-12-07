@@ -1,9 +1,11 @@
 name: Weekly Schedule Scrape
 
 on:
-  # Run every Sunday at 6 AM MST (13:00 UTC)
+  # Run every Sunday and Wednesday at 6 AM MST (13:00 UTC)
+  # Sunday = 0, Wednesday = 3
   schedule:
-    - cron: '0 13 * * 0'
+    - cron: '0 13 * * 0'  # Sunday at 6 AM MST
+    - cron: '0 13 * * 3'  # Wednesday at 6 AM MST
   
   # Allow manual trigger from GitHub Actions UI
   workflow_dispatch:
@@ -46,6 +48,6 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add data/*.json
-          git commit -m "Weekly schedule update: $(date +%Y-%m-%d)"
+          git commit -m "Schedule update: $(date +%Y-%m-%d)"
           git push
 
