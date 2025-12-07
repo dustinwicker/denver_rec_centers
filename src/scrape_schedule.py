@@ -293,7 +293,54 @@ def scrape_schedule():
         if dates:
             week_start = datetime.fromisoformat(dates[0]).date()
             week_end = datetime.fromisoformat(dates[-1]).date()
-            save_week_files(all_events, week_start, week_end)
+            week_info = save_week_files(all_events, week_start, week_end)
+            
+            # Update master manifest to include this week
+            master_file = DATA_DIR / "master_manifest.json"
+            if master_file.exists():
+                with open(master_file, 'r') as f:
+                    master = json.load(f)
+            else:
+                master = {'weeks': [], 'current_week': None}
+            
+            # Add or update this week in the list
+            week_files = [w['file'] for w in master['weeks']]
+            if week_info['file'] not in week_files:
+                master['weeks'].append(week_info)
+            else:
+                # Update existing week
+                for i, w in enumerate(master['weeks']):
+                    if w['file'] == week_info['file']:
+                        master['weeks'][i] = week_info
+                        break
+            
+            # Sort weeks by start date
+            master['weeks'] = sorted(master['weeks'], key=lambda w: w['week_start'])
+            
+            # Update current week
+            today = datetime.now().date().isoformat()
+            for week in master['weeks']:
+                if week['week_start'] <= today <= week['week_end']:
+                    master['current_week'] = week['file']
+                    break
+            
+            # Update generated timestamp
+            master['generated'] = datetime.now().isoformat()
+            
+            # Save master manifest
+            with open(master_file, 'w', encoding='utf-8') as f:
+                json.dump(master, f, indent=2)
+            print(f"Updated master_manifest.json (current week: {master['current_week']})")
+            
+            # Also update week_manifest.json for backwards compatibility
+            if master['current_week']:
+                current_week_file = DATA_DIR / master['current_week']
+                if current_week_file.exists():
+                    with open(current_week_file, 'r') as f:
+                        current_week_data = json.load(f)
+                    with open(DATA_DIR / 'week_manifest.json', 'w') as f:
+                        json.dump(current_week_data, f, indent=2)
+                    print("Updated week_manifest.json to current week")
     
     return all_events
 
