@@ -15,9 +15,9 @@ A web-based calendar for viewing Denver Recreation Center schedules with filteri
 - 🎟️ **Sign Up Links** - Direct links to reserve classes that require sign-up
 - ❌ **Cancelled Class Indicators** - Visual indicators for cancelled classes with option to hide them
 
-## Live Demo
+## Official Website
 
-[View the website](https://dustinwicker.github.io/denver_rec_centers/)
+[View the calendar](https://dustinwicker.github.io/denver_rec_centers/)
 
 ## Quick Start
 
