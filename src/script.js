@@ -1301,10 +1301,10 @@
     
     dayTabsEl.innerHTML = '';
     
-    // Get month name from first day
-    const firstDay = weekManifest.days[0];
-    if (firstDay) {
-      const dateParts = firstDay.display_date.split(' ');
+    // Get month name from currently selected day (not first day)
+    const selectedDay = weekManifest.days[currentDayIndex] || weekManifest.days[0];
+    if (selectedDay) {
+      const dateParts = selectedDay.display_date.split(' ');
       weekHeaderEl.textContent = dateParts[1]; // Month name
     }
     
@@ -1327,7 +1327,7 @@
       tab.addEventListener('click', () => {
         currentDayIndex = index;
         loadDayData(day.file);
-        renderDayTabs();
+        renderDayTabs(); // This will update the month header
       });
       
       dayTabsEl.appendChild(tab);
