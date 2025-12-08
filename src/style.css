@@ -385,6 +385,7 @@
 }
 :root.dark .dropdown-item{
   border-bottom-color:#1e293b;
+  color:#e2e8f0;
 }
 :root.dark .dropdown-item:hover{
   background:rgba(255,255,255,0.05);
@@ -395,9 +396,13 @@
 :root.dark .dropdown-item.select-all-item{
   background:rgba(59,130,246,0.1);
   border-bottom-color:#1e293b;
+  color:#e2e8f0;
 }
 :root.dark .dropdown-item.select-all-item:hover{
   background:rgba(59,130,246,0.15);
+}
+:root.dark .dropdown-item span{
+  color:#e2e8f0;
 }
 :root.dark .dropdown-separator{
   background:#1e293b;
@@ -421,7 +426,8 @@
   font-size:11px;
   color:var(--muted);
   white-space:nowrap;
-  margin-left:4px;
+  margin-left:2px;
+  margin-right:2px;
 }
 .hide-cancelled-label input[type="checkbox"]{
   width:12px;
