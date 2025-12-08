@@ -1112,7 +1112,11 @@
   let selectedGyms = [];
   let selectedClasses = []; // Empty = show all classes
   let hideCancelled = true;
+  let hideNonClasses = false; // Hide non-class activities like "Pool Closed", "Gym Closed"
   let filtersInitialized = false;
+  
+  // List of non-class activities (not actual classes/activities)
+  const NON_CLASSES = ['Pool Closed', 'Gym Closed'];
 
   function setupFilters() {
     if (filtersInitialized) {
@@ -1127,6 +1131,7 @@
     const resetClassBtn = qs('#reset-class-filter');
     const resetSearchBtn = qs('#reset-search');
     const hideCancelledCheckbox = qs('#hide-cancelled');
+    const hideNonClassesCheckbox = qs('#hide-non-classes');
 
     // Setup gym dropdown (no limit now since we use distance sorting)
     setupDropdown('gym', allGyms, Infinity);
@@ -1139,6 +1144,12 @@
     // Hide cancelled checkbox
     hideCancelledCheckbox.addEventListener('change', () => {
       hideCancelled = hideCancelledCheckbox.checked;
+      applyFilters();
+    });
+    
+    // Hide non-classes checkbox
+    hideNonClassesCheckbox.addEventListener('change', () => {
+      hideNonClasses = hideNonClassesCheckbox.checked;
       applyFilters();
     });
     
@@ -1207,6 +1218,42 @@
     
     menu.innerHTML = '';
     
+    // Add "Select All" option for class dropdown
+    if (type === 'class') {
+      const selectAllDiv = el('div', 'dropdown-item select-all-item');
+      const allSelected = selected.length === items.length && items.length > 0;
+      
+      const selectAllCheckbox = document.createElement('input');
+      selectAllCheckbox.type = 'checkbox';
+      selectAllCheckbox.checked = allSelected;
+      
+      const selectAllLabel = document.createElement('span');
+      selectAllLabel.textContent = 'Select All';
+      selectAllLabel.style.fontWeight = 'bold';
+      
+      selectAllDiv.appendChild(selectAllCheckbox);
+      selectAllDiv.appendChild(selectAllLabel);
+      
+      selectAllDiv.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (allSelected) {
+          // Deselect all
+          selectedClasses = [];
+        } else {
+          // Select all
+          selectedClasses = [...items];
+        }
+        updateDropdown(type, items, maxItems);
+        applyFilters();
+      });
+      
+      menu.appendChild(selectAllDiv);
+      
+      // Add separator
+      const separator = el('div', 'dropdown-separator');
+      menu.appendChild(separator);
+    }
+    
     items.forEach(item => {
       const div = el('div', 'dropdown-item');
       const isChecked = selected.includes(item);
@@ -1264,6 +1311,11 @@
     // Filter out cancelled events if checkbox is checked
     if (hideCancelled) {
       filtered = filtered.filter(d => !d.cancelled);
+    }
+    
+    // Filter out non-class activities if checkbox is checked
+    if (hideNonClasses) {
+      filtered = filtered.filter(d => !NON_CLASSES.includes(d.className));
     }
     
     // If specific gyms are manually selected, use those
