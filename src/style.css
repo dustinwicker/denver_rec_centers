@@ -412,7 +412,7 @@
 .search-group{
   flex-direction:row !important;
   align-items:center !important;
-  gap:6px !important;
+  gap:4px !important;
 }
 .search-group input{
   min-width:80px !important;
@@ -426,8 +426,8 @@
   font-size:11px;
   color:var(--muted);
   white-space:nowrap;
-  margin-left:2px;
-  margin-right:2px;
+  margin-left:0;
+  margin-right:0;
 }
 .hide-cancelled-label input[type="checkbox"]{
   width:12px;
