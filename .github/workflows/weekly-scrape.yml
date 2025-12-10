@@ -54,13 +54,20 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          # Ensure we're on main branch
-          git checkout main
-          # Fetch and pull latest with rebase, autostash will handle our uncommitted files
+          # Fetch latest before doing anything
           git fetch origin main
-          git pull --rebase --autostash origin main
+          # Stash our uncommitted changes
+          git stash push -m "scraped-data" data/
+          # Reset to match origin/main exactly
+          git reset --hard origin/main
+          # Reapply our stashed changes
+          git stash pop
           # Add and commit our scraped files
           git add data/*.json
           git commit -m "Schedule update: $(date +%Y-%m-%d)"
-          # Push to main (use --force-with-lease as safety net)
-          git push --force-with-lease origin main
+          # Fetch one more time right before push
+          git fetch origin main
+          # Rebase our commit on top of latest origin/main
+          git rebase origin/main
+          # Push to main
+          git push origin main
