@@ -55,19 +55,24 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
-          # THE KEY FIX: Sync with remote before committing
+          # Sync with remote BEFORE committing to ensure we start from latest state.
+          # This prevents "rejected (fetch first)" errors by making sure our local
+          # branch matches the remote before we create our commit.
           git fetch origin main
-          git stash push data/ || true
-          git reset --hard origin/main
-          git stash pop || true
+          git stash push data/ || true  # Temporarily save scraped files
+          git reset --hard origin/main  # Match remote exactly
+          git stash pop || true         # Reapply our scraped files
           
-          # Commit our changes
+          # Commit our changes on top of the latest remote state
           git add data/*.json
           git commit -m "Schedule update: $(date +%Y-%m-%d)"
           
-          # THE KEY FIX: Sync again and rebase before pushing
+          # Sync AGAIN before pushing to handle race conditions where the remote
+          # might have been updated between our commit and push (e.g., if another
+          # workflow run started simultaneously). Rebase moves our commit on top
+          # of any new remote commits.
           git fetch origin main
           git rebase origin/main
           
-          # Push
+          # Push the rebased commit
           git push origin main

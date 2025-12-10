@@ -54,7 +54,20 @@ denver_rec_centers/
 
 ## Updating Schedule Data
 
-### 1. Scrape the latest schedule
+### Automated Updates (GitHub Actions)
+
+The schedule is automatically updated via GitHub Actions:
+- **Runs every Sunday and Wednesday at 6 AM MST** to capture the latest week's schedule
+- Can be manually triggered from the [Actions tab](https://github.com/dustinwicker/denver_rec_centers/actions)
+- The workflow scrapes the schedule, commits the changes, and pushes to the repository
+
+**Note:** The workflow uses a two-stage sync process to handle concurrent updates:
+1. Syncs with remote before committing (ensures we start from latest state)
+2. Syncs again before pushing (handles race conditions with concurrent runs)
+
+### Manual Updates
+
+#### 1. Scrape the latest schedule
 
 ```bash
 cd src
@@ -63,7 +76,7 @@ python3 scrape_schedule.py
 
 This uses Selenium to scrape the schedule from [GroupExPro](https://groupexpro.com/schedule/522/) and saves raw data to the `data/` folder.
 
-### 2. Parse into daily JSON files
+#### 2. Parse into daily JSON files
 
 ```bash
 python3 manual_json.py
@@ -71,7 +84,7 @@ python3 manual_json.py
 
 This creates individual JSON files for each day of the week.
 
-### 3. Update distances (optional)
+#### 3. Update distances (optional)
 
 If you want to update distances from a different origin:
 
