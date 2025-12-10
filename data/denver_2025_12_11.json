@@ -1053,7 +1053,7 @@
       "end_time": "11:15am",
       "class_name": "Ai Chi",
       "studio": "Lap Pool",
-      "instructor": "",
+      "instructor": "Felicia J",
       "location": "Green Valley Ranch",
       "category": "AQ",
       "cancelled": false,
@@ -1613,6 +1613,17 @@
       "start_time": "1:00pm",
       "end_time": "3:00pm",
       "class_name": "AOA: Bingo",
+      "studio": "Multi-Purpose Room",
+      "instructor": "",
+      "location": "Southwest",
+      "category": "AOA",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "1:00pm",
+      "end_time": "3:00pm",
+      "class_name": "AOA: Bingo",
       "studio": "Multi Purpose Room",
       "instructor": "",
       "location": "College View",
@@ -1649,17 +1660,6 @@
       "studio": "Studio 1",
       "instructor": "NA - No Instructor",
       "location": "Montclair",
-      "category": "AOA",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "1:00pm",
-      "end_time": "3:00pm",
-      "class_name": "AOA: Bingo",
-      "studio": "Multi-Purpose Room",
-      "instructor": "",
-      "location": "Southwest",
       "category": "AOA",
       "cancelled": false,
       "requires_signup": false
@@ -2201,7 +2201,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": false
     },
     {
       "start_time": "5:00pm",
