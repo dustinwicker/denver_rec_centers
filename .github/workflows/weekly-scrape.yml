@@ -52,22 +52,32 @@ jobs:
       - name: Commit and push changes
         if: steps.check_changes.outputs.changes == 'true'
         run: |
+          set -e  # Exit on error
+          echo "=== Setting up git config ==="
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          # Fetch latest before doing anything
+          
+          echo "=== Fetching latest from origin/main ==="
           git fetch origin main
-          # Stash our uncommitted changes
-          git stash push -m "scraped-data" data/
-          # Reset to match origin/main exactly
+          
+          echo "=== Stashing uncommitted changes ==="
+          git stash push -m "scraped-data-$(date +%s)" data/ || echo "Nothing to stash"
+          
+          echo "=== Resetting to origin/main ==="
           git reset --hard origin/main
-          # Reapply our stashed changes
-          git stash pop
-          # Add and commit our scraped files
+          
+          echo "=== Reapplying stashed changes ==="
+          git stash pop || echo "No stash to pop"
+          
+          echo "=== Adding and committing scraped files ==="
           git add data/*.json
-          git commit -m "Schedule update: $(date +%Y-%m-%d)"
-          # Fetch one more time right before push
+          git commit -m "Schedule update: $(date +%Y-%m-%d)" || echo "Nothing to commit"
+          
+          echo "=== Fetching again before push ==="
           git fetch origin main
-          # Rebase our commit on top of latest origin/main
-          git rebase origin/main
-          # Push to main
+          
+          echo "=== Rebasing on origin/main ==="
+          git rebase origin/main || echo "Rebase not needed"
+          
+          echo "=== Pushing to origin/main ==="
           git push origin main
