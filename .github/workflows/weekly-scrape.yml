@@ -53,26 +53,15 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          # Fetch latest and ensure we're up to date
-          git fetch origin main
-          # Reset to origin/main but keep our working directory changes
-          git reset --soft origin/main
+          # Use pull with rebase and autostash to automatically handle syncing
+          # This will stash our changes, pull latest, then reapply them
+          git pull --rebase --autostash origin main || true
           # Add and commit our scraped files
           git add data/*.json
-          git commit -m "Schedule update: $(date +%Y-%m-%d)"
-          # Fetch again right before pushing to handle race conditions
+          git commit -m "Schedule update: $(date +%Y-%m-%d)" || echo "No changes to commit"
+          # Fetch latest one more time before pushing
           git fetch origin main
-          # Rebase our commit on top of latest origin/main if needed
-          git rebase origin/main || git reset --hard origin/main && git add data/*.json && git commit -m "Schedule update: $(date +%Y-%m-%d)"
-          # Push to main with retry logic
-          for i in 1 2 3; do
-            git fetch origin main
-            git rebase origin/main 2>/dev/null || true
-            if git push origin main; then
-              echo "Push succeeded on attempt $i"
-              break
-            else
-              echo "Push failed on attempt $i, retrying..."
-              sleep 2
-            fi
-          done
+          # Rebase our commit on top of latest if needed
+          git rebase origin/main || git pull --rebase origin main
+          # Push to main
+          git push origin main
