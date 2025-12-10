@@ -21,6 +21,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
       
@@ -53,15 +54,13 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          # Use pull with rebase and autostash to automatically handle syncing
-          # This will stash our changes, pull latest, then reapply them
-          git pull --rebase --autostash origin main || true
+          # Ensure we're on main branch
+          git checkout main
+          # Fetch and pull latest with rebase, autostash will handle our uncommitted files
+          git fetch origin main
+          git pull --rebase --autostash origin main
           # Add and commit our scraped files
           git add data/*.json
-          git commit -m "Schedule update: $(date +%Y-%m-%d)" || echo "No changes to commit"
-          # Fetch latest one more time before pushing
-          git fetch origin main
-          # Rebase our commit on top of latest if needed
-          git rebase origin/main || git pull --rebase origin main
-          # Push to main
-          git push origin main
+          git commit -m "Schedule update: $(date +%Y-%m-%d)"
+          # Push to main (use --force-with-lease as safety net)
+          git push --force-with-lease origin main
