@@ -68,16 +68,89 @@ def scrape_week(target_date=None, driver=None):
         print(f"URL: {url}")
         driver.get(url)
         
-        # Wait for page to load
+        # Wait for page to load - need to wait longer for day tabs to appear
         print("Waiting for page to load...")
-        time.sleep(5)
+        time.sleep(10)  # Increased wait time to ensure day tabs are loaded
         
-        # Find day tabs
-        day_tabs = driver.find_elements(By.CSS_SELECTOR, ".day-tab, [class*='day-selector'] > div, .calendar-day")
-        if not day_tabs:
-            day_tabs = driver.find_elements(By.XPATH, "//div[contains(@class, 'day')]")
+        # Remove overlay that blocks clicks (do this early)
+        try:
+            overlay = driver.find_element(By.ID, "overlay-overhaul")
+            if overlay.is_displayed():
+                driver.execute_script("arguments[0].style.display = 'none';", overlay)
+                print("Removed blocking overlay")
+                time.sleep(0.5)
+        except:
+            pass  # No overlay found
         
-        print(f"Found {len(day_tabs)} day tabs")
+        # Wait for page to be ready and day tabs to be present
+        day_tabs = []
+        try:
+            # Wait and capture the elements when found
+            def find_day_tabs(d):
+                tabs = d.find_elements(By.XPATH, "//div[contains(@class, 'day-column')]")
+                if len(tabs) >= 7:
+                    return tabs
+                return False
+            
+            day_tabs = WebDriverWait(driver, 15).until(find_day_tabs)
+            print(f"Day tabs found after wait: {len(day_tabs)}")
+            time.sleep(2)  # Additional wait after condition is met
+        except:
+            print("WebDriverWait timed out, trying to find tabs manually...")
+            time.sleep(3)  # Wait a bit more if condition times out
+            # Find day tabs manually with fallbacks
+            day_tabs = driver.find_elements(By.XPATH, "//div[contains(@class, 'day-column')]")
+            if not day_tabs or len(day_tabs) < 7:
+                # Fallback: find by data-day attribute
+                day_tabs = driver.find_elements(By.XPATH, "//div[@data-day]")
+            if not day_tabs or len(day_tabs) < 7:
+                # Fallback: find any div with 'day' in class
+                day_tabs = driver.find_elements(By.XPATH, "//div[contains(@class, 'day')]")
+        
+        # Only use the tabs if we found at least 7
+        if not day_tabs or len(day_tabs) < 7:
+            print(f"Warning: Only found {len(day_tabs)} day tabs, expected 7")
+        
+        # Filter to only get unique, clickable tabs (avoid duplicates and child elements like month-day)
+        unique_tabs = []
+        seen_texts = set()
+        for tab in day_tabs:
+            try:
+                tab_class = tab.get_attribute('class') or ''
+                tab_id = tab.get_attribute('id') or ''
+                
+                # Skip month-day elements (child elements, not the actual tabs)
+                if 'month-day' in tab_class or tab_id.startswith('GXPSliderDate'):
+                    continue
+                
+                # If it's a day-column, include it (these are the actual tabs)
+                if 'day-column' in tab_class:
+                    tab_text = tab.text.strip()
+                    # Use first line of text for comparison (day-column has "Sun\n14" format)
+                    first_line = tab_text.split('\n')[0] if '\n' in tab_text else tab_text
+                    if first_line not in seen_texts:
+                        unique_tabs.append(tab)
+                        seen_texts.add(first_line)
+                    continue
+                
+                # For other elements, check if they look like day tabs
+                tab_text = tab.text.strip()
+                # Skip if it's just a number (likely a child element)
+                if tab_text.isdigit() and len(tab_text) <= 2:
+                    continue
+                # Skip if we've seen this text before
+                if tab_text in seen_texts:
+                    continue
+                # Only include if it looks like a day tab (has day name)
+                if any(day in tab_text for day in ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']):
+                    unique_tabs.append(tab)
+                    seen_texts.add(tab_text)
+            except Exception as e:
+                print(f"  Error filtering tab: {e}")
+                continue
+        
+        day_tabs = unique_tabs[:7]  # Limit to 7 days max
+        print(f"Found {len(day_tabs)} day tabs after filtering")
         
         # If we can't find clickable day tabs, just parse the current view
         if len(day_tabs) < 2:
@@ -92,15 +165,37 @@ def scrape_week(target_date=None, driver=None):
                 try:
                     tab_text = tab.text.strip()
                     print(f"Clicking day tab {i+1}: {tab_text}")
-                    tab.click()
-                    time.sleep(3)  # Wait for content to load
+                    
+                    # Remove overlay again before each click (it might reappear)
+                    try:
+                        overlay = driver.find_element(By.ID, "overlay-overhaul")
+                        if overlay.is_displayed():
+                            driver.execute_script("arguments[0].style.display = 'none';", overlay)
+                    except:
+                        pass
+                    
+                    # Scroll into view and click using JavaScript to avoid interception
+                    driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", tab)
+                    time.sleep(0.5)
+                    
+                    # Use JavaScript click to avoid overlay interception
+                    driver.execute_script("arguments[0].click();", tab)
+                    time.sleep(7)  # Wait longer for content to load
                     
                     events = parse_current_day(driver)
                     if events:
                         for date_key, day_data in events.items():
+                            event_count = len(day_data.get('events', []))
                             all_events[date_key] = day_data
+                            print(f"  ✓ Parsed {date_key}: {event_count} events")
+                            if event_count == 0:
+                                print(f"    ⚠️  WARNING: No events found for {date_key}")
+                    else:
+                        print(f"  ⚠️  WARNING: No events parsed for tab {i+1} ({tab_text})")
                 except Exception as e:
-                    print(f"Error clicking tab {i}: {e}")
+                    print(f"❌ Error clicking tab {i+1} ({tab_text}): {e}")
+                    import traceback
+                    traceback.print_exc()
         
         # If still no events, try parsing the full page text
         if not all_events:
