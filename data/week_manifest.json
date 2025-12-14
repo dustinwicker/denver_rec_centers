@@ -1,29 +1,8 @@
 {
-  "week_start": "2025-12-07",
-  "week_end": "2025-12-13",
-  "display_range": "December 07 - December 13, 2025",
+  "week_start": "2025-12-10",
+  "week_end": "2025-12-16",
+  "display_range": "December 10 - December 16, 2025",
   "days": [
-    {
-      "date": "2025-12-07",
-      "day_name": "Sunday",
-      "display_date": "Sunday, December 7, 2025",
-      "event_count": 38,
-      "file": "denver_2025_12_07.json"
-    },
-    {
-      "date": "2025-12-08",
-      "day_name": "Monday",
-      "display_date": "Monday, December 8, 2025",
-      "event_count": 221,
-      "file": "denver_2025_12_08.json"
-    },
-    {
-      "date": "2025-12-09",
-      "day_name": "Tuesday",
-      "display_date": "Tuesday, December 9, 2025",
-      "event_count": 248,
-      "file": "denver_2025_12_09.json"
-    },
     {
       "date": "2025-12-10",
       "day_name": "Wednesday",
@@ -51,6 +30,27 @@
       "display_date": "Saturday, December 13, 2025",
       "event_count": 102,
       "file": "denver_2025_12_13.json"
+    },
+    {
+      "date": "2025-12-14",
+      "day_name": "Sunday",
+      "display_date": "Sunday, December 14, 2025",
+      "event_count": 38,
+      "file": "denver_2025_12_14.json"
+    },
+    {
+      "date": "2025-12-15",
+      "day_name": "Monday",
+      "display_date": "Monday, December 15, 2025",
+      "event_count": 221,
+      "file": "denver_2025_12_15.json"
+    },
+    {
+      "date": "2025-12-16",
+      "day_name": "Tuesday",
+      "display_date": "Tuesday, December 16, 2025",
+      "event_count": 249,
+      "file": "denver_2025_12_16.json"
     }
   ]
 }

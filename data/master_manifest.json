@@ -1,5 +1,5 @@
 {
-  "generated": "2025-12-10T17:47:06.692757",
+  "generated": "2025-12-14T13:23:21.313333",
   "weeks": [
     {
       "file": "manifest_2025_11_30_to_2025_12_06.json",
@@ -24,7 +24,15 @@
       "display_range": "December 10 - December 16, 2025",
       "day_count": 7,
       "event_count": 1260
+    },
+    {
+      "file": "manifest_2025_12_14_to_2025_12_20.json",
+      "week_start": "2025-12-14",
+      "week_end": "2025-12-20",
+      "display_range": "December 14 - December 20, 2025",
+      "day_count": 7,
+      "event_count": 796
     }
   ],
-  "current_week": "manifest_2025_12_07_to_2025_12_13.json"
+  "current_week": "manifest_2025_12_10_to_2025_12_16.json"
 }
