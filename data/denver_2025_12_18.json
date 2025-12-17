@@ -2201,7 +2201,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": false
     },
     {
       "start_time": "5:00pm",

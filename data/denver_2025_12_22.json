@@ -1,7 +1,7 @@
 {
-  "day_name": "Wednesday",
-  "date": "2025-12-17",
-  "display_date": "Wednesday, December 17, 2025",
+  "day_name": "Monday",
+  "date": "2025-12-22",
+  "display_date": "Monday, December 22, 2025",
   "events": [
     {
       "start_time": "5:30am",
@@ -48,6 +48,17 @@
       "requires_signup": false
     },
     {
+      "start_time": "5:45am",
+      "end_time": "6:30am",
+      "class_name": "HIIT Cycle",
+      "studio": "Spin Studio",
+      "instructor": "Andrea C",
+      "location": "Central Park",
+      "category": "FIT",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
       "start_time": "6:00am",
       "end_time": "10:00am",
       "class_name": "Lap Swim",
@@ -71,22 +82,22 @@
     },
     {
       "start_time": "6:00am",
-      "end_time": "7:30am",
+      "end_time": "8:00pm",
       "class_name": "Open Gym",
       "studio": "Gym",
       "instructor": "NA - No Instructor",
-      "location": "Scheitler",
+      "location": "Ashland",
       "category": "",
       "cancelled": false,
       "requires_signup": false
     },
     {
       "start_time": "6:00am",
-      "end_time": "8:15am",
-      "class_name": "Full Court Basketball",
+      "end_time": "9:00am",
+      "class_name": "Open Gym",
       "studio": "Gym",
       "instructor": "NA - No Instructor",
-      "location": "Washington Park",
+      "location": "Glenarm",
       "category": "",
       "cancelled": false,
       "requires_signup": false
@@ -115,6 +126,17 @@
     },
     {
       "start_time": "6:00am",
+      "end_time": "9:00am",
+      "class_name": "Pickleball",
+      "studio": "Gym",
+      "instructor": "NA - No Instructor",
+      "location": "Montclair",
+      "category": "CWS",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "6:00am",
       "end_time": "8:45am",
       "class_name": "Lap Swim",
       "studio": "Lap and Leisure Pool",
@@ -123,6 +145,17 @@
       "category": "AQ",
       "cancelled": false,
       "requires_signup": false
+    },
+    {
+      "start_time": "6:00am",
+      "end_time": "7:00am",
+      "class_name": "Total Body Conditioning",
+      "studio": "Fitness Studio",
+      "instructor": "Melissa K",
+      "location": "Carla Madison",
+      "category": "FIT",
+      "cancelled": false,
+      "requires_signup": true
     },
     {
       "start_time": "6:00am",
@@ -137,11 +170,11 @@
     },
     {
       "start_time": "6:00am",
-      "end_time": "9:00am",
+      "end_time": "8:30pm",
       "class_name": "Open Gym",
       "studio": "Gym",
       "instructor": "NA - No Instructor",
-      "location": "Ashland",
+      "location": "Scheitler",
       "category": "",
       "cancelled": false,
       "requires_signup": false
@@ -176,17 +209,6 @@
       "instructor": "NA - No Instructor",
       "location": "Green Valley Ranch",
       "category": "AQ",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "6:00am",
-      "end_time": "7:00am",
-      "class_name": "Open Gym",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "Montclair",
-      "category": "",
       "cancelled": false,
       "requires_signup": false
     },
@@ -214,17 +236,6 @@
     },
     {
       "start_time": "6:00am",
-      "end_time": "8:00am",
-      "class_name": "Full Court Basketball",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "Glenarm",
-      "category": "",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "6:00am",
       "end_time": "4:50pm",
       "class_name": "Open Gym",
       "studio": "Gym",
@@ -235,15 +246,15 @@
       "requires_signup": false
     },
     {
-      "start_time": "6:00am",
-      "end_time": "6:45am",
+      "start_time": "6:15am",
+      "end_time": "7:00am",
       "class_name": "HIIT Cycle",
       "studio": "Spin Studio",
-      "instructor": "Melissa K",
+      "instructor": "Catherine W",
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": false
+      "requires_signup": true
     },
     {
       "start_time": "6:30am",
@@ -258,11 +269,44 @@
     },
     {
       "start_time": "6:30am",
+      "end_time": "7:45pm",
+      "class_name": "Open Gym",
+      "studio": "Gym",
+      "instructor": "NA - No Instructor",
+      "location": "Twentieth Street",
+      "category": "",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "6:30am",
       "end_time": "7:00am",
       "class_name": "Lap Swim",
       "studio": "Lap Pool",
       "instructor": "NA - No Instructor",
       "location": "Twentieth Street",
+      "category": "AQ",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "6:30am",
+      "end_time": "7:30am",
+      "class_name": "Group Training",
+      "studio": "Gym",
+      "instructor": "Samantha B",
+      "location": "Washington Park",
+      "category": "FIT",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "6:30am",
+      "end_time": "6:15pm",
+      "class_name": "Lap Swim",
+      "studio": "Lap Pool",
+      "instructor": "NA - No Instructor",
+      "location": "Central Park",
       "category": "AQ",
       "cancelled": false,
       "requires_signup": false
@@ -290,35 +334,24 @@
       "requires_signup": false
     },
     {
-      "start_time": "6:30am",
-      "end_time": "5:45pm",
-      "class_name": "Lap Swim",
-      "studio": "Lap Pool",
-      "instructor": "NA - No Instructor",
-      "location": "Central Park",
-      "category": "AQ",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
       "start_time": "7:00am",
-      "end_time": "10:00am",
+      "end_time": "4:45pm",
       "class_name": "Open Gym",
       "studio": "Gym",
       "instructor": "NA - No Instructor",
-      "location": "Cook Park",
+      "location": "Hiawatha Davis Jr.",
       "category": "",
       "cancelled": false,
       "requires_signup": false
     },
     {
       "start_time": "7:00am",
-      "end_time": "9:00am",
-      "class_name": "Full Court Basketball",
+      "end_time": "12:00pm",
+      "class_name": "Pickleball (INT/ADV)",
       "studio": "Gym",
       "instructor": "NA - No Instructor",
       "location": "Eisenhower",
-      "category": "",
+      "category": "CWS",
       "cancelled": false,
       "requires_signup": false
     },
@@ -346,17 +379,6 @@
     },
     {
       "start_time": "7:00am",
-      "end_time": "9:00am",
-      "class_name": "Pickleball",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "Twentieth Street",
-      "category": "CWS",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "7:00am",
       "end_time": "6:30pm",
       "class_name": "Adult Swim",
       "studio": "Indoor Therapy",
@@ -379,34 +401,12 @@
     },
     {
       "start_time": "7:00am",
-      "end_time": "3:00pm",
+      "end_time": "3:30pm",
       "class_name": "Open Gym",
       "studio": "Gym",
       "instructor": "NA - No Instructor",
       "location": "Carla Madison",
       "category": "",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "7:00am",
-      "end_time": "4:15pm",
-      "class_name": "Open Gym",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "Hiawatha Davis Jr.",
-      "category": "",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "7:15am",
-      "end_time": "10:15am",
-      "class_name": "Pickleball",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "Montclair",
-      "category": "CWS",
       "cancelled": false,
       "requires_signup": false
     },
@@ -422,24 +422,46 @@
       "requires_signup": false
     },
     {
-      "start_time": "7:30am",
-      "end_time": "10:00am",
-      "class_name": "Pickleball",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "Scheitler",
-      "category": "CWS",
+      "start_time": "7:15am",
+      "end_time": "8:15am",
+      "class_name": "Vinyasa Yoga",
+      "studio": "Multi Purpose Room",
+      "instructor": "",
+      "location": "Montclair",
+      "category": "FIT",
       "cancelled": false,
       "requires_signup": false
     },
     {
       "start_time": "7:30am",
-      "end_time": "5:45pm",
+      "end_time": "8:30am",
+      "class_name": "Vinyasa Yoga",
+      "studio": "Ballroom",
+      "instructor": "Hannah W",
+      "location": "Scheitler",
+      "category": "FIT",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "7:30am",
+      "end_time": "7:30pm",
       "class_name": "Open Gym",
       "studio": "Gym",
       "instructor": "NA - No Instructor",
       "location": "Central Park",
       "category": "",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "7:45am",
+      "end_time": "8:45am",
+      "class_name": "Yoga II",
+      "studio": "Fitness Studio",
+      "instructor": "Michelle S",
+      "location": "Central Park",
+      "category": "FIT",
       "cancelled": false,
       "requires_signup": false
     },
@@ -451,6 +473,17 @@
       "instructor": "NA - No Instructor",
       "location": "Twentieth Street",
       "category": "AQ",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "7:45am",
+      "end_time": "8:45am",
+      "class_name": "Open Gym",
+      "studio": "Gym",
+      "instructor": "NA - No Instructor",
+      "location": "Washington Park",
+      "category": "",
       "cancelled": false,
       "requires_signup": false
     },
@@ -473,17 +506,6 @@
       "instructor": "NA - No Instructor",
       "location": "Carla Madison",
       "category": "AQ",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "8:00am",
-      "end_time": "12:30pm",
-      "class_name": "Open Gym",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "Glenarm",
-      "category": "",
       "cancelled": false,
       "requires_signup": false
     },
@@ -512,17 +534,6 @@
     {
       "start_time": "8:30am",
       "end_time": "9:30am",
-      "class_name": "Yoga I",
-      "studio": "Gym",
-      "instructor": "Clifford W",
-      "location": "Washington Park",
-      "category": "FIT",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "8:30am",
-      "end_time": "9:30am",
       "class_name": "Aqua Aerobics",
       "studio": "Lap Pool",
       "instructor": "",
@@ -532,35 +543,13 @@
       "requires_signup": false
     },
     {
-      "start_time": "8:30am",
-      "end_time": "9:30am",
+      "start_time": "9:00am",
+      "end_time": "10:00am",
       "class_name": "Zumba\u00ae",
       "studio": "Fitness Studio",
-      "instructor": "Linda M",
+      "instructor": "Beth L",
       "location": "Central Park",
       "category": "FIT",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "8:45am",
-      "end_time": "9:45am",
-      "class_name": "AOA: Functional Fit 50+",
-      "studio": "Ballroom",
-      "instructor": "Allan M",
-      "location": "Platt Park",
-      "category": "AOA",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "9:00am",
-      "end_time": "10:45am",
-      "class_name": "Open Gym",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "Harvey Park",
-      "category": "",
       "cancelled": false,
       "requires_signup": false
     },
@@ -577,17 +566,6 @@
     },
     {
       "start_time": "9:00am",
-      "end_time": "10:00pm",
-      "class_name": "Club: Social Group",
-      "studio": "Multi Purpose Room",
-      "instructor": "NA - No Instructor",
-      "location": "Montclair",
-      "category": "AOA",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "9:00am",
       "end_time": "10:00am",
       "class_name": "Aqua Aerobics",
       "studio": "Lap and Leisure Pool",
@@ -599,25 +577,58 @@
     },
     {
       "start_time": "9:00am",
-      "end_time": "5:45pm",
-      "class_name": "Open Gym",
+      "end_time": "12:00pm",
+      "class_name": "Pickleball",
       "studio": "Gym",
       "instructor": "NA - No Instructor",
-      "location": "Twentieth Street",
-      "category": "",
+      "location": "Glenarm",
+      "category": "CWS",
       "cancelled": false,
       "requires_signup": false
     },
     {
       "start_time": "9:00am",
-      "end_time": "11:30am",
-      "class_name": "AOA: Club: In Stiches Quilting",
-      "studio": "Lounge",
+      "end_time": "12:00pm",
+      "class_name": "Pickleball",
+      "studio": "Gym",
       "instructor": "NA - No Instructor",
-      "location": "Central Park",
-      "category": "AOA",
+      "location": "La Familia",
+      "category": "CWS",
       "cancelled": false,
       "requires_signup": false
+    },
+    {
+      "start_time": "9:00am",
+      "end_time": "10:00am",
+      "class_name": "Zumba Gold\u00ae",
+      "studio": "Multi Purpose Room",
+      "instructor": "Lanita De L",
+      "location": "Cook Park",
+      "category": "FIT",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "9:00am",
+      "end_time": "10:00am",
+      "class_name": "Zumba\u00ae",
+      "studio": "Gym",
+      "instructor": "Adriana Pardo Q",
+      "location": "Washington Park",
+      "category": "FIT",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "9:00am",
+      "end_time": "10:00am",
+      "class_name": "Shallow Water Aerobics",
+      "studio": "Lap Pool",
+      "instructor": "Linda M",
+      "location": "Green Valley Ranch",
+      "category": "AQ",
+      "cancelled": false,
+      "requires_signup": true
     },
     {
       "start_time": "9:00am",
@@ -627,17 +638,6 @@
       "instructor": "",
       "location": "Carla Madison",
       "category": "AQ",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "9:00am",
-      "end_time": "10:00am",
-      "class_name": "AOA: Circuit Fit 50+",
-      "studio": "Ballroom",
-      "instructor": "Dara M",
-      "location": "Highland",
-      "category": "AOA",
       "cancelled": false,
       "requires_signup": false
     },
@@ -656,17 +656,6 @@
       "start_time": "9:00am",
       "end_time": "10:00am",
       "class_name": "Shallow Water Aerobics",
-      "studio": "Lap Pool",
-      "instructor": "Liz S",
-      "location": "Green Valley Ranch",
-      "category": "AQ",
-      "cancelled": false,
-      "requires_signup": true
-    },
-    {
-      "start_time": "9:00am",
-      "end_time": "10:00am",
-      "class_name": "Shallow Water Aerobics",
       "studio": "Leisure Pool",
       "instructor": "",
       "location": "Green Valley Ranch",
@@ -676,12 +665,23 @@
     },
     {
       "start_time": "9:00am",
-      "end_time": "12:00pm",
-      "class_name": "Pickleball",
+      "end_time": "7:55pm",
+      "class_name": "Open Gym",
       "studio": "Gym",
       "instructor": "NA - No Instructor",
-      "location": "Ashland",
-      "category": "CWS",
+      "location": "Harvey Park",
+      "category": "",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "9:00am",
+      "end_time": "10:00am",
+      "class_name": "Zumba\u00ae",
+      "studio": "Fitness Studio",
+      "instructor": "Sofia C",
+      "location": "Eisenhower",
+      "category": "FIT",
       "cancelled": false,
       "requires_signup": false
     },
@@ -710,24 +710,13 @@
     {
       "start_time": "9:15am",
       "end_time": "10:15am",
-      "class_name": "D2G SocaFit",
+      "class_name": "Zumba\u00ae",
       "studio": "Fitness Studio",
-      "instructor": "Shenelle R",
+      "instructor": "Naomi O",
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
       "requires_signup": true
-    },
-    {
-      "start_time": "9:15am",
-      "end_time": "10:15am",
-      "class_name": "Zumba\u00ae",
-      "studio": "Multi Purpose Room",
-      "instructor": "Adriana Pardo Q",
-      "location": "Cook Park",
-      "category": "FIT",
-      "cancelled": false,
-      "requires_signup": false
     },
     {
       "start_time": "9:30am",
@@ -743,11 +732,22 @@
     {
       "start_time": "9:30am",
       "end_time": "10:30am",
-      "class_name": "AOA: Gentle Yoga 50+",
-      "studio": "Multi Purpose Room",
-      "instructor": "Michelle S",
-      "location": "Hiawatha Davis Jr.",
+      "class_name": "AOA: Cardio & Strength FIT 50+",
+      "studio": "Ballroom",
+      "instructor": "Dara M",
+      "location": "Highland",
       "category": "AOA",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "9:30am",
+      "end_time": "11:30am",
+      "class_name": "Pickleball",
+      "studio": "Gym",
+      "instructor": "NA - No Instructor",
+      "location": "5090 Broadway",
+      "category": "CWS",
       "cancelled": false,
       "requires_signup": false
     },
@@ -759,6 +759,28 @@
       "instructor": "NA - No Instructor",
       "location": "Athmar",
       "category": "CWS",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "9:30am",
+      "end_time": "10:30am",
+      "class_name": "AOA: Gentle Yoga 50+",
+      "studio": "Gym",
+      "instructor": "Michelle S",
+      "location": "Martin Luther King Jr.",
+      "category": "AOA",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "9:30am",
+      "end_time": "10:30am",
+      "class_name": "Zumba Gold\u00ae",
+      "studio": "Multi Purpose Room",
+      "instructor": "Sisley A",
+      "location": "Montclair",
+      "category": "FIT",
       "cancelled": false,
       "requires_signup": false
     },
@@ -776,28 +798,28 @@
     {
       "start_time": "9:45am",
       "end_time": "10:45am",
-      "class_name": "Open Gym",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "Washington Park",
-      "category": "",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "10:00am",
-      "end_time": "11:00am",
-      "class_name": "AOA: Cardio & Strength FIT 50+",
+      "class_name": "AOA: Gentle Yoga 50+",
       "studio": "Fitness Studio",
-      "instructor": "Christine S",
-      "location": "Central Park",
+      "instructor": "Carlos R",
+      "location": "Harvard Gulch",
       "category": "AOA",
       "cancelled": false,
       "requires_signup": false
     },
     {
       "start_time": "10:00am",
-      "end_time": "4:00pm",
+      "end_time": "11:30am",
+      "class_name": "Line Dancing",
+      "studio": "Gym",
+      "instructor": "",
+      "location": "Cook Park",
+      "category": "AC",
+      "cancelled": true,
+      "requires_signup": false
+    },
+    {
+      "start_time": "10:00am",
+      "end_time": "5:00pm",
       "class_name": "Open Gym",
       "studio": "Small Gym",
       "instructor": "NA - No Instructor",
@@ -819,12 +841,34 @@
     },
     {
       "start_time": "10:00am",
-      "end_time": "12:00pm",
-      "class_name": "Pickleball",
+      "end_time": "11:00am",
+      "class_name": "Yoga I",
+      "studio": "Multi Purpose Room",
+      "instructor": "Karyn K",
+      "location": "Glenarm",
+      "category": "FIT",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "10:00am",
+      "end_time": "5:30pm",
+      "class_name": "Open Gym",
+      "studio": "Large Gym",
+      "instructor": "NA - No Instructor",
+      "location": "St. Charles",
+      "category": "",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "10:00am",
+      "end_time": "11:45am",
+      "class_name": "Open Gym",
       "studio": "Gym",
       "instructor": "NA - No Instructor",
       "location": "Barnum",
-      "category": "CWS",
+      "category": "",
       "cancelled": false,
       "requires_signup": false
     },
@@ -863,12 +907,34 @@
     },
     {
       "start_time": "10:00am",
+      "end_time": "2:15pm",
+      "class_name": "Open Gym",
+      "studio": "Gym",
+      "instructor": "NA - No Instructor",
+      "location": "La Alma",
+      "category": "",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "10:00am",
       "end_time": "2:00pm",
       "class_name": "Open Swim",
       "studio": "Leisure Pool",
       "instructor": "NA - No Instructor",
       "location": "Carla Madison",
       "category": "AQ",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "10:00am",
+      "end_time": "4:00pm",
+      "class_name": "Open Gym",
+      "studio": "Gym",
+      "instructor": "NA - No Instructor",
+      "location": "Johnson",
+      "category": "",
       "cancelled": false,
       "requires_signup": false
     },
@@ -885,34 +951,12 @@
     },
     {
       "start_time": "10:00am",
-      "end_time": "8:30pm",
+      "end_time": "4:00pm",
       "class_name": "Open Gym",
       "studio": "Gym",
       "instructor": "NA - No Instructor",
-      "location": "Scheitler",
-      "category": "",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "10:00am",
-      "end_time": "2:00pm",
-      "class_name": "Pickleball",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
       "location": "Aztlan",
-      "category": "CWS",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "10:00am",
-      "end_time": "11:30am",
-      "class_name": "Pickleball: Advanced",
-      "studio": "Large Gym",
-      "instructor": "NA - No Instructor",
-      "location": "St. Charles",
-      "category": "CWS",
+      "category": "",
       "cancelled": false,
       "requires_signup": false
     },
@@ -930,17 +974,6 @@
     {
       "start_time": "10:15am",
       "end_time": "11:15am",
-      "class_name": "AOA: Functional Fit 50+",
-      "studio": "Pamela O.",
-      "instructor": "Pamela O",
-      "location": "La Familia",
-      "category": "AOA",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "10:15am",
-      "end_time": "11:15am",
       "class_name": "Adult Swim",
       "studio": "Lap Pool",
       "instructor": "NA - No Instructor",
@@ -952,7 +985,29 @@
     {
       "start_time": "10:15am",
       "end_time": "11:15am",
-      "class_name": "Aqua Tone",
+      "class_name": "Essentrics",
+      "studio": "Gym",
+      "instructor": "Kristine C",
+      "location": "Washington Park",
+      "category": "FIT",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "10:15am",
+      "end_time": "11:15am",
+      "class_name": "AOA: Cardio & Strength FIT 50+",
+      "studio": "Fitness Studio",
+      "instructor": "Christine S",
+      "location": "Central Park",
+      "category": "AOA",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "10:15am",
+      "end_time": "11:15am",
+      "class_name": "Deep Water Aerobics",
       "studio": "Lap Pool",
       "instructor": "",
       "location": "Carla Madison",
@@ -973,28 +1028,6 @@
     },
     {
       "start_time": "10:30am",
-      "end_time": "11:30am",
-      "class_name": "AOA: Functional Fit 50+",
-      "studio": "Gym",
-      "instructor": "Allan M",
-      "location": "Cook Park",
-      "category": "AOA",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "10:30am",
-      "end_time": "11:30am",
-      "class_name": "AOA: Functional Fit 50+",
-      "studio": "Fitness Studio",
-      "instructor": "Celeste S",
-      "location": "Harvard Gulch",
-      "category": "AOA",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "10:30am",
       "end_time": "4:45pm",
       "class_name": "Lap Swim",
       "studio": "Lap Pool",
@@ -1002,17 +1035,6 @@
       "location": "Hiawatha Davis Jr.",
       "category": "AQ",
       "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "10:30am",
-      "end_time": "11:30am",
-      "class_name": "AOA: Tai Chi",
-      "studio": "Gym",
-      "instructor": "Maureen C",
-      "location": "Montclair",
-      "category": "AOA",
-      "cancelled": true,
       "requires_signup": false
     },
     {
@@ -1029,22 +1051,22 @@
     {
       "start_time": "10:30am",
       "end_time": "11:30am",
-      "class_name": "Barre",
-      "studio": "Fitness Studio",
-      "instructor": "Melissa C",
-      "location": "Carla Madison",
-      "category": "FIT",
+      "class_name": "AOA: Functional Fit 50+",
+      "studio": "Ballroom",
+      "instructor": "Dean S",
+      "location": "Barnum",
+      "category": "AOA",
       "cancelled": false,
       "requires_signup": false
     },
     {
       "start_time": "10:30am",
-      "end_time": "12:30pm",
-      "class_name": "Pickleball",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "La Alma",
-      "category": "CWS",
+      "end_time": "11:30am",
+      "class_name": "AOA: Circuit Fit 50+",
+      "studio": "Fitness Studio",
+      "instructor": "Cat R",
+      "location": "Carla Madison",
+      "category": "AOA",
       "cancelled": false,
       "requires_signup": false
     },
@@ -1072,6 +1094,17 @@
     },
     {
       "start_time": "10:30am",
+      "end_time": "11:30am",
+      "class_name": "AOA: Functional Fit 50+",
+      "studio": "Multi Purpose Room",
+      "instructor": "Veronica W",
+      "location": "Eisenhower",
+      "category": "AOA",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "10:30am",
       "end_time": "7:30pm",
       "class_name": "Open Swim",
       "studio": "Leisure Pool",
@@ -1082,35 +1115,35 @@
       "requires_signup": false
     },
     {
-      "start_time": "11:00am",
-      "end_time": "12:00pm",
+      "start_time": "10:30am",
+      "end_time": "11:30am",
       "class_name": "AOA: Tai Chi",
       "studio": "Ballroom",
-      "instructor": "Tim M",
-      "location": "Highland",
+      "instructor": "Tara-Lloyd B",
+      "location": "Platt Park",
       "category": "AOA",
       "cancelled": false,
       "requires_signup": false
     },
     {
-      "start_time": "11:00am",
-      "end_time": "1:00pm",
-      "class_name": "Club: Pastels",
-      "studio": "Multi Purpose Room",
-      "instructor": "NA - No Instructor",
-      "location": "Hiawatha Davis Jr.",
-      "category": "AOA",
+      "start_time": "10:45am",
+      "end_time": "11:45am",
+      "class_name": "Group Training",
+      "studio": "Fitness Studio",
+      "instructor": "Linda M",
+      "location": "Green Valley Ranch",
+      "category": "FIT",
       "cancelled": false,
       "requires_signup": false
     },
     {
-      "start_time": "11:00am",
-      "end_time": "1:00pm",
-      "class_name": "Pickleball",
+      "start_time": "10:45am",
+      "end_time": "8:30pm",
+      "class_name": "Open Gym",
       "studio": "Gym",
       "instructor": "NA - No Instructor",
-      "location": "Harvey Park",
-      "category": "CWS",
+      "location": "Montclair",
+      "category": "",
       "cancelled": false,
       "requires_signup": false
     },
@@ -1138,11 +1171,11 @@
     },
     {
       "start_time": "11:00am",
-      "end_time": "12:00pm",
-      "class_name": "Gym Closed",
+      "end_time": "4:30pm",
+      "class_name": "Open Gym",
       "studio": "Gym",
-      "instructor": "",
-      "location": "Washington Park",
+      "instructor": "NA - No Instructor",
+      "location": "Rude",
       "category": "",
       "cancelled": false,
       "requires_signup": false
@@ -1155,6 +1188,28 @@
       "instructor": "NA - No Instructor",
       "location": "Montclair",
       "category": "AQ",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "11:00am",
+      "end_time": "12:00pm",
+      "class_name": "AOA: Functional Fit 50+",
+      "studio": "Ballroom",
+      "instructor": "Dara M",
+      "location": "Scheitler",
+      "category": "AOA",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "11:00am",
+      "end_time": "12:00pm",
+      "class_name": "AOA: Functional Fit 50+",
+      "studio": "Fitness Studio",
+      "instructor": "Carlos R",
+      "location": "Harvard Gulch",
+      "category": "AOA",
       "cancelled": false,
       "requires_signup": false
     },
@@ -1177,28 +1232,6 @@
       "instructor": "NA - No Instructor",
       "location": "Montclair",
       "category": "AQ",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "11:00am",
-      "end_time": "4:00pm",
-      "class_name": "Open Gym",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "Rude",
-      "category": "",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "11:15am",
-      "end_time": "1:15pm",
-      "class_name": "Pickleball",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "Harvard Gulch",
-      "category": "CWS",
       "cancelled": false,
       "requires_signup": false
     },
@@ -1226,17 +1259,6 @@
     },
     {
       "start_time": "11:15am",
-      "end_time": "7:45pm",
-      "class_name": "Open Gym",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "Eisenhower",
-      "category": "",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "11:15am",
       "end_time": "12:00pm",
       "class_name": "Swim Lessons",
       "studio": "Lap Pool",
@@ -1248,12 +1270,12 @@
     },
     {
       "start_time": "11:30am",
-      "end_time": "12:30pm",
-      "class_name": "AOA: Gentle Yoga 50+",
-      "studio": "Ballroom",
-      "instructor": "Ingrid V",
-      "location": "Platt Park",
-      "category": "AOA",
+      "end_time": "2:30pm",
+      "class_name": "Pickleball",
+      "studio": "Gym",
+      "instructor": "NA - No Instructor",
+      "location": "Washington Park",
+      "category": "CWS",
       "cancelled": false,
       "requires_signup": false
     },
@@ -1274,8 +1296,19 @@
       "class_name": "Open Gym",
       "studio": "Gym",
       "instructor": "NA - No Instructor",
-      "location": "La Familia",
+      "location": "Harvard Gulch",
       "category": "",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "11:45am",
+      "end_time": "12:45pm",
+      "class_name": "AOA: Gentle Yoga 50+",
+      "studio": "Multi Purpose Room",
+      "instructor": "Veronica W",
+      "location": "Eisenhower",
+      "category": "AOA",
       "cancelled": false,
       "requires_signup": false
     },
@@ -1287,28 +1320,6 @@
       "instructor": "NA - No Instructor",
       "location": "Green Valley Ranch",
       "category": "AQ",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "11:45am",
-      "end_time": "4:15pm",
-      "class_name": "Open Gym",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "Athmar",
-      "category": "",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "12:00pm",
-      "end_time": "2:00pm",
-      "class_name": "Club: Knitting",
-      "studio": "Game Room",
-      "instructor": "NA - No Instructor",
-      "location": "Platt Park",
-      "category": "AOA",
       "cancelled": false,
       "requires_signup": false
     },
@@ -1336,12 +1347,34 @@
     },
     {
       "start_time": "12:00pm",
-      "end_time": "1:00pm",
-      "class_name": "Yoga I",
+      "end_time": "2:00pm",
+      "class_name": "Club: Wood Carving",
+      "studio": "Ballroom",
+      "instructor": "NA - No Instructor",
+      "location": "Barnum",
+      "category": "AC",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "12:00pm",
+      "end_time": "2:00pm",
+      "class_name": "Club: Painting",
+      "studio": "Ballroom",
+      "instructor": "NA - No Instructor",
+      "location": "Barnum",
+      "category": "AC",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "12:00pm",
+      "end_time": "8:00pm",
+      "class_name": "Open Gym",
       "studio": "Gym",
-      "instructor": "Rebecca J",
-      "location": "Montclair",
-      "category": "FIT",
+      "instructor": "NA - No Instructor",
+      "location": "Glenarm",
+      "category": "",
       "cancelled": false,
       "requires_signup": false
     },
@@ -1359,6 +1392,39 @@
     {
       "start_time": "12:00pm",
       "end_time": "2:00pm",
+      "class_name": "Full Court Basketball",
+      "studio": "Gym",
+      "instructor": "NA - No Instructor",
+      "location": "Barnum",
+      "category": "",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "12:00pm",
+      "end_time": "1:00pm",
+      "class_name": "AOA: Tai Chi",
+      "studio": "Ballroom",
+      "instructor": "Dean S",
+      "location": "Barnum",
+      "category": "AOA",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "12:00pm",
+      "end_time": "12:45pm",
+      "class_name": "Cardio Kickboxing",
+      "studio": "Fitness Studio",
+      "instructor": "Bobbi E",
+      "location": "Carla Madison",
+      "category": "FIT",
+      "cancelled": false,
+      "requires_signup": true
+    },
+    {
+      "start_time": "12:00pm",
+      "end_time": "2:00pm",
       "class_name": "Lap Swim",
       "studio": "Lap and Leisure Pool",
       "instructor": "NA - No Instructor",
@@ -1369,56 +1435,45 @@
     },
     {
       "start_time": "12:00pm",
-      "end_time": "5:30pm",
+      "end_time": "7:45pm",
       "class_name": "Open Gym",
       "studio": "Gym",
       "instructor": "NA - No Instructor",
-      "location": "Ashland",
+      "location": "Eisenhower",
       "category": "",
       "cancelled": false,
       "requires_signup": false
     },
     {
       "start_time": "12:00pm",
-      "end_time": "4:30pm",
+      "end_time": "4:00pm",
       "class_name": "Open Gym",
       "studio": "Gym",
       "instructor": "NA - No Instructor",
-      "location": "Cook Park",
+      "location": "5090 Broadway",
       "category": "",
       "cancelled": false,
       "requires_signup": false
     },
     {
       "start_time": "12:15pm",
-      "end_time": "1:15pm",
-      "class_name": "AOA Tai Chi: Inter/Advance",
-      "studio": "Ballroom",
-      "instructor": "Tim M",
-      "location": "Highland",
-      "category": "AOA",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "12:15pm",
-      "end_time": "1:15pm",
-      "class_name": "Total Body Conditioning",
-      "studio": "Fitness Studio",
-      "instructor": "Samantha B",
-      "location": "Carla Madison",
-      "category": "FIT",
-      "cancelled": false,
-      "requires_signup": true
-    },
-    {
-      "start_time": "12:15pm",
-      "end_time": "3:00pm",
-      "class_name": "Pickleball",
+      "end_time": "4:00pm",
+      "class_name": "Open Gym",
       "studio": "Gym",
-      "instructor": "",
-      "location": "Washington Park",
+      "instructor": "NA - No Instructor",
+      "location": "La Familia",
       "category": "",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "12:30pm",
+      "end_time": "3:30pm",
+      "class_name": "Club: Duplicate Bridge",
+      "studio": "Ballroom",
+      "instructor": "NA - No Instructor",
+      "location": "Platt Park",
+      "category": "AOA",
       "cancelled": false,
       "requires_signup": false
     },
@@ -1427,32 +1482,10 @@
       "end_time": "3:00pm",
       "class_name": "Lap Swim",
       "studio": "Lap Pool",
-      "instructor": "NA - No Instructor",
+      "instructor": "",
       "location": "Martin Luther King Jr.",
       "category": "AQ",
       "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "12:30pm",
-      "end_time": "2:30pm",
-      "class_name": "Full Court Basketball",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "Glenarm",
-      "category": "",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "12:30pm",
-      "end_time": "1:30pm",
-      "class_name": "AOA: Tai Chi",
-      "studio": "Multi Purpose Room",
-      "instructor": "Maureen C",
-      "location": "Central Park",
-      "category": "AOA",
-      "cancelled": true,
       "requires_signup": false
     },
     {
@@ -1464,28 +1497,6 @@
       "location": "Glenarm",
       "category": "AOA",
       "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "12:30pm",
-      "end_time": "7:45pm",
-      "class_name": "Open Gym",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "Barnum",
-      "category": "",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "12:30pm",
-      "end_time": "1:30pm",
-      "class_name": "Slow Flow Yoga",
-      "studio": "Multi-Purpose Room",
-      "instructor": "Juliana F",
-      "location": "Southwest",
-      "category": "FIT",
-      "cancelled": true,
       "requires_signup": false
     },
     {
@@ -1501,6 +1512,17 @@
     },
     {
       "start_time": "1:00pm",
+      "end_time": "3:00pm",
+      "class_name": "AOA: Bingo",
+      "studio": "Ballroom",
+      "instructor": "Tashia G",
+      "location": "Highland",
+      "category": "AOA",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "1:00pm",
       "end_time": "3:30pm",
       "class_name": "Lap Swim",
       "studio": "Lap Pool",
@@ -1523,34 +1545,23 @@
     },
     {
       "start_time": "1:00pm",
+      "end_time": "2:00pm",
+      "class_name": "AOA: Functional Fit 50+",
+      "studio": "Gym",
+      "instructor": "Kaylee H",
+      "location": "Cook Park",
+      "category": "AOA",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "1:00pm",
       "end_time": "4:45pm",
       "class_name": "Open Swim",
       "studio": "Lap and Leisure Pool",
       "instructor": "NA - No Instructor",
       "location": "Scheitler",
       "category": "AQ",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "1:00pm",
-      "end_time": "2:00pm",
-      "class_name": "Total Body Conditioning",
-      "studio": "Fitness Studio",
-      "instructor": "Kristine C",
-      "location": "Eisenhower",
-      "category": "FIT",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "1:00pm",
-      "end_time": "2:30pm",
-      "class_name": "AOA: Drop-in Technology Help",
-      "studio": "Classroom",
-      "instructor": "Olivia G",
-      "location": "Highland",
-      "category": "AOA",
       "cancelled": false,
       "requires_signup": false
     },
@@ -1589,11 +1600,11 @@
     },
     {
       "start_time": "1:00pm",
-      "end_time": "4:00pm",
+      "end_time": "4:15pm",
       "class_name": "Open Gym",
       "studio": "Gym",
       "instructor": "NA - No Instructor",
-      "location": "5090 Broadway",
+      "location": "Athmar",
       "category": "",
       "cancelled": false,
       "requires_signup": false
@@ -1601,33 +1612,11 @@
     {
       "start_time": "1:30pm",
       "end_time": "2:30pm",
-      "class_name": "AOA: Gentle Yoga 50+",
-      "studio": "Multi Purpose Room",
-      "instructor": "Sky H",
-      "location": "Cook Park",
-      "category": "AOA",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "1:30pm",
-      "end_time": "2:30pm",
-      "class_name": "AOA: Functional Fit 50+",
+      "class_name": "Total Body Conditioning",
       "studio": "Fitness Studio",
-      "instructor": "Dean S",
-      "location": "Carla Madison",
-      "category": "AOA",
-      "cancelled": false,
-      "requires_signup": true
-    },
-    {
-      "start_time": "1:30pm",
-      "end_time": "5:00pm",
-      "class_name": "Open Gym",
-      "studio": "Large Gym",
-      "instructor": "NA - No Instructor",
-      "location": "St. Charles",
-      "category": "",
+      "instructor": "Maddy W",
+      "location": "Harvard Gulch",
+      "category": "FIT",
       "cancelled": false,
       "requires_signup": false
     },
@@ -1643,24 +1632,13 @@
       "requires_signup": false
     },
     {
-      "start_time": "1:30pm",
-      "end_time": "4:30pm",
-      "class_name": "Open Gym",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "Harvard Gulch",
-      "category": "",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "1:55pm",
-      "end_time": "7:55pm",
-      "class_name": "Open Gym",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "Harvey Park",
-      "category": "",
+      "start_time": "1:45pm",
+      "end_time": "2:45pm",
+      "class_name": "AOA: Gentle Yoga 50+",
+      "studio": "Single court",
+      "instructor": "Lisa B",
+      "location": "Southwest",
+      "category": "AOA",
       "cancelled": false,
       "requires_signup": false
     },
@@ -1683,6 +1661,17 @@
       "instructor": "NA - No Instructor",
       "location": "Montclair",
       "category": "AQ",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "2:00pm",
+      "end_time": "4:00pm",
+      "class_name": "Pickleball",
+      "studio": "Gym",
+      "instructor": "NA - No Instructor",
+      "location": "Barnum",
+      "category": "CWS",
       "cancelled": false,
       "requires_signup": false
     },
@@ -1731,23 +1720,23 @@
       "requires_signup": false
     },
     {
-      "start_time": "2:30pm",
-      "end_time": "8:30pm",
-      "class_name": "Open Gym",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "Montclair",
-      "category": "",
+      "start_time": "2:15pm",
+      "end_time": "3:15pm",
+      "class_name": "AOA: Gentle Yoga 50+",
+      "studio": "Multi Purpose Room",
+      "instructor": "Kaylee H",
+      "location": "Cook Park",
+      "category": "AOA",
       "cancelled": false,
       "requires_signup": false
     },
     {
-      "start_time": "2:30pm",
-      "end_time": "8:00pm",
+      "start_time": "2:15pm",
+      "end_time": "4:30pm",
       "class_name": "Open Gym",
       "studio": "Gym",
       "instructor": "NA - No Instructor",
-      "location": "Glenarm",
+      "location": "Cook Park",
       "category": "",
       "cancelled": false,
       "requires_signup": false
@@ -1777,13 +1766,13 @@
     {
       "start_time": "2:45pm",
       "end_time": "3:45pm",
-      "class_name": "AOA: Tai Chi",
-      "studio": "Fitness Studio",
-      "instructor": "Dean S",
-      "location": "Carla Madison",
-      "category": "AOA",
+      "class_name": "Vinyasa Yoga",
+      "studio": "Gym",
+      "instructor": "",
+      "location": "Washington Park",
+      "category": "FIT",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": false
     },
     {
       "start_time": "3:00pm",
@@ -1798,7 +1787,7 @@
     },
     {
       "start_time": "3:00pm",
-      "end_time": "7:30pm",
+      "end_time": "6:00pm",
       "class_name": "Open Swim",
       "studio": "Lap Pool",
       "instructor": "NA - No Instructor",
@@ -1814,39 +1803,6 @@
       "studio": "Gym",
       "instructor": "NA - No Instructor",
       "location": "Swansea",
-      "category": "",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "3:00pm",
-      "end_time": "4:30pm",
-      "class_name": "Open Gym: 18 & Under",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "Carla Madison",
-      "category": "",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "3:15pm",
-      "end_time": "3:45pm",
-      "class_name": "Open Gym",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "Washington Park",
-      "category": "",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "3:30pm",
-      "end_time": "7:00pm",
-      "class_name": "Open Climbing",
-      "studio": "Climbing Wall",
-      "instructor": "NA - No Instructor",
-      "location": "Carla Madison",
       "category": "",
       "cancelled": false,
       "requires_signup": false
@@ -1874,6 +1830,17 @@
       "requires_signup": false
     },
     {
+      "start_time": "3:30pm",
+      "end_time": "9:00pm",
+      "class_name": "Youth Basketball",
+      "studio": "Gym",
+      "instructor": "",
+      "location": "Carla Madison",
+      "category": "YS",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
       "start_time": "3:45pm",
       "end_time": "4:45pm",
       "class_name": "Open Gym",
@@ -1881,17 +1848,6 @@
       "instructor": "NA - No Instructor",
       "location": "La Alma",
       "category": "",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "4:00pm",
-      "end_time": "5:00pm",
-      "class_name": "Swim Lessons",
-      "studio": "Lap Pool",
-      "instructor": "",
-      "location": "La Familia",
-      "category": "AQ",
       "cancelled": false,
       "requires_signup": false
     },
@@ -1908,34 +1864,23 @@
     },
     {
       "start_time": "4:00pm",
+      "end_time": "5:00pm",
+      "class_name": "Swim Lessons",
+      "studio": "Lap Pool",
+      "instructor": "",
+      "location": "La Familia",
+      "category": "AQ",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "4:00pm",
       "end_time": "6:00pm",
       "class_name": "My Denver Programming",
       "studio": "Multi Purpose Room",
       "instructor": "NA - No Instructor",
       "location": "Hiawatha Davis Jr.",
       "category": "MYD",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "4:00pm",
-      "end_time": "5:00pm",
-      "class_name": "Yoga III",
-      "studio": "Fitness Studio",
-      "instructor": "Rebecca J",
-      "location": "Carla Madison",
-      "category": "FIT",
-      "cancelled": false,
-      "requires_signup": true
-    },
-    {
-      "start_time": "4:00pm",
-      "end_time": "8:00pm",
-      "class_name": "Open Swim",
-      "studio": "Leisure Pool",
-      "instructor": "NA - No Instructor",
-      "location": "Carla Madison",
-      "category": "AQ",
       "cancelled": false,
       "requires_signup": false
     },
@@ -1963,7 +1908,18 @@
     },
     {
       "start_time": "4:00pm",
-      "end_time": "6:00pm",
+      "end_time": "5:00pm",
+      "class_name": "Adaptive Swim Lessons",
+      "studio": "Leisure Pool",
+      "instructor": "",
+      "location": "Carla Madison",
+      "category": "AQ",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "4:00pm",
+      "end_time": "5:00pm",
       "class_name": "Youth Basketball",
       "studio": "Gym",
       "instructor": "",
@@ -1973,8 +1929,30 @@
       "requires_signup": false
     },
     {
+      "start_time": "4:15pm",
+      "end_time": "7:45pm",
+      "class_name": "Open Gym",
+      "studio": "Gym",
+      "instructor": "NA - No Instructor",
+      "location": "Barnum",
+      "category": "",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
       "start_time": "4:30pm",
       "end_time": "5:30pm",
+      "class_name": "Yoga I",
+      "studio": "Fitness Studio",
+      "instructor": "Celeste S",
+      "location": "Harvard Gulch",
+      "category": "FIT",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "4:30pm",
+      "end_time": "7:30pm",
       "class_name": "Open Swim",
       "studio": "Lap Pool",
       "instructor": "NA - No Instructor",
@@ -1985,33 +1963,33 @@
     },
     {
       "start_time": "4:30pm",
-      "end_time": "7:45pm",
-      "class_name": "Full Court Basketball",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "Aztlan",
-      "category": "",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "4:30pm",
-      "end_time": "6:30pm",
-      "class_name": "Youth Basketball",
-      "studio": "Gym",
-      "instructor": "",
-      "location": "Carla Madison",
-      "category": "YS",
+      "end_time": "5:30pm",
+      "class_name": "Total Body Conditioning",
+      "studio": "Multi Purpose Room",
+      "instructor": "Maddy W",
+      "location": "Cook Park",
+      "category": "FIT",
       "cancelled": false,
       "requires_signup": false
     },
     {
       "start_time": "4:45pm",
-      "end_time": "5:30pm",
-      "class_name": "Cycle Weights",
-      "studio": "Spin Studio",
-      "instructor": "Lindsay K",
-      "location": "Carla Madison",
+      "end_time": "5:45pm",
+      "class_name": "Core Training",
+      "studio": "Fitness Studio",
+      "instructor": "Kate S",
+      "location": "Eisenhower",
+      "category": "FIT",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "4:45pm",
+      "end_time": "5:45pm",
+      "class_name": "Pilates",
+      "studio": "Fitness Studio",
+      "instructor": "Kyla M",
+      "location": "Central Park",
       "category": "FIT",
       "cancelled": false,
       "requires_signup": false
@@ -2024,6 +2002,17 @@
       "instructor": "",
       "location": "Green Valley Ranch",
       "category": "AQ",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "4:45pm",
+      "end_time": "8:00pm",
+      "class_name": "Youth Basketball",
+      "studio": "Gym",
+      "instructor": "",
+      "location": "La Alma",
+      "category": "YS",
       "cancelled": false,
       "requires_signup": false
     },
@@ -2073,17 +2062,6 @@
     },
     {
       "start_time": "5:00pm",
-      "end_time": "7:45pm",
-      "class_name": "Full Court Basketball",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "La Familia",
-      "category": "",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "5:00pm",
       "end_time": "5:30pm",
       "class_name": "Swim Lessons",
       "studio": "Lap and Leisure Pool",
@@ -2095,22 +2073,11 @@
     },
     {
       "start_time": "5:00pm",
-      "end_time": "6:30pm",
-      "class_name": "Open Gym",
-      "studio": "Small Gym",
+      "end_time": "8:00pm",
+      "class_name": "Open Swim",
+      "studio": "Leisure Pool",
       "instructor": "NA - No Instructor",
-      "location": "St. Charles",
-      "category": "",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "5:00pm",
-      "end_time": "7:30pm",
-      "class_name": "Stroke Improvement",
-      "studio": "Lap Pool",
-      "instructor": "",
-      "location": "La Familia",
+      "location": "Carla Madison",
       "category": "AQ",
       "cancelled": false,
       "requires_signup": false
@@ -2129,32 +2096,43 @@
     {
       "start_time": "5:15pm",
       "end_time": "6:15pm",
-      "class_name": "Yoga I",
-      "studio": "Multi Purpose Room",
-      "instructor": "Michelle S",
-      "location": "Montclair",
-      "category": "FIT",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "5:15pm",
-      "end_time": "6:15pm",
-      "class_name": "Zumba\u00ae",
+      "class_name": "Nia",
       "studio": "Fitness Studio",
-      "instructor": "Victoria G",
+      "instructor": "Lora S",
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
       "requires_signup": true
     },
     {
+      "start_time": "5:15pm",
+      "end_time": "5:45pm",
+      "class_name": "Open Gym",
+      "studio": "Gym",
+      "instructor": "NA - No Instructor",
+      "location": "Washington Park",
+      "category": "",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "5:30pm",
+      "end_time": "7:30pm",
+      "class_name": "Pickleball",
+      "studio": "Large Gym",
+      "instructor": "NA - No Instructor",
+      "location": "St. Charles",
+      "category": "CWS",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
       "start_time": "5:30pm",
       "end_time": "6:30pm",
-      "class_name": "Zumba\u00ae",
-      "studio": "Ballroom",
-      "instructor": "Sofia C",
-      "location": "Barnum",
+      "class_name": "Vinyasa Yoga",
+      "studio": "Multi Purpose Room",
+      "instructor": "Erika W",
+      "location": "Rude",
       "category": "FIT",
       "cancelled": false,
       "requires_signup": false
@@ -2162,10 +2140,21 @@
     {
       "start_time": "5:30pm",
       "end_time": "6:30pm",
-      "class_name": "Slow Flow Yoga",
-      "studio": "Multi Purpose Room",
-      "instructor": "Dawn G",
-      "location": "Glenarm",
+      "class_name": "Zumba\u00ae",
+      "studio": "Fitness Studio",
+      "instructor": "Victoria G",
+      "location": "Johnson",
+      "category": "FIT",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "5:30pm",
+      "end_time": "6:30pm",
+      "class_name": "REB3L\u00ae Groove",
+      "studio": "Ballroom",
+      "instructor": "Sarah D",
+      "location": "Scheitler",
       "category": "FIT",
       "cancelled": false,
       "requires_signup": false
@@ -2194,17 +2183,6 @@
     },
     {
       "start_time": "5:30pm",
-      "end_time": "6:30pm",
-      "class_name": "Glide Fit",
-      "studio": "Lap Pool",
-      "instructor": "",
-      "location": "Twentieth Street",
-      "category": "AQ",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "5:30pm",
       "end_time": "7:45pm",
       "class_name": "Open Gym",
       "studio": "Gym",
@@ -2213,28 +2191,6 @@
       "category": "",
       "cancelled": false,
       "requires_signup": false
-    },
-    {
-      "start_time": "5:30pm",
-      "end_time": "8:00pm",
-      "class_name": "Full Court Basketball",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "Ashland",
-      "category": "",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "5:45pm",
-      "end_time": "6:30pm",
-      "class_name": "HIIT Cycle",
-      "studio": "Spin Studio",
-      "instructor": "Lindsay K",
-      "location": "Carla Madison",
-      "category": "FIT",
-      "cancelled": false,
-      "requires_signup": true
     },
     {
       "start_time": "5:45pm",
@@ -2249,6 +2205,17 @@
     },
     {
       "start_time": "5:45pm",
+      "end_time": "6:30pm",
+      "class_name": "Indoor Cycling",
+      "studio": "Spin Studio",
+      "instructor": "Blair K",
+      "location": "Carla Madison",
+      "category": "FIT",
+      "cancelled": false,
+      "requires_signup": true
+    },
+    {
+      "start_time": "5:45pm",
       "end_time": "8:00pm",
       "class_name": "Open Swim",
       "studio": "Lap and Leisure Pool",
@@ -2259,23 +2226,12 @@
       "requires_signup": false
     },
     {
-      "start_time": "5:45pm",
-      "end_time": "7:15pm",
-      "class_name": "Youth Basketball",
-      "studio": "Gym",
-      "instructor": "",
-      "location": "Twentieth Street",
-      "category": "YS",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
       "start_time": "6:00pm",
       "end_time": "7:00pm",
-      "class_name": "Yoga II",
+      "class_name": "Zumba\u00ae",
       "studio": "Fitness Studio",
-      "instructor": "Stephanie T",
-      "location": "Harvard Gulch",
+      "instructor": "",
+      "location": "Green Valley Ranch",
       "category": "FIT",
       "cancelled": false,
       "requires_signup": false
@@ -2283,10 +2239,10 @@
     {
       "start_time": "6:00pm",
       "end_time": "7:00pm",
-      "class_name": "Total Body Conditioning",
-      "studio": "Ballroom",
-      "instructor": "Jeannie P",
-      "location": "Scheitler",
+      "class_name": "Oula",
+      "studio": "Fitness Studio",
+      "instructor": "Andrea L",
+      "location": "Eisenhower",
       "category": "FIT",
       "cancelled": false,
       "requires_signup": false
@@ -2326,10 +2282,21 @@
     },
     {
       "start_time": "6:00pm",
-      "end_time": "6:45pm",
-      "class_name": "HIIT Cycle",
-      "studio": "Spin Studio",
-      "instructor": "Natalie S",
+      "end_time": "7:00pm",
+      "class_name": "Zumba\u00ae",
+      "studio": "Multi Purpose Room",
+      "instructor": "Cenya D",
+      "location": "Glenarm",
+      "category": "FIT",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "6:00pm",
+      "end_time": "7:00pm",
+      "class_name": "Zumba\u00ae",
+      "studio": "Fitness Studio",
+      "instructor": "Anna P",
       "location": "Central Park",
       "category": "FIT",
       "cancelled": false,
@@ -2348,34 +2315,12 @@
     },
     {
       "start_time": "6:00pm",
-      "end_time": "9:30pm",
-      "class_name": "Reserved: Adult Basketball",
+      "end_time": "8:00pm",
+      "class_name": "Youth Basketball",
       "studio": "Gym",
       "instructor": "",
-      "location": "Central Park",
-      "category": "CWS",
-      "cancelled": false,
-      "requires_signup": true
-    },
-    {
-      "start_time": "6:00pm",
-      "end_time": "7:00pm",
-      "class_name": "Aqua Aerobics",
-      "studio": "Lap Pool",
-      "instructor": "",
-      "location": "Central Park",
-      "category": "AQ",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "6:15pm",
-      "end_time": "7:15pm",
-      "class_name": "Zumba\u00ae",
-      "studio": "Fitness Studio",
-      "instructor": "Eduardo R",
-      "location": "Johnson",
-      "category": "FIT",
+      "location": "Washington Park",
+      "category": "YS",
       "cancelled": false,
       "requires_signup": false
     },
@@ -2392,36 +2337,25 @@
     },
     {
       "start_time": "6:15pm",
-      "end_time": "7:30pm",
-      "class_name": "Open Swim",
+      "end_time": "7:15pm",
+      "class_name": "Shallow Water Aerobics",
+      "studio": "Lap Pool",
+      "instructor": "Liz S",
+      "location": "Green Valley Ranch",
+      "category": "AQ",
+      "cancelled": false,
+      "requires_signup": true
+    },
+    {
+      "start_time": "6:15pm",
+      "end_time": "7:15pm",
+      "class_name": "Shallow Water Aerobics",
       "studio": "Leisure Pool",
-      "instructor": "NA - No Instructor",
+      "instructor": "",
       "location": "Green Valley Ranch",
       "category": "AQ",
       "cancelled": false,
       "requires_signup": false
-    },
-    {
-      "start_time": "6:15pm",
-      "end_time": "6:45pm",
-      "class_name": "Open Gym",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "Washington Park",
-      "category": "",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "6:30pm",
-      "end_time": "7:30pm",
-      "class_name": "Barre",
-      "studio": "Fitness Studio",
-      "instructor": "Kyla M",
-      "location": "Carla Madison",
-      "category": "FIT",
-      "cancelled": false,
-      "requires_signup": true
     },
     {
       "start_time": "6:30pm",
@@ -2436,25 +2370,14 @@
     },
     {
       "start_time": "6:30pm",
-      "end_time": "10:00pm",
-      "class_name": "Reserved: Adult Basketball",
-      "studio": "Gym",
-      "instructor": "",
+      "end_time": "7:45pm",
+      "class_name": "Yinyasa Yoga",
+      "studio": "Fitness Studio",
+      "instructor": "Alona H",
       "location": "Carla Madison",
-      "category": "CWS",
+      "category": "FIT",
       "cancelled": false,
       "requires_signup": true
-    },
-    {
-      "start_time": "6:30pm",
-      "end_time": "8:00pm",
-      "class_name": "Line Dancing",
-      "studio": "Ballroom",
-      "instructor": "",
-      "location": "Barnum",
-      "category": "AC",
-      "cancelled": false,
-      "requires_signup": false
     },
     {
       "start_time": "6:30pm",
@@ -2470,10 +2393,10 @@
     {
       "start_time": "6:30pm",
       "end_time": "7:30pm",
-      "class_name": "Open Swim",
+      "class_name": "Aqua Aerobics",
       "studio": "Lap Pool",
-      "instructor": "NA - No Instructor",
-      "location": "Twentieth Street",
+      "instructor": "",
+      "location": "Central Park",
       "category": "AQ",
       "cancelled": false,
       "requires_signup": false
@@ -2493,31 +2416,9 @@
       "start_time": "7:00pm",
       "end_time": "8:00pm",
       "class_name": "Open Gym",
-      "studio": "Gym",
+      "studio": "Small Gym",
       "instructor": "NA - No Instructor",
-      "location": "Swansea",
-      "category": "",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "7:00pm",
-      "end_time": "8:00pm",
-      "class_name": "Youth Basketball",
-      "studio": "Gym",
-      "instructor": "",
-      "location": "Washington Park",
-      "category": "YS",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "7:45pm",
-      "end_time": "8:50pm",
-      "class_name": "Open Gym",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "Athmar",
+      "location": "St. Charles",
       "category": "",
       "cancelled": false,
       "requires_signup": false

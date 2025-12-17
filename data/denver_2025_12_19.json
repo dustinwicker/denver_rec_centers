@@ -1303,17 +1303,6 @@
     },
     {
       "start_time": "12:30pm",
-      "end_time": "1:30pm",
-      "class_name": "Total Body Conditioning",
-      "studio": "Fitness Studio",
-      "instructor": "Linda M",
-      "location": "Carla Madison",
-      "category": "FIT",
-      "cancelled": false,
-      "requires_signup": true
-    },
-    {
-      "start_time": "12:30pm",
       "end_time": "4:30pm",
       "class_name": "Club: Mah Jong",
       "studio": "Room B",
@@ -1333,6 +1322,17 @@
       "category": "AOA",
       "cancelled": false,
       "requires_signup": false
+    },
+    {
+      "start_time": "12:30pm",
+      "end_time": "1:15pm",
+      "class_name": "Cardio Kickboxing",
+      "studio": "Fitness Studio",
+      "instructor": "",
+      "location": "Carla Madison",
+      "category": "FIT",
+      "cancelled": false,
+      "requires_signup": true
     },
     {
       "start_time": "1:00pm",
