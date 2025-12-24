@@ -1592,7 +1592,7 @@
       "end_time": "4:00pm",
       "class_name": "Total Body Conditioning",
       "studio": "Fitness Studio",
-      "instructor": "Maddy W",
+      "instructor": "",
       "location": "Eisenhower",
       "category": "FIT",
       "cancelled": false,
@@ -1810,17 +1810,6 @@
     {
       "start_time": "5:30pm",
       "end_time": "6:30pm",
-      "class_name": "Vinyasa Yoga",
-      "studio": "Fitness Studio",
-      "instructor": "Garry A",
-      "location": "Carla Madison",
-      "category": "FIT",
-      "cancelled": false,
-      "requires_signup": true
-    },
-    {
-      "start_time": "5:30pm",
-      "end_time": "6:30pm",
       "class_name": "Boxing Conditioning",
       "studio": "Boxing Studio",
       "instructor": "Salaam G",
@@ -1872,6 +1861,17 @@
       "category": "",
       "cancelled": false,
       "requires_signup": false
+    },
+    {
+      "start_time": "5:30pm",
+      "end_time": "6:30pm",
+      "class_name": "Yogalates",
+      "studio": "Fitness Studio",
+      "instructor": "",
+      "location": "Carla Madison",
+      "category": "FIT",
+      "cancelled": false,
+      "requires_signup": true
     },
     {
       "start_time": "5:45pm",
