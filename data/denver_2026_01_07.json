@@ -232,7 +232,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": false
     },
     {
       "start_time": "6:30am",
@@ -1013,7 +1013,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": false
     },
     {
       "start_time": "10:30am",
@@ -1413,7 +1413,7 @@
     },
     {
       "start_time": "12:30pm",
-      "end_time": "3:00pm",
+      "end_time": "5:00pm",
       "class_name": "Lap Swim",
       "studio": "Lap Pool",
       "instructor": "NA - No Instructor",
@@ -1776,17 +1776,6 @@
     },
     {
       "start_time": "3:00pm",
-      "end_time": "6:30pm",
-      "class_name": "Open Swim",
-      "studio": "Lap Pool",
-      "instructor": "NA - No Instructor",
-      "location": "Martin Luther King Jr.",
-      "category": "AQ",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "3:00pm",
       "end_time": "4:30pm",
       "class_name": "Open Gym",
       "studio": "Gym",
@@ -1992,7 +1981,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": false
     },
     {
       "start_time": "4:45pm",
@@ -2129,6 +2118,17 @@
     {
       "start_time": "5:15pm",
       "end_time": "6:15pm",
+      "class_name": "Aqua Tone",
+      "studio": "Lap Pool",
+      "instructor": "NA - No Instructor",
+      "location": "Martin Luther King Jr.",
+      "category": "AQ",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "5:15pm",
+      "end_time": "6:15pm",
       "class_name": "Yoga I",
       "studio": "Multi Purpose Room",
       "instructor": "Michelle S",
@@ -2223,7 +2223,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": false
     },
     {
       "start_time": "5:45pm",
@@ -2382,7 +2382,7 @@
     {
       "start_time": "6:15pm",
       "end_time": "7:15pm",
-      "class_name": "Aqua Zumba",
+      "class_name": "Aqua Tone",
       "studio": "Lap Pool",
       "instructor": "",
       "location": "Green Valley Ranch",
@@ -2410,7 +2410,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": false
     },
     {
       "start_time": "6:30pm",

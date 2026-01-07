@@ -136,17 +136,6 @@
       "requires_signup": false
     },
     {
-      "start_time": "8:15am",
-      "end_time": "9:15am",
-      "class_name": "Zumba\u00ae",
-      "studio": "Fitness Studio",
-      "instructor": "Nilsa G",
-      "location": "Central Park",
-      "category": "FIT",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
       "start_time": "8:30am",
       "end_time": "9:30am",
       "class_name": "Zumba\u00ae",
@@ -1078,17 +1067,6 @@
       "instructor": "NA - No Instructor",
       "location": "Carla Madison",
       "category": "",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "2:00pm",
-      "end_time": "3:30pm",
-      "class_name": "Key Log Roll/Diving Board",
-      "studio": "Lap Pool",
-      "instructor": "NA - No Instructor",
-      "location": "Carla Madison",
-      "category": "AQ",
       "cancelled": false,
       "requires_signup": false
     },
