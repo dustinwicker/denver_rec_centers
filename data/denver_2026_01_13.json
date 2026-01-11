@@ -247,6 +247,17 @@
     },
     {
       "start_time": "6:30am",
+      "end_time": "7:30am",
+      "class_name": "Indoor Cycling",
+      "studio": "Spin Studio",
+      "instructor": "Staci S",
+      "location": "Carla Madison",
+      "category": "FIT",
+      "cancelled": false,
+      "requires_signup": true
+    },
+    {
+      "start_time": "6:30am",
       "end_time": "3:45pm",
       "class_name": "Open Gym",
       "studio": "Gym",
@@ -277,17 +288,6 @@
       "category": "",
       "cancelled": false,
       "requires_signup": false
-    },
-    {
-      "start_time": "6:30am",
-      "end_time": "7:30am",
-      "class_name": "Indoor Cycling",
-      "studio": "Spin Studio",
-      "instructor": "Staci S",
-      "location": "Carla Madison",
-      "category": "FIT",
-      "cancelled": false,
-      "requires_signup": true
     },
     {
       "start_time": "6:30am",
@@ -423,17 +423,6 @@
     },
     {
       "start_time": "8:00am",
-      "end_time": "9:00am",
-      "class_name": "Vinyasa Yoga",
-      "studio": "Fitness Studio",
-      "instructor": "Karyn K",
-      "location": "Carla Madison",
-      "category": "FIT",
-      "cancelled": false,
-      "requires_signup": true
-    },
-    {
-      "start_time": "8:00am",
       "end_time": "9:15am",
       "class_name": "Quiet Swim",
       "studio": "Leisure Pool",
@@ -486,6 +475,17 @@
       "category": "CWS",
       "cancelled": false,
       "requires_signup": false
+    },
+    {
+      "start_time": "8:00am",
+      "end_time": "9:00am",
+      "class_name": "Yogalates",
+      "studio": "Fitness Studio",
+      "instructor": "",
+      "location": "Carla Madison",
+      "category": "FIT",
+      "cancelled": false,
+      "requires_signup": true
     },
     {
       "start_time": "8:30am",
@@ -1358,6 +1358,17 @@
     },
     {
       "start_time": "12:00pm",
+      "end_time": "1:00pm",
+      "class_name": "Zumba\u00ae",
+      "studio": "Fitness Studio",
+      "instructor": "Karen Farbman S",
+      "location": "Carla Madison",
+      "category": "FIT",
+      "cancelled": false,
+      "requires_signup": true
+    },
+    {
+      "start_time": "12:00pm",
       "end_time": "2:00pm",
       "class_name": "AOA: Bingo",
       "studio": "Ballroom",
@@ -1399,17 +1410,6 @@
       "category": "AQ",
       "cancelled": false,
       "requires_signup": false
-    },
-    {
-      "start_time": "12:00pm",
-      "end_time": "1:00pm",
-      "class_name": "Zumba\u00ae",
-      "studio": "Fitness Studio",
-      "instructor": "Karen Farbman S",
-      "location": "Carla Madison",
-      "category": "FIT",
-      "cancelled": false,
-      "requires_signup": true
     },
     {
       "start_time": "12:00pm",
@@ -1688,6 +1688,17 @@
     },
     {
       "start_time": "1:30pm",
+      "end_time": "4:45pm",
+      "class_name": "Open Gym",
+      "studio": "Gym",
+      "instructor": "NA - No Instructor",
+      "location": "Washington Park",
+      "category": "",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "1:30pm",
       "end_time": "2:30pm",
       "class_name": "AOA: Functional Fit 50+",
       "studio": "Multi Purpose Room",
@@ -1737,17 +1748,6 @@
       "studio": "Gym",
       "instructor": "NA - No Instructor",
       "location": "Martin Luther King Jr.",
-      "category": "",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "1:30pm",
-      "end_time": "3:45pm",
-      "class_name": "Open Gym",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "Washington Park",
       "category": "",
       "cancelled": false,
       "requires_signup": false
@@ -2061,17 +2061,6 @@
       "requires_signup": false
     },
     {
-      "start_time": "4:00pm",
-      "end_time": "6:00pm",
-      "class_name": "Youth Basketball",
-      "studio": "Gym",
-      "instructor": "",
-      "location": "Washington Park",
-      "category": "YS",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
       "start_time": "4:15pm",
       "end_time": "5:15pm",
       "class_name": "Boxing Conditioning",
@@ -2096,17 +2085,6 @@
     {
       "start_time": "4:30pm",
       "end_time": "5:30pm",
-      "class_name": "REB3L\u00ae Strength",
-      "studio": "Ballroom",
-      "instructor": "Sarah D",
-      "location": "Scheitler",
-      "category": "FIT",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "4:30pm",
-      "end_time": "5:30pm",
       "class_name": "Yin Yoga",
       "studio": "Fitness Studio",
       "instructor": "Rebecca J",
@@ -2114,6 +2092,17 @@
       "category": "FIT",
       "cancelled": false,
       "requires_signup": true
+    },
+    {
+      "start_time": "4:30pm",
+      "end_time": "5:30pm",
+      "class_name": "REB3L\u00ae Strength",
+      "studio": "Ballroom",
+      "instructor": "Sarah D",
+      "location": "Scheitler",
+      "category": "FIT",
+      "cancelled": false,
+      "requires_signup": false
     },
     {
       "start_time": "4:30pm",
@@ -2178,6 +2167,17 @@
       "instructor": "",
       "location": "Green Valley Ranch",
       "category": "AQ",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "5:00pm",
+      "end_time": "7:30pm",
+      "class_name": "Youth Basketball",
+      "studio": "Gym",
+      "instructor": "",
+      "location": "Washington Park",
+      "category": "YS",
       "cancelled": false,
       "requires_signup": false
     },
@@ -2382,6 +2382,17 @@
     {
       "start_time": "6:00pm",
       "end_time": "7:00pm",
+      "class_name": "Zumba\u00ae",
+      "studio": "Fitness Studio",
+      "instructor": "Arianna B",
+      "location": "Carla Madison",
+      "category": "FIT",
+      "cancelled": false,
+      "requires_signup": true
+    },
+    {
+      "start_time": "6:00pm",
+      "end_time": "7:00pm",
       "class_name": "Vinyasa Yoga",
       "studio": "Fitness Studio",
       "instructor": "Michelle S",
@@ -2422,17 +2433,6 @@
       "category": "FIT",
       "cancelled": false,
       "requires_signup": false
-    },
-    {
-      "start_time": "6:00pm",
-      "end_time": "7:00pm",
-      "class_name": "Zumba\u00ae",
-      "studio": "Fitness Studio",
-      "instructor": "Arianna B",
-      "location": "Carla Madison",
-      "category": "FIT",
-      "cancelled": false,
-      "requires_signup": true
     },
     {
       "start_time": "6:00pm",
@@ -2532,17 +2532,6 @@
       "category": "AQ",
       "cancelled": false,
       "requires_signup": true
-    },
-    {
-      "start_time": "6:15pm",
-      "end_time": "8:45pm",
-      "class_name": "Open Gym",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "Washington Park",
-      "category": "",
-      "cancelled": false,
-      "requires_signup": false
     },
     {
       "start_time": "6:30pm",
@@ -2695,6 +2684,17 @@
       "instructor": "Hannah W",
       "location": "Scheitler",
       "category": "FIT",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "7:45pm",
+      "end_time": "8:45pm",
+      "class_name": "Open Gym",
+      "studio": "Gym",
+      "instructor": "NA - No Instructor",
+      "location": "Washington Park",
+      "category": "",
       "cancelled": false,
       "requires_signup": false
     }
