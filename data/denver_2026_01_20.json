@@ -16,39 +16,6 @@
     },
     {
       "start_time": "5:30am",
-      "end_time": "7:00am",
-      "class_name": "Full Court Basketball",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "Carla Madison",
-      "category": "",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "5:30am",
-      "end_time": "8:00am",
-      "class_name": "Pool Closed",
-      "studio": "Leisure Pool",
-      "instructor": "NA - No Instructor",
-      "location": "Carla Madison",
-      "category": "AQ",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "5:30am",
-      "end_time": "11:00am",
-      "class_name": "Open Gym",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "Central Park",
-      "category": "",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "5:30am",
       "end_time": "4:00pm",
       "class_name": "Lap Swim",
       "studio": "Lap Pool",
@@ -93,50 +60,6 @@
     },
     {
       "start_time": "6:00am",
-      "end_time": "8:30am",
-      "class_name": "Open Gym",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "Martin Luther King Jr.",
-      "category": "",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "6:00am",
-      "end_time": "10:00am",
-      "class_name": "Lap Swim",
-      "studio": "Lap Pool",
-      "instructor": "NA - No Instructor",
-      "location": "Glenarm",
-      "category": "AQ",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "6:00am",
-      "end_time": "8:15am",
-      "class_name": "Lap Swim",
-      "studio": "Lap Pool",
-      "instructor": "NA - No Instructor",
-      "location": "Montclair",
-      "category": "AQ",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "6:00am",
-      "end_time": "9:45am",
-      "class_name": "Lap Swim",
-      "studio": "Lap Pool",
-      "instructor": "NA - No Instructor",
-      "location": "Ashland",
-      "category": "AQ",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "6:00am",
       "end_time": "12:30pm",
       "class_name": "Open Gym",
       "studio": "Gym",
@@ -154,28 +77,6 @@
       "instructor": "NA - No Instructor",
       "location": "Washington Park",
       "category": "",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "6:00am",
-      "end_time": "8:45am",
-      "class_name": "Lap Swim",
-      "studio": "Lap and Leisure Pool",
-      "instructor": "NA - No Instructor",
-      "location": "Scheitler",
-      "category": "AQ",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "6:00am",
-      "end_time": "12:00pm",
-      "class_name": "Lap Swim",
-      "studio": "Lap and Leisure Pool",
-      "instructor": "NA - No Instructor",
-      "location": "Rude",
-      "category": "AQ",
       "cancelled": false,
       "requires_signup": false
     },
@@ -254,7 +155,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": false
     },
     {
       "start_time": "6:30am",
@@ -694,7 +595,7 @@
       "location": "Carla Madison",
       "category": "AOA",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": false
     },
     {
       "start_time": "9:30am",
@@ -1478,17 +1379,6 @@
       "requires_signup": false
     },
     {
-      "start_time": "12:00pm",
-      "end_time": "4:00pm",
-      "class_name": "Open Gym",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "5090 Broadway",
-      "category": "",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
       "start_time": "12:15pm",
       "end_time": "1:15pm",
       "class_name": "Dance Cardio Fusion",
@@ -1946,7 +1836,7 @@
       "studio": "Gym",
       "instructor": "",
       "location": "Green Valley Ranch",
-      "category": "MYD",
+      "category": "",
       "cancelled": false,
       "requires_signup": false
     },
@@ -1990,18 +1880,18 @@
       "studio": "Multi Purpose Room",
       "instructor": "NA - No Instructor",
       "location": "Hiawatha Davis Jr.",
-      "category": "MYD",
+      "category": "",
       "cancelled": false,
       "requires_signup": false
     },
     {
       "start_time": "4:00pm",
       "end_time": "5:00pm",
-      "class_name": "MY Denver Karate",
-      "studio": "Small Gym",
+      "class_name": "Small Gym",
+      "studio": "Staff",
       "instructor": "",
       "location": "St. Charles",
-      "category": "MYD",
+      "category": "",
       "cancelled": false,
       "requires_signup": false
     },
@@ -2310,17 +2200,6 @@
       "instructor": "Hiawatha Davis Jr",
       "location": "Hiawatha Davis Jr.",
       "category": "AQ",
-      "cancelled": false,
-      "requires_signup": false
-    },
-    {
-      "start_time": "5:30pm",
-      "end_time": "6:30pm",
-      "class_name": "MY Denver Karate",
-      "studio": "Ballroom",
-      "instructor": "",
-      "location": "Swansea",
-      "category": "MYD",
       "cancelled": false,
       "requires_signup": false
     },
