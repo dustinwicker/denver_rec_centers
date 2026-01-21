@@ -1,36 +1,8 @@
 {
-  "week_start": "2026-01-14",
-  "week_end": "2026-01-20",
-  "display_range": "January 14 - January 20, 2026",
+  "week_start": "2026-01-18",
+  "week_end": "2026-01-24",
+  "display_range": "January 18 - January 24, 2026",
   "days": [
-    {
-      "date": "2026-01-14",
-      "day_name": "Wednesday",
-      "display_date": "Wednesday, January 14, 2026",
-      "event_count": 227,
-      "file": "denver_2026_01_14.json"
-    },
-    {
-      "date": "2026-01-15",
-      "day_name": "Thursday",
-      "display_date": "Thursday, January 15, 2026",
-      "event_count": 238,
-      "file": "denver_2026_01_15.json"
-    },
-    {
-      "date": "2026-01-16",
-      "day_name": "Friday",
-      "display_date": "Friday, January 16, 2026",
-      "event_count": 175,
-      "file": "denver_2026_01_16.json"
-    },
-    {
-      "date": "2026-01-17",
-      "day_name": "Saturday",
-      "display_date": "Saturday, January 17, 2026",
-      "event_count": 100,
-      "file": "denver_2026_01_17.json"
-    },
     {
       "date": "2026-01-18",
       "day_name": "Sunday",
@@ -42,15 +14,43 @@
       "date": "2026-01-19",
       "day_name": "Monday",
       "display_date": "Monday, January 19, 2026",
-      "event_count": 220,
+      "event_count": 214,
       "file": "denver_2026_01_19.json"
     },
     {
       "date": "2026-01-20",
       "day_name": "Tuesday",
       "display_date": "Tuesday, January 20, 2026",
-      "event_count": 245,
+      "event_count": 234,
       "file": "denver_2026_01_20.json"
+    },
+    {
+      "date": "2026-01-21",
+      "day_name": "Wednesday",
+      "display_date": "Wednesday, January 21, 2026",
+      "event_count": 222,
+      "file": "denver_2026_01_21.json"
+    },
+    {
+      "date": "2026-01-22",
+      "day_name": "Thursday",
+      "display_date": "Thursday, January 22, 2026",
+      "event_count": 220,
+      "file": "denver_2026_01_22.json"
+    },
+    {
+      "date": "2026-01-23",
+      "day_name": "Friday",
+      "display_date": "Friday, January 23, 2026",
+      "event_count": 170,
+      "file": "denver_2026_01_23.json"
+    },
+    {
+      "date": "2026-01-24",
+      "day_name": "Saturday",
+      "display_date": "Saturday, January 24, 2026",
+      "event_count": 100,
+      "file": "denver_2026_01_24.json"
     }
   ]
 }
