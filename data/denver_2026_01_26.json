@@ -23,7 +23,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": false
     },
     {
       "start_time": "6:00am",
@@ -331,7 +331,7 @@
       "location": "Carla Madison",
       "category": "AOA",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": false
     },
     {
       "start_time": "10:30am",
@@ -363,7 +363,7 @@
       "instructor": "Veronica W",
       "location": "Eisenhower",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false
     },
     {
@@ -440,7 +440,7 @@
       "instructor": "Veronica W",
       "location": "Eisenhower",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false
     },
     {
@@ -749,7 +749,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": false
     },
     {
       "start_time": "6:00pm",
