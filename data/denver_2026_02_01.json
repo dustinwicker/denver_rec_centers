@@ -1,0 +1,73 @@
+{
+  "day_name": "Sunday",
+  "date": "2026-02-01",
+  "display_date": "Sunday, February 1, 2026",
+  "events": [
+    {
+      "start_time": "8:30am",
+      "end_time": "9:30am",
+      "class_name": "Zumba\u00ae",
+      "studio": "Fitness Studio",
+      "instructor": "Ashley C",
+      "location": "Carla Madison",
+      "category": "FIT",
+      "cancelled": false,
+      "requires_signup": true
+    },
+    {
+      "start_time": "9:00am",
+      "end_time": "10:00am",
+      "class_name": "Barre",
+      "studio": "Fitness Studio",
+      "instructor": "Kyla M",
+      "location": "Central Park",
+      "category": "FIT",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "9:45am",
+      "end_time": "10:45am",
+      "class_name": "Vinyasa Yoga",
+      "studio": "Fitness Studio",
+      "instructor": "Rebecca J",
+      "location": "Carla Madison",
+      "category": "FIT",
+      "cancelled": false,
+      "requires_signup": true
+    },
+    {
+      "start_time": "10:30am",
+      "end_time": "11:30am",
+      "class_name": "Zumba\u00ae",
+      "studio": "Fitness Studio",
+      "instructor": "Linda M",
+      "location": "Central Park",
+      "category": "FIT",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "11:00am",
+      "end_time": "12:00pm",
+      "class_name": "Vinyasa Yoga",
+      "studio": "Fitness Studio",
+      "instructor": "Rebecca J",
+      "location": "Carla Madison",
+      "category": "FIT",
+      "cancelled": false,
+      "requires_signup": true
+    },
+    {
+      "start_time": "11:00am",
+      "end_time": "1:15pm",
+      "class_name": "Pickleball",
+      "studio": "Gym",
+      "instructor": "NA - No Instructor",
+      "location": "Washington Park",
+      "category": "CWS",
+      "cancelled": false,
+      "requires_signup": false
+    }
+  ]
+}
