@@ -45,7 +45,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": false
     },
     {
       "start_time": "6:30am",
@@ -96,7 +96,7 @@
       "end_time": "8:45am",
       "class_name": "Yoga II",
       "studio": "Fitness Studio",
-      "instructor": "Michelle S",
+      "instructor": "",
       "location": "Central Park",
       "category": "FIT",
       "cancelled": false,
@@ -253,7 +253,7 @@
       "instructor": "Michelle S",
       "location": "Martin Luther King Jr.",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false
     },
     {
@@ -331,7 +331,7 @@
       "location": "Carla Madison",
       "category": "AOA",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": false
     },
     {
       "start_time": "10:30am",
@@ -749,7 +749,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": false
     },
     {
       "start_time": "6:00pm",
@@ -815,7 +815,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": false
     }
   ]
 }

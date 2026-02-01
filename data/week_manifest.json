@@ -1,29 +1,8 @@
 {
-  "week_start": "2026-01-25",
-  "week_end": "2026-01-31",
-  "display_range": "January 25 - January 31, 2026",
+  "week_start": "2026-01-28",
+  "week_end": "2026-02-03",
+  "display_range": "January 28 - February 03, 2026",
   "days": [
-    {
-      "date": "2026-01-25",
-      "day_name": "Sunday",
-      "display_date": "Sunday, January 25, 2026",
-      "event_count": 6,
-      "file": "denver_2026_01_25.json"
-    },
-    {
-      "date": "2026-01-26",
-      "day_name": "Monday",
-      "display_date": "Monday, January 26, 2026",
-      "event_count": 74,
-      "file": "denver_2026_01_26.json"
-    },
-    {
-      "date": "2026-01-27",
-      "day_name": "Tuesday",
-      "display_date": "Tuesday, January 27, 2026",
-      "event_count": 86,
-      "file": "denver_2026_01_27.json"
-    },
     {
       "date": "2026-01-28",
       "day_name": "Wednesday",
@@ -35,7 +14,7 @@
       "date": "2026-01-29",
       "day_name": "Thursday",
       "display_date": "Thursday, January 29, 2026",
-      "event_count": 77,
+      "event_count": 76,
       "file": "denver_2026_01_29.json"
     },
     {
@@ -51,6 +30,27 @@
       "display_date": "Saturday, January 31, 2026",
       "event_count": 23,
       "file": "denver_2026_01_31.json"
+    },
+    {
+      "date": "2026-02-01",
+      "day_name": "Sunday",
+      "display_date": "Sunday, February 1, 2026",
+      "event_count": 6,
+      "file": "denver_2026_02_01.json"
+    },
+    {
+      "date": "2026-02-02",
+      "day_name": "Monday",
+      "display_date": "Monday, February 2, 2026",
+      "event_count": 74,
+      "file": "denver_2026_02_02.json"
+    },
+    {
+      "date": "2026-02-03",
+      "day_name": "Tuesday",
+      "display_date": "Tuesday, February 3, 2026",
+      "event_count": 85,
+      "file": "denver_2026_02_03.json"
     }
   ]
 }
