@@ -1451,7 +1451,7 @@
     nextWeekBtn.style.opacity = nextWeekBtn.disabled ? '0.3' : '1';
   }
   
-  async function loadWeekByIndex(index) {
+  async function loadWeekByIndex(index, targetDateStr = null) {
     if (!masterManifest || index < 0 || index >= masterManifest.weeks.length) return;
     
     currentWeekIndex = index;
@@ -1466,12 +1466,16 @@
       }
       weekManifest = await response.json();
       
-      // Reset to first day or today if in this week
-      const today = new Date();
-      const todayStr = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
-      
-      const todayIndex = weekManifest.days.findIndex(d => d.date === todayStr);
-      currentDayIndex = todayIndex !== -1 ? todayIndex : 0;
+      // Use target date if provided (for day-by-day navigation across weeks), otherwise today or first day
+      if (targetDateStr) {
+        const targetIndex = weekManifest.days.findIndex(d => d.date === targetDateStr);
+        currentDayIndex = targetIndex !== -1 ? targetIndex : 0;
+      } else {
+        const today = new Date();
+        const todayStr = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+        const todayIndex = weekManifest.days.findIndex(d => d.date === todayStr);
+        currentDayIndex = todayIndex !== -1 ? todayIndex : 0;
+      }
       
       renderDayTabs();
       updateWeekNavButtons();
@@ -1542,19 +1546,22 @@
     return -1;
   }
 
-  // Navigate to a specific date (loads the week and day)
+  // Navigate to a specific date (loads the week and selects that day)
   async function navigateToDate(dateStr) {
     if (!weekManifest || !weekManifest.days) return;
     const weekIdx = findWeekIndexForDate(dateStr);
     if (weekIdx === -1) return; // Date not in any loaded week
     if (weekIdx !== currentWeekIndex) {
-      await loadWeekByIndex(weekIdx);
-    }
-    const dayIdx = weekManifest.days.findIndex(d => d.date === dateStr);
-    if (dayIdx !== -1 && dayIdx !== currentDayIndex) {
-      currentDayIndex = dayIdx;
-      await loadDayData(weekManifest.days[dayIdx].file);
-      renderDayTabs();
+      await loadWeekByIndex(weekIdx, dateStr);  // Pass target date so we select WED 4, not today
+    } else {
+      // Same week - just switch to that day
+      const dayIdx = weekManifest.days.findIndex(d => d.date === dateStr);
+      if (dayIdx !== -1 && dayIdx !== currentDayIndex) {
+        currentDayIndex = dayIdx;
+        await loadDayData(weekManifest.days[dayIdx].file);
+        renderDayTabs();
+        updateWeekNavButtons();
+      }
     }
   }
 
