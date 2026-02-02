@@ -1376,10 +1376,11 @@
         <div class="day-num">${dayNum}</div>
       `;
       
-      tab.addEventListener('click', () => {
+      tab.addEventListener('click', async () => {
         currentDayIndex = index;
-        loadDayData(day.file);
+        await loadDayData(day.file);
         renderDayTabs(); // This will update the month header
+        updateWeekNavButtons();
       });
       
       dayTabsEl.appendChild(tab);
@@ -1425,17 +1426,29 @@
   }
   
   function updateWeekNavButtons() {
-    if (!masterManifest || masterManifest.weeks.length <= 1) {
+    if (!weekManifest || !weekManifest.days) {
       prevWeekBtn.disabled = true;
       nextWeekBtn.disabled = true;
       prevWeekBtn.style.opacity = '0.3';
       nextWeekBtn.style.opacity = '0.3';
-    } else {
-      prevWeekBtn.disabled = currentWeekIndex <= 0;
-      nextWeekBtn.disabled = currentWeekIndex >= masterManifest.weeks.length - 1;
-      prevWeekBtn.style.opacity = prevWeekBtn.disabled ? '0.3' : '1';
-      nextWeekBtn.style.opacity = nextWeekBtn.disabled ? '0.3' : '1';
+      return;
     }
+    const currentDate = weekManifest.days[currentDayIndex]?.date;
+    if (!currentDate) {
+      prevWeekBtn.disabled = true;
+      nextWeekBtn.disabled = true;
+      prevWeekBtn.style.opacity = '0.3';
+      nextWeekBtn.style.opacity = '0.3';
+      return;
+    }
+    // Can go prev if not first day of week, or if previous date exists in another week
+    const canGoPrev = currentDayIndex > 0 || findWeekIndexForDate(addDaysToDate(currentDate, -1)) !== -1;
+    // Can go next if not last day of week, or if next date exists in another week
+    const canGoNext = currentDayIndex < weekManifest.days.length - 1 || findWeekIndexForDate(addDaysToDate(currentDate, 1)) !== -1;
+    prevWeekBtn.disabled = !canGoPrev;
+    nextWeekBtn.disabled = !canGoNext;
+    prevWeekBtn.style.opacity = prevWeekBtn.disabled ? '0.3' : '1';
+    nextWeekBtn.style.opacity = nextWeekBtn.disabled ? '0.3' : '1';
   }
   
   async function loadWeekByIndex(index) {
@@ -1499,6 +1512,7 @@
         }
         
         renderDayTabs();
+        updateWeekNavButtons();
         
         // Load the first (or today's) day
         if (weekManifest.days.length > 0) {
@@ -1511,17 +1525,72 @@
     }
   }
 
-  // Week navigation
-  prevWeekBtn.addEventListener('click', async () => {
-    if (masterManifest && currentWeekIndex > 0) {
-      await loadWeekByIndex(currentWeekIndex - 1);
+  // Add days to a date string (YYYY-MM-DD)
+  function addDaysToDate(dateStr, days) {
+    const d = new Date(dateStr + 'T12:00:00');
+    d.setDate(d.getDate() + days);
+    return d.toISOString().slice(0, 10);
+  }
+
+  // Find which week index in master manifest contains this date
+  function findWeekIndexForDate(dateStr) {
+    if (!masterManifest || !masterManifest.weeks) return -1;
+    for (let i = 0; i < masterManifest.weeks.length; i++) {
+      const w = masterManifest.weeks[i];
+      if (dateStr >= w.week_start && dateStr <= w.week_end) return i;
     }
+    return -1;
+  }
+
+  // Navigate to a specific date (loads the week and day)
+  async function navigateToDate(dateStr) {
+    if (!weekManifest || !weekManifest.days) return;
+    const weekIdx = findWeekIndexForDate(dateStr);
+    if (weekIdx === -1) return; // Date not in any loaded week
+    if (weekIdx !== currentWeekIndex) {
+      await loadWeekByIndex(weekIdx);
+    }
+    const dayIdx = weekManifest.days.findIndex(d => d.date === dateStr);
+    if (dayIdx !== -1 && dayIdx !== currentDayIndex) {
+      currentDayIndex = dayIdx;
+      await loadDayData(weekManifest.days[dayIdx].file);
+      renderDayTabs();
+    }
+  }
+
+  // Day navigation - arrows move by calendar day (wrapping across weeks when needed)
+  prevWeekBtn.addEventListener('click', async () => {
+    if (!weekManifest || !weekManifest.days) return;
+    const currentDate = weekManifest.days[currentDayIndex]?.date;
+    if (!currentDate) return;
+    if (currentDayIndex > 0) {
+      // Previous day is in same week
+      currentDayIndex--;
+      await loadDayData(weekManifest.days[currentDayIndex].file);
+      renderDayTabs();
+    } else {
+      // Need to go to previous week's last day
+      const prevDate = addDaysToDate(currentDate, -1);
+      await navigateToDate(prevDate);
+    }
+    updateWeekNavButtons();
   });
   
   nextWeekBtn.addEventListener('click', async () => {
-    if (masterManifest && currentWeekIndex < masterManifest.weeks.length - 1) {
-      await loadWeekByIndex(currentWeekIndex + 1);
+    if (!weekManifest || !weekManifest.days) return;
+    const currentDate = weekManifest.days[currentDayIndex]?.date;
+    if (!currentDate) return;
+    if (currentDayIndex < weekManifest.days.length - 1) {
+      // Next day is in same week
+      currentDayIndex++;
+      await loadDayData(weekManifest.days[currentDayIndex].file);
+      renderDayTabs();
+    } else {
+      // Need to go to next week's first day (the chronologically next day)
+      const nextDate = addDaysToDate(currentDate, 1);
+      await navigateToDate(nextDate);
     }
+    updateWeekNavButtons();
   });
 
   // Initial load
