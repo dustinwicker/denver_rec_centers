@@ -1112,7 +1112,7 @@
   let selectedGyms = [];
   let selectedClasses = []; // Empty = show all classes
   let hideCancelled = true;
-  let hideNonClasses = false; // Hide non-class activities like "Pool Closed", "Gym Closed"
+  let hideNonClasses = true; // Hide non-class activities like "Pool Closed", "Gym Closed"
   let filtersInitialized = false;
   
   // List of non-class activities (not actual classes/activities)

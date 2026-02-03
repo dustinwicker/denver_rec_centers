@@ -421,7 +421,7 @@
 .hide-cancelled-label{
   display:inline-flex;
   align-items:center;
-  gap:1px;
+  gap:0;
   cursor:pointer;
   font-size:11px;
   color:var(--muted);
@@ -434,6 +434,9 @@
   height:12px;
   cursor:pointer;
   margin:0;
+  margin-right:-8px;
+  padding:0;
+  flex-shrink:0;
 }
 
 .status-bar{
