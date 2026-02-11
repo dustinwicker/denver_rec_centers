@@ -12,7 +12,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": false
     },
     {
       "start_time": "7:00am",
@@ -265,7 +265,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": false
     },
     {
       "start_time": "10:30am",
@@ -330,7 +330,7 @@
       "instructor": "Tim M",
       "location": "Highland",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false
     },
     {
@@ -430,7 +430,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": false
     },
     {
       "start_time": "12:15pm",
@@ -440,7 +440,7 @@
       "instructor": "Tim M",
       "location": "Highland",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false
     },
     {
@@ -518,7 +518,7 @@
       "location": "Carla Madison",
       "category": "AOA",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": false
     },
     {
       "start_time": "1:30pm",
@@ -540,7 +540,7 @@
       "location": "Carla Madison",
       "category": "AOA",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": false
     },
     {
       "start_time": "3:30pm",
@@ -606,7 +606,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": false
     },
     {
       "start_time": "5:15pm",
@@ -661,7 +661,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": false
     },
     {
       "start_time": "6:00pm",
@@ -708,17 +708,6 @@
       "requires_signup": false
     },
     {
-      "start_time": "6:15pm",
-      "end_time": "7:15pm",
-      "class_name": "Aqua Tone",
-      "studio": "Lap Pool",
-      "instructor": "",
-      "location": "Green Valley Ranch",
-      "category": "AQ",
-      "cancelled": false,
-      "requires_signup": true
-    },
-    {
       "start_time": "6:30pm",
       "end_time": "7:30pm",
       "class_name": "Barre",
@@ -726,6 +715,17 @@
       "instructor": "Kyla M",
       "location": "Carla Madison",
       "category": "FIT",
+      "cancelled": false,
+      "requires_signup": false
+    },
+    {
+      "start_time": "6:30pm",
+      "end_time": "7:30pm",
+      "class_name": "Aqua Tone",
+      "studio": "Lap Pool",
+      "instructor": "",
+      "location": "Green Valley Ranch",
+      "category": "AQ",
       "cancelled": false,
       "requires_signup": true
     },
