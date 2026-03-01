@@ -23,7 +23,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": false
     },
     {
       "start_time": "6:00am",
@@ -45,7 +45,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": false
     },
     {
       "start_time": "6:30am",
@@ -72,9 +72,9 @@
     {
       "start_time": "7:15am",
       "end_time": "8:15am",
-      "class_name": "Vinyasa Yoga",
+      "class_name": "Yoga I",
       "studio": "Multi Purpose Room",
-      "instructor": "Victoria B",
+      "instructor": "",
       "location": "Montclair",
       "category": "FIT",
       "cancelled": false,
@@ -331,7 +331,7 @@
       "location": "Carla Madison",
       "category": "AOA",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": false
     },
     {
       "start_time": "10:30am",
@@ -418,7 +418,7 @@
       "instructor": "Lanita De L",
       "location": "Montclair",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false
     },
     {
@@ -760,7 +760,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": false
     },
     {
       "start_time": "6:00pm",
@@ -826,7 +826,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": false
     }
   ]
 }
