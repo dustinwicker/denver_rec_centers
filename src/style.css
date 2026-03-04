@@ -813,10 +813,11 @@
 .modal-signup-reminder-note{
   background:#eff6ff;
   color:#1e40af;
-  padding:10px 12px;
+  padding:12px 14px;
   border-radius:8px;
-  font-size:13px;
+  font-size:16px;
   margin-bottom:16px;
+  line-height:1.4;
 }
 .modal-description{
   font-size:13px;
@@ -1072,8 +1073,8 @@
 /* Status only - legend removed */
   
   /* Footer */
-  .footer{padding:12px;text-align:center;font-size:12px;color:var(--muted)}
-  .footer .data-as-of{margin-top:6px;font-size:11px;opacity:0.9}
+  .footer{padding:14px 12px;text-align:center;color:var(--muted)}
+  .footer .data-as-of{font-size:15px;opacity:0.95}
   
   /* Responsive - Tablet */
   @media (max-width:1024px){

@@ -786,11 +786,12 @@
     return classStartDate.getTime() > seventyTwoHoursFromNow.getTime();
   }
 
-  // Google Calendar link for a "remind me when sign-up opens" event (72 hours before class)
+  // Google Calendar link for a "remind me when sign-up opens" event (72 hours = 3 days before, same time of day)
+  // Use "3 days earlier" instead of subtracting 72h in ms so DST doesn't shift the hour (e.g. 8:30 stays 8:30).
   function createSignupReminderCalendarLink(item, gymName, dateStr) {
     const classStart = getClassStartDate(item, dateStr);
     if (!classStart) return '';
-    const reminderTime = new Date(classStart.getTime() - 72 * 60 * 60 * 1000);
+    const reminderTime = new Date(classStart.getFullYear(), classStart.getMonth(), classStart.getDate() - 3, classStart.getHours(), classStart.getMinutes(), 0);
     const endReminder = new Date(reminderTime.getTime() + 15 * 60 * 1000);
     const fmt = (d) => {
       const y = d.getFullYear();
@@ -939,13 +940,13 @@
           <p><em>No description available. Click "See More" on GroupExPro for details.</em></p>
         </div>
       `}
-      ${showSignupReminder ? '<div class="modal-signup-reminder-note">Sign-up opens 72 hours before class. Add a calendar reminder to get notified when it opens.</div>' : ''}
+      ${showSignupReminder ? '<div class="modal-signup-reminder-note">Sign-up opens 72 hours before class (same time of day). Add a calendar reminder for that time to get notified when it opens.</div>' : ''}
       ${item.classFull ? '<div class="modal-class-full">This class is full. Sign Up / Reserve is not available.</div>' : ''}
       <div class="modal-actions">
         ${!item.cancelled ? `
+          ${showSignupReminder && reminderCalLink ? `<a href="${reminderCalLink}" target="_blank" class="modal-btn secondary reminder-cal-btn">🔔 Add reminder for when sign-up opens</a>` : ''}
           <a href="${calLink}" target="_blank" class="modal-btn primary">📅 Add to Calendar</a>
           ${item.requiresSignup && !showSignupReminder ? `<button class="modal-btn secondary signup-external-btn">${item.joinWaitlist ? '🎟️ Join Waitlist' : '🎟️ Sign Up / Reserve'}</button>` : ''}
-          ${showSignupReminder && reminderCalLink ? `<a href="${reminderCalLink}" target="_blank" class="modal-btn secondary reminder-cal-btn">🔔 Remind me when sign-up opens</a>` : ''}
           <a href="${signUpLink}" target="_blank" class="modal-btn tertiary">See More on GroupExPro</a>
         ` : `
           <a href="${signUpLink}" target="_blank" class="modal-btn secondary">View on GroupExPro</a>
