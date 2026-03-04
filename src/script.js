@@ -929,7 +929,6 @@
         <div class="modal-row"><span class="modal-label">Instructor:</span> ${item.instructor || 'N/A'}</div>
       </div>
       ${item.cancelled ? '<div class="modal-cancelled">⚠️ This class has been CANCELLED</div>' : ''}
-      ${showSignupReminder ? '<div class="modal-signup-reminder-note">Sign-up opens 72 hours before class. Add a calendar reminder to get notified when it opens.</div>' : ''}
       ${description ? `
         <div class="modal-description-text">
           <strong>Description:</strong>
@@ -940,11 +939,12 @@
           <p><em>No description available. Click "See More" on GroupExPro for details.</em></p>
         </div>
       `}
+      ${showSignupReminder ? '<div class="modal-signup-reminder-note">Sign-up opens 72 hours before class. Add a calendar reminder to get notified when it opens.</div>' : ''}
       ${item.classFull ? '<div class="modal-class-full">This class is full. Sign Up / Reserve is not available.</div>' : ''}
       <div class="modal-actions">
         ${!item.cancelled ? `
           <a href="${calLink}" target="_blank" class="modal-btn primary">📅 Add to Calendar</a>
-          ${item.requiresSignup ? `<button class="modal-btn secondary signup-external-btn">${item.joinWaitlist ? '🎟️ Join Waitlist' : '🎟️ Sign Up / Reserve'}</button>` : ''}
+          ${item.requiresSignup && !showSignupReminder ? `<button class="modal-btn secondary signup-external-btn">${item.joinWaitlist ? '🎟️ Join Waitlist' : '🎟️ Sign Up / Reserve'}</button>` : ''}
           ${showSignupReminder && reminderCalLink ? `<a href="${reminderCalLink}" target="_blank" class="modal-btn secondary reminder-cal-btn">🔔 Remind me when sign-up opens</a>` : ''}
           <a href="${signUpLink}" target="_blank" class="modal-btn tertiary">See More on GroupExPro</a>
         ` : `
@@ -1586,11 +1586,9 @@
   function updateDataAsOf() {
     const el = qs('#data-as-of');
     if (!el) return;
-    const manifest = weekManifest || masterManifest;
-    let dateStr = null;
-    if (manifest) {
-      dateStr = manifest.last_scraped || (manifest.generated && manifest.generated.slice(0, 10));
-    }
+    const fromWeek = weekManifest && (weekManifest.last_scraped || (weekManifest.generated && weekManifest.generated.slice(0, 10)));
+    const fromMaster = masterManifest && masterManifest.generated && masterManifest.generated.slice(0, 10);
+    const dateStr = fromWeek || fromMaster;
     if (!dateStr) {
       el.textContent = '';
       el.style.display = 'none';
