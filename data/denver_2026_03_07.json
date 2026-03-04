@@ -12,7 +12,9 @@
       "location": "Central Park",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": false
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
     },
     {
       "start_time": "8:30am",
@@ -23,7 +25,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": true,
+      "class_full": false,
+      "join_waitlist": false
     },
     {
       "start_time": "8:30am",
@@ -34,7 +38,9 @@
       "location": "Central Park",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": false
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
     },
     {
       "start_time": "8:45am",
@@ -45,7 +51,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": true,
+      "class_full": false,
+      "join_waitlist": false
     },
     {
       "start_time": "9:00am",
@@ -56,7 +64,9 @@
       "location": "Washington Park",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": false
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
     },
     {
       "start_time": "9:00am",
@@ -67,7 +77,9 @@
       "location": "Hiawatha Davis Jr.",
       "category": "CWS",
       "cancelled": false,
-      "requires_signup": false
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
     },
     {
       "start_time": "9:15am",
@@ -78,7 +90,9 @@
       "location": "Montclair",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": false
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
     },
     {
       "start_time": "9:15am",
@@ -89,7 +103,9 @@
       "location": "Scheitler",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": false
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
     },
     {
       "start_time": "9:30am",
@@ -100,7 +116,9 @@
       "location": "Eisenhower",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": false
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
     },
     {
       "start_time": "9:30am",
@@ -111,7 +129,9 @@
       "location": "Athmar",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": false
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
     },
     {
       "start_time": "9:45am",
@@ -122,7 +142,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": true,
+      "class_full": false,
+      "join_waitlist": false
     },
     {
       "start_time": "10:00am",
@@ -133,7 +155,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": true,
+      "class_full": false,
+      "join_waitlist": false
     },
     {
       "start_time": "10:00am",
@@ -144,7 +168,9 @@
       "location": "Carla Madison",
       "category": "",
       "cancelled": false,
-      "requires_signup": false
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
     },
     {
       "start_time": "10:15am",
@@ -155,7 +181,9 @@
       "location": "Rude",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": false
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
     },
     {
       "start_time": "10:15am",
@@ -166,7 +194,9 @@
       "location": "Harvard Gulch",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": false
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
     },
     {
       "start_time": "10:30am",
@@ -177,7 +207,9 @@
       "location": "Montclair",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": false
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
     },
     {
       "start_time": "10:30am",
@@ -188,7 +220,9 @@
       "location": "Cook Park",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": false
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
     },
     {
       "start_time": "10:30am",
@@ -199,7 +233,9 @@
       "location": "Aztlan",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": false
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
     },
     {
       "start_time": "10:30am",
@@ -210,7 +246,9 @@
       "location": "Green Valley Ranch",
       "category": "CWS",
       "cancelled": false,
-      "requires_signup": false
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
     },
     {
       "start_time": "11:00am",
@@ -221,7 +259,9 @@
       "location": "Glenarm",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": false
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
     },
     {
       "start_time": "11:00am",
@@ -232,7 +272,9 @@
       "location": "Eisenhower",
       "category": "AOA",
       "cancelled": false,
-      "requires_signup": false
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
     },
     {
       "start_time": "11:15am",
@@ -243,7 +285,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true
+      "requires_signup": true,
+      "class_full": false,
+      "join_waitlist": false
     },
     {
       "start_time": "11:30am",
@@ -254,7 +298,9 @@
       "location": "Harvard Gulch",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": false
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
     },
     {
       "start_time": "2:30pm",
@@ -265,7 +311,9 @@
       "location": "Hiawatha Davis Jr.",
       "category": "AC",
       "cancelled": false,
-      "requires_signup": false
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
     }
   ]
 }
