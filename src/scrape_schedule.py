@@ -514,13 +514,20 @@ def parse_current_day(driver):
             category = ""
             is_cancelled = False
             
-            # Check for cancelled and sign-up required in any line
+            # Check for cancelled, class full, sign-up, and waitlist in any line
             requires_signup = False
+            class_full = False
+            join_waitlist = False
             for el in event_lines:
                 if el == 'Cancelled':
                     is_cancelled = True
                 if 'Sign Up' in el or 'Reserve' in el:
                     requires_signup = True
+                if 'Class Full' in el:
+                    class_full = True
+                if 'Join Waitlist' in el or 'Waitlist' in el:
+                    requires_signup = True
+                    join_waitlist = True
             
             # Extract instructor (usually has a period at the end or is "NA - No Instructor")
             for el in event_lines:
@@ -565,7 +572,9 @@ def parse_current_day(driver):
                 'location': location,
                 'category': category,
                 'cancelled': is_cancelled,
-                'requires_signup': requires_signup
+                'requires_signup': requires_signup,
+                'class_full': class_full,
+                'join_waitlist': join_waitlist
             })
             
             i = j

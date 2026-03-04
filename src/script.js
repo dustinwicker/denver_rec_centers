@@ -393,7 +393,9 @@
       start: ev.start_time,
       end: ev.end_time,
       cancelled: ev.cancelled || false,
-      requiresSignup: ev.requires_signup || false
+      requiresSignup: ev.requires_signup || false,
+      classFull: ev.class_full || false,
+      joinWaitlist: ev.join_waitlist || false
     }));
     
     // Get unique gyms and classes sorted
@@ -715,6 +717,9 @@
         if(item.cancelled) {
           ev.innerHTML += `<div class="cancelled-label">CANCELLED</div>`;
         }
+        if(item.classFull && !item.cancelled) {
+          ev.innerHTML += `<div class="class-full-label">Class Full</div>`;
+        }
         
         // Add action buttons (Add to Calendar, Sign Up if required)
         if (!item.cancelled) {
@@ -724,14 +729,14 @@
           const calLink = createGoogleCalendarLink(item, gymName);
           actions.innerHTML = `<a href="${calLink}" target="_blank" class="event-btn cal-btn" title="Add to Google Calendar">📅</a>`;
           
-          // Sign Up link (only if requires signup) - shows confirmation modal
+          // Sign Up / Join Waitlist (only if requires signup) - shows confirmation modal
           if (item.requiresSignup) {
             const signUpBtn = el('button', 'event-btn signup-btn');
             signUpBtn.innerHTML = '🎟️';
-            signUpBtn.title = 'Sign Up / Reserve';
+            signUpBtn.title = item.joinWaitlist ? 'Join Waitlist' : 'Sign Up / Reserve';
             signUpBtn.addEventListener('click', (e) => {
               e.stopPropagation();
-              showExternalLinkModal(item.className, gymName);
+              showExternalLinkModal(item.className, gymName, item.joinWaitlist);
             });
             actions.appendChild(signUpBtn);
           }
@@ -800,12 +805,14 @@
   
   // Show event details modal
   // Show confirmation modal before navigating to external sign-up page
-  function showExternalLinkModal(className, gymName) {
+  function showExternalLinkModal(className, gymName, isWaitlist) {
     // Remove existing modal if any
     const existingModal = qs('.event-modal-overlay');
     if (existingModal) existingModal.remove();
     
     const signUpLink = `https://groupexpro.com/schedule/522/?view=new`;
+    const actionVerb = isWaitlist ? 'join the waitlist for' : 'sign up for';
+    const buttonLabel = isWaitlist ? '✓ Continue to Join Waitlist' : '✓ Continue to Sign Up';
     
     const overlay = el('div', 'event-modal-overlay');
     const modal = el('div', 'event-modal external-link-modal');
@@ -815,7 +822,7 @@
       <div class="external-link-icon">🔗</div>
       <h2 class="modal-title">Leaving This Site</h2>
       <div class="external-link-message">
-        <p>You are about to leave the Denver Recreation Center Calendar to sign up for:</p>
+        <p>You are about to leave the Denver Recreation Center Calendar to ${actionVerb}:</p>
         <div class="external-link-class">
           <strong>${className}</strong>
           <span>at ${gymName}</span>
@@ -825,7 +832,7 @@
         <p class="external-link-note">This is the official GroupExPro scheduling site for Denver Recreation Centers.</p>
       </div>
       <div class="modal-actions">
-        <button class="modal-btn primary continue-btn">✓ Continue to Sign Up</button>
+        <button class="modal-btn primary continue-btn">${buttonLabel}</button>
         <button class="modal-btn secondary cancel-btn">Cancel</button>
       </div>
     `;
@@ -881,6 +888,7 @@
         <div class="modal-row"><span class="modal-label">Instructor:</span> ${item.instructor || 'N/A'}</div>
       </div>
       ${item.cancelled ? '<div class="modal-cancelled">⚠️ This class has been CANCELLED</div>' : ''}
+      ${item.classFull ? '<div class="modal-class-full">This class is full. Sign up / Reserve is not available.</div>' : ''}
       ${description ? `
         <div class="modal-description-text">
           <strong>Description:</strong>
@@ -894,7 +902,7 @@
       <div class="modal-actions">
         ${!item.cancelled ? `
           <a href="${calLink}" target="_blank" class="modal-btn primary">📅 Add to Calendar</a>
-          ${item.requiresSignup ? `<button class="modal-btn secondary signup-external-btn">🎟️ Sign Up / Reserve</button>` : ''}
+          ${item.requiresSignup ? `<button class="modal-btn secondary signup-external-btn">${item.joinWaitlist ? '🎟️ Join Waitlist' : '🎟️ Sign Up / Reserve'}</button>` : ''}
           <a href="${signUpLink}" target="_blank" class="modal-btn tertiary">See More on GroupExPro</a>
         ` : `
           <a href="${signUpLink}" target="_blank" class="modal-btn secondary">View on GroupExPro</a>
@@ -905,12 +913,12 @@
     overlay.appendChild(modal);
     document.body.appendChild(overlay);
     
-    // Add click handler for sign up button to show external link modal
+    // Add click handler for sign up / waitlist button to show external link modal
     const signupBtn = modal.querySelector('.signup-external-btn');
     if (signupBtn) {
       signupBtn.addEventListener('click', () => {
         overlay.remove();
-        showExternalLinkModal(item.className, gymName);
+        showExternalLinkModal(item.className, gymName, item.joinWaitlist);
       });
     }
     
