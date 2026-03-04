@@ -809,6 +809,14 @@
   font-weight:500;
   margin-bottom:16px;
 }
+.modal-signup-reminder-note{
+  background:#eff6ff;
+  color:#1e40af;
+  padding:10px 12px;
+  border-radius:8px;
+  font-size:13px;
+  margin-bottom:16px;
+}
 .modal-description{
   font-size:13px;
   color:var(--muted);
@@ -1041,6 +1049,10 @@
 :root.dark .event .class-full-label{
   background:#475569;
   color:#e2e8f0;
+}
+:root.dark .modal-signup-reminder-note{
+  background:#1e3a5f;
+  color:#93c5fd;
 }
 :root.dark .modal-close{
   color:#94a3b8;

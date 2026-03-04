@@ -769,6 +769,42 @@
     calendarRoot.appendChild(scrollContainer);
   }
   
+  // Get class start as Date (for 72h check)
+  function getClassStartDate(item, dateStr) {
+    const iso = parseTimeToISO(item.start, dateStr);
+    if (!iso) return null;
+    const [y, m, d, rest] = [iso.slice(0, 4), iso.slice(4, 6), iso.slice(6, 8), iso.slice(9)];
+    const [hh, mm] = [rest.slice(0, 2), rest.slice(2, 4)];
+    return new Date(parseInt(y, 10), parseInt(m, 10) - 1, parseInt(d, 10), parseInt(hh, 10), parseInt(mm, 10), 0);
+  }
+
+  // True if class starts more than 72 hours from now
+  function isClassMoreThan72HoursAway(classStartDate) {
+    if (!classStartDate || !(classStartDate instanceof Date) || isNaN(classStartDate.getTime())) return false;
+    const now = new Date();
+    const seventyTwoHoursFromNow = new Date(now.getTime() + 72 * 60 * 60 * 1000);
+    return classStartDate.getTime() > seventyTwoHoursFromNow.getTime();
+  }
+
+  // Google Calendar link for a "remind me when sign-up opens" event (72 hours before class)
+  function createSignupReminderCalendarLink(item, gymName, dateStr) {
+    const classStart = getClassStartDate(item, dateStr);
+    if (!classStart) return '';
+    const reminderTime = new Date(classStart.getTime() - 72 * 60 * 60 * 1000);
+    const endReminder = new Date(reminderTime.getTime() + 15 * 60 * 1000);
+    const fmt = (d) => {
+      const y = d.getFullYear();
+      const m = String(d.getMonth() + 1).padStart(2, '0');
+      const day = String(d.getDate()).padStart(2, '0');
+      const h = String(d.getHours()).padStart(2, '0');
+      const min = String(d.getMinutes()).padStart(2, '0');
+      return `${y}${m}${day}T${h}${min}00`;
+    };
+    const title = encodeURIComponent(`Sign up opens: ${item.className} @ ${gymName}`);
+    const details = encodeURIComponent(`Denver Rec class sign-up opens 72 hours before class.\nClass: ${item.className}\n${item.start} - ${item.end}\n${gymName} Recreation Center.`);
+    return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${fmt(reminderTime)}/${fmt(endReminder)}&details=${details}`;
+  }
+
   // Create Google Calendar link for an event
   function createGoogleCalendarLink(item, gymName) {
     // Get current selected day's date
@@ -866,7 +902,12 @@
     if (existingModal) existingModal.remove();
     
     const currentDay = weekManifest?.days?.[currentDayIndex];
+    const dateStr = currentDay?.date || new Date().toISOString().split('T')[0];
     const dateDisplay = currentDay?.display_date || 'Today';
+    
+    const classStartDate = getClassStartDate(item, dateStr);
+    const showSignupReminder = !item.cancelled && item.requiresSignup && isClassMoreThan72HoursAway(classStartDate);
+    const reminderCalLink = showSignupReminder ? createSignupReminderCalendarLink(item, gymName, dateStr) : '';
     
     const overlay = el('div', 'event-modal-overlay');
     const modal = el('div', 'event-modal');
@@ -889,6 +930,7 @@
       </div>
       ${item.cancelled ? '<div class="modal-cancelled">⚠️ This class has been CANCELLED</div>' : ''}
       ${item.classFull ? '<div class="modal-class-full">This class is full. Sign up / Reserve is not available.</div>' : ''}
+      ${showSignupReminder ? '<div class="modal-signup-reminder-note">Sign-up opens 72 hours before class. Add a calendar reminder to get notified when it opens.</div>' : ''}
       ${description ? `
         <div class="modal-description-text">
           <strong>Description:</strong>
@@ -903,6 +945,7 @@
         ${!item.cancelled ? `
           <a href="${calLink}" target="_blank" class="modal-btn primary">📅 Add to Calendar</a>
           ${item.requiresSignup ? `<button class="modal-btn secondary signup-external-btn">${item.joinWaitlist ? '🎟️ Join Waitlist' : '🎟️ Sign Up / Reserve'}</button>` : ''}
+          ${showSignupReminder && reminderCalLink ? `<a href="${reminderCalLink}" target="_blank" class="modal-btn secondary reminder-cal-btn">🔔 Remind me when sign-up opens</a>` : ''}
           <a href="${signUpLink}" target="_blank" class="modal-btn tertiary">See More on GroupExPro</a>
         ` : `
           <a href="${signUpLink}" target="_blank" class="modal-btn secondary">View on GroupExPro</a>
