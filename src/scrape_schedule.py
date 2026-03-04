@@ -308,6 +308,7 @@ def save_week_files(all_events, week_start, week_end):
         'week_start': week_start.isoformat(),
         'week_end': week_end.isoformat(),
         'display_range': f"{week_start.strftime('%B %d')} - {week_end.strftime('%B %d, %Y')}",
+        'last_scraped': datetime.now().date().isoformat(),
         'days': []
     }
     

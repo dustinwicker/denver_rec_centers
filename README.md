@@ -57,7 +57,7 @@ denver_rec_centers/
 ### Automated Updates (GitHub Actions)
 
 The schedule is automatically updated via GitHub Actions:
-- **Runs every Sunday and Wednesday at 6 AM MST** to capture the latest week's schedule
+- **Runs every Monday, Wednesday, Friday, and Sunday at 6 AM MST** to capture the latest week's schedule
 - Can be manually triggered from the [Actions tab](https://github.com/dustinwicker/denver_rec_centers/actions)
 - The workflow scrapes the schedule, commits the changes, and pushes to the repository
 

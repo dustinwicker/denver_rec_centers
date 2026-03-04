@@ -1,11 +1,13 @@
 name: Weekly Schedule Scrape
 
 on:
-  # Run every Sunday and Wednesday at 6 AM MST (13:00 UTC)
-  # Sunday = 0, Wednesday = 3
+  # Run every Monday, Wednesday, Friday, Sunday at 6 AM MST (13:00 UTC)
+  # Sunday = 0, Monday = 1, Wednesday = 3, Friday = 5
   schedule:
     - cron: '0 13 * * 0'  # Sunday at 6 AM MST
+    - cron: '0 13 * * 1'  # Monday at 6 AM MST
     - cron: '0 13 * * 3'  # Wednesday at 6 AM MST
+    - cron: '0 13 * * 5'  # Friday at 6 AM MST
   
   # Allow manual trigger from GitHub Actions UI
   workflow_dispatch:

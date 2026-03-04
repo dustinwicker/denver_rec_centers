@@ -1530,6 +1530,7 @@
       
       renderDayTabs();
       updateWeekNavButtons();
+      updateDataAsOf();
       
       if (weekManifest.days.length > 0) {
         await loadDayData(weekManifest.days[currentDayIndex].file);
@@ -1568,6 +1569,7 @@
         
         renderDayTabs();
         updateWeekNavButtons();
+        updateDataAsOf();
         
         // Load the first (or today's) day
         if (weekManifest.days.length > 0) {
@@ -1578,6 +1580,27 @@
       status('Error: ' + e.message);
       console.error(e);
     }
+  }
+
+  // Update footer "data as of" note when we have manifest with last_scraped or generated
+  function updateDataAsOf() {
+    const el = qs('#data-as-of');
+    if (!el) return;
+    const manifest = weekManifest || masterManifest;
+    let dateStr = null;
+    if (manifest) {
+      dateStr = manifest.last_scraped || (manifest.generated && manifest.generated.slice(0, 10));
+    }
+    if (!dateStr) {
+      el.textContent = '';
+      el.style.display = 'none';
+      return;
+    }
+    const [y, m, d] = dateStr.split('-');
+    const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    const displayDate = `${months[parseInt(m, 10) - 1]} ${parseInt(d, 10)}, ${y}`;
+    el.textContent = `Schedule data as of ${displayDate}. Check GroupExPro for current availability.`;
+    el.style.display = 'block';
   }
 
   // Add days to a date string (YYYY-MM-DD)
