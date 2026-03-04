@@ -940,7 +940,7 @@
           <p><em>No description available. Click "See More" on GroupExPro for details.</em></p>
         </div>
       `}
-      ${showSignupReminder ? '<div class="modal-signup-reminder-note">Sign-up opens 72 hours before class (same time of day). Add a calendar reminder for that time to get notified when it opens.</div>' : ''}
+      ${showSignupReminder ? '<div class="modal-signup-reminder-note">Sign-up opens at the same time as class start, 72 hours (3 days) earlier. Add a calendar reminder for that time to get notified when it opens.</div>' : ''}
       ${item.classFull ? '<div class="modal-class-full">This class is full. Sign Up / Reserve is not available.</div>' : ''}
       <div class="modal-actions">
         ${!item.cancelled ? `
