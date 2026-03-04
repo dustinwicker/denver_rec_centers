@@ -802,12 +802,13 @@
   margin-bottom:16px;
 }
 .modal-class-full{
-  background:#f1f5f9;
-  color:#475569;
+  background:rgba(16,185,129,0.08);
+  color:#047857;
   padding:10px 12px;
   border-radius:8px;
   font-weight:500;
   margin-bottom:16px;
+  border:2px solid #10b981;
 }
 .modal-signup-reminder-note{
   background:#eff6ff;
@@ -1043,8 +1044,9 @@
   color:#fca5a5;
 }
 :root.dark .modal-class-full{
-  background:#334155;
-  color:#cbd5e1;
+  background:rgba(16,185,129,0.15);
+  color:#6ee7b7;
+  border:2px solid #10b981;
 }
 :root.dark .event .class-full-label{
   background:#475569;
