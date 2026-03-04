@@ -1606,7 +1606,9 @@
         const min = d.getMinutes();
         const ampm = h >= 12 ? 'PM' : 'AM';
         const h12 = h % 12 || 12;
-        const timeStr = `${h12}:${String(min).padStart(2, '0')} ${ampm}`;
+        const tzParts = new Intl.DateTimeFormat('en-US', { timeZoneName: 'short' }).formatToParts(d);
+        const tz = tzParts.find(p => p.type === 'timeZoneName')?.value || '';
+        const timeStr = tz ? `${h12}:${String(min).padStart(2, '0')} ${ampm} ${tz}` : `${h12}:${String(min).padStart(2, '0')} ${ampm}`;
         displayDate = `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()} at ${timeStr}`;
       }
     }
