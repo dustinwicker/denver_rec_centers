@@ -10,7 +10,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 import time
 import re
@@ -308,7 +308,7 @@ def save_week_files(all_events, week_start, week_end):
         'week_start': week_start.isoformat(),
         'week_end': week_end.isoformat(),
         'display_range': f"{week_start.strftime('%B %d')} - {week_end.strftime('%B %d, %Y')}",
-        'last_scraped': datetime.now().isoformat(),
+        'last_scraped': datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z'),
         'days': []
     }
     
@@ -343,7 +343,7 @@ def save_master_manifest(all_weeks):
     all_weeks_sorted = sorted(all_weeks, key=lambda w: w['week_start'])
     
     master = {
-        'generated': datetime.now().isoformat(),
+        'generated': datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z'),
         'weeks': all_weeks_sorted,
         'current_week': None
     }
@@ -421,7 +421,7 @@ def scrape_schedule():
                     break
             
             # Update generated timestamp
-            master['generated'] = datetime.now().isoformat()
+            master['generated'] = datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')
             
             # Save master manifest
             with open(master_file, 'w', encoding='utf-8') as f:

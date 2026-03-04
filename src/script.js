@@ -1598,7 +1598,9 @@
     const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
     let displayDate = '';
     if (iso && iso.length >= 16) {
-      const d = new Date(iso);
+      // Scraper runs on GitHub Actions (UTC); timestamps have no Z, so treat as UTC so display is correct in user's local time
+      const isoForParse = /Z|[+-]\d{2}:?\d{2}$/.test(iso) ? iso : iso.replace(/\.\d+$/, '').slice(0, 19) + 'Z';
+      const d = new Date(isoForParse);
       if (!isNaN(d.getTime())) {
         const h = d.getHours();
         const min = d.getMinutes();
