@@ -142,9 +142,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
-      "join_waitlist": true
+      "requires_signup": false,
+      "class_full": true,
+      "join_waitlist": false
     },
     {
       "start_time": "9:00am",
@@ -524,6 +524,19 @@
       "join_waitlist": false
     },
     {
+      "start_time": "10:30am",
+      "end_time": "12:30pm",
+      "class_name": "Club: Canasta",
+      "studio": "Game Room",
+      "instructor": "NA - No Instructor",
+      "location": "Platt Park",
+      "category": "AOA",
+      "cancelled": false,
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
+    },
+    {
       "start_time": "10:45am",
       "end_time": "12:00pm",
       "class_name": "AOA: Tai Chi",
@@ -658,7 +671,7 @@
       "end_time": "2:30pm",
       "class_name": "Club: Fused Glass",
       "studio": "Pottery Studio",
-      "instructor": "",
+      "instructor": "NA - No Instructor",
       "location": "Platt Park",
       "category": "AOA",
       "cancelled": false,
@@ -751,6 +764,19 @@
       "studio": "Multi Purpose Room",
       "instructor": "Tashia G",
       "location": "Hiawatha Davis Jr.",
+      "category": "AOA",
+      "cancelled": false,
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
+    },
+    {
+      "start_time": "1:00pm",
+      "end_time": "3:00pm",
+      "class_name": "Club: Pinochle",
+      "studio": "Game Room",
+      "instructor": "NA - No Instructor",
+      "location": "Platt Park",
       "category": "AOA",
       "cancelled": false,
       "requires_signup": false,

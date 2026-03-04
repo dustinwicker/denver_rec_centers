@@ -459,6 +459,32 @@
       "join_waitlist": false
     },
     {
+      "start_time": "10:30am",
+      "end_time": "2:00pm",
+      "class_name": "Club: Mah Jong",
+      "studio": "Game Room",
+      "instructor": "NA - No Instructor",
+      "location": "Platt Park",
+      "category": "AOA",
+      "cancelled": false,
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
+    },
+    {
+      "start_time": "10:30am",
+      "end_time": "12:30pm",
+      "class_name": "Club: Doodle",
+      "studio": "Pottery Studio",
+      "instructor": "NA - No Instructor",
+      "location": "Platt Park",
+      "category": "AOA",
+      "cancelled": false,
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
+    },
+    {
       "start_time": "11:00am",
       "end_time": "12:00pm",
       "class_name": "AOA: Functional Fit 50+",

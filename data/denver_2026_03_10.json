@@ -485,6 +485,19 @@
       "join_waitlist": false
     },
     {
+      "start_time": "10:30am",
+      "end_time": "12:30pm",
+      "class_name": "Club: Line Dancing",
+      "studio": "Ballroom",
+      "instructor": "",
+      "location": "Platt Park",
+      "category": "AOA",
+      "cancelled": false,
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
+    },
+    {
       "start_time": "10:45am",
       "end_time": "11:45am",
       "class_name": "AOA: Cardio & Strength FIT 50+",
