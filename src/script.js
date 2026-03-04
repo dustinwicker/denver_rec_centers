@@ -1587,17 +1587,31 @@
   function updateDataAsOf() {
     const el = qs('#data-as-of');
     if (!el) return;
-    const fromWeek = weekManifest && (weekManifest.last_scraped || (weekManifest.generated && weekManifest.generated.slice(0, 10)));
-    const fromMaster = masterManifest && masterManifest.generated && masterManifest.generated.slice(0, 10);
-    const dateStr = fromWeek || fromMaster;
+    const iso = (masterManifest && masterManifest.generated) || (weekManifest && (weekManifest.generated || (weekManifest.last_scraped && weekManifest.last_scraped.includes('T') ? weekManifest.last_scraped : null)));
+    const dateOnly = (weekManifest && weekManifest.last_scraped) ? weekManifest.last_scraped.slice(0, 10) : (iso && iso.slice(0, 10));
+    const dateStr = dateOnly || (iso && iso.slice(0, 10));
     if (!dateStr) {
       el.textContent = '';
       el.style.display = 'none';
       return;
     }
-    const [y, m, d] = dateStr.split('-');
     const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-    const displayDate = `${months[parseInt(m, 10) - 1]} ${parseInt(d, 10)}, ${y}`;
+    let displayDate = '';
+    if (iso && iso.length >= 16) {
+      const d = new Date(iso);
+      if (!isNaN(d.getTime())) {
+        const h = d.getHours();
+        const min = d.getMinutes();
+        const ampm = h >= 12 ? 'PM' : 'AM';
+        const h12 = h % 12 || 12;
+        const timeStr = `${h12}:${String(min).padStart(2, '0')} ${ampm}`;
+        displayDate = `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()} at ${timeStr}`;
+      }
+    }
+    if (!displayDate) {
+      const [y, m, day] = dateStr.split('-');
+      displayDate = `${months[parseInt(m, 10) - 1]} ${parseInt(day, 10)}, ${y}`;
+    }
     el.textContent = `Schedule data as of ${displayDate}. Check GroupExPro for current availability.`;
     el.style.display = 'block';
   }
