@@ -717,7 +717,7 @@
         if(item.cancelled) {
           ev.innerHTML += `<div class="cancelled-label">CANCELLED</div>`;
         }
-        if(item.classFull && !item.cancelled) {
+        if(item.classFull && !item.joinWaitlist && !item.cancelled) {
           ev.innerHTML += `<div class="class-full-label">Class Full</div>`;
         }
         
@@ -941,12 +941,12 @@
         </div>
       `}
       ${showSignupReminder ? '<div class="modal-signup-reminder-note">Sign-up opens at the same time as class start, 72 hours (3 days) earlier. Add a calendar reminder for that time to get notified when it opens.</div>' : ''}
-      ${item.classFull ? '<div class="modal-class-full">This class is full. Sign Up / Reserve is not available.</div>' : ''}
+      ${item.classFull && !item.joinWaitlist ? '<div class="modal-class-full">This class is full. Sign Up / Reserve is not available.</div>' : ''}
       <div class="modal-actions">
         ${!item.cancelled ? `
           ${showSignupReminder && reminderCalLink ? `<a href="${reminderCalLink}" target="_blank" class="modal-btn secondary reminder-cal-btn">🔔 Add reminder for when sign-up opens</a>` : ''}
           <a href="${calLink}" target="_blank" class="modal-btn primary">📅 Add to Calendar</a>
-          ${item.requiresSignup && !showSignupReminder ? `<button class="modal-btn secondary signup-external-btn">${item.joinWaitlist ? '🎟️ Join Waitlist' : '🎟️ Sign Up / Reserve'}</button>` : ''}
+          ${item.requiresSignup && !showSignupReminder && (!item.classFull || item.joinWaitlist) ? `<button class="modal-btn secondary signup-external-btn">${item.joinWaitlist ? '🎟️ Join Waitlist' : '🎟️ Sign Up / Reserve'}</button>` : ''}
           <a href="${signUpLink}" target="_blank" class="modal-btn tertiary">See More on GroupExPro</a>
         ` : `
           <a href="${signUpLink}" target="_blank" class="modal-btn secondary">View on GroupExPro</a>
