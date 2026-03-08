@@ -1,48 +1,28 @@
 {
-  "week_start": "2026-03-01",
-  "week_end": "2026-03-07",
-  "display_range": "March 01 - March 07, 2026",
+  "week_start": "2026-03-04",
+  "week_end": "2026-03-10",
+  "display_range": "March 04 - March 10, 2026",
+  "last_scraped": "2026-03-04T17:14:11.638044Z",
   "days": [
-    {
-      "date": "2026-03-01",
-      "day_name": "Sunday",
-      "display_date": "Sunday, March 1, 2026",
-      "event_count": 7,
-      "file": "denver_2026_03_01.json"
-    },
-    {
-      "date": "2026-03-02",
-      "day_name": "Monday",
-      "display_date": "Monday, March 2, 2026",
-      "event_count": 75,
-      "file": "denver_2026_03_02.json"
-    },
-    {
-      "date": "2026-03-03",
-      "day_name": "Tuesday",
-      "display_date": "Tuesday, March 3, 2026",
-      "event_count": 84,
-      "file": "denver_2026_03_03.json"
-    },
     {
       "date": "2026-03-04",
       "day_name": "Wednesday",
       "display_date": "Wednesday, March 4, 2026",
-      "event_count": 67,
+      "event_count": 68,
       "file": "denver_2026_03_04.json"
     },
     {
       "date": "2026-03-05",
       "day_name": "Thursday",
       "display_date": "Thursday, March 5, 2026",
-      "event_count": 76,
+      "event_count": 78,
       "file": "denver_2026_03_05.json"
     },
     {
       "date": "2026-03-06",
       "day_name": "Friday",
       "display_date": "Friday, March 6, 2026",
-      "event_count": 58,
+      "event_count": 60,
       "file": "denver_2026_03_06.json"
     },
     {
@@ -51,6 +31,27 @@
       "display_date": "Saturday, March 7, 2026",
       "event_count": 24,
       "file": "denver_2026_03_07.json"
+    },
+    {
+      "date": "2026-03-08",
+      "day_name": "Sunday",
+      "display_date": "Sunday, March 8, 2026",
+      "event_count": 6,
+      "file": "denver_2026_03_08.json"
+    },
+    {
+      "date": "2026-03-09",
+      "day_name": "Monday",
+      "display_date": "Monday, March 9, 2026",
+      "event_count": 75,
+      "file": "denver_2026_03_09.json"
+    },
+    {
+      "date": "2026-03-10",
+      "day_name": "Tuesday",
+      "display_date": "Tuesday, March 10, 2026",
+      "event_count": 83,
+      "file": "denver_2026_03_10.json"
     }
   ]
 }
