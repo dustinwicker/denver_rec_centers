@@ -39,7 +39,7 @@
       "category": "FIT",
       "cancelled": false,
       "requires_signup": false,
-      "class_full": true,
+      "class_full": false,
       "join_waitlist": false
     },
     {
@@ -337,8 +337,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": false,
-      "class_full": true,
+      "requires_signup": true,
+      "class_full": false,
       "join_waitlist": false
     },
     {
@@ -388,8 +388,8 @@
       "instructor": "Felicia J",
       "location": "Green Valley Ranch",
       "category": "AQ",
-      "cancelled": false,
-      "requires_signup": true,
+      "cancelled": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -515,7 +515,7 @@
       "end_time": "12:00pm",
       "class_name": "AOA: Tai Chi",
       "studio": "Gym",
-      "instructor": "Maureen C",
+      "instructor": "",
       "location": "Montclair",
       "category": "AOA",
       "cancelled": false,
@@ -558,9 +558,9 @@
       "location": "Carla Madison",
       "category": "AOA",
       "cancelled": false,
-      "requires_signup": false,
-      "class_full": true,
-      "join_waitlist": false
+      "requires_signup": true,
+      "class_full": false,
+      "join_waitlist": true
     },
     {
       "start_time": "12:00pm",
@@ -573,7 +573,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "12:00pm",
@@ -612,7 +612,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "12:30pm",
@@ -766,9 +766,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
-      "join_waitlist": true
+      "requires_signup": false,
+      "class_full": true,
+      "join_waitlist": false
     },
     {
       "start_time": "5:30pm",
