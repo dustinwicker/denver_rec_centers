@@ -1,16 +1,9 @@
 {
-  "week_start": "2026-03-08",
-  "week_end": "2026-03-14",
-  "display_range": "March 08 - March 14, 2026",
-  "last_scraped": "2026-03-08T13:35:35.622664Z",
+  "week_start": "2026-03-09",
+  "week_end": "2026-03-15",
+  "display_range": "March 09 - March 15, 2026",
+  "last_scraped": "2026-03-09T14:07:44.937828Z",
   "days": [
-    {
-      "date": "2026-03-08",
-      "day_name": "Sunday",
-      "display_date": "Sunday, March 8, 2026",
-      "event_count": 6,
-      "file": "denver_2026_03_08.json"
-    },
     {
       "date": "2026-03-09",
       "day_name": "Monday",
@@ -52,6 +45,13 @@
       "display_date": "Saturday, March 14, 2026",
       "event_count": 23,
       "file": "denver_2026_03_14.json"
+    },
+    {
+      "date": "2026-03-15",
+      "day_name": "Sunday",
+      "display_date": "Sunday, March 15, 2026",
+      "event_count": 6,
+      "file": "denver_2026_03_15.json"
     }
   ]
 }

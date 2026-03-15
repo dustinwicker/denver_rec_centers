@@ -238,6 +238,19 @@
       "join_waitlist": false
     },
     {
+      "start_time": "9:00am",
+      "end_time": "10:00am",
+      "class_name": "Water Walking",
+      "studio": "Lap and Leisure Pool",
+      "instructor": "NA - No Instructor",
+      "location": "Washington Park",
+      "category": "AQ",
+      "cancelled": false,
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
+    },
+    {
       "start_time": "9:15am",
       "end_time": "10:15am",
       "class_name": "Current Channel Water Aerobics",

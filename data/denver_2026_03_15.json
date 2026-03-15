@@ -12,9 +12,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": false,
-      "class_full": true,
-      "join_waitlist": false
+      "requires_signup": true,
+      "class_full": false,
+      "join_waitlist": true
     },
     {
       "start_time": "9:00am",
@@ -76,6 +76,19 @@
       "instructor": "NA - No Instructor",
       "location": "Washington Park",
       "category": "CWS",
+      "cancelled": false,
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
+    },
+    {
+      "start_time": "11:15am",
+      "end_time": "12:15pm",
+      "class_name": "Deep Water Aerobics",
+      "studio": "Lap and Leisure Pool",
+      "instructor": "",
+      "location": "Washington Park",
+      "category": "AQ",
       "cancelled": false,
       "requires_signup": false,
       "class_full": false,
