@@ -34,12 +34,12 @@
       "end_time": "6:45am",
       "class_name": "HIIT Cycle",
       "studio": "Spin Studio",
-      "instructor": "Melissa K",
+      "instructor": "",
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -131,7 +131,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "8:45am",
@@ -333,7 +333,7 @@
       "end_time": "10:45am",
       "class_name": "Zumba\u00ae",
       "studio": "Gym",
-      "instructor": "Anna P",
+      "instructor": "",
       "location": "Montclair",
       "category": "FIT",
       "cancelled": false,
@@ -586,7 +586,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "12:00pm",
@@ -792,8 +792,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
