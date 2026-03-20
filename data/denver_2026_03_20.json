@@ -21,7 +21,7 @@
       "end_time": "6:30am",
       "class_name": "HIIT Cycle",
       "studio": "Spin Studio",
-      "instructor": "Andrea C",
+      "instructor": "",
       "location": "Central Park",
       "category": "FIT",
       "cancelled": false,
@@ -39,7 +39,7 @@
       "category": "FIT",
       "cancelled": false,
       "requires_signup": false,
-      "class_full": true,
+      "class_full": false,
       "join_waitlist": false
     },
     {
@@ -115,7 +115,7 @@
       "instructor": "Christine S",
       "location": "Central Park",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -352,7 +352,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "10:00am",
@@ -593,13 +593,13 @@
       "end_time": "12:45pm",
       "class_name": "Indoor Cycling",
       "studio": "Spin Studio",
-      "instructor": "Melissa K",
+      "instructor": "",
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "12:00pm",
@@ -636,8 +636,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {

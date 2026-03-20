@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-18T14:20:16.115187Z",
+  "generated": "2026-03-20T14:02:34.797065Z",
   "weeks": [
     {
       "file": "manifest_2025_11_30_to_2025_12_06.json",
@@ -280,7 +280,15 @@
       "display_range": "March 18 - March 24, 2026",
       "day_count": 7,
       "event_count": 393
+    },
+    {
+      "file": "manifest_2026_03_20_to_2026_03_26.json",
+      "week_start": "2026-03-20",
+      "week_end": "2026-03-26",
+      "display_range": "March 20 - March 26, 2026",
+      "day_count": 7,
+      "event_count": 393
     }
   ],
-  "current_week": "manifest_2026_03_13_to_2026_03_19.json"
+  "current_week": "manifest_2026_03_15_to_2026_03_21.json"
 }

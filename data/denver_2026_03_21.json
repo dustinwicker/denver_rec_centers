@@ -53,7 +53,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "9:00am",
@@ -112,7 +112,7 @@
       "end_time": "10:30am",
       "class_name": "Zumba\u00ae",
       "studio": "Fitness Studio",
-      "instructor": "Adriana Pardo Q",
+      "instructor": "",
       "location": "Eisenhower",
       "category": "FIT",
       "cancelled": false,
@@ -142,8 +142,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -155,8 +155,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
