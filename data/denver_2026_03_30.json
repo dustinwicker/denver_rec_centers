@@ -492,7 +492,7 @@
       "instructor": "Lanita De L",
       "location": "Montclair",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -947,8 +947,8 @@
       "instructor": "Liz S",
       "location": "Green Valley Ranch",
       "category": "AQ",
-      "cancelled": false,
-      "requires_signup": true,
+      "cancelled": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     }
