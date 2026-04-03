@@ -11,8 +11,8 @@
       "instructor": "Ashley C",
       "location": "Carla Madison",
       "category": "FIT",
-      "cancelled": false,
-      "requires_signup": true,
+      "cancelled": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -24,7 +24,7 @@
       "instructor": "Kyla M",
       "location": "Central Park",
       "category": "FIT",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -37,8 +37,8 @@
       "instructor": "Rebecca J",
       "location": "Carla Madison",
       "category": "FIT",
-      "cancelled": false,
-      "requires_signup": true,
+      "cancelled": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -50,7 +50,7 @@
       "instructor": "Linda M",
       "location": "Central Park",
       "category": "FIT",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -63,8 +63,8 @@
       "instructor": "Rebecca J",
       "location": "Carla Madison",
       "category": "FIT",
-      "cancelled": false,
-      "requires_signup": true,
+      "cancelled": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -76,7 +76,7 @@
       "instructor": "NA - No Instructor",
       "location": "Washington Park",
       "category": "CWS",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -89,7 +89,7 @@
       "instructor": "",
       "location": "Washington Park",
       "category": "AQ",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
