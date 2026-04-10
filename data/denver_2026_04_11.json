@@ -25,8 +25,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -51,8 +51,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -110,9 +110,9 @@
     {
       "start_time": "9:15am",
       "end_time": "10:15am",
-      "class_name": "Total Body Conditioning",
+      "class_name": "REB3L\u00ae Strength",
       "studio": "Ballroom",
-      "instructor": "Jeannie P",
+      "instructor": "",
       "location": "Scheitler",
       "category": "FIT",
       "cancelled": false,
@@ -155,8 +155,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -168,8 +168,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {

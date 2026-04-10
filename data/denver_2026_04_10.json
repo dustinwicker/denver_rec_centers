@@ -38,7 +38,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -118,7 +118,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "8:45am",
@@ -333,13 +333,13 @@
       "end_time": "11:00am",
       "class_name": "Pilates",
       "studio": "Fitness Studio",
-      "instructor": "Bobbi E",
+      "instructor": "",
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "10:00am",
@@ -402,8 +402,8 @@
       "location": "Green Valley Ranch",
       "category": "AQ",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -450,7 +450,7 @@
       "end_time": "11:30am",
       "class_name": "Pilates",
       "studio": "Fitness Studio",
-      "instructor": "Linda M",
+      "instructor": "",
       "location": "Central Park",
       "category": "FIT",
       "cancelled": false,
@@ -571,22 +571,22 @@
       "location": "Carla Madison",
       "category": "AOA",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
-      "join_waitlist": true
+      "requires_signup": false,
+      "class_full": true,
+      "join_waitlist": false
     },
     {
       "start_time": "12:00pm",
       "end_time": "12:45pm",
       "class_name": "Indoor Cycling",
       "studio": "Spin Studio",
-      "instructor": "Melissa K",
+      "instructor": "",
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "12:00pm",
@@ -619,7 +619,7 @@
       "end_time": "1:30pm",
       "class_name": "Total Body Conditioning",
       "studio": "Fitness Studio",
-      "instructor": "Linda M",
+      "instructor": "",
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
@@ -779,9 +779,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": false,
-      "class_full": true,
-      "join_waitlist": false
+      "requires_signup": true,
+      "class_full": false,
+      "join_waitlist": true
     },
     {
       "start_time": "5:30pm",
