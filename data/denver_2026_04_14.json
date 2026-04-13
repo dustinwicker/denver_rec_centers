@@ -25,9 +25,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
-      "join_waitlist": true
+      "requires_signup": false,
+      "class_full": true,
+      "join_waitlist": false
     },
     {
       "start_time": "7:00am",
@@ -66,7 +66,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "8:00am",
@@ -246,9 +246,9 @@
       "location": "Carla Madison",
       "category": "AOA",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
-      "join_waitlist": true
+      "requires_signup": false,
+      "class_full": true,
+      "join_waitlist": false
     },
     {
       "start_time": "9:30am",
@@ -370,19 +370,6 @@
     {
       "start_time": "10:00am",
       "end_time": "11:00am",
-      "class_name": "Bilingual Vinyasa Yoga",
-      "studio": "Fitness Studio",
-      "instructor": "Michelle S",
-      "location": "Central Park",
-      "category": "FIT",
-      "cancelled": false,
-      "requires_signup": false,
-      "class_full": false,
-      "join_waitlist": false
-    },
-    {
-      "start_time": "10:00am",
-      "end_time": "11:00am",
       "class_name": "AOA: Circuit Weight Room 101",
       "studio": "Fitness Room",
       "instructor": "Jann G",
@@ -400,6 +387,19 @@
       "studio": "Multi Purpose Room",
       "instructor": "Karyn K",
       "location": "Glenarm",
+      "category": "FIT",
+      "cancelled": false,
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
+    },
+    {
+      "start_time": "10:00am",
+      "end_time": "11:00am",
+      "class_name": "Yoga I",
+      "studio": "Fitness Studio",
+      "instructor": "",
+      "location": "Central Park",
       "category": "FIT",
       "cancelled": false,
       "requires_signup": false,
@@ -493,9 +493,9 @@
       "location": "Carla Madison",
       "category": "AOA",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
-      "join_waitlist": true
+      "requires_signup": false,
+      "class_full": true,
+      "join_waitlist": false
     },
     {
       "start_time": "11:00am",
@@ -580,7 +580,7 @@
       "end_time": "12:15pm",
       "class_name": "AOA: Gentle Yoga 50+",
       "studio": "Fitness Studio",
-      "instructor": "Michelle S",
+      "instructor": "",
       "location": "Central Park",
       "category": "AOA",
       "cancelled": false,
@@ -820,7 +820,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "3:00pm",
@@ -883,8 +883,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -948,8 +948,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -970,7 +970,7 @@
       "end_time": "7:00pm",
       "class_name": "Vinyasa Yoga",
       "studio": "Fitness Studio",
-      "instructor": "Michelle S",
+      "instructor": "",
       "location": "Eisenhower",
       "category": "FIT",
       "cancelled": false,
