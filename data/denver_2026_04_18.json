@@ -102,7 +102,7 @@
       "instructor": "Jessalyn H",
       "location": "Montclair",
       "category": "FIT",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -112,7 +112,7 @@
       "end_time": "10:15am",
       "class_name": "Total Body Conditioning",
       "studio": "Ballroom",
-      "instructor": "Jeannie P",
+      "instructor": "",
       "location": "Scheitler",
       "category": "FIT",
       "cancelled": false,
@@ -219,7 +219,7 @@
       "instructor": "Lorie L",
       "location": "Montclair",
       "category": "FIT",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -310,7 +310,7 @@
       "instructor": "Garry A",
       "location": "Harvard Gulch",
       "category": "FIT",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
