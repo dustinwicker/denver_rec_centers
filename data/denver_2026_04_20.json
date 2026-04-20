@@ -24,8 +24,8 @@
       "instructor": "Melissa K",
       "location": "Carla Madison",
       "category": "FIT",
-      "cancelled": false,
-      "requires_signup": true,
+      "cancelled": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -51,7 +51,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -138,7 +138,7 @@
       "end_time": "10:00am",
       "class_name": "Zumba\u00ae",
       "studio": "Fitness Studio",
-      "instructor": "Beth L",
+      "instructor": "",
       "location": "Central Park",
       "category": "FIT",
       "cancelled": false,
@@ -389,9 +389,9 @@
       "location": "Carla Madison",
       "category": "AOA",
       "cancelled": false,
-      "requires_signup": false,
-      "class_full": true,
-      "join_waitlist": false
+      "requires_signup": true,
+      "class_full": false,
+      "join_waitlist": true
     },
     {
       "start_time": "10:30am",
@@ -801,7 +801,7 @@
       "end_time": "6:15pm",
       "class_name": "Xtreme Hip Hop Step",
       "studio": "Fitness Studio",
-      "instructor": "Shawn W",
+      "instructor": "",
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
@@ -857,9 +857,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
-      "join_waitlist": true
+      "requires_signup": false,
+      "class_full": true,
+      "join_waitlist": false
     },
     {
       "start_time": "6:00pm",
@@ -935,9 +935,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
-      "join_waitlist": true
+      "requires_signup": false,
+      "class_full": true,
+      "join_waitlist": false
     },
     {
       "start_time": "6:30pm",
