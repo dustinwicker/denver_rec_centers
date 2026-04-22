@@ -40,7 +40,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "7:00am",
@@ -118,7 +118,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "8:45am",
@@ -138,7 +138,7 @@
       "end_time": "10:00am",
       "class_name": "AOA: Tai Chi",
       "studio": "Ballroom",
-      "instructor": "Allan M",
+      "instructor": "",
       "location": "Platt Park",
       "category": "AOA",
       "cancelled": false,
@@ -339,7 +339,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "10:00am",
@@ -450,7 +450,7 @@
       "end_time": "11:30am",
       "class_name": "Pilates",
       "studio": "Fitness Studio",
-      "instructor": "Linda M",
+      "instructor": "",
       "location": "Central Park",
       "category": "FIT",
       "cancelled": false,
@@ -573,7 +573,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "12:00pm",
@@ -625,7 +625,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "12:30pm",
@@ -779,8 +779,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {

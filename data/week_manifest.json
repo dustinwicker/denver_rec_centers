@@ -1,23 +1,9 @@
 {
-  "week_start": "2026-04-15",
-  "week_end": "2026-04-21",
-  "display_range": "April 15 - April 21, 2026",
-  "last_scraped": "2026-04-15T14:28:39.798375Z",
+  "week_start": "2026-04-17",
+  "week_end": "2026-04-23",
+  "display_range": "April 17 - April 23, 2026",
+  "last_scraped": "2026-04-17T14:21:45.830558Z",
   "days": [
-    {
-      "date": "2026-04-15",
-      "day_name": "Wednesday",
-      "display_date": "Wednesday, April 15, 2026",
-      "event_count": 71,
-      "file": "denver_2026_04_15.json"
-    },
-    {
-      "date": "2026-04-16",
-      "day_name": "Thursday",
-      "display_date": "Thursday, April 16, 2026",
-      "event_count": 78,
-      "file": "denver_2026_04_16.json"
-    },
     {
       "date": "2026-04-17",
       "day_name": "Friday",
@@ -52,6 +38,20 @@
       "display_date": "Tuesday, April 21, 2026",
       "event_count": 82,
       "file": "denver_2026_04_21.json"
+    },
+    {
+      "date": "2026-04-22",
+      "day_name": "Wednesday",
+      "display_date": "Wednesday, April 22, 2026",
+      "event_count": 71,
+      "file": "denver_2026_04_22.json"
+    },
+    {
+      "date": "2026-04-23",
+      "day_name": "Thursday",
+      "display_date": "Thursday, April 23, 2026",
+      "event_count": 79,
+      "file": "denver_2026_04_23.json"
     }
   ]
 }

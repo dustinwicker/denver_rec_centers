@@ -25,8 +25,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -125,7 +125,7 @@
       "end_time": "10:30am",
       "class_name": "Zumba\u00ae",
       "studio": "Fitness Studio",
-      "instructor": "Adriana Pardo Q",
+      "instructor": "",
       "location": "Eisenhower",
       "category": "FIT",
       "cancelled": false,
@@ -164,7 +164,7 @@
       "end_time": "11:00am",
       "class_name": "Barre",
       "studio": "Fitness Studio",
-      "instructor": "Melissa C",
+      "instructor": "",
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
