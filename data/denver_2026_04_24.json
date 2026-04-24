@@ -38,9 +38,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
-      "join_waitlist": true
+      "join_waitlist": false
     },
     {
       "start_time": "7:00am",
@@ -116,9 +116,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
-      "join_waitlist": true
+      "join_waitlist": false
     },
     {
       "start_time": "8:45am",
@@ -404,7 +404,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "10:30am",
@@ -583,8 +583,8 @@
       "instructor": "Melissa K",
       "location": "Carla Madison",
       "category": "FIT",
-      "cancelled": false,
-      "requires_signup": true,
+      "cancelled": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -622,10 +622,10 @@
       "instructor": "Linda M",
       "location": "Carla Madison",
       "category": "FIT",
-      "cancelled": false,
-      "requires_signup": true,
+      "cancelled": true,
+      "requires_signup": false,
       "class_full": false,
-      "join_waitlist": true
+      "join_waitlist": false
     },
     {
       "start_time": "12:30pm",
