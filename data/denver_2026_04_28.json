@@ -64,8 +64,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -222,7 +222,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "9:15am",
@@ -493,9 +493,9 @@
       "location": "Carla Madison",
       "category": "AOA",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
-      "join_waitlist": true
+      "requires_signup": false,
+      "class_full": true,
+      "join_waitlist": false
     },
     {
       "start_time": "11:00am",
@@ -818,8 +818,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -862,6 +862,19 @@
       "join_waitlist": false
     },
     {
+      "start_time": "4:00pm",
+      "end_time": "5:15pm",
+      "class_name": "Swim Lessons",
+      "studio": "Lap and Leisure Pool",
+      "instructor": "",
+      "location": "Washington Park",
+      "category": "AQ",
+      "cancelled": false,
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
+    },
+    {
       "start_time": "4:15pm",
       "end_time": "5:15pm",
       "class_name": "Boxing Conditioning",
@@ -883,16 +896,16 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": false,
-      "class_full": true,
-      "join_waitlist": false
+      "requires_signup": true,
+      "class_full": false,
+      "join_waitlist": true
     },
     {
       "start_time": "4:30pm",
       "end_time": "5:30pm",
-      "class_name": "REB3L\u00ae Strength",
+      "class_name": "Total Body Conditioning",
       "studio": "Ballroom",
-      "instructor": "Sarah D",
+      "instructor": "",
       "location": "Scheitler",
       "category": "FIT",
       "cancelled": false,
@@ -948,8 +961,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {

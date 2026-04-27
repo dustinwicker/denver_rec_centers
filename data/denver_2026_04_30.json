@@ -836,11 +836,24 @@
       "join_waitlist": false
     },
     {
+      "start_time": "4:00pm",
+      "end_time": "5:15pm",
+      "class_name": "Swim Lessons",
+      "studio": "Lap and Leisure Pool",
+      "instructor": "",
+      "location": "Washington Park",
+      "category": "AQ",
+      "cancelled": false,
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
+    },
+    {
       "start_time": "4:30pm",
       "end_time": "5:30pm",
-      "class_name": "REB3L\u00ae Strength",
+      "class_name": "Total Body Conditioning",
       "studio": "Ballroom",
-      "instructor": "Sarah D",
+      "instructor": "",
       "location": "Scheitler",
       "category": "FIT",
       "cancelled": false,
