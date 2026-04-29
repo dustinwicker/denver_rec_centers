@@ -6,7 +6,7 @@
     {
       "start_time": "8:15am",
       "end_time": "9:15am",
-      "class_name": "D2G SocaFit",
+      "class_name": "Zumba\u00ae",
       "studio": "Fitness Studio",
       "instructor": "",
       "location": "Central Park",
@@ -25,8 +25,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
