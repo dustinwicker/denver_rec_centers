@@ -38,9 +38,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
-      "join_waitlist": true
+      "join_waitlist": false
     },
     {
       "start_time": "7:00am",
@@ -116,9 +116,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": false,
-      "class_full": true,
-      "join_waitlist": false
+      "requires_signup": true,
+      "class_full": false,
+      "join_waitlist": true
     },
     {
       "start_time": "8:45am",
@@ -255,7 +255,7 @@
       "end_time": "10:30am",
       "class_name": "AOA: Functional Fit 50+",
       "studio": "Ballroom",
-      "instructor": "Dara M",
+      "instructor": "",
       "location": "Highland",
       "category": "AOA",
       "cancelled": false,
@@ -375,7 +375,7 @@
       "instructor": "Dawn G",
       "location": "Glenarm",
       "category": "FIT",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -404,7 +404,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "10:30am",
@@ -554,8 +554,8 @@
       "end_time": "12:00pm",
       "class_name": "AOA: Functional Fit 50+",
       "studio": "Ballroom",
-      "instructor": "Dara M",
-      "location": "Scheitler",
+      "instructor": "",
+      "location": "Highland",
       "category": "AOA",
       "cancelled": false,
       "requires_signup": false,
@@ -584,8 +584,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
