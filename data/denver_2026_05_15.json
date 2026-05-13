@@ -40,7 +40,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "7:00am",
@@ -339,7 +339,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "10:00am",
@@ -437,7 +437,7 @@
       "end_time": "11:30am",
       "class_name": "Zumba Gold\u00ae",
       "studio": "Fitness Studio",
-      "instructor": "Sisley A",
+      "instructor": "",
       "location": "Eisenhower",
       "category": "FIT",
       "cancelled": false,
@@ -528,7 +528,7 @@
       "end_time": "12:00pm",
       "class_name": "AOA: Tai Chi",
       "studio": "Gym",
-      "instructor": "Maureen C",
+      "instructor": "",
       "location": "Montclair",
       "category": "AOA",
       "cancelled": false,
@@ -571,8 +571,8 @@
       "location": "Carla Madison",
       "category": "AOA",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
