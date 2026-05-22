@@ -21,7 +21,7 @@
       "end_time": "6:30am",
       "class_name": "HIIT Cycle",
       "studio": "Spin Studio",
-      "instructor": "Andrea C",
+      "instructor": "",
       "location": "Central Park",
       "category": "FIT",
       "cancelled": false,
@@ -38,9 +38,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
-      "join_waitlist": true
+      "join_waitlist": false
     },
     {
       "start_time": "7:00am",
@@ -116,9 +116,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
-      "join_waitlist": true
+      "join_waitlist": false
     },
     {
       "start_time": "8:45am",
@@ -220,7 +220,7 @@
       "location": "Green Valley Ranch",
       "category": "AQ",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -320,7 +320,7 @@
       "end_time": "10:45am",
       "class_name": "Zumba\u00ae",
       "studio": "Gym",
-      "instructor": "Anna P",
+      "instructor": "",
       "location": "Montclair",
       "category": "FIT",
       "cancelled": false,
@@ -440,7 +440,7 @@
       "instructor": "Sisley A",
       "location": "Eisenhower",
       "category": "FIT",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -599,7 +599,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "12:00pm",
@@ -779,9 +779,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
-      "join_waitlist": true
+      "requires_signup": false,
+      "class_full": true,
+      "join_waitlist": false
     },
     {
       "start_time": "5:30pm",
