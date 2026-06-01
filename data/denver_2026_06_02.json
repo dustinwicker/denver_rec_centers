@@ -27,7 +27,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "7:00am",
@@ -66,7 +66,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "8:00am",
@@ -206,8 +206,8 @@
       "instructor": "",
       "location": "Carla Madison",
       "category": "AQ",
-      "cancelled": false,
-      "requires_signup": true,
+      "cancelled": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -583,7 +583,7 @@
       "instructor": "Tim M",
       "location": "Harvard Gulch",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -648,7 +648,7 @@
       "instructor": "Tim M",
       "location": "Harvard Gulch",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -831,7 +831,20 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
+      "class_full": true,
+      "join_waitlist": false
+    },
+    {
+      "start_time": "3:00pm",
+      "end_time": "7:30pm",
+      "class_name": "Open Climbing",
+      "studio": "Climbing Wall",
+      "instructor": "",
+      "location": "Carla Madison",
+      "category": "",
+      "cancelled": false,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -883,8 +896,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -963,7 +976,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "6:00pm",

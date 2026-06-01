@@ -14,7 +14,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "7:00am",
@@ -350,8 +350,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -677,7 +677,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "1:30pm",
@@ -702,6 +702,19 @@
       "category": "AOA",
       "cancelled": false,
       "requires_signup": true,
+      "class_full": false,
+      "join_waitlist": true
+    },
+    {
+      "start_time": "3:00pm",
+      "end_time": "7:30pm",
+      "class_name": "Open Climbing",
+      "studio": "Climbing Wall",
+      "instructor": "",
+      "location": "Carla Madison",
+      "category": "",
+      "cancelled": false,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
