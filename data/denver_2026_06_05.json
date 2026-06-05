@@ -24,7 +24,7 @@
       "instructor": "Andrea C",
       "location": "Central Park",
       "category": "FIT",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -37,8 +37,8 @@
       "instructor": "Melissa K",
       "location": "Carla Madison",
       "category": "FIT",
-      "cancelled": false,
-      "requires_signup": true,
+      "cancelled": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -116,9 +116,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
-      "join_waitlist": true
+      "join_waitlist": false
     },
     {
       "start_time": "8:45am",
@@ -219,8 +219,8 @@
       "instructor": "Liz S",
       "location": "Green Valley Ranch",
       "category": "AQ",
-      "cancelled": false,
-      "requires_signup": true,
+      "cancelled": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -310,7 +310,7 @@
       "instructor": "Lanita De L",
       "location": "Cook Park",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -337,9 +337,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
-      "join_waitlist": true
+      "requires_signup": false,
+      "class_full": true,
+      "join_waitlist": false
     },
     {
       "start_time": "10:00am",
@@ -401,8 +401,8 @@
       "instructor": "Felicia J",
       "location": "Green Valley Ranch",
       "category": "AQ",
-      "cancelled": false,
-      "requires_signup": true,
+      "cancelled": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -596,8 +596,8 @@
       "instructor": "Melissa K",
       "location": "Carla Madison",
       "category": "FIT",
-      "cancelled": false,
-      "requires_signup": true,
+      "cancelled": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -805,9 +805,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
-      "join_waitlist": true
+      "requires_signup": false,
+      "class_full": true,
+      "join_waitlist": false
     },
     {
       "start_time": "5:30pm",
