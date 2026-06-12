@@ -21,7 +21,7 @@
       "end_time": "6:30am",
       "class_name": "HIIT Cycle",
       "studio": "Spin Studio",
-      "instructor": "Andrea C",
+      "instructor": "",
       "location": "Central Park",
       "category": "FIT",
       "cancelled": false,
@@ -38,7 +38,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -117,7 +117,7 @@
       "category": "FIT",
       "cancelled": false,
       "requires_signup": false,
-      "class_full": true,
+      "class_full": false,
       "join_waitlist": false
     },
     {
@@ -220,7 +220,7 @@
       "location": "Green Valley Ranch",
       "category": "AQ",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -255,7 +255,7 @@
       "end_time": "10:30am",
       "class_name": "AOA: Functional Fit 50+",
       "studio": "Ballroom",
-      "instructor": "Dara M",
+      "instructor": "",
       "location": "Highland",
       "category": "AOA",
       "cancelled": false,
@@ -338,7 +338,7 @@
       "category": "FIT",
       "cancelled": false,
       "requires_signup": false,
-      "class_full": true,
+      "class_full": false,
       "join_waitlist": false
     },
     {
@@ -401,8 +401,8 @@
       "instructor": "Felicia J",
       "location": "Green Valley Ranch",
       "category": "AQ",
-      "cancelled": false,
-      "requires_signup": true,
+      "cancelled": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -502,7 +502,7 @@
       "end_time": "12:00pm",
       "class_name": "AOA: Functional Fit 50+",
       "studio": "Fitness Studio",
-      "instructor": "Kaylee H",
+      "instructor": "",
       "location": "Harvard Gulch",
       "category": "AOA",
       "cancelled": false,
@@ -531,7 +531,7 @@
       "instructor": "Maureen C",
       "location": "Montclair",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -557,7 +557,7 @@
       "instructor": "Dara M",
       "location": "Scheitler",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -597,8 +597,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -606,7 +606,7 @@
       "end_time": "1:00pm",
       "class_name": "AOA: Gentle Yoga 50+",
       "studio": "Fitness Studio",
-      "instructor": "Kaylee H",
+      "instructor": "",
       "location": "Harvard Gulch",
       "category": "AOA",
       "cancelled": false,
@@ -805,9 +805,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": false,
-      "class_full": true,
-      "join_waitlist": false
+      "requires_signup": true,
+      "class_full": false,
+      "join_waitlist": true
     },
     {
       "start_time": "5:30pm",
