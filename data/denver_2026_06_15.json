@@ -53,7 +53,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "7:00am",
@@ -317,6 +317,19 @@
     },
     {
       "start_time": "10:00am",
+      "end_time": "3:00pm",
+      "class_name": "My Denver Programming",
+      "studio": "Gym",
+      "instructor": "",
+      "location": "Green Valley Ranch",
+      "category": "",
+      "cancelled": false,
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
+    },
+    {
+      "start_time": "10:00am",
       "end_time": "11:00am",
       "class_name": "Yoga I",
       "studio": "Multi Purpose Room",
@@ -336,7 +349,7 @@
       "instructor": "Christine S",
       "location": "Central Park",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -363,8 +376,8 @@
       "location": "Carla Madison",
       "category": "AOA",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -437,7 +450,7 @@
       "end_time": "12:00pm",
       "class_name": "AOA: Cardio & Strength FIT 50+",
       "studio": "Ballroom",
-      "instructor": "Dara M",
+      "instructor": "",
       "location": "Scheitler",
       "category": "AOA",
       "cancelled": false,
@@ -479,7 +492,7 @@
       "instructor": "Christine S",
       "location": "Central Park",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -583,7 +596,7 @@
       "instructor": "Kaylee H",
       "location": "Cook Park",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -648,7 +661,7 @@
       "instructor": "Kaylee H",
       "location": "Cook Park",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -661,19 +674,6 @@
       "instructor": "Alicia R",
       "location": "Washington Park",
       "category": "FIT",
-      "cancelled": false,
-      "requires_signup": false,
-      "class_full": false,
-      "join_waitlist": false
-    },
-    {
-      "start_time": "3:30pm",
-      "end_time": "6:30pm",
-      "class_name": "My Denver Programming",
-      "studio": "Gym",
-      "instructor": "",
-      "location": "Green Valley Ranch",
-      "category": "",
       "cancelled": false,
       "requires_signup": false,
       "class_full": false,
@@ -833,7 +833,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "6:00pm",

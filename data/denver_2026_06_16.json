@@ -27,7 +27,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "7:00am",
@@ -66,7 +66,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "8:00am",
@@ -206,8 +206,8 @@
       "instructor": "Felicia J",
       "location": "Green Valley Ranch",
       "category": "AQ",
-      "cancelled": false,
-      "requires_signup": true,
+      "cancelled": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -235,7 +235,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "9:30am",
@@ -310,6 +310,19 @@
       "instructor": "NA - No Instructor",
       "location": "Platt Park",
       "category": "AOA",
+      "cancelled": false,
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
+    },
+    {
+      "start_time": "10:00am",
+      "end_time": "3:00pm",
+      "class_name": "My Denver Programming",
+      "studio": "Gym",
+      "instructor": "",
+      "location": "Green Valley Ranch",
+      "category": "",
       "cancelled": false,
       "requires_signup": false,
       "class_full": false,
@@ -466,8 +479,8 @@
       "instructor": "Felicia J",
       "location": "Green Valley Ranch",
       "category": "AQ",
-      "cancelled": false,
-      "requires_signup": true,
+      "cancelled": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -482,7 +495,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "11:00am",
@@ -842,19 +855,6 @@
       "studio": "Climbing Wall",
       "instructor": "",
       "location": "Carla Madison",
-      "category": "",
-      "cancelled": false,
-      "requires_signup": false,
-      "class_full": false,
-      "join_waitlist": false
-    },
-    {
-      "start_time": "3:30pm",
-      "end_time": "6:30pm",
-      "class_name": "My Denver Programming",
-      "studio": "Gym",
-      "instructor": "",
-      "location": "Green Valley Ranch",
       "category": "",
       "cancelled": false,
       "requires_signup": false,
