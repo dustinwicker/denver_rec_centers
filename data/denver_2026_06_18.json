@@ -430,7 +430,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "10:15am",
@@ -895,7 +895,7 @@
       "instructor": "Shawn W",
       "location": "Hiawatha Davis Jr.",
       "category": "FIT",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false

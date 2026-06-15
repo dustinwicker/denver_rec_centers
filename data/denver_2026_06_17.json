@@ -12,8 +12,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -363,8 +363,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -645,7 +645,7 @@
       "end_time": "1:30pm",
       "class_name": "AOA: Gentle Yoga 50+",
       "studio": "Fitness Studio",
-      "instructor": "Veronica D",
+      "instructor": "",
       "location": "La Alma",
       "category": "AOA",
       "cancelled": false,
@@ -703,7 +703,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "1:30pm",
@@ -729,7 +729,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "3:00pm",
