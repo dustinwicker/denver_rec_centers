@@ -615,19 +615,6 @@
       "join_waitlist": false
     },
     {
-      "start_time": "11:30am",
-      "end_time": "12:30pm",
-      "class_name": "AOA: Gentle Yoga 50+",
-      "studio": "Multi Purpose Room",
-      "instructor": "Sigrid K",
-      "location": "Hiawatha Davis Jr.",
-      "category": "AOA",
-      "cancelled": false,
-      "requires_signup": false,
-      "class_full": false,
-      "join_waitlist": false
-    },
-    {
       "start_time": "12:00pm",
       "end_time": "1:00pm",
       "class_name": "Vinyasa Yoga",
