@@ -791,7 +791,7 @@
       "instructor": "Veronica W",
       "location": "Eisenhower",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false

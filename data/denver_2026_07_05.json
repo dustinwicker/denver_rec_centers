@@ -14,7 +14,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "9:00am",
@@ -32,15 +32,15 @@
     {
       "start_time": "9:45am",
       "end_time": "10:45am",
-      "class_name": "Vinyasa Yoga",
+      "class_name": "Yoga I",
       "studio": "Fitness Studio",
-      "instructor": "Rebecca J",
+      "instructor": "",
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "10:30am",
@@ -63,8 +63,8 @@
       "instructor": "Rebecca J",
       "location": "Carla Madison",
       "category": "FIT",
-      "cancelled": false,
-      "requires_signup": true,
+      "cancelled": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
