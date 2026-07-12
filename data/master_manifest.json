@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-10T15:32:48.952850Z",
+  "generated": "2026-07-12T14:24:15.161816Z",
   "weeks": [
     {
       "file": "manifest_2025_11_30_to_2025_12_06.json",
@@ -800,7 +800,15 @@
       "display_range": "July 10 - July 16, 2026",
       "day_count": 7,
       "event_count": 403
+    },
+    {
+      "file": "manifest_2026_07_12_to_2026_07_18.json",
+      "week_start": "2026-07-12",
+      "week_end": "2026-07-18",
+      "display_range": "July 12 - July 18, 2026",
+      "day_count": 7,
+      "event_count": 403
     }
   ],
-  "current_week": "manifest_2026_07_05_to_2026_07_11.json"
+  "current_week": "manifest_2026_07_06_to_2026_07_12.json"
 }
