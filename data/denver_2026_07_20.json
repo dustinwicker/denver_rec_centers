@@ -53,7 +53,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "7:00am",
@@ -180,8 +180,8 @@
       "instructor": "Linda M",
       "location": "Green Valley Ranch",
       "category": "AQ",
-      "cancelled": false,
-      "requires_signup": true,
+      "cancelled": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -333,7 +333,7 @@
       "end_time": "11:00am",
       "class_name": "Yoga I",
       "studio": "Multi Purpose Room",
-      "instructor": "Karyn K",
+      "instructor": "",
       "location": "Glenarm",
       "category": "FIT",
       "cancelled": false,
@@ -376,8 +376,8 @@
       "location": "Carla Madison",
       "category": "AOA",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -859,7 +859,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "6:00pm",
