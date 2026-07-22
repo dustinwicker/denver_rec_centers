@@ -116,8 +116,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -337,8 +337,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -511,6 +511,19 @@
       "join_waitlist": false
     },
     {
+      "start_time": "10:45am",
+      "end_time": "11:45am",
+      "class_name": "AOA: Gentle Yoga 50+",
+      "studio": "Ballroom",
+      "instructor": "Stephanie U",
+      "location": "Highland",
+      "category": "AOA",
+      "cancelled": false,
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
+    },
+    {
       "start_time": "11:00am",
       "end_time": "12:00pm",
       "class_name": "AOA: Functional Fit 50+",
@@ -584,8 +597,8 @@
       "location": "Carla Madison",
       "category": "AOA",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
