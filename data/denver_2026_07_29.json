@@ -8,7 +8,7 @@
       "end_time": "6:45am",
       "class_name": "HIIT Cycle",
       "studio": "Spin Studio",
-      "instructor": "Melissa K",
+      "instructor": "",
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
@@ -363,8 +363,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -918,7 +918,7 @@
       "end_time": "6:45pm",
       "class_name": "HIIT Cycle",
       "studio": "Spin Studio",
-      "instructor": "Natalie S",
+      "instructor": "",
       "location": "Central Park",
       "category": "FIT",
       "cancelled": false,

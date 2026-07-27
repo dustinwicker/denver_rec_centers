@@ -355,19 +355,6 @@
       "join_waitlist": false
     },
     {
-      "start_time": "9:30am",
-      "end_time": "10:30am",
-      "class_name": "AOA: Circuit Fit 50+",
-      "studio": "Ballroom",
-      "instructor": "Dara M",
-      "location": "Highland",
-      "category": "AOA",
-      "cancelled": false,
-      "requires_signup": false,
-      "class_full": false,
-      "join_waitlist": false
-    },
-    {
       "start_time": "10:00am",
       "end_time": "3:00pm",
       "class_name": "My Denver Programming",
