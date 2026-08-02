@@ -12,8 +12,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": false,
-      "class_full": true,
+      "requires_signup": true,
+      "class_full": false,
       "join_waitlist": false
     },
     {
@@ -32,9 +32,9 @@
     {
       "start_time": "9:45am",
       "end_time": "10:45am",
-      "class_name": "Vinyasa Yoga",
+      "class_name": "Yoga I",
       "studio": "Fitness Studio",
-      "instructor": "Rebecca J",
+      "instructor": "",
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
@@ -57,19 +57,6 @@
     },
     {
       "start_time": "11:00am",
-      "end_time": "12:00pm",
-      "class_name": "Vinyasa Yoga",
-      "studio": "Fitness Studio",
-      "instructor": "Rebecca J",
-      "location": "Carla Madison",
-      "category": "FIT",
-      "cancelled": false,
-      "requires_signup": false,
-      "class_full": true,
-      "join_waitlist": false
-    },
-    {
-      "start_time": "11:00am",
       "end_time": "1:15pm",
       "class_name": "Pickleball",
       "studio": "Gym",
@@ -78,6 +65,19 @@
       "category": "CWS",
       "cancelled": false,
       "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
+    },
+    {
+      "start_time": "11:00am",
+      "end_time": "12:00pm",
+      "class_name": "Yoga I",
+      "studio": "Fitness Studio",
+      "instructor": "",
+      "location": "Carla Madison",
+      "category": "FIT",
+      "cancelled": false,
+      "requires_signup": true,
       "class_full": false,
       "join_waitlist": false
     },
