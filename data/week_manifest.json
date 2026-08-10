@@ -1,23 +1,9 @@
 {
-  "week_start": "2026-08-03",
-  "week_end": "2026-08-09",
-  "display_range": "August 03 - August 09, 2026",
-  "last_scraped": "2026-08-03T15:44:18.535475Z",
+  "week_start": "2026-08-05",
+  "week_end": "2026-08-11",
+  "display_range": "August 05 - August 11, 2026",
+  "last_scraped": "2026-08-05T15:10:36.430978Z",
   "days": [
-    {
-      "date": "2026-08-03",
-      "day_name": "Monday",
-      "display_date": "Monday, August 3, 2026",
-      "event_count": 73,
-      "file": "denver_2026_08_03.json"
-    },
-    {
-      "date": "2026-08-04",
-      "day_name": "Tuesday",
-      "display_date": "Tuesday, August 4, 2026",
-      "event_count": 85,
-      "file": "denver_2026_08_04.json"
-    },
     {
       "date": "2026-08-05",
       "day_name": "Wednesday",
@@ -52,6 +38,20 @@
       "display_date": "Sunday, August 9, 2026",
       "event_count": 7,
       "file": "denver_2026_08_09.json"
+    },
+    {
+      "date": "2026-08-10",
+      "day_name": "Monday",
+      "display_date": "Monday, August 10, 2026",
+      "event_count": 73,
+      "file": "denver_2026_08_10.json"
+    },
+    {
+      "date": "2026-08-11",
+      "day_name": "Tuesday",
+      "display_date": "Tuesday, August 11, 2026",
+      "event_count": 81,
+      "file": "denver_2026_08_11.json"
     }
   ]
 }
