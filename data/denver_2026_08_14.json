@@ -21,7 +21,7 @@
       "end_time": "6:30am",
       "class_name": "HIIT Cycle",
       "studio": "Spin Studio",
-      "instructor": "Andrea C",
+      "instructor": "",
       "location": "Central Park",
       "category": "FIT",
       "cancelled": false,
@@ -38,9 +38,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
-      "join_waitlist": true
+      "join_waitlist": false
     },
     {
       "start_time": "7:00am",
@@ -255,7 +255,7 @@
       "end_time": "10:30am",
       "class_name": "AOA: Functional Fit 50+",
       "studio": "Ballroom",
-      "instructor": "Dara M",
+      "instructor": "",
       "location": "Highland",
       "category": "AOA",
       "cancelled": false,
@@ -310,7 +310,7 @@
       "instructor": "Lanita De L",
       "location": "Cook Park",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -339,7 +339,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "10:00am",
@@ -453,7 +453,7 @@
       "instructor": "Linda M",
       "location": "Central Park",
       "category": "FIT",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -570,7 +570,7 @@
       "instructor": "Dara M",
       "location": "Scheitler",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -635,7 +635,7 @@
       "instructor": "Linda M",
       "location": "Central Park",
       "category": "FIT",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -684,7 +684,7 @@
       "end_time": "2:00pm",
       "class_name": "Total Body Conditioning",
       "studio": "Gym",
-      "instructor": "Kate S",
+      "instructor": "",
       "location": "Washington Park",
       "category": "FIT",
       "cancelled": false,
@@ -729,7 +729,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "3:00pm",
@@ -794,7 +794,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "5:30pm",
