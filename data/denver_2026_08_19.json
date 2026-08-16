@@ -589,6 +589,19 @@
       "join_waitlist": false
     },
     {
+      "start_time": "12:45pm",
+      "end_time": "1:45pm",
+      "class_name": "AOA: Cardio & Strength FIT 50+",
+      "studio": "Gym",
+      "instructor": "",
+      "location": "Harvey Park",
+      "category": "AOA",
+      "cancelled": false,
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
+    },
+    {
       "start_time": "1:00pm",
       "end_time": "2:00pm",
       "class_name": "Total Body Conditioning",
