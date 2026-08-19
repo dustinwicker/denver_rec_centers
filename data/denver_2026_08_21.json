@@ -40,7 +40,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "7:00am",
@@ -116,8 +116,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -339,7 +339,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "10:00am",
@@ -403,19 +403,6 @@
       "category": "AQ",
       "cancelled": false,
       "requires_signup": true,
-      "class_full": false,
-      "join_waitlist": false
-    },
-    {
-      "start_time": "10:30am",
-      "end_time": "11:30am",
-      "class_name": "Yogalates",
-      "studio": "Multi Purpose Room",
-      "instructor": "Franklin G",
-      "location": "Harvey Park",
-      "category": "FIT",
-      "cancelled": false,
-      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -493,6 +480,19 @@
       "location": "Platt Park",
       "category": "AOA",
       "cancelled": false,
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
+    },
+    {
+      "start_time": "10:30am",
+      "end_time": "11:30am",
+      "class_name": "Yogalates",
+      "studio": "Multi Purpose Room",
+      "instructor": "NA - No Instructor",
+      "location": "Harvey Park",
+      "category": "FIT",
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -586,7 +586,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "11:45am",
