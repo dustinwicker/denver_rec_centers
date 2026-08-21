@@ -38,9 +38,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
-      "join_waitlist": true
+      "join_waitlist": false
     },
     {
       "start_time": "7:00am",
@@ -116,9 +116,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": false,
-      "class_full": true,
-      "join_waitlist": false
+      "requires_signup": true,
+      "class_full": false,
+      "join_waitlist": true
     },
     {
       "start_time": "8:45am",
@@ -141,7 +141,7 @@
       "instructor": "Allan M",
       "location": "Platt Park",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -612,7 +612,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "12:00pm",
@@ -727,8 +727,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -792,8 +792,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
