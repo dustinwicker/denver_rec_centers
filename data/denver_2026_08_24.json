@@ -27,7 +27,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "6:00am",
@@ -89,7 +89,7 @@
       "instructor": "Michelle S",
       "location": "Central Park",
       "category": "FIT",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -350,8 +350,8 @@
       "location": "Carla Madison",
       "category": "AOA",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -768,7 +768,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "5:30pm",
@@ -801,7 +801,7 @@
       "end_time": "6:30pm",
       "class_name": "REB3L\u00ae Groove",
       "studio": "Ballroom",
-      "instructor": "Sarah D",
+      "instructor": "",
       "location": "Scheitler",
       "category": "FIT",
       "cancelled": false,
@@ -820,7 +820,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "6:00pm",

@@ -235,7 +235,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "9:30am",
@@ -836,6 +836,19 @@
       "join_waitlist": false
     },
     {
+      "start_time": "2:00pm",
+      "end_time": "3:00pm",
+      "class_name": "Total Body Conditioning",
+      "studio": "Fitness Studio",
+      "instructor": "Richard B",
+      "location": "Carla Madison",
+      "category": "FIT",
+      "cancelled": false,
+      "requires_signup": true,
+      "class_full": false,
+      "join_waitlist": false
+    },
+    {
       "start_time": "4:00pm",
       "end_time": "6:00pm",
       "class_name": "My Denver Programming",
@@ -872,7 +885,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "4:30pm",
