@@ -112,13 +112,13 @@
       "end_time": "9:45am",
       "class_name": "Zumba\u00ae",
       "studio": "Fitness Studio",
-      "instructor": "Mandy Y",
+      "instructor": "",
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "8:45am",
@@ -499,19 +499,6 @@
     },
     {
       "start_time": "11:00am",
-      "end_time": "12:00pm",
-      "class_name": "AOA: Functional Fit 50+",
-      "studio": "Fitness Studio",
-      "instructor": "Kaylee H",
-      "location": "Harvard Gulch",
-      "category": "AOA",
-      "cancelled": false,
-      "requires_signup": false,
-      "class_full": false,
-      "join_waitlist": false
-    },
-    {
-      "start_time": "11:00am",
       "end_time": "1:00pm",
       "class_name": "Club: Pastels",
       "studio": "Multi Purpose Room",
@@ -563,6 +550,19 @@
       "join_waitlist": false
     },
     {
+      "start_time": "11:00am",
+      "end_time": "12:00pm",
+      "class_name": "AOA: Functional Fit 50+",
+      "studio": "Fitness Studio",
+      "instructor": "",
+      "location": "Harvard Gulch",
+      "category": "AOA",
+      "cancelled": false,
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
+    },
+    {
       "start_time": "11:15am",
       "end_time": "12:15pm",
       "class_name": "AOA: Functional Fit 50+",
@@ -571,8 +571,8 @@
       "location": "Carla Madison",
       "category": "AOA",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -606,7 +606,7 @@
       "end_time": "1:00pm",
       "class_name": "AOA: Gentle Yoga 50+",
       "studio": "Fitness Studio",
-      "instructor": "Kaylee H",
+      "instructor": "",
       "location": "Harvard Gulch",
       "category": "AOA",
       "cancelled": false,
