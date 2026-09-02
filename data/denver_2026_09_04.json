@@ -118,7 +118,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "8:45am",
@@ -339,7 +339,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "10:00am",
@@ -573,7 +573,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "11:45am",
@@ -606,7 +606,7 @@
       "end_time": "1:00pm",
       "class_name": "AOA: Gentle Yoga 50+",
       "studio": "Fitness Studio",
-      "instructor": "",
+      "instructor": "Charlotte W",
       "location": "Harvard Gulch",
       "category": "AOA",
       "cancelled": false,
@@ -716,7 +716,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "3:00pm",
@@ -779,8 +779,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {

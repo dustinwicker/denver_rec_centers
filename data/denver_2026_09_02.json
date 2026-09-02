@@ -11,10 +11,10 @@
       "instructor": "Melissa K",
       "location": "Carla Madison",
       "category": "FIT",
-      "cancelled": false,
-      "requires_signup": true,
+      "cancelled": true,
+      "requires_signup": false,
       "class_full": false,
-      "join_waitlist": true
+      "join_waitlist": false
     },
     {
       "start_time": "7:00am",
@@ -51,9 +51,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
-      "join_waitlist": true
+      "join_waitlist": false
     },
     {
       "start_time": "7:30am",
@@ -155,7 +155,7 @@
       "location": "Green Valley Ranch",
       "category": "AQ",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -203,11 +203,11 @@
       "end_time": "10:15am",
       "class_name": "Zumba\u00ae",
       "studio": "Fitness Studio",
-      "instructor": "Sofia C",
+      "instructor": "",
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -331,19 +331,6 @@
     {
       "start_time": "10:30am",
       "end_time": "11:30am",
-      "class_name": "Barre",
-      "studio": "Fitness Studio",
-      "instructor": "Melissa C",
-      "location": "Carla Madison",
-      "category": "FIT",
-      "cancelled": false,
-      "requires_signup": false,
-      "class_full": true,
-      "join_waitlist": false
-    },
-    {
-      "start_time": "10:30am",
-      "end_time": "11:30am",
       "class_name": "AOA: Functional Fit 50+",
       "studio": "Gym",
       "instructor": "Cat R",
@@ -413,6 +400,19 @@
       "studio": "Boxing Studio",
       "instructor": "Richard B",
       "location": "Twentieth Street",
+      "category": "FIT",
+      "cancelled": false,
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
+    },
+    {
+      "start_time": "10:30am",
+      "end_time": "11:30am",
+      "class_name": "Vinyasa Yoga",
+      "studio": "Fitness Studio",
+      "instructor": "",
+      "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
       "requires_signup": false,
@@ -492,7 +492,7 @@
       "instructor": "Ingrid V",
       "location": "Platt Park",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -528,7 +528,7 @@
       "end_time": "1:00pm",
       "class_name": "Yoga I",
       "studio": "Gym",
-      "instructor": "Rebecca J",
+      "instructor": "",
       "location": "Montclair",
       "category": "FIT",
       "cancelled": false,
@@ -755,7 +755,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "5:15pm",
@@ -831,8 +831,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -896,8 +896,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
