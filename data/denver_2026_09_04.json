@@ -38,7 +38,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -116,9 +116,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
-      "join_waitlist": true
+      "join_waitlist": false
     },
     {
       "start_time": "8:45am",
@@ -220,7 +220,7 @@
       "location": "Green Valley Ranch",
       "category": "AQ",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -337,9 +337,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
-      "join_waitlist": true
+      "join_waitlist": false
     },
     {
       "start_time": "10:00am",
@@ -402,7 +402,7 @@
       "location": "Green Valley Ranch",
       "category": "AQ",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -557,7 +557,7 @@
       "instructor": "",
       "location": "Harvard Gulch",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -599,7 +599,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "12:00pm",
