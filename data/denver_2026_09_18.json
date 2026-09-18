@@ -38,9 +38,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
-      "join_waitlist": true
+      "join_waitlist": false
     },
     {
       "start_time": "7:00am",
@@ -116,9 +116,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
-      "join_waitlist": true
+      "join_waitlist": false
     },
     {
       "start_time": "8:45am",
@@ -218,19 +218,6 @@
       "studio": "Lap Pool",
       "instructor": "Liz S",
       "location": "Green Valley Ranch",
-      "category": "AQ",
-      "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
-      "join_waitlist": false
-    },
-    {
-      "start_time": "9:00am",
-      "end_time": "10:00am",
-      "class_name": "Aqua Tone",
-      "studio": "Lap and Leisure Pool",
-      "instructor": "",
-      "location": "Washington Park",
       "category": "AQ",
       "cancelled": false,
       "requires_signup": false,
@@ -337,7 +324,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -381,28 +368,15 @@
       "join_waitlist": false
     },
     {
-      "start_time": "10:00am",
-      "end_time": "11:00am",
-      "class_name": "Ai Chi",
-      "studio": "Lap and Leisure Pool",
-      "instructor": "",
-      "location": "Washington Park",
-      "category": "AQ",
-      "cancelled": false,
-      "requires_signup": false,
-      "class_full": false,
-      "join_waitlist": false
-    },
-    {
       "start_time": "10:15am",
       "end_time": "11:15am",
       "class_name": "Current Channel Water Aerobics",
       "studio": "Leisure Pool",
-      "instructor": "Felicia J",
+      "instructor": "Amanda S",
       "location": "Green Valley Ranch",
       "category": "AQ",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -424,7 +398,7 @@
       "end_time": "11:30am",
       "class_name": "Zumba Gold\u00ae",
       "studio": "Fitness Studio",
-      "instructor": "Sisley A",
+      "instructor": "",
       "location": "Eisenhower",
       "category": "FIT",
       "cancelled": false,
@@ -583,7 +557,7 @@
       "instructor": "Karen Farbman S",
       "location": "Washington Park",
       "category": "FIT",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -599,7 +573,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "12:00pm",
@@ -781,7 +755,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "5:30pm",
