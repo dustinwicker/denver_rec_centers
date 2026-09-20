@@ -326,7 +326,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "10:30am",
@@ -790,19 +790,6 @@
       "studio": "Ballroom",
       "instructor": "Sofia C",
       "location": "Barnum",
-      "category": "FIT",
-      "cancelled": false,
-      "requires_signup": false,
-      "class_full": false,
-      "join_waitlist": false
-    },
-    {
-      "start_time": "5:30pm",
-      "end_time": "6:30pm",
-      "class_name": "Slow Flow Yoga",
-      "studio": "Multi Purpose Room",
-      "instructor": "Dawn G",
-      "location": "Glenarm",
       "category": "FIT",
       "cancelled": false,
       "requires_signup": false,
