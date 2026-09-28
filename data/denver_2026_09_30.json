@@ -53,7 +53,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "7:30am",
@@ -664,7 +664,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "1:30pm",
@@ -688,8 +688,8 @@
       "location": "Carla Madison",
       "category": "AOA",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -824,11 +824,11 @@
     },
     {
       "start_time": "6:00pm",
-      "end_time": "7:00pm",
-      "class_name": "Total Body Conditioning",
-      "studio": "Ballroom",
-      "instructor": "Jeannie P",
-      "location": "Scheitler",
+      "end_time": "6:45pm",
+      "class_name": "HIIT Cycle",
+      "studio": "Spin Studio",
+      "instructor": "Natalie S",
+      "location": "Central Park",
       "category": "FIT",
       "cancelled": false,
       "requires_signup": false,
@@ -837,11 +837,11 @@
     },
     {
       "start_time": "6:00pm",
-      "end_time": "6:45pm",
-      "class_name": "HIIT Cycle",
-      "studio": "Spin Studio",
-      "instructor": "Natalie S",
-      "location": "Central Park",
+      "end_time": "7:00pm",
+      "class_name": "REB3L\u00ae Strength",
+      "studio": "Ballroom",
+      "instructor": "",
+      "location": "Scheitler",
       "category": "FIT",
       "cancelled": false,
       "requires_signup": false,

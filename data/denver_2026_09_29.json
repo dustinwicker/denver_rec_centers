@@ -27,7 +27,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "7:00am",
@@ -183,7 +183,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "9:15am",
@@ -632,7 +632,7 @@
       "end_time": "1:00pm",
       "class_name": "Zumba\u00ae",
       "studio": "Fitness Studio",
-      "instructor": "Karen Farbman S",
+      "instructor": "",
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
@@ -791,7 +791,7 @@
       "instructor": "Eric D",
       "location": "Cook Park",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -883,8 +883,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -963,7 +963,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "6:00pm",
@@ -976,7 +976,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "6:00pm",
@@ -1074,7 +1074,7 @@
       "end_time": "8:15pm",
       "class_name": "Yinyasa Yoga",
       "studio": "Ballroom",
-      "instructor": "Lisa T",
+      "instructor": "",
       "location": "Scheitler",
       "category": "FIT",
       "cancelled": false,
