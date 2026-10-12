@@ -609,7 +609,6 @@
 }
 .event.pool-event.pool-lap{ background:#075985; }
 .event.pool-event.pool-leisure{ background:#0f766e; }
-.event.pool-event.pool-program{ background:#9a3412; }
 .event.pool-event:hover{ transform:none; z-index:4; }
   
 /* Event blocks */

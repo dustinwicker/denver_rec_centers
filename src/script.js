@@ -634,7 +634,6 @@
     const ev = el('div', 'event');
     if (item.isPool) {
       ev.classList.add('pool-event', item.pool === 'lap' ? 'pool-lap' : 'pool-leisure');
-      if (item.poolKind === 'program') ev.classList.add('pool-program');
     } else {
       ev.style.background = gymColor;
     }
