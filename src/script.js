@@ -60,6 +60,7 @@
   let currentDayIndex = 0;
   let distancesData = null; // Store distances data
   let classDescriptions = {}; // Store class descriptions
+  let poolSchedules = null; // Weekly pool hours from rec center pages
   let locationStatus = 'unknown'; // 'unknown', 'loading', 'granted', 'denied', 'cached'
   let userLocation = null;
 
@@ -302,6 +303,62 @@
     modal.querySelector('.cancel-btn').addEventListener('click', () => overlay.remove());
   }
 
+  async function loadPoolSchedules() {
+    try {
+      const response = await fetch('data/pool_schedules.json');
+      if (response.ok) {
+        poolSchedules = await response.json();
+      }
+    } catch (e) {
+      console.log('No pool schedules available');
+    }
+  }
+
+  // Weekly pool blocks for the day being viewed. Posted on each rec center page, not GroupEx.
+  function poolEventsForDay(dayData) {
+    if (!poolSchedules || !dayData?.date || !dayData?.day_name) return [];
+    const date = dayData.date;
+    if (date < poolSchedules.valid_from || date > poolSchedules.valid_through) return [];
+
+    const closure = (poolSchedules.closures || []).find(c => c.date === date);
+    const events = [];
+
+    (poolSchedules.centers || []).forEach(center => {
+      const gymClasses = (dayData.events || []).filter(ev => (ev.location || ev.location_name) === center.gym);
+      const gymClosed = gymClasses.length > 0 && gymClasses.every(ev => ev.cancelled);
+      const cancelled = Boolean(closure) || gymClosed;
+      const closureReason = closure?.reason || (gymClosed ? 'Recreation center is closed' : '');
+
+      (center.pools || []).forEach(pool => {
+        const blocks = pool.days?.[dayData.day_name] || [];
+        blocks.forEach(block => {
+          events.push({
+            gym: center.gym,
+            className: block.name,
+            category: 'Pool',
+            studio: pool.name,
+            instructor: '',
+            start: block.start,
+            end: block.end,
+            cancelled,
+            requiresSignup: false,
+            classFull: false,
+            joinWaitlist: false,
+            isPool: true,
+            pool: pool.id,
+            poolKind: block.kind || 'swim',
+            note: block.note || '',
+            scheduleUrl: center.url,
+            seasonLabel: poolSchedules.season || '',
+            closureReason
+          });
+        });
+      });
+    });
+
+    return events;
+  }
+
   // Load class descriptions
   async function loadClassDescriptions() {
     try {
@@ -397,10 +454,11 @@
       classFull: ev.class_full || false,
       joinWaitlist: ev.join_waitlist || false
     }));
+    allData = allData.concat(poolEventsForDay(dayData));
     
-    // Get unique gyms and classes sorted
+    // Get unique gyms and classes sorted. Pool sessions have their own toggles.
     allGyms = [...new Set(allData.map(d => d.gym))].sort();
-    allClasses = [...new Set(allData.map(d => d.className))].sort();
+    allClasses = [...new Set(allData.filter(d => !d.isPool).map(d => d.className))].sort();
     
     return groupDataByGym(allData);
   }
@@ -563,6 +621,75 @@
     return positions;
   }
 
+  function appendScheduleEvent(grid, item, gymName, gymColor, pos, startHour, endHour, hourHeight) {
+    const startMins = timeToMinutes(item.start);
+    const endMins = timeToMinutes(item.end);
+    if (endMins <= startHour * 60 || startMins >= endHour * 60) return;
+
+    const visibleStart = Math.max(startMins, startHour * 60);
+    const visibleEnd = Math.min(endMins, endHour * 60);
+    const topPx = (visibleStart - startHour * 60) / 60 * hourHeight;
+    const heightPx = Math.max(item.isPool ? 18 : 24, (visibleEnd - visibleStart) / 60 * hourHeight);
+
+    const ev = el('div', 'event');
+    if (item.isPool) {
+      ev.classList.add('pool-event', item.pool === 'lap' ? 'pool-lap' : 'pool-leisure');
+      if (item.poolKind === 'program') ev.classList.add('pool-program');
+    } else {
+      ev.style.background = gymColor;
+    }
+    ev.style.top = topPx + 'px';
+    ev.style.height = heightPx + 'px';
+
+    if (pos && pos.totalColumns > 1) {
+      const colWidth = 100 / pos.totalColumns;
+      ev.style.left = (pos.column * colWidth) + '%';
+      ev.style.width = colWidth + '%';
+      ev.style.right = 'auto';
+    }
+
+    if (item.cancelled) ev.classList.add('cancelled');
+
+    ev.innerHTML = `<div class="title">${item.className}</div><div class="meta">${item.start} - ${item.end}</div>`;
+    if (!item.isPool && item.studio) {
+      ev.innerHTML += `<div class="studio">${item.studio}</div>`;
+    }
+    if (!item.isPool && item.category) {
+      ev.innerHTML += `<div class="category">${item.category}</div>`;
+    }
+    if (item.cancelled) {
+      ev.innerHTML += `<div class="cancelled-label">CANCELLED</div>`;
+    }
+    if (item.classFull && !item.joinWaitlist && !item.cancelled) {
+      ev.innerHTML += `<div class="class-full-label">Class Full</div>`;
+    }
+
+    if (!item.cancelled && !item.isPool) {
+      const actions = el('div', 'event-actions');
+      const calLink = createGoogleCalendarLink(item, gymName);
+      actions.innerHTML = `<a href="${calLink}" target="_blank" class="event-btn cal-btn" title="Add to Google Calendar">📅</a>`;
+      if (item.requiresSignup) {
+        const signUpBtn = el('button', 'event-btn signup-btn');
+        signUpBtn.innerHTML = '🎟️';
+        signUpBtn.title = item.joinWaitlist ? 'Join Waitlist' : 'Sign Up / Reserve';
+        signUpBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          showExternalLinkModal(item.className, gymName, item.joinWaitlist);
+        });
+        actions.appendChild(signUpBtn);
+      }
+      ev.appendChild(actions);
+    }
+
+    ev.addEventListener('click', (e) => {
+      if (e.target.closest('.event-actions')) return;
+      showEventModal(item, gymName);
+    });
+    ev.style.cursor = 'pointer';
+    ev.dataset.className = item.className;
+    grid.appendChild(ev);
+  }
+
   function renderCalendar(parsed) {
     clearCalendar();
     // Clear time indicator tracking
@@ -666,95 +793,40 @@
       const grid = el('div', 'hour-grid');
       grid.style.height = totalHeight + 'px';
       grid.style.minHeight = totalHeight + 'px';
-      col.appendChild(grid);
 
-      // Sort items by start time
       const sortedItems = gymData.items.slice().sort((a, b) => timeToMinutes(a.start) - timeToMinutes(b.start));
-      
-      // Calculate overlapping events and assign columns
-      const eventPositions = calculateEventColumns(sortedItems, startHour, endHour);
-      
-      sortedItems.forEach((item, idx) => {
-        const startMins = timeToMinutes(item.start);
-        const endMins = timeToMinutes(item.end);
-        
-        // Skip events completely outside the time range
-        if (endMins <= startHour * 60 || startMins >= endHour * 60) return;
-        
-        // Clamp to visible range
-        const visibleStart = Math.max(startMins, startHour * 60);
-        const visibleEnd = Math.min(endMins, endHour * 60);
-        
-        const topPx = (visibleStart - startHour * 60) / 60 * hourHeight;
-        const heightPx = Math.max(24, (visibleEnd - visibleStart) / 60 * hourHeight);
-        
-        const ev = el('div', 'event');
-        ev.style.background = gymColor;
-        ev.style.top = topPx + 'px';
-        ev.style.height = heightPx + 'px';
-        
-        // Apply column positioning for overlapping events
-        const pos = eventPositions[idx];
-        if (pos && pos.totalColumns > 1) {
-          const colWidth = 100 / pos.totalColumns;
-          ev.style.left = (pos.column * colWidth) + '%';
-          ev.style.width = colWidth + '%';
-          ev.style.right = 'auto';
-        }
-        
-        // Add cancelled class if applicable
-        if (item.cancelled) {
-          ev.classList.add('cancelled');
-        }
-        
-        ev.innerHTML = `<div class="title">${item.className}</div><div class="meta">${item.start} - ${item.end}</div>`;
-        if(item.studio) {
-          ev.innerHTML += `<div class="studio">${item.studio}</div>`;
-        }
-        if(item.category) {
-          ev.innerHTML += `<div class="category">${item.category}</div>`;
-        }
-        if(item.cancelled) {
-          ev.innerHTML += `<div class="cancelled-label">CANCELLED</div>`;
-        }
-        if(item.classFull && !item.joinWaitlist && !item.cancelled) {
-          ev.innerHTML += `<div class="class-full-label">Class Full</div>`;
-        }
-        
-        // Add action buttons (Add to Calendar, Sign Up if required)
-        if (!item.cancelled) {
-          const actions = el('div', 'event-actions');
-          
-          // Google Calendar link
-          const calLink = createGoogleCalendarLink(item, gymName);
-          actions.innerHTML = `<a href="${calLink}" target="_blank" class="event-btn cal-btn" title="Add to Google Calendar">📅</a>`;
-          
-          // Sign Up / Join Waitlist (only if requires signup) - shows confirmation modal
-          if (item.requiresSignup) {
-            const signUpBtn = el('button', 'event-btn signup-btn');
-            signUpBtn.innerHTML = '🎟️';
-            signUpBtn.title = item.joinWaitlist ? 'Join Waitlist' : 'Sign Up / Reserve';
-            signUpBtn.addEventListener('click', (e) => {
-              e.stopPropagation();
-              showExternalLinkModal(item.className, gymName, item.joinWaitlist);
-            });
-            actions.appendChild(signUpBtn);
-          }
-          
-          ev.appendChild(actions);
-        }
-        
-        // Add click handler to show event details modal
-        ev.addEventListener('click', (e) => {
-          // Don't trigger if clicking on action buttons
-          if (e.target.closest('.event-actions')) return;
-          showEventModal(item, gymName);
-        });
-        ev.style.cursor = 'pointer';
-        
-        ev.dataset.className = item.className;
-        grid.appendChild(ev);
+      const classItems = sortedItems.filter(item => !item.isPool);
+      const lapItems = sortedItems.filter(item => item.isPool && item.pool === 'lap');
+      const leisureItems = sortedItems.filter(item => item.isPool && item.pool === 'leisure');
+
+      const eventPositions = calculateEventColumns(classItems, startHour, endHour);
+      classItems.forEach((item, idx) => {
+        appendScheduleEvent(grid, item, gymName, gymColor, eventPositions[idx], startHour, endHour, hourHeight);
       });
+
+      const columnBody = el('div', 'column-body');
+      columnBody.style.height = totalHeight + 'px';
+      columnBody.appendChild(grid);
+
+      if (lapItems.length || leisureItems.length) {
+        col.classList.add('has-pools');
+        const rail = el('div', 'pool-rail');
+        rail.style.height = totalHeight + 'px';
+        [
+          ['lap', lapItems],
+          ['leisure', leisureItems]
+        ].forEach(([poolId, items]) => {
+          if (!items.length) return;
+          const lane = el('div', `pool-lane pool-lane-${poolId}`);
+          items.forEach(item => {
+            appendScheduleEvent(lane, item, gymName, gymColor, null, startHour, endHour, hourHeight);
+          });
+          rail.appendChild(lane);
+        });
+        columnBody.appendChild(rail);
+      }
+
+      col.appendChild(columnBody);
       
       // Add current time indicator to this gym's grid
       const isFirstGym = gymsWrapper.children.length === 0;
@@ -817,7 +889,10 @@
     const endTime = parseTimeToISO(item.end, dateStr);
     
     const title = encodeURIComponent(`${item.className} @ ${gymName}`);
-    const details = encodeURIComponent(`Class: ${item.className}\nStudio: ${item.studio || 'N/A'}\nCategory: ${item.category || 'N/A'}\nInstructor: ${item.instructor || 'N/A'}`);
+    const detailLines = item.isPool
+      ? [item.studio, item.note, item.seasonLabel ? `${item.seasonLabel} pool schedule` : ''].filter(Boolean)
+      : [`Class: ${item.className}`, `Studio: ${item.studio || 'N/A'}`, `Category: ${item.category || 'N/A'}`, `Instructor: ${item.instructor || 'N/A'}`];
+    const details = encodeURIComponent(detailLines.join('\n'));
     const location = encodeURIComponent(`${gymName} Recreation Center, Denver, CO`);
     
     return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startTime}/${endTime}&details=${details}&location=${location}`;
@@ -914,9 +989,16 @@
     const modal = el('div', 'event-modal');
     
     const calLink = createGoogleCalendarLink(item, gymName);
-    const signUpLink = `https://groupexpro.com/schedule/522/?view=new`;
+    const signUpLink = item.isPool && item.scheduleUrl
+      ? item.scheduleUrl
+      : `https://groupexpro.com/schedule/522/?view=new`;
+    const externalLabel = item.isPool ? 'View pool schedule' : 'See More on GroupExPro';
     
     const description = getClassDescription(item.className);
+    const poolNote = item.isPool && item.note ? item.note : '';
+    const seasonNote = item.isPool && item.seasonLabel
+      ? `${item.seasonLabel} schedule from the ${gymName} rec center page. Subject to change.`
+      : '';
     
     modal.innerHTML = `
       <button class="modal-close" title="Close">&times;</button>
@@ -925,21 +1007,23 @@
       <div class="modal-time">${item.start} - ${item.end}</div>
       <div class="modal-details">
         <div class="modal-row"><span class="modal-label">Location:</span> ${gymName}</div>
-        <div class="modal-row"><span class="modal-label">Studio:</span> ${item.studio || 'N/A'}</div>
-        <div class="modal-row"><span class="modal-label">Category:</span> ${item.category || 'N/A'}</div>
-        <div class="modal-row"><span class="modal-label">Instructor:</span> ${item.instructor || 'N/A'}</div>
+        <div class="modal-row"><span class="modal-label">${item.isPool ? 'Pool:' : 'Studio:'}</span> ${item.studio || 'N/A'}</div>
+        ${item.isPool ? '' : `<div class="modal-row"><span class="modal-label">Category:</span> ${item.category || 'N/A'}</div>`}
+        ${item.isPool ? '' : `<div class="modal-row"><span class="modal-label">Instructor:</span> ${item.instructor || 'N/A'}</div>`}
       </div>
-      ${item.cancelled ? '<div class="modal-cancelled">⚠️ This class has been CANCELLED</div>' : ''}
+      ${item.cancelled ? `<div class="modal-cancelled">⚠️ ${item.closureReason || 'This class has been CANCELLED'}</div>` : ''}
       ${description ? `
         <div class="modal-description-text">
           <strong>Description:</strong>
           <p>${description}</p>
         </div>
-      ` : `
+      ` : item.isPool ? '' : `
         <div class="modal-description">
           <p><em>No description available. Click "See More" on GroupExPro for details.</em></p>
         </div>
       `}
+      ${poolNote ? `<div class="modal-description-text"><strong>Schedule note:</strong><p>${poolNote}</p></div>` : ''}
+      ${seasonNote ? `<div class="modal-signup-reminder-note">${seasonNote}</div>` : ''}
       ${showSignupReminder ? '<div class="modal-signup-reminder-note">Sign-up opens at the same time as class start, 72 hours (3 days) earlier. Add a calendar reminder for that time to get notified when it opens.</div>' : ''}
       ${item.classFull && !item.joinWaitlist ? '<div class="modal-class-full">This class is full. Sign Up / Reserve is not available.</div>' : ''}
       <div class="modal-actions">
@@ -947,9 +1031,9 @@
           ${showSignupReminder && reminderCalLink ? `<a href="${reminderCalLink}" target="_blank" class="modal-btn secondary reminder-cal-btn">🔔 Add reminder for when sign-up opens</a>` : ''}
           <a href="${calLink}" target="_blank" class="modal-btn primary">📅 Add to Calendar</a>
           ${item.requiresSignup && !showSignupReminder && (!item.classFull || item.joinWaitlist) ? `<button class="modal-btn secondary signup-external-btn">${item.joinWaitlist ? '🎟️ Join Waitlist' : '🎟️ Sign Up / Reserve'}</button>` : ''}
-          <a href="${signUpLink}" target="_blank" class="modal-btn tertiary">See More on GroupExPro</a>
+          <a href="${signUpLink}" target="_blank" class="modal-btn tertiary">${externalLabel}</a>
         ` : `
-          <a href="${signUpLink}" target="_blank" class="modal-btn secondary">View on GroupExPro</a>
+          <a href="${signUpLink}" target="_blank" class="modal-btn secondary">${item.isPool ? 'View pool schedule' : 'View on GroupExPro'}</a>
         `}
       </div>
     `;
@@ -1165,6 +1249,8 @@
   let selectedClasses = []; // Empty = show all classes
   let hideCancelled = true;
   let hideNonClasses = true; // Hide non-class activities like "Pool Closed", "Gym Closed"
+  let showLapPool = localStorage.getItem('swimcal_pool_lap') !== '0';
+  let showLeisurePool = localStorage.getItem('swimcal_pool_leisure') !== '0';
   let filtersInitialized = false;
   
   // List of non-class activities (not actual classes/activities)
@@ -1184,6 +1270,10 @@
     const resetSearchBtn = qs('#reset-search');
     const hideCancelledCheckbox = qs('#hide-cancelled');
     const hideNonClassesCheckbox = qs('#hide-non-classes');
+    const showLapPoolCheckbox = qs('#show-lap-pool');
+    const showLeisurePoolCheckbox = qs('#show-leisure-pool');
+    if (showLapPoolCheckbox) showLapPoolCheckbox.checked = showLapPool;
+    if (showLeisurePoolCheckbox) showLeisurePoolCheckbox.checked = showLeisurePool;
 
     // Setup gym dropdown (no limit now since we use distance sorting)
     setupDropdown('gym', allGyms, Infinity);
@@ -1204,6 +1294,21 @@
       hideNonClasses = hideNonClassesCheckbox.checked;
       applyFilters();
     });
+
+    if (showLapPoolCheckbox) {
+      showLapPoolCheckbox.addEventListener('change', () => {
+        showLapPool = showLapPoolCheckbox.checked;
+        localStorage.setItem('swimcal_pool_lap', showLapPool ? '1' : '0');
+        applyFilters();
+      });
+    }
+    if (showLeisurePoolCheckbox) {
+      showLeisurePoolCheckbox.addEventListener('change', () => {
+        showLeisurePool = showLeisurePoolCheckbox.checked;
+        localStorage.setItem('swimcal_pool_leisure', showLeisurePool ? '1' : '0');
+        applyFilters();
+      });
+    }
     
     // Distance sort change
     if (distanceSortSel) {
@@ -1369,6 +1474,13 @@
     if (hideNonClasses) {
       filtered = filtered.filter(d => !NON_CLASSES.includes(d.className));
     }
+
+    if (!showLapPool) {
+      filtered = filtered.filter(d => d.pool !== 'lap');
+    }
+    if (!showLeisurePool) {
+      filtered = filtered.filter(d => d.pool !== 'leisure');
+    }
     
     // If specific gyms are manually selected, use those
     // Otherwise, we'll apply the limit in groupDataByGym
@@ -1377,7 +1489,7 @@
     }
     
     if (selectedClasses.length > 0) {
-      filtered = filtered.filter(d => selectedClasses.includes(d.className));
+      filtered = filtered.filter(d => d.isPool || selectedClasses.includes(d.className));
     }
     
     if (searchQuery) {
@@ -1695,6 +1807,7 @@
   async function init() {
     await loadDistancesData();
     await loadClassDescriptions();
+    await loadPoolSchedules();
     await loadWeekManifest();
   }
   

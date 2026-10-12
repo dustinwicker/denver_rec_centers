@@ -1,0 +1,239 @@
+{
+  "season": "Fall 2026",
+  "valid_from": "2026-08-09",
+  "valid_through": "2026-11-14",
+  "closures": [
+    {
+      "date": "2026-10-12",
+      "reason": "Closed for Indigenous Peoples' Day"
+    }
+  ],
+  "centers": [
+    {
+      "gym": "Carla Madison",
+      "url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Parks-Recreation/Recreation-Centers-Pools-Activities/Recreation-Centers/Carla-Madison-Recreation-Center",
+      "pools": [
+        {
+          "id": "lap",
+          "name": "Lap pool",
+          "revised": "2026-10-04",
+          "days": {
+            "Monday": [
+              {
+                "name": "Lap Swim",
+                "start": "5:30am",
+                "end": "8:30pm",
+                "note": "5 lanes are used 9:00–10:00am for shallow water aerobics and 10:15–11:15am for deep water aerobics."
+              }
+            ],
+            "Tuesday": [
+              {
+                "name": "Lap Swim",
+                "start": "5:30am",
+                "end": "8:30pm",
+                "note": "5 lanes are used 4:00–6:00pm for swim team and 6:00–7:00pm for swim lessons."
+              }
+            ],
+            "Wednesday": [
+              {
+                "name": "Lap Swim",
+                "start": "5:30am",
+                "end": "8:30pm",
+                "note": "5 lanes are used 9:00–10:00am for shallow water aerobics, 10:15–11:15am for aqua tone, and 4:00–5:30pm for swim team."
+              }
+            ],
+            "Thursday": [
+              {
+                "name": "Lap Swim",
+                "start": "5:30am",
+                "end": "8:30pm",
+                "note": "5 lanes are used 4:00–6:00pm for swim team and 6:00–7:00pm for swim lessons."
+              }
+            ],
+            "Friday": [
+              {
+                "name": "Lap Swim",
+                "start": "5:30am",
+                "end": "7:30pm",
+                "note": "6 lanes are used 6:00–7:00pm for adult fitness swim."
+              }
+            ],
+            "Saturday": [
+              {
+                "name": "Lap Swim",
+                "start": "8:00am",
+                "end": "3:30pm"
+              }
+            ],
+            "Sunday": [
+              {
+                "name": "Lap Swim",
+                "start": "8:00am",
+                "end": "3:30pm",
+                "note": "4 lanes are used 2:00–3:30pm for key log rolling and the diving board."
+              }
+            ]
+          }
+        },
+        {
+          "id": "leisure",
+          "name": "Leisure pool",
+          "revised": "2026-09-14",
+          "days": {
+            "Monday": [
+              {
+                "name": "Quiet Swim",
+                "start": "8:00am",
+                "end": "10:00am",
+                "note": "River walking."
+              },
+              {
+                "name": "Open Swim",
+                "start": "10:00am",
+                "end": "4:00pm",
+                "note": "Slide subject to availability."
+              },
+              {
+                "name": "Adaptive Swim Lessons",
+                "start": "4:00pm",
+                "end": "6:00pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Open Swim",
+                "start": "6:00pm",
+                "end": "8:30pm",
+                "note": "Slide subject to availability."
+              }
+            ],
+            "Tuesday": [
+              {
+                "name": "Adult Swim",
+                "start": "8:00am",
+                "end": "10:15am",
+                "note": "River walking. Current channel aerobics uses the pool 9:15–10:15am."
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "10:15am",
+                "end": "11:45am",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Open Swim",
+                "start": "12:00pm",
+                "end": "4:00pm",
+                "note": "Slide subject to availability."
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "4:00pm",
+                "end": "7:00pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Open Swim",
+                "start": "7:00pm",
+                "end": "8:30pm",
+                "note": "Slide subject to availability."
+              }
+            ],
+            "Wednesday": [
+              {
+                "name": "Quiet Swim",
+                "start": "8:00am",
+                "end": "10:00am",
+                "note": "River walking."
+              },
+              {
+                "name": "Open Swim",
+                "start": "10:00am",
+                "end": "8:30pm",
+                "note": "Slide subject to availability. Swim lessons 10:15–11:45am (registration required)."
+              }
+            ],
+            "Thursday": [
+              {
+                "name": "Adult Swim",
+                "start": "8:00am",
+                "end": "10:15am",
+                "note": "River walking. Current channel aerobics uses the pool 9:15–10:15am."
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "10:15am",
+                "end": "11:45am",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Open Swim",
+                "start": "12:00pm",
+                "end": "4:00pm",
+                "note": "Slide subject to availability."
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "4:00pm",
+                "end": "7:00pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Open Swim",
+                "start": "7:00pm",
+                "end": "8:30pm",
+                "note": "Slide subject to availability."
+              }
+            ],
+            "Friday": [
+              {
+                "name": "Quiet Swim",
+                "start": "8:00am",
+                "end": "10:00am",
+                "note": "River walking."
+              },
+              {
+                "name": "Open Swim",
+                "start": "10:00am",
+                "end": "7:30pm",
+                "note": "Slide subject to availability."
+              }
+            ],
+            "Saturday": [
+              {
+                "name": "Adult Swim",
+                "start": "8:00am",
+                "end": "10:00am",
+                "note": "River walking."
+              },
+              {
+                "name": "Open Swim",
+                "start": "10:00am",
+                "end": "3:30pm",
+                "note": "Slide subject to availability."
+              }
+            ],
+            "Sunday": [
+              {
+                "name": "Adult Swim",
+                "start": "8:00am",
+                "end": "10:00am",
+                "note": "River walking."
+              },
+              {
+                "name": "Open Swim",
+                "start": "10:00am",
+                "end": "3:30pm",
+                "note": "Slide subject to availability."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

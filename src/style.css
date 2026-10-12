@@ -551,6 +551,66 @@
 .hour-grid{
   position:relative;
 }
+.column-body{
+  display:flex;
+  align-items:stretch;
+}
+.column-body .hour-grid{
+  flex:1;
+  min-width:0;
+}
+.day-column.has-pools{
+  min-width:280px;
+}
+.pool-rail{
+  display:flex;
+  width:148px;
+  flex-shrink:0;
+  border-left:1px solid rgba(0,0,0,0.08);
+}
+.pool-lane{
+  position:relative;
+  flex:1;
+  min-width:0;
+  height:100%;
+}
+.pool-lane + .pool-lane{
+  border-left:1px dashed rgba(15,23,42,0.15);
+}
+.pool-filter-group .pool-toggles{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  min-height:28px;
+}
+.pool-toggle{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  font-size:12px;
+  font-weight:600;
+  color:var(--muted);
+  cursor:pointer;
+  white-space:nowrap;
+}
+.pool-toggle input{
+  width:14px;
+  height:14px;
+  margin:0;
+  accent-color:#0369a1;
+  cursor:pointer;
+}
+.event.pool-event{
+  left:2px;
+  right:2px;
+  padding:3px 4px;
+  box-shadow:none;
+  z-index:1;
+}
+.event.pool-event.pool-lap{ background:#075985; }
+.event.pool-event.pool-leisure{ background:#0f766e; }
+.event.pool-event.pool-program{ background:#9a3412; }
+.event.pool-event:hover{ transform:none; z-index:4; }
   
 /* Event blocks */
 .event{
