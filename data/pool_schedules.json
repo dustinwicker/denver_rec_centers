@@ -234,6 +234,3339 @@
           }
         }
       ]
+    },
+    {
+      "gym": "Ashland",
+      "url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Parks-Recreation/Recreation-Centers-Pools-Activities/Recreation-Centers/Ashland-Recreation-Center",
+      "pools": [
+        {
+          "id": "lap",
+          "name": "Lap pool",
+          "revised": "2026-08-13",
+          "days": {
+            "Monday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:00am",
+                "end": "2:30pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "2:30pm",
+                "end": "5:00pm",
+                "note": "One lap lane during open swim."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "5:00pm",
+                "end": "5:45pm"
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "6:00pm",
+                "end": "7:30pm",
+                "kind": "program",
+                "note": "Registration required."
+              }
+            ],
+            "Tuesday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:00am",
+                "end": "9:45am"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "10:00am",
+                "end": "11:00am",
+                "kind": "program"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "11:15am",
+                "end": "2:30pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "2:30pm",
+                "end": "5:00pm",
+                "note": "One lap lane during open swim."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "5:00pm",
+                "end": "7:30pm"
+              }
+            ],
+            "Wednesday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:00am",
+                "end": "2:30pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "2:30pm",
+                "end": "5:00pm",
+                "note": "One lap lane during open swim."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "5:00pm",
+                "end": "5:45pm"
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "6:00pm",
+                "end": "7:30pm",
+                "kind": "program",
+                "note": "Registration required."
+              }
+            ],
+            "Thursday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:00am",
+                "end": "9:45am"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "10:00am",
+                "end": "11:00am",
+                "kind": "program"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "11:15am",
+                "end": "2:30pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "2:30pm",
+                "end": "5:00pm",
+                "note": "One lap lane during open swim."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "5:00pm",
+                "end": "7:30pm"
+              }
+            ],
+            "Friday": [
+              {
+                "name": "Lap Swim",
+                "start": "8:00am",
+                "end": "2:30pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "2:30pm",
+                "end": "5:00pm",
+                "note": "One lap lane during open swim."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "5:00pm",
+                "end": "6:45pm"
+              }
+            ],
+            "Saturday": [
+              {
+                "name": "Lap Swim",
+                "start": "8:00am",
+                "end": "1:30pm"
+              }
+            ]
+          }
+        },
+        {
+          "id": "leisure",
+          "name": "Leisure pool",
+          "revised": "2026-08-13",
+          "days": {
+            "Monday": [
+              {
+                "name": "Open Swim",
+                "start": "10:00am",
+                "end": "5:45pm"
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "6:00pm",
+                "end": "7:30pm",
+                "kind": "program",
+                "note": "Registration required."
+              }
+            ],
+            "Tuesday": [
+              {
+                "name": "Swim Lessons",
+                "start": "9:00am",
+                "end": "10:00am",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Open Swim",
+                "start": "11:15am",
+                "end": "7:30pm"
+              }
+            ],
+            "Wednesday": [
+              {
+                "name": "Open Swim",
+                "start": "10:00am",
+                "end": "5:45pm"
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "6:00pm",
+                "end": "7:30pm",
+                "kind": "program",
+                "note": "Registration required."
+              }
+            ],
+            "Thursday": [
+              {
+                "name": "Swim Lessons",
+                "start": "9:00am",
+                "end": "10:00am",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Open Swim",
+                "start": "11:15am",
+                "end": "7:30pm"
+              }
+            ],
+            "Friday": [
+              {
+                "name": "Open Swim",
+                "start": "10:00am",
+                "end": "6:45pm"
+              }
+            ],
+            "Saturday": [
+              {
+                "name": "Open Swim",
+                "start": "8:00am",
+                "end": "1:30pm"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "gym": "Athmar",
+      "url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Parks-Recreation/Recreation-Centers-Pools-Activities/Recreation-Centers/Athmar-Recreation-Center",
+      "pools": [
+        {
+          "id": "lap",
+          "name": "Lap pool",
+          "revised": "2026-08-21",
+          "days": {
+            "Monday": [
+              {
+                "name": "Lap Swim",
+                "start": "7:00am",
+                "end": "9:15am"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "9:30am",
+                "end": "10:30am",
+                "kind": "program"
+              },
+              {
+                "name": "Water Walking",
+                "start": "10:30am",
+                "end": "11:15am"
+              },
+              {
+                "name": "Pool Maintenance",
+                "start": "11:15am",
+                "end": "12:00pm",
+                "kind": "program"
+              },
+              {
+                "name": "Adult Swim",
+                "start": "12:00pm",
+                "end": "1:30pm"
+              },
+              {
+                "name": "Family Swim",
+                "start": "1:30pm",
+                "end": "2:30pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "2:30pm",
+                "end": "5:15pm"
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "5:30pm",
+                "end": "6:30pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Open Swim",
+                "start": "6:45pm",
+                "end": "8:30pm"
+              }
+            ],
+            "Tuesday": [
+              {
+                "name": "Lap Swim",
+                "start": "7:00am",
+                "end": "10:30am"
+              },
+              {
+                "name": "Water Walking",
+                "start": "10:30am",
+                "end": "11:15am"
+              },
+              {
+                "name": "Pool Maintenance",
+                "start": "11:15am",
+                "end": "12:00pm",
+                "kind": "program"
+              },
+              {
+                "name": "Adult Swim",
+                "start": "12:00pm",
+                "end": "1:30pm"
+              },
+              {
+                "name": "Family Swim",
+                "start": "1:30pm",
+                "end": "2:30pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "2:30pm",
+                "end": "4:15pm"
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "4:30pm",
+                "end": "6:30pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Open Swim",
+                "start": "6:45pm",
+                "end": "8:30pm"
+              }
+            ],
+            "Wednesday": [
+              {
+                "name": "Lap Swim",
+                "start": "7:00am",
+                "end": "9:15am"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "9:30am",
+                "end": "10:30am",
+                "kind": "program"
+              },
+              {
+                "name": "Water Walking",
+                "start": "10:30am",
+                "end": "11:15am"
+              },
+              {
+                "name": "Pool Maintenance",
+                "start": "11:15am",
+                "end": "12:00pm",
+                "kind": "program"
+              },
+              {
+                "name": "Adult Swim",
+                "start": "12:00pm",
+                "end": "1:30pm"
+              },
+              {
+                "name": "Family Swim",
+                "start": "1:30pm",
+                "end": "2:30pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "2:30pm",
+                "end": "5:15pm"
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "5:30pm",
+                "end": "6:30pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Open Swim",
+                "start": "6:45pm",
+                "end": "8:30pm"
+              }
+            ],
+            "Thursday": [
+              {
+                "name": "Lap Swim",
+                "start": "7:00am",
+                "end": "10:30am"
+              },
+              {
+                "name": "Water Walking",
+                "start": "10:30am",
+                "end": "11:15am"
+              },
+              {
+                "name": "Pool Maintenance",
+                "start": "11:15am",
+                "end": "12:00pm",
+                "kind": "program"
+              },
+              {
+                "name": "Adult Swim",
+                "start": "12:00pm",
+                "end": "1:30pm"
+              },
+              {
+                "name": "Family Swim",
+                "start": "1:30pm",
+                "end": "2:30pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "2:30pm",
+                "end": "4:15pm"
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "4:30pm",
+                "end": "6:30pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Open Swim",
+                "start": "6:45pm",
+                "end": "8:30pm"
+              }
+            ],
+            "Friday": [
+              {
+                "name": "Lap Swim",
+                "start": "7:00am",
+                "end": "9:15am"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "9:30am",
+                "end": "10:30am",
+                "kind": "program"
+              },
+              {
+                "name": "MS Hydro Therapy",
+                "start": "10:45am",
+                "end": "1:00pm",
+                "kind": "program"
+              },
+              {
+                "name": "Adult Swim",
+                "start": "1:00pm",
+                "end": "2:30pm"
+              },
+              {
+                "name": "Family Swim",
+                "start": "2:30pm",
+                "end": "3:30pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "3:30pm",
+                "end": "7:30pm"
+              }
+            ],
+            "Saturday": [
+              {
+                "name": "Lap Swim",
+                "start": "9:00am",
+                "end": "11:00am"
+              },
+              {
+                "name": "Open Swim",
+                "start": "11:00am",
+                "end": "2:30pm"
+              }
+            ],
+            "Sunday": [
+              {
+                "name": "Lap Swim",
+                "start": "12:00pm",
+                "end": "1:00pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "1:00pm",
+                "end": "3:30pm"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "gym": "Central Park",
+      "url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Parks-Recreation/Recreation-Centers-Pools-Activities/Recreation-Centers/Central-Park-Recreation-Center",
+      "valid_from": "2026-09-13",
+      "valid_through": "2026-11-14",
+      "pools": [
+        {
+          "id": "lap",
+          "name": "Lap pool",
+          "revised": "2026-09-24",
+          "days": {
+            "Monday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:30am",
+                "end": "6:00pm"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "6:15pm",
+                "end": "7:30pm",
+                "kind": "program"
+              }
+            ],
+            "Tuesday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:30am",
+                "end": "9:00am"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "9:00am",
+                "end": "10:00am",
+                "note": "Fitness swim."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "10:00am",
+                "end": "11:30am",
+                "note": "Swim lessons. Registration required."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "11:30am",
+                "end": "5:00pm"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "5:00pm",
+                "end": "6:00pm",
+                "note": "Swim lessons. Registration required."
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "6:00pm",
+                "end": "7:00pm",
+                "kind": "program",
+                "note": "Registration required."
+              }
+            ],
+            "Wednesday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:30am",
+                "end": "5:00pm"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "5:00pm",
+                "end": "6:00pm",
+                "note": "Mermaid swim."
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "6:15pm",
+                "end": "7:30pm",
+                "kind": "program"
+              }
+            ],
+            "Thursday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:30am",
+                "end": "9:00am"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "9:00am",
+                "end": "10:00am",
+                "note": "Fitness swim."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "10:00am",
+                "end": "11:30am",
+                "note": "Swim lessons. Registration required."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "11:30am",
+                "end": "5:00pm"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "5:00pm",
+                "end": "6:00pm",
+                "note": "Swim lessons. Registration required."
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "6:00pm",
+                "end": "7:00pm",
+                "kind": "program",
+                "note": "Registration required."
+              }
+            ],
+            "Friday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:30am",
+                "end": "6:00pm"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "6:00pm",
+                "end": "7:00pm",
+                "kind": "program"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "7:00pm",
+                "end": "7:30pm"
+              }
+            ],
+            "Saturday": [
+              {
+                "name": "Lap Swim",
+                "start": "8:00am",
+                "end": "12:00pm"
+              },
+              {
+                "name": "Open / Lap Swim",
+                "start": "12:00pm",
+                "end": "3:30pm",
+                "note": "2 lap lanes."
+              }
+            ],
+            "Sunday": [
+              {
+                "name": "Lap Swim",
+                "start": "8:00am",
+                "end": "12:00pm"
+              },
+              {
+                "name": "Open / Lap Swim",
+                "start": "12:00pm",
+                "end": "3:30pm",
+                "note": "2 lap lanes."
+              }
+            ]
+          }
+        },
+        {
+          "id": "leisure",
+          "name": "Leisure pool",
+          "revised": "2026-06-02",
+          "days": {
+            "Monday": [
+              {
+                "name": "Adult Swim",
+                "start": "6:30am",
+                "end": "10:00am",
+                "note": "Water walking. Ages 18+."
+              },
+              {
+                "name": "Open Swim",
+                "start": "10:30am",
+                "end": "7:30pm"
+              }
+            ],
+            "Tuesday": [
+              {
+                "name": "Adult Swim",
+                "start": "6:30am",
+                "end": "9:00am",
+                "note": "Water walking. Ages 18+."
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "9:00am",
+                "end": "10:45am",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Open Swim",
+                "start": "10:45am",
+                "end": "4:45pm"
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "4:45pm",
+                "end": "6:45pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Open Swim",
+                "start": "6:45pm",
+                "end": "7:30pm"
+              }
+            ],
+            "Wednesday": [
+              {
+                "name": "Adult Swim",
+                "start": "6:30am",
+                "end": "10:00am",
+                "note": "Water walking. Ages 18+."
+              },
+              {
+                "name": "Open Swim",
+                "start": "10:30am",
+                "end": "7:30pm"
+              }
+            ],
+            "Thursday": [
+              {
+                "name": "Adult Swim",
+                "start": "6:30am",
+                "end": "9:00am",
+                "note": "Water walking. Ages 18+."
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "9:00am",
+                "end": "10:45am",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Open Swim",
+                "start": "10:45am",
+                "end": "4:45pm"
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "4:45pm",
+                "end": "6:45pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Open Swim",
+                "start": "6:45pm",
+                "end": "7:30pm"
+              }
+            ],
+            "Friday": [
+              {
+                "name": "Adult Swim",
+                "start": "6:30am",
+                "end": "10:00am",
+                "note": "Water walking. Ages 18+."
+              },
+              {
+                "name": "Open Swim",
+                "start": "10:30am",
+                "end": "7:30pm"
+              }
+            ],
+            "Saturday": [
+              {
+                "name": "Adult Swim",
+                "start": "8:00am",
+                "end": "8:45am",
+                "note": "Water walking. Ages 18+."
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "9:00am",
+                "end": "10:00am",
+                "kind": "program"
+              },
+              {
+                "name": "Open Swim",
+                "start": "10:30am",
+                "end": "3:30pm"
+              }
+            ],
+            "Sunday": [
+              {
+                "name": "Adult Swim",
+                "start": "8:00am",
+                "end": "10:00am",
+                "note": "Water walking. Ages 18+."
+              },
+              {
+                "name": "Open Swim",
+                "start": "10:30am",
+                "end": "3:30pm"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "gym": "Green Valley Ranch",
+      "url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Parks-Recreation/Recreation-Centers-Pools-Activities/Recreation-Centers/Green-Valley-Ranch-Recreation-Center",
+      "valid_from": "2026-08-17",
+      "valid_through": "2026-11-14",
+      "pools": [
+        {
+          "id": "lap",
+          "name": "Lap pool",
+          "revised": "2026-08-17",
+          "days": {
+            "Monday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:00am",
+                "end": "8:55am"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "9:00am",
+                "end": "10:00am",
+                "kind": "program"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "10:05am",
+                "end": "3:00pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "3:00pm",
+                "end": "4:45pm",
+                "note": "Slides and zipine are only available during open swim."
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "4:45pm",
+                "end": "6:30pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "6:30pm",
+                "end": "7:30pm",
+                "kind": "program"
+              }
+            ],
+            "Tuesday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:00am",
+                "end": "10:25am"
+              },
+              {
+                "name": "Deep Water Aerobics",
+                "start": "10:30am",
+                "end": "11:30am",
+                "kind": "program"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "11:35am",
+                "end": "3:00pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "3:00pm",
+                "end": "4:45pm",
+                "note": "Slides and zipine are only available during open swim."
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "4:45pm",
+                "end": "6:30pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "6:30pm",
+                "end": "7:30pm",
+                "kind": "program"
+              }
+            ],
+            "Wednesday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:00am",
+                "end": "8:55am"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "9:00am",
+                "end": "10:00am",
+                "kind": "program"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "10:05am",
+                "end": "3:00pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "3:00pm",
+                "end": "4:45pm",
+                "note": "Slides and zipine are only available during open swim."
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "4:45pm",
+                "end": "6:30pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Drum Vibes",
+                "start": "6:30pm",
+                "end": "7:30pm",
+                "kind": "program"
+              }
+            ],
+            "Thursday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:00am",
+                "end": "10:25am"
+              },
+              {
+                "name": "Ai Chi",
+                "start": "10:30am",
+                "end": "11:30am",
+                "kind": "program"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "11:30am",
+                "end": "3:00pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "3:00pm",
+                "end": "4:45pm",
+                "note": "Slides and zipine are only available during open swim."
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "4:45pm",
+                "end": "6:30pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "6:30pm",
+                "end": "7:30pm"
+              }
+            ],
+            "Friday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:00am",
+                "end": "8:55am"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "9:00am",
+                "end": "10:00am",
+                "kind": "program"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "11:35am",
+                "end": "3:00pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "3:00pm",
+                "end": "7:30pm",
+                "note": "Slides and zipine are only available during open swim."
+              }
+            ],
+            "Saturday": [
+              {
+                "name": "Lap Swim",
+                "start": "10:00am",
+                "end": "11:25am"
+              },
+              {
+                "name": "Open Swim",
+                "start": "11:30am",
+                "end": "1:15pm",
+                "note": "Slides and zipine are only available during open swim."
+              },
+              {
+                "name": "Safety Break",
+                "start": "1:15pm",
+                "end": "1:30pm",
+                "kind": "program"
+              },
+              {
+                "name": "Open Swim",
+                "start": "1:30pm",
+                "end": "3:30pm",
+                "note": "Slides and zipine are only available during open swim."
+              }
+            ]
+          }
+        },
+        {
+          "id": "leisure",
+          "name": "Leisure pool",
+          "revised": "2026-08-17",
+          "days": {
+            "Monday": [
+              {
+                "name": "Quiet Swim",
+                "start": "6:00am",
+                "end": "10:15am"
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "10:15am",
+                "end": "11:15am",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Quiet Swim",
+                "start": "11:15am",
+                "end": "12:30pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "12:30pm",
+                "end": "4:45pm",
+                "note": "Slides and zipine are only available during open swim."
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "4:45pm",
+                "end": "6:30pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Quiet Swim",
+                "start": "6:30pm",
+                "end": "7:30pm"
+              }
+            ],
+            "Tuesday": [
+              {
+                "name": "Quiet Swim",
+                "start": "6:00am",
+                "end": "9:15am"
+              },
+              {
+                "name": "Water Walking",
+                "start": "9:15am",
+                "end": "10:15am"
+              },
+              {
+                "name": "Quiet Swim",
+                "start": "10:15am",
+                "end": "11:45am"
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "11:45am",
+                "end": "12:30pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Open Swim",
+                "start": "12:30pm",
+                "end": "4:45pm",
+                "note": "Slides and zipine are only available during open swim."
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "4:45pm",
+                "end": "6:30pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Quiet Swim",
+                "start": "6:30pm",
+                "end": "7:30pm"
+              }
+            ],
+            "Wednesday": [
+              {
+                "name": "Quiet Swim",
+                "start": "6:00am",
+                "end": "10:15am"
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "10:15am",
+                "end": "11:15am",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Quiet Swim",
+                "start": "11:15am",
+                "end": "12:30pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "12:30pm",
+                "end": "4:45pm",
+                "note": "Slides and zipine are only available during open swim."
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "4:45pm",
+                "end": "6:30pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Quiet Swim",
+                "start": "6:30pm",
+                "end": "7:30pm"
+              }
+            ],
+            "Thursday": [
+              {
+                "name": "Quiet Swim",
+                "start": "6:00am",
+                "end": "9:15am"
+              },
+              {
+                "name": "Water Walking",
+                "start": "9:15am",
+                "end": "10:15am"
+              },
+              {
+                "name": "Quiet Swim",
+                "start": "10:15am",
+                "end": "11:45am"
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "11:45am",
+                "end": "12:30pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Open Swim",
+                "start": "12:30pm",
+                "end": "4:45pm",
+                "note": "Slides and zipine are only available during open swim."
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "4:45pm",
+                "end": "6:30pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Water Walking",
+                "start": "6:30pm",
+                "end": "7:30pm"
+              }
+            ],
+            "Friday": [
+              {
+                "name": "Quiet Swim",
+                "start": "6:00am",
+                "end": "10:15am"
+              },
+              {
+                "name": "Water Walking",
+                "start": "10:15am",
+                "end": "11:15am"
+              },
+              {
+                "name": "Quiet Swim",
+                "start": "11:15am",
+                "end": "12:30pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "12:30pm",
+                "end": "7:30pm",
+                "note": "Slides and zipine are only available during open swim."
+              }
+            ],
+            "Saturday": [
+              {
+                "name": "Quiet Swim",
+                "start": "10:00am",
+                "end": "11:30am"
+              },
+              {
+                "name": "Open Swim",
+                "start": "11:30am",
+                "end": "1:15pm",
+                "note": "Slides and zipine are only available during open swim."
+              },
+              {
+                "name": "Safety Break",
+                "start": "1:15pm",
+                "end": "1:30pm",
+                "kind": "program"
+              },
+              {
+                "name": "Open Swim",
+                "start": "1:30pm",
+                "end": "3:30pm",
+                "note": "Slides and zipine are only available during open swim."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "gym": "Hiawatha Davis Jr.",
+      "url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Parks-Recreation/Recreation-Centers-Pools-Activities/Recreation-Centers/Hiawatha-Davis-Jr.-Recreation-Center",
+      "pools": [
+        {
+          "id": "lap",
+          "name": "Indoor pool",
+          "revised": "2026-09-10",
+          "days": {
+            "Monday": [
+              {
+                "name": "Lap Swim",
+                "start": "7:15am",
+                "end": "9:00am"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "9:15am",
+                "end": "10:15am",
+                "kind": "program"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "10:30am",
+                "end": "12:30pm",
+                "note": "Vive. 3 lanes for Vive and 3 lap lanes."
+              },
+              {
+                "name": "Open / Lap Swim",
+                "start": "12:30pm",
+                "end": "3:45pm",
+                "note": "3 open lanes and 3 lap lanes."
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "4:00pm",
+                "end": "7:30pm",
+                "kind": "program",
+                "note": "Registration required."
+              }
+            ],
+            "Tuesday": [
+              {
+                "name": "Lap Swim",
+                "start": "7:15am",
+                "end": "10:15am"
+              },
+              {
+                "name": "Open / Lap Swim",
+                "start": "10:15am",
+                "end": "5:15pm",
+                "note": "3 open lanes and 3 lap lanes."
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "5:30pm",
+                "end": "6:30pm",
+                "kind": "program"
+              },
+              {
+                "name": "Ai Chi",
+                "start": "6:35pm",
+                "end": "7:35pm",
+                "kind": "program",
+                "note": "Quiet class."
+              }
+            ],
+            "Wednesday": [
+              {
+                "name": "Lap Swim",
+                "start": "7:15am",
+                "end": "9:00am"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "9:15am",
+                "end": "10:15am",
+                "kind": "program"
+              },
+              {
+                "name": "Open / Lap Swim",
+                "start": "10:30am",
+                "end": "3:45pm",
+                "note": "3 open lanes and 3 lap lanes."
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "4:00pm",
+                "end": "7:30pm",
+                "kind": "program",
+                "note": "Registration required."
+              }
+            ],
+            "Thursday": [
+              {
+                "name": "Lap Swim",
+                "start": "7:15am",
+                "end": "10:15am"
+              },
+              {
+                "name": "Ai Chi",
+                "start": "10:30am",
+                "end": "11:30am",
+                "kind": "program",
+                "note": "Quiet class."
+              },
+              {
+                "name": "Open / Lap Swim",
+                "start": "11:45am",
+                "end": "5:15pm",
+                "note": "3 open lanes and 3 lap lanes."
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "5:30pm",
+                "end": "6:30pm",
+                "kind": "program"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "6:45pm",
+                "end": "7:30pm"
+              }
+            ],
+            "Friday": [
+              {
+                "name": "Lap Swim",
+                "start": "7:15am",
+                "end": "9:00am"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "9:15am",
+                "end": "10:15am",
+                "kind": "program"
+              },
+              {
+                "name": "Open / Lap Swim",
+                "start": "10:30am",
+                "end": "3:45pm",
+                "note": "3 open lanes and 3 lap lanes."
+              },
+              {
+                "name": "Vive",
+                "start": "4:00pm",
+                "end": "5:30pm",
+                "kind": "program"
+              },
+              {
+                "name": "Open / Lap Swim",
+                "start": "5:45pm",
+                "end": "6:30pm",
+                "note": "3 open lanes and 3 lap lanes."
+              }
+            ],
+            "Saturday": [
+              {
+                "name": "Lap Swim",
+                "start": "9:00am",
+                "end": "12:15pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "12:15pm",
+                "end": "3:30pm"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "gym": "La Familia",
+      "url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Parks-Recreation/Recreation-Centers-Pools-Activities/Recreation-Centers/La-Familia-Recreation-Center",
+      "pools": [
+        {
+          "id": "lap",
+          "name": "Indoor pool",
+          "revised": "2026-08-03",
+          "days": {
+            "Monday": [
+              {
+                "name": "Lap Swim",
+                "start": "8:00am",
+                "end": "1:00pm"
+              },
+              {
+                "name": "Open / Lap Swim",
+                "start": "1:00pm",
+                "end": "3:30pm"
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "4:00pm",
+                "end": "5:00pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Open Swim",
+                "start": "5:00pm",
+                "end": "7:30pm"
+              }
+            ],
+            "Tuesday": [
+              {
+                "name": "Lap Swim",
+                "start": "8:00am",
+                "end": "10:00am"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "10:00am",
+                "end": "11:00am",
+                "kind": "program"
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "11:00am",
+                "end": "12:00pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Open / Lap Swim",
+                "start": "12:00pm",
+                "end": "3:30pm"
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "4:00pm",
+                "end": "5:00pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Open / Lap Swim",
+                "start": "5:00pm",
+                "end": "7:30pm"
+              }
+            ],
+            "Wednesday": [
+              {
+                "name": "Lap Swim",
+                "start": "8:00am",
+                "end": "1:00pm"
+              },
+              {
+                "name": "Open / Lap Swim",
+                "start": "1:00pm",
+                "end": "3:30pm"
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "4:00pm",
+                "end": "5:00pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Open Swim",
+                "start": "5:00pm",
+                "end": "7:30pm"
+              }
+            ],
+            "Thursday": [
+              {
+                "name": "Lap Swim",
+                "start": "8:00am",
+                "end": "10:00am"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "10:00am",
+                "end": "11:00am",
+                "kind": "program"
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "11:00am",
+                "end": "12:00pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Open / Lap Swim",
+                "start": "12:00pm",
+                "end": "3:30pm"
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "4:00pm",
+                "end": "5:00pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Open / Lap Swim",
+                "start": "5:00pm",
+                "end": "7:30pm"
+              }
+            ],
+            "Friday": [
+              {
+                "name": "Lap Swim",
+                "start": "8:00am",
+                "end": "1:00pm"
+              },
+              {
+                "name": "Open / Lap Swim",
+                "start": "1:00pm",
+                "end": "7:30pm"
+              }
+            ],
+            "Saturday": [
+              {
+                "name": "Lap Swim",
+                "start": "10:00am",
+                "end": "11:30am"
+              },
+              {
+                "name": "Open / Lap Swim",
+                "start": "11:30am",
+                "end": "3:30pm"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "gym": "Martin Luther King Jr.",
+      "url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Parks-Recreation/Recreation-Centers-Pools-Activities/Recreation-Centers/Martin-Luther-King-Jr.-Recreation-Center",
+      "closures": [
+        {
+          "from": "2026-10-09",
+          "through": "2026-10-18",
+          "reason": "Lap and therapy pools closed for maintenance. Reopens Monday, Oct. 19."
+        }
+      ],
+      "pools": [
+        {
+          "id": "lap",
+          "name": "Lap pool",
+          "revised": "2026-08-07",
+          "days": {
+            "Monday": [
+              {
+                "name": "Lap Swim",
+                "start": "7:00am",
+                "end": "9:00am"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "9:15am",
+                "end": "10:15am",
+                "kind": "program"
+              },
+              {
+                "name": "Adult Swim",
+                "start": "10:15am",
+                "end": "11:15am"
+              },
+              {
+                "name": "Ai Chi",
+                "start": "11:15am",
+                "end": "12:15pm",
+                "kind": "program"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "12:30pm",
+                "end": "3:00pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "3:00pm",
+                "end": "6:30pm",
+                "note": "Vive lessons."
+              }
+            ],
+            "Tuesday": [
+              {
+                "name": "Lap Swim",
+                "start": "7:00am",
+                "end": "9:00am"
+              },
+              {
+                "name": "Deep Water Aerobics",
+                "start": "9:15am",
+                "end": "10:15am",
+                "kind": "program"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "10:30am",
+                "end": "2:00pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "2:00pm",
+                "end": "4:45pm"
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "5:00pm",
+                "end": "6:50pm",
+                "kind": "program",
+                "note": "Registration required."
+              }
+            ],
+            "Wednesday": [
+              {
+                "name": "Lap Swim",
+                "start": "7:00am",
+                "end": "9:00am"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "9:15am",
+                "end": "10:15am",
+                "kind": "program"
+              },
+              {
+                "name": "Adult Swim",
+                "start": "10:15am",
+                "end": "10:45am"
+              },
+              {
+                "name": "Ai Chi",
+                "start": "10:45am",
+                "end": "11:45am",
+                "kind": "program"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "12:00pm",
+                "end": "5:00pm"
+              },
+              {
+                "name": "Aqua Tone",
+                "start": "5:15pm",
+                "end": "6:15pm",
+                "kind": "program"
+              }
+            ],
+            "Thursday": [
+              {
+                "name": "Lap Swim",
+                "start": "7:00am",
+                "end": "9:00am"
+              },
+              {
+                "name": "Deep Water Aerobics",
+                "start": "9:15am",
+                "end": "10:15am",
+                "kind": "program"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "10:30am",
+                "end": "2:00pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "2:00pm",
+                "end": "4:45pm"
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "5:00pm",
+                "end": "6:50pm",
+                "kind": "program",
+                "note": "Registration required."
+              }
+            ],
+            "Friday": [
+              {
+                "name": "Lap Swim",
+                "start": "7:00am",
+                "end": "9:00am"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "9:15am",
+                "end": "10:15am",
+                "kind": "program"
+              },
+              {
+                "name": "Aqua Tone",
+                "start": "10:30am",
+                "end": "11:30am",
+                "kind": "program"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "11:45am",
+                "end": "3:00pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "3:00pm",
+                "end": "6:30pm"
+              }
+            ],
+            "Saturday": [
+              {
+                "name": "Lap Swim",
+                "start": "9:00am",
+                "end": "11:00am"
+              },
+              {
+                "name": "Open Swim",
+                "start": "11:00am",
+                "end": "12:30pm"
+              }
+            ]
+          }
+        },
+        {
+          "id": "leisure",
+          "name": "Therapy pool",
+          "revised": "2026-08-07",
+          "days": {
+            "Monday": [
+              {
+                "name": "Adult Swim",
+                "start": "7:00am",
+                "end": "6:30pm"
+              }
+            ],
+            "Tuesday": [
+              {
+                "name": "Adult Swim",
+                "start": "7:00am",
+                "end": "6:30pm"
+              }
+            ],
+            "Wednesday": [
+              {
+                "name": "Adult Swim",
+                "start": "7:00am",
+                "end": "6:30pm"
+              }
+            ],
+            "Thursday": [
+              {
+                "name": "Adult Swim",
+                "start": "7:00am",
+                "end": "6:30pm"
+              }
+            ],
+            "Friday": [
+              {
+                "name": "Adult Swim",
+                "start": "7:00am",
+                "end": "6:30pm"
+              }
+            ],
+            "Saturday": [
+              {
+                "name": "Adult Swim",
+                "start": "9:00am",
+                "end": "12:30pm"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "gym": "Montbello",
+      "url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Parks-Recreation/Recreation-Centers-Pools-Activities/Recreation-Centers/Montbello-Recreation-Center",
+      "pools": [
+        {
+          "id": "lap",
+          "name": "Indoor pool",
+          "revised": "2026-08-05",
+          "days": {
+            "Monday": [
+              {
+                "name": "Lap Swim",
+                "start": "9:00am",
+                "end": "10:45am"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "11:00am",
+                "end": "12:00pm",
+                "kind": "program"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "12:30pm",
+                "end": "2:00pm",
+                "note": "Quiet swim."
+              },
+              {
+                "name": "Open Swim",
+                "start": "2:00pm",
+                "end": "5:45pm"
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "6:00pm",
+                "end": "7:30pm",
+                "kind": "program",
+                "note": "Registration required."
+              }
+            ],
+            "Tuesday": [
+              {
+                "name": "Lap Swim",
+                "start": "9:00am",
+                "end": "11:30am"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "11:30am",
+                "end": "2:00pm",
+                "note": "Quiet swim."
+              },
+              {
+                "name": "Open Swim",
+                "start": "2:00pm",
+                "end": "4:00pm"
+              },
+              {
+                "name": "Vive Swim Lessons",
+                "start": "4:00pm",
+                "end": "5:30pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "5:30pm",
+                "end": "6:30pm",
+                "kind": "program",
+                "note": "Vive swim lessons."
+              },
+              {
+                "name": "MTB/Vive Swim Lessons",
+                "start": "6:30pm",
+                "end": "7:30pm",
+                "kind": "program",
+                "note": "Registration required."
+              }
+            ],
+            "Wednesday": [
+              {
+                "name": "Lap Swim",
+                "start": "9:00am",
+                "end": "10:45am"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "11:00am",
+                "end": "12:00pm",
+                "kind": "program"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "12:30pm",
+                "end": "2:00pm",
+                "note": "Quiet swim."
+              },
+              {
+                "name": "Open Swim",
+                "start": "2:00pm",
+                "end": "5:45pm"
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "6:00pm",
+                "end": "7:30pm",
+                "kind": "program",
+                "note": "Registration required."
+              }
+            ],
+            "Thursday": [
+              {
+                "name": "Lap Swim",
+                "start": "9:00am",
+                "end": "11:30am"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "11:30am",
+                "end": "2:00pm",
+                "note": "Quiet swim."
+              },
+              {
+                "name": "Open Swim",
+                "start": "2:00pm",
+                "end": "4:00pm"
+              },
+              {
+                "name": "Vive Swim Lessons",
+                "start": "4:00pm",
+                "end": "5:30pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "5:30pm",
+                "end": "6:30pm",
+                "kind": "program",
+                "note": "Vive swim lessons."
+              },
+              {
+                "name": "MTB/Vive Swim Lessons",
+                "start": "6:30pm",
+                "end": "7:30pm",
+                "kind": "program",
+                "note": "Registration required."
+              }
+            ],
+            "Friday": [
+              {
+                "name": "Lap Swim",
+                "start": "9:00am",
+                "end": "10:45am"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "11:00am",
+                "end": "12:00pm",
+                "kind": "program"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "12:30pm",
+                "end": "2:00pm",
+                "note": "Quiet swim."
+              },
+              {
+                "name": "Open Swim",
+                "start": "2:00pm",
+                "end": "7:30pm"
+              }
+            ],
+            "Saturday": [
+              {
+                "name": "Vive Swim Lessons",
+                "start": "9:00am",
+                "end": "12:30pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Open Swim",
+                "start": "12:30pm",
+                "end": "3:30pm"
+              }
+            ],
+            "Sunday": [
+              {
+                "name": "Lap Swim",
+                "start": "9:00am",
+                "end": "12:30pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "12:30pm",
+                "end": "3:30pm"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "gym": "Montclair",
+      "url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Parks-Recreation/Recreation-Centers-Pools-Activities/Recreation-Centers/Montclair-Recreation-Center",
+      "pools": [
+        {
+          "id": "lap",
+          "name": "Lap pool",
+          "revised": "2026-09-13",
+          "days": {
+            "Monday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:00am",
+                "end": "8:15am"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "8:30am",
+                "end": "9:30am",
+                "kind": "program"
+              },
+              {
+                "name": "Adult Swim",
+                "start": "9:30am",
+                "end": "11:00am"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "11:00am",
+                "end": "2:00pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "2:00pm",
+                "end": "4:15pm",
+                "note": "3 lap lanes. Both pools close 4:15–4:30pm for a break."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "4:30pm",
+                "end": "6:30pm",
+                "note": "3 lanes."
+              },
+              {
+                "name": "Open Swim",
+                "start": "6:15pm",
+                "end": "8:30pm",
+                "note": "3 lap lanes."
+              }
+            ],
+            "Tuesday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:00am",
+                "end": "8:15am"
+              },
+              {
+                "name": "Deep Water Aerobics",
+                "start": "8:30am",
+                "end": "9:30am",
+                "kind": "program"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "9:30am",
+                "end": "2:00pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "2:00pm",
+                "end": "4:15pm",
+                "note": "3 lap lanes. Both pools close 4:15–4:30pm for a break."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "4:30pm",
+                "end": "6:15pm",
+                "note": "3 lanes."
+              },
+              {
+                "name": "Open Swim",
+                "start": "6:15pm",
+                "end": "8:30pm",
+                "note": "3 lap lanes."
+              }
+            ],
+            "Wednesday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:00am",
+                "end": "8:15am"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "8:30am",
+                "end": "9:30am",
+                "kind": "program"
+              },
+              {
+                "name": "Adult Swim",
+                "start": "9:30am",
+                "end": "11:00am"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "11:00am",
+                "end": "2:00pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "2:00pm",
+                "end": "4:15pm",
+                "note": "3 lap lanes. Both pools close 4:15–4:30pm for a break."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "4:30pm",
+                "end": "6:30pm",
+                "note": "3 lanes."
+              },
+              {
+                "name": "Open Swim",
+                "start": "6:15pm",
+                "end": "8:30pm",
+                "note": "3 lap lanes."
+              }
+            ],
+            "Thursday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:00am",
+                "end": "8:15am"
+              },
+              {
+                "name": "Deep Water Aerobics",
+                "start": "8:30am",
+                "end": "9:30am",
+                "kind": "program"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "9:30am",
+                "end": "2:00pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "2:00pm",
+                "end": "4:15pm",
+                "note": "3 lap lanes. Both pools close 4:15–4:30pm for a break."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "4:30pm",
+                "end": "6:15pm",
+                "note": "3 lanes."
+              },
+              {
+                "name": "Open Swim",
+                "start": "6:15pm",
+                "end": "8:30pm",
+                "note": "3 lap lanes."
+              }
+            ],
+            "Friday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:00am",
+                "end": "8:15am"
+              },
+              {
+                "name": "Self-led Aqua Aerobics",
+                "start": "8:30am",
+                "end": "9:30am",
+                "kind": "program"
+              },
+              {
+                "name": "Adult Swim",
+                "start": "9:30am",
+                "end": "11:00am"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "11:00am",
+                "end": "2:00pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "2:00pm",
+                "end": "7:30pm",
+                "note": "3 lap lanes. Both pools close 4:15–4:30pm for a break. Closes at 4:15pm on the 2nd and 4th Friday of the month."
+              }
+            ],
+            "Saturday": [
+              {
+                "name": "Lap Swim",
+                "start": "9:00am",
+                "end": "12:00pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "12:00pm",
+                "end": "3:30pm",
+                "note": "3 lap lanes."
+              }
+            ],
+            "Sunday": [
+              {
+                "name": "Lap Swim",
+                "start": "9:00am",
+                "end": "12:00pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "12:00pm",
+                "end": "3:30pm",
+                "note": "3 lap lanes."
+              }
+            ]
+          }
+        },
+        {
+          "id": "leisure",
+          "name": "Leisure pool",
+          "revised": "2026-09-13",
+          "days": {
+            "Monday": [
+              {
+                "name": "Open Swim",
+                "start": "10:00am",
+                "end": "4:15pm",
+                "note": "Both pools close 4:15–4:30pm for a break."
+              },
+              {
+                "name": "Open Swim",
+                "start": "6:15pm",
+                "end": "8:30pm"
+              }
+            ],
+            "Tuesday": [
+              {
+                "name": "Open Swim",
+                "start": "11:00am",
+                "end": "4:15pm",
+                "note": "Both pools close 4:15–4:30pm for a break."
+              },
+              {
+                "name": "Open Swim",
+                "start": "6:15pm",
+                "end": "8:30pm"
+              }
+            ],
+            "Wednesday": [
+              {
+                "name": "Open Swim",
+                "start": "10:00am",
+                "end": "4:15pm",
+                "note": "Both pools close 4:15–4:30pm for a break."
+              },
+              {
+                "name": "Open Swim",
+                "start": "6:15pm",
+                "end": "8:30pm"
+              }
+            ],
+            "Thursday": [
+              {
+                "name": "Open Swim",
+                "start": "11:00am",
+                "end": "4:15pm",
+                "note": "Both pools close 4:15–4:30pm for a break."
+              },
+              {
+                "name": "Open Swim",
+                "start": "6:15pm",
+                "end": "8:30pm"
+              }
+            ],
+            "Friday": [
+              {
+                "name": "Open Swim",
+                "start": "10:00am",
+                "end": "7:30pm",
+                "note": "Both pools close 4:15–4:30pm for a break. Closes at 4:15pm on the 2nd and 4th Friday of the month."
+              }
+            ],
+            "Saturday": [
+              {
+                "name": "Open Swim",
+                "start": "9:00am",
+                "end": "3:30pm"
+              }
+            ],
+            "Sunday": [
+              {
+                "name": "Open Swim",
+                "start": "9:00am",
+                "end": "3:30pm"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "gym": "Rude",
+      "url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Parks-Recreation/Recreation-Centers-Pools-Activities/Recreation-Centers/Rude-Recreation-Center",
+      "pools": [
+        {
+          "id": "lap",
+          "name": "Indoor pool",
+          "revised": "2026-09-10",
+          "days": {
+            "Monday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:00am",
+                "end": "8:45am"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "9:00am",
+                "end": "10:00am",
+                "kind": "program"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "10:15am",
+                "end": "2:00pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "2:00pm",
+                "end": "6:30pm",
+                "note": "3 lap lanes available."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "6:30pm",
+                "end": "7:30pm"
+              }
+            ],
+            "Tuesday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:00am",
+                "end": "11:00am"
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "11:00am",
+                "end": "12:00pm",
+                "kind": "program",
+                "note": "3 lap lanes available."
+              },
+              {
+                "name": "Open Swim",
+                "start": "12:00pm",
+                "end": "4:15pm",
+                "note": "3 lap lanes available."
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "4:15pm",
+                "end": "5:45pm",
+                "kind": "program",
+                "note": "Pool closed for lessons."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "5:45pm",
+                "end": "6:30pm",
+                "note": "3 lap lanes available."
+              },
+              {
+                "name": "Open Swim",
+                "start": "6:30pm",
+                "end": "7:30pm",
+                "note": "3 lap lanes available."
+              }
+            ],
+            "Wednesday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:00am",
+                "end": "8:45am"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "9:00am",
+                "end": "10:00am",
+                "kind": "program"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "10:15am",
+                "end": "2:00pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "2:00pm",
+                "end": "6:30pm",
+                "note": "3 lap lanes available."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "6:30pm",
+                "end": "7:30pm"
+              }
+            ],
+            "Thursday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:00am",
+                "end": "11:00am"
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "11:00am",
+                "end": "12:00pm",
+                "kind": "program",
+                "note": "3 lap lanes available."
+              },
+              {
+                "name": "Open Swim",
+                "start": "12:00pm",
+                "end": "4:15pm",
+                "note": "3 lap lanes available."
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "4:15pm",
+                "end": "5:45pm",
+                "kind": "program",
+                "note": "Pool closed for lessons."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "5:45pm",
+                "end": "6:30pm",
+                "note": "3 lap lanes available."
+              },
+              {
+                "name": "Open Swim",
+                "start": "6:30pm",
+                "end": "7:30pm",
+                "note": "3 lap lanes available."
+              }
+            ],
+            "Friday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:00am",
+                "end": "2:00pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "2:00pm",
+                "end": "7:30pm",
+                "note": "3 lap lanes available."
+              }
+            ],
+            "Saturday": [
+              {
+                "name": "Lap Swim",
+                "start": "8:00am",
+                "end": "11:30am",
+                "note": "Fitness swim 11:00am–12:00pm."
+              },
+              {
+                "name": "Open Swim",
+                "start": "11:30am",
+                "end": "3:30pm",
+                "note": "3 lap lanes available."
+              }
+            ],
+            "Sunday": [
+              {
+                "name": "Lap Swim",
+                "start": "8:00am",
+                "end": "11:30am"
+              },
+              {
+                "name": "Open Swim",
+                "start": "11:30am",
+                "end": "3:30pm",
+                "note": "3 lap lanes available."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "gym": "Scheitler",
+      "url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Parks-Recreation/Recreation-Centers-Pools-Activities/Recreation-Centers/Scheitler-Recreation-Center",
+      "valid_from": "2026-08-16",
+      "valid_through": "2026-11-19",
+      "pools": [
+        {
+          "id": "lap",
+          "name": "Indoor pool",
+          "revised": "2026-08-16",
+          "days": {
+            "Monday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:00am",
+                "end": "8:45am"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "9:00am",
+                "end": "10:00am",
+                "kind": "program"
+              },
+              {
+                "name": "Water Walking",
+                "start": "10:00am",
+                "end": "10:45am"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "11:00am",
+                "end": "1:00pm"
+              },
+              {
+                "name": "Open / Lap Swim",
+                "start": "1:00pm",
+                "end": "4:45pm",
+                "note": "1–2 lap lanes."
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "5:00pm",
+                "end": "5:30pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Open / Lap Swim",
+                "start": "5:45pm",
+                "end": "8:00pm",
+                "note": "1–2 lap lanes."
+              }
+            ],
+            "Tuesday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:00am",
+                "end": "8:45am"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "9:00am",
+                "end": "10:00am",
+                "kind": "program"
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "10:00am",
+                "end": "10:45am",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "11:00am",
+                "end": "1:00pm"
+              },
+              {
+                "name": "Open / Lap Swim",
+                "start": "1:00pm",
+                "end": "4:45pm",
+                "note": "1–2 lap lanes."
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "5:00pm",
+                "end": "6:00pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Open / Lap Swim",
+                "start": "6:15pm",
+                "end": "8:00pm",
+                "note": "1–2 lap lanes."
+              }
+            ],
+            "Wednesday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:00am",
+                "end": "8:45am"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "9:00am",
+                "end": "10:00am",
+                "kind": "program"
+              },
+              {
+                "name": "Water Walking",
+                "start": "10:00am",
+                "end": "10:45am"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "11:00am",
+                "end": "1:00pm"
+              },
+              {
+                "name": "Open / Lap Swim",
+                "start": "1:00pm",
+                "end": "4:45pm",
+                "note": "1–2 lap lanes."
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "5:00pm",
+                "end": "5:30pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "5:45pm",
+                "end": "6:45pm",
+                "kind": "program"
+              },
+              {
+                "name": "Open / Lap Swim",
+                "start": "7:00pm",
+                "end": "8:00pm",
+                "note": "1–2 lap lanes."
+              }
+            ],
+            "Thursday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:00am",
+                "end": "8:45am"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "9:00am",
+                "end": "10:00am",
+                "kind": "program"
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "10:00am",
+                "end": "10:45am",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "11:00am",
+                "end": "1:00pm"
+              },
+              {
+                "name": "Open / Lap Swim",
+                "start": "1:00pm",
+                "end": "4:45pm",
+                "note": "1–2 lap lanes."
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "5:00pm",
+                "end": "6:00pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Open / Lap Swim",
+                "start": "6:15pm",
+                "end": "8:00pm",
+                "note": "1–2 lap lanes."
+              }
+            ],
+            "Friday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:00am",
+                "end": "8:45am"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "11:00am",
+                "end": "1:00pm"
+              },
+              {
+                "name": "Open / Lap Swim",
+                "start": "1:00pm",
+                "end": "6:30pm",
+                "note": "1–2 lap lanes. Stroke improvement class 5:00–6:00pm."
+              }
+            ],
+            "Saturday": [
+              {
+                "name": "Lap Swim",
+                "start": "9:15am",
+                "end": "12:00pm"
+              },
+              {
+                "name": "Open / Lap Swim",
+                "start": "12:00pm",
+                "end": "3:30pm",
+                "note": "1–2 lap lanes."
+              }
+            ],
+            "Sunday": [
+              {
+                "name": "Lap Swim",
+                "start": "9:15am",
+                "end": "11:00am"
+              },
+              {
+                "name": "Open / Lap Swim",
+                "start": "11:00am",
+                "end": "1:30pm",
+                "note": "1–2 lap lanes."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "gym": "Swansea",
+      "url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Parks-Recreation/Recreation-Centers-Pools-Activities/Recreation-Centers/Swansea-Recreation-Center",
+      "pools": [
+        {
+          "id": "lap",
+          "name": "Indoor pool",
+          "revised": "2026-09-29",
+          "days": {
+            "Monday": [
+              {
+                "name": "Lap Swim",
+                "start": "10:00am",
+                "end": "1:30pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "1:30pm",
+                "end": "7:30pm"
+              }
+            ],
+            "Tuesday": [
+              {
+                "name": "Lap Swim",
+                "start": "10:00am",
+                "end": "1:30pm",
+                "note": "2 lanes. Swim lessons 10:30–11:30am (registration required). Water walking 11:30am–1:30pm."
+              },
+              {
+                "name": "Open Swim",
+                "start": "1:30pm",
+                "end": "5:00pm"
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "5:00pm",
+                "end": "6:30pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Open Swim",
+                "start": "6:30pm",
+                "end": "7:30pm"
+              }
+            ],
+            "Wednesday": [
+              {
+                "name": "Lap Swim",
+                "start": "10:00am",
+                "end": "1:30pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "10:00am",
+                "end": "12:15pm"
+              }
+            ],
+            "Thursday": [
+              {
+                "name": "Lap Swim",
+                "start": "10:00am",
+                "end": "1:30pm",
+                "note": "2 lanes. Swim lessons 10:30–11:30am (registration required). Water walking 11:30am–1:30pm."
+              },
+              {
+                "name": "Open Swim",
+                "start": "1:30pm",
+                "end": "5:00pm"
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "5:00pm",
+                "end": "6:30pm",
+                "kind": "program",
+                "note": "Registration required."
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "6:30pm",
+                "end": "7:30pm",
+                "kind": "program"
+              }
+            ],
+            "Friday": [
+              {
+                "name": "Lap Swim",
+                "start": "10:00am",
+                "end": "1:30pm",
+                "note": "Water walking."
+              },
+              {
+                "name": "Open Swim",
+                "start": "1:30pm",
+                "end": "6:30pm"
+              }
+            ],
+            "Saturday": [
+              {
+                "name": "Lap Swim",
+                "start": "10:00am",
+                "end": "12:00pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "10:00am",
+                "end": "1:30pm"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "gym": "Twentieth Street",
+      "url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Parks-Recreation/Recreation-Centers-Pools-Activities/Recreation-Centers/Twentieth-Street-Recreation-Center",
+      "pools": [
+        {
+          "id": "lap",
+          "name": "Indoor pool",
+          "revised": "2026-07-24",
+          "days": {
+            "Monday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:30am",
+                "end": "7:00am"
+              },
+              {
+                "name": "Adult Swim Lessons",
+                "start": "7:00am",
+                "end": "7:45am",
+                "kind": "program",
+                "note": "Registration required. One lap lane available. For ages 15 and older."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "7:45am",
+                "end": "12:00pm"
+              },
+              {
+                "name": "Adult Swim Lessons",
+                "start": "12:00pm",
+                "end": "12:45pm",
+                "kind": "program",
+                "note": "Registration required. One lap lane available. For ages 15 and older."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "12:45pm",
+                "end": "2:00pm"
+              },
+              {
+                "name": "Preschool Swim Lessons",
+                "start": "2:00pm",
+                "end": "2:30pm",
+                "kind": "program",
+                "note": "Registration required. Session I: Sept. 14–Oct. 9. Session II: Oct. 19–Nov. 12."
+              },
+              {
+                "name": "Open Swim",
+                "start": "4:30pm",
+                "end": "7:30pm"
+              }
+            ],
+            "Tuesday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:30am",
+                "end": "9:00am"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "9:00am",
+                "end": "9:45am",
+                "kind": "program",
+                "note": "Drop-in, free with membership. One lap lane available."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "9:45am",
+                "end": "2:00pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "4:30pm",
+                "end": "6:00pm",
+                "note": "Open swim available upon request."
+              },
+              {
+                "name": "Aqua Zumba",
+                "start": "6:00pm",
+                "end": "7:00pm",
+                "kind": "program",
+                "note": "Drop-in, free with membership. One lap lane available."
+              },
+              {
+                "name": "Open Swim",
+                "start": "7:00pm",
+                "end": "7:30pm",
+                "note": "Open swim available upon request."
+              }
+            ],
+            "Wednesday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:30am",
+                "end": "7:00am"
+              },
+              {
+                "name": "Adult Swim Lessons",
+                "start": "7:00am",
+                "end": "7:45am",
+                "kind": "program",
+                "note": "Registration required. One lap lane available. For ages 15 and older."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "7:45am",
+                "end": "12:00pm"
+              },
+              {
+                "name": "Adult Swim Lessons",
+                "start": "12:00pm",
+                "end": "12:45pm",
+                "kind": "program",
+                "note": "Registration required. One lap lane available. For ages 15 and older."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "12:45pm",
+                "end": "2:00pm"
+              },
+              {
+                "name": "Preschool Swim Lessons",
+                "start": "2:00pm",
+                "end": "2:30pm",
+                "kind": "program",
+                "note": "Registration required. Session I: Sept. 14–Oct. 9. Session II: Oct. 19–Nov. 12."
+              },
+              {
+                "name": "Open Swim",
+                "start": "4:30pm",
+                "end": "5:30pm"
+              },
+              {
+                "name": "Glide Fit",
+                "start": "5:30pm",
+                "end": "6:15pm",
+                "kind": "program",
+                "note": "Registration required. Drop-in, free with membership. One lap lane available. In-person sign-up opens 30 minutes before class, first come first served, maximum 8 participants."
+              },
+              {
+                "name": "Open Swim",
+                "start": "6:15pm",
+                "end": "7:30pm",
+                "note": "Open swim available upon request."
+              }
+            ],
+            "Thursday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:30am",
+                "end": "9:00am"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "9:00am",
+                "end": "9:45am",
+                "kind": "program",
+                "note": "Drop-in, free with membership. One lap lane available."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "9:45am",
+                "end": "2:00pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "4:30pm",
+                "end": "7:30pm",
+                "note": "Fitness swim 6:00–7:30pm. Open swim available upon request."
+              }
+            ],
+            "Friday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:30am",
+                "end": "2:00pm"
+              }
+            ],
+            "Saturday": [
+              {
+                "name": "Open Swim",
+                "start": "9:00am",
+                "end": "12:30pm",
+                "note": "Two lap lanes available."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "gym": "Washington Park",
+      "url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Parks-Recreation/Recreation-Centers-Pools-Activities/Recreation-Centers/Washington-Park-Recreation-Center",
+      "valid_from": "2026-09-13",
+      "valid_through": "2026-11-14",
+      "pools": [
+        {
+          "id": "lap",
+          "name": "Indoor pool",
+          "revised": "2026-09-12",
+          "days": {
+            "Monday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:00am",
+                "end": "8:45am"
+              },
+              {
+                "name": "Aqua Tone",
+                "start": "9:00am",
+                "end": "10:00am",
+                "kind": "program"
+              },
+              {
+                "name": "Quiet Swim",
+                "start": "10:00am",
+                "end": "11:00am",
+                "note": "Swim lessons. 2 lap lanes."
+              },
+              {
+                "name": "Quiet Swim",
+                "start": "11:00am",
+                "end": "11:45am",
+                "note": "2 lap lanes."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "12:00pm",
+                "end": "1:45pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "2:00pm",
+                "end": "3:45pm",
+                "note": "No lap lanes."
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "4:00pm",
+                "end": "5:15pm",
+                "kind": "program",
+                "note": "No lap lanes."
+              },
+              {
+                "name": "Open Swim",
+                "start": "5:15pm",
+                "end": "6:15pm",
+                "note": "No lap lanes."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "6:30pm",
+                "end": "8:30pm"
+              }
+            ],
+            "Tuesday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:00am",
+                "end": "8:45am"
+              },
+              {
+                "name": "Water Walking",
+                "start": "9:00am",
+                "end": "10:00am",
+                "note": "No instructor."
+              },
+              {
+                "name": "Quiet Swim",
+                "start": "10:00am",
+                "end": "11:00am",
+                "note": "Swim lessons. 2 lap lanes."
+              },
+              {
+                "name": "Quiet Swim",
+                "start": "11:00am",
+                "end": "11:45am",
+                "note": "2 lap lanes."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "12:00pm",
+                "end": "1:45pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "2:00pm",
+                "end": "3:45pm",
+                "note": "No lap lanes."
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "4:00pm",
+                "end": "5:15pm",
+                "kind": "program",
+                "note": "No lap lanes."
+              },
+              {
+                "name": "Open Swim",
+                "start": "5:15pm",
+                "end": "6:15pm",
+                "note": "No lap lanes."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "6:30pm",
+                "end": "8:30pm"
+              }
+            ],
+            "Wednesday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:00am",
+                "end": "8:45am"
+              },
+              {
+                "name": "Aqua Tone",
+                "start": "9:00am",
+                "end": "10:00am",
+                "kind": "program"
+              },
+              {
+                "name": "Quiet Swim",
+                "start": "10:00am",
+                "end": "11:00am",
+                "note": "Swim lessons. 2 lap lanes."
+              },
+              {
+                "name": "Quiet Swim",
+                "start": "11:00am",
+                "end": "11:45am",
+                "note": "2 lap lanes."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "12:00pm",
+                "end": "1:45pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "2:00pm",
+                "end": "3:45pm",
+                "note": "No lap lanes."
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "4:00pm",
+                "end": "5:15pm",
+                "kind": "program",
+                "note": "No lap lanes."
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "5:15pm",
+                "end": "6:15pm",
+                "kind": "program"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "6:30pm",
+                "end": "8:30pm"
+              }
+            ],
+            "Thursday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:00am",
+                "end": "8:45am"
+              },
+              {
+                "name": "Water Walking",
+                "start": "9:00am",
+                "end": "10:00am",
+                "note": "No instructor."
+              },
+              {
+                "name": "Quiet Swim",
+                "start": "10:00am",
+                "end": "11:00am",
+                "note": "Swim lessons. 2 lap lanes."
+              },
+              {
+                "name": "Quiet Swim",
+                "start": "11:00am",
+                "end": "11:45am",
+                "note": "2 lap lanes."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "12:00pm",
+                "end": "1:45pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "2:00pm",
+                "end": "3:45pm",
+                "note": "No lap lanes."
+              },
+              {
+                "name": "Swim Lessons",
+                "start": "4:00pm",
+                "end": "5:15pm",
+                "kind": "program",
+                "note": "No lap lanes."
+              },
+              {
+                "name": "Open Swim",
+                "start": "5:15pm",
+                "end": "6:15pm",
+                "note": "No lap lanes."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "6:30pm",
+                "end": "8:30pm"
+              }
+            ],
+            "Friday": [
+              {
+                "name": "Lap Swim",
+                "start": "6:00am",
+                "end": "8:45am"
+              },
+              {
+                "name": "Aqua Tone",
+                "start": "9:00am",
+                "end": "10:00am",
+                "kind": "program"
+              },
+              {
+                "name": "Ai Chi",
+                "start": "10:00am",
+                "end": "11:00am",
+                "kind": "program"
+              },
+              {
+                "name": "Quiet Swim",
+                "start": "11:00am",
+                "end": "11:45am",
+                "note": "2 lap lanes."
+              },
+              {
+                "name": "Lap Swim",
+                "start": "12:00pm",
+                "end": "2:45pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "3:00pm",
+                "end": "7:30pm",
+                "note": "No lap lanes."
+              }
+            ],
+            "Saturday": [
+              {
+                "name": "Lap Swim",
+                "start": "8:00am",
+                "end": "9:45am"
+              },
+              {
+                "name": "Aqua Aerobics",
+                "start": "10:00am",
+                "end": "11:00am",
+                "kind": "program"
+              },
+              {
+                "name": "Quiet Swim",
+                "start": "11:00am",
+                "end": "12:30pm",
+                "note": "2 lap lanes."
+              },
+              {
+                "name": "Open Swim",
+                "start": "12:30pm",
+                "end": "3:30pm",
+                "note": "No lap lanes."
+              }
+            ],
+            "Sunday": [
+              {
+                "name": "Deep Water Aerobics",
+                "start": "11:15am",
+                "end": "12:15pm",
+                "kind": "program"
+              },
+              {
+                "name": "Lap Swim",
+                "start": "12:30pm",
+                "end": "1:45pm"
+              },
+              {
+                "name": "Open Swim",
+                "start": "2:00pm",
+                "end": "3:30pm",
+                "note": "No lap lanes."
+              }
+            ]
+          }
+        }
+      ]
     }
   ]
 }

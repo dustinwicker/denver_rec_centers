@@ -318,16 +318,19 @@
   function poolEventsForDay(dayData) {
     if (!poolSchedules || !dayData?.date || !dayData?.day_name) return [];
     const date = dayData.date;
-    if (date < poolSchedules.valid_from || date > poolSchedules.valid_through) return [];
-
     const closure = (poolSchedules.closures || []).find(c => c.date === date);
     const events = [];
 
     (poolSchedules.centers || []).forEach(center => {
+      const from = center.valid_from || poolSchedules.valid_from;
+      const through = center.valid_through || poolSchedules.valid_through;
+      if (!from || !through || date < from || date > through) return;
+
+      const centerClosure = (center.closures || []).find(c => date >= c.from && date <= c.through);
       const gymClasses = (dayData.events || []).filter(ev => (ev.location || ev.location_name) === center.gym);
       const gymClosed = gymClasses.length > 0 && gymClasses.every(ev => ev.cancelled);
-      const cancelled = Boolean(closure) || gymClosed;
-      const closureReason = closure?.reason || (gymClosed ? 'Recreation center is closed' : '');
+      const cancelled = Boolean(closure) || Boolean(centerClosure) || gymClosed;
+      const closureReason = closure?.reason || centerClosure?.reason || (gymClosed ? 'Recreation center is closed' : '');
 
       (center.pools || []).forEach(pool => {
         const blocks = pool.days?.[dayData.day_name] || [];
