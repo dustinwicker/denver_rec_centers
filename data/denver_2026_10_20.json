@@ -635,8 +635,8 @@
       "instructor": "Karen Farbman S",
       "location": "Carla Madison",
       "category": "FIT",
-      "cancelled": false,
-      "requires_signup": true,
+      "cancelled": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -1025,7 +1025,7 @@
       "instructor": "Andrea W",
       "location": "Harvard Gulch",
       "category": "FIT",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
