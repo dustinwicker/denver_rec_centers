@@ -1,16 +1,9 @@
 {
-  "week_start": "2026-10-11",
-  "week_end": "2026-10-17",
-  "display_range": "October 11 - October 17, 2026",
-  "last_scraped": "2026-10-11T17:52:29.059033Z",
+  "week_start": "2026-10-12",
+  "week_end": "2026-10-18",
+  "display_range": "October 12 - October 18, 2026",
+  "last_scraped": "2026-10-12T21:36:34.010378Z",
   "days": [
-    {
-      "date": "2026-10-11",
-      "day_name": "Sunday",
-      "display_date": "Sunday, October 11, 2026",
-      "event_count": 6,
-      "file": "denver_2026_10_11.json"
-    },
     {
       "date": "2026-10-12",
       "day_name": "Monday",
@@ -52,6 +45,13 @@
       "display_date": "Saturday, October 17, 2026",
       "event_count": 22,
       "file": "denver_2026_10_17.json"
+    },
+    {
+      "date": "2026-10-18",
+      "day_name": "Sunday",
+      "display_date": "Sunday, October 18, 2026",
+      "event_count": 6,
+      "file": "denver_2026_10_18.json"
     }
   ]
 }
