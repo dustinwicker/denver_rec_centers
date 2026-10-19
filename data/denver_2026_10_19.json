@@ -25,7 +25,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -51,7 +51,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -76,7 +76,7 @@
       "instructor": "Michelle S",
       "location": "Central Park",
       "category": "FIT",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -168,7 +168,7 @@
       "location": "Green Valley Ranch",
       "category": "AQ",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -207,7 +207,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -338,7 +338,7 @@
       "category": "AOA",
       "cancelled": false,
       "requires_signup": false,
-      "class_full": true,
+      "class_full": false,
       "join_waitlist": false
     },
     {
@@ -493,7 +493,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -872,7 +872,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "6:30pm",
