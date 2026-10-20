@@ -1,0 +1,58 @@
+name: Check Pool Schedules
+
+on:
+  # 6 AM MST. A center is fetched starting five business days before its poster ends.
+  # Fall hours stay on the calendar through the end date.
+  # Glenarm is fetched every day until a pool schedule is posted again.
+  schedule:
+    - cron: '0 13 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Look for expired or reopened pool posters
+        run: python src/check_pool_schedules.py
+
+      - name: Check for a new poster
+        id: check_changes
+        run: |
+          if [ -n "$(git status --porcelain -- data/pool_schedule_pending.json)" ]; then
+            echo "changes=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push a pending update
+        if: steps.check_changes.outputs.changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git fetch origin main
+          git stash push -- data/pool_schedule_pending.json || true
+          git reset --hard origin/main
+          git stash pop || true
+          if [ -f data/pool_schedule_pending.json ]; then
+            git add data/pool_schedule_pending.json
+          else
+            git add -u -- data/pool_schedule_pending.json
+          fi
+          git diff --cached --quiet && exit 0
+          git commit -m "Pool poster needs an update: $(date +%Y-%m-%d)"
+          git fetch origin main
+          git rebase origin/main
+          git push origin main
