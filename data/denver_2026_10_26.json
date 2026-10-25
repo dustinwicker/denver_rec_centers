@@ -76,7 +76,7 @@
       "instructor": "Michelle S",
       "location": "Central Park",
       "category": "FIT",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -240,19 +240,6 @@
     {
       "start_time": "9:30am",
       "end_time": "10:30am",
-      "class_name": "AOA: Gentle Yoga 50+",
-      "studio": "Gym",
-      "instructor": "Michelle S",
-      "location": "Martin Luther King Jr.",
-      "category": "AOA",
-      "cancelled": false,
-      "requires_signup": false,
-      "class_full": false,
-      "join_waitlist": false
-    },
-    {
-      "start_time": "9:30am",
-      "end_time": "10:30am",
       "class_name": "Zumba Gold\u00ae",
       "studio": "Multi Purpose Room",
       "instructor": "Sisley A",
@@ -337,8 +324,8 @@
       "location": "Carla Madison",
       "category": "AOA",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -349,7 +336,7 @@
       "instructor": "Dean S",
       "location": "Barnum",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -505,7 +492,7 @@
       "instructor": "Dean S",
       "location": "Barnum",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -807,7 +794,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "6:00pm",
