@@ -99,7 +99,7 @@
       "end_time": "9:30am",
       "class_name": "Zumba\u00ae",
       "studio": "Fitness Studio",
-      "instructor": "June N",
+      "instructor": "",
       "location": "Central Park",
       "category": "FIT",
       "cancelled": false,
@@ -324,8 +324,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -703,13 +703,13 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "1:30pm",
       "end_time": "2:30pm",
       "class_name": "AOA: Gentle Yoga 50+",
-      "studio": "Multi Purpose Room",
+      "studio": "Gym",
       "instructor": "Sky H",
       "location": "Cook Park",
       "category": "AOA",
@@ -736,13 +736,13 @@
       "end_time": "3:45pm",
       "class_name": "AOA: Tai Chi",
       "studio": "Fitness Studio",
-      "instructor": "Dean S",
+      "instructor": "",
       "location": "Carla Madison",
       "category": "AOA",
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "4:00pm",
@@ -830,7 +830,7 @@
       "instructor": "Michelle S",
       "location": "Montclair",
       "category": "FIT",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
