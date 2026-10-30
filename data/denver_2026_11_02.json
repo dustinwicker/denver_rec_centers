@@ -232,7 +232,7 @@
       "instructor": "Sisley A",
       "location": "Montclair",
       "category": "FIT",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -268,7 +268,7 @@
       "end_time": "11:00am",
       "class_name": "AOA: Cardio & Strength FIT 50+",
       "studio": "Fitness Studio",
-      "instructor": "Christine S",
+      "instructor": "Bob J",
       "location": "Central Park",
       "category": "AOA",
       "cancelled": false,
@@ -313,7 +313,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "10:30am",
@@ -700,7 +700,7 @@
       "instructor": "Kate S",
       "location": "Eisenhower",
       "category": "FIT",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
