@@ -13,7 +13,7 @@
       "category": "FIT",
       "cancelled": false,
       "requires_signup": false,
-      "class_full": true,
+      "class_full": false,
       "join_waitlist": false
     },
     {
@@ -39,7 +39,7 @@
       "category": "FIT",
       "cancelled": false,
       "requires_signup": false,
-      "class_full": true,
+      "class_full": false,
       "join_waitlist": false
     },
     {
@@ -65,7 +65,7 @@
       "category": "FIT",
       "cancelled": false,
       "requires_signup": false,
-      "class_full": true,
+      "class_full": false,
       "join_waitlist": false
     },
     {

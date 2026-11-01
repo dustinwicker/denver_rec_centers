@@ -196,7 +196,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "9:30am",
@@ -311,9 +311,9 @@
       "location": "Carla Madison",
       "category": "AOA",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
-      "join_waitlist": true
+      "requires_signup": false,
+      "class_full": true,
+      "join_waitlist": false
     },
     {
       "start_time": "10:30am",
@@ -781,7 +781,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "6:00pm",
