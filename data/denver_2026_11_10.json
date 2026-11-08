@@ -207,8 +207,8 @@
       "location": "Carla Madison",
       "category": "AOA",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -258,19 +258,6 @@
       "instructor": "Kyla M",
       "location": "Hiawatha Davis Jr.",
       "category": "FIT",
-      "cancelled": false,
-      "requires_signup": false,
-      "class_full": false,
-      "join_waitlist": false
-    },
-    {
-      "start_time": "9:30am",
-      "end_time": "10:30am",
-      "class_name": "AOA: Circuit Weight Room 101",
-      "studio": "Gym",
-      "instructor": "Jann G",
-      "location": "Scheitler",
-      "category": "AOA",
       "cancelled": false,
       "requires_signup": false,
       "class_full": false,
@@ -493,8 +480,8 @@
       "location": "Carla Madison",
       "category": "AOA",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
