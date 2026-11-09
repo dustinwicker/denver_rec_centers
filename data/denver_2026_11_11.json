@@ -193,8 +193,8 @@
       "instructor": "Shenelle R",
       "location": "Carla Madison",
       "category": "FIT",
-      "cancelled": false,
-      "requires_signup": true,
+      "cancelled": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -427,7 +427,7 @@
       "instructor": "Charlotte W",
       "location": "Glenarm",
       "category": "FIT",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -544,8 +544,8 @@
       "instructor": "Melissa C",
       "location": "Carla Madison",
       "category": "FIT",
-      "cancelled": false,
-      "requires_signup": true,
+      "cancelled": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
