@@ -258,7 +258,7 @@
       "instructor": "Carlos R",
       "location": "Harvard Gulch",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -311,8 +311,8 @@
       "location": "Carla Madison",
       "category": "AOA",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -414,7 +414,7 @@
       "instructor": "Carlos R",
       "location": "Harvard Gulch",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -853,7 +853,7 @@
       "end_time": "7:45pm",
       "class_name": "Yinyasa Yoga",
       "studio": "Fitness Studio",
-      "instructor": "Alona H",
+      "instructor": "",
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
@@ -882,7 +882,7 @@
       "instructor": "Kimmy M",
       "location": "Scheitler",
       "category": "FIT",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false

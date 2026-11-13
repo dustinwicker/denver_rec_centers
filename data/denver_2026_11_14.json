@@ -51,9 +51,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
-      "join_waitlist": true
+      "requires_signup": false,
+      "class_full": true,
+      "join_waitlist": false
     },
     {
       "start_time": "9:00am",
@@ -144,7 +144,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "9:45am",
@@ -168,9 +168,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
-      "join_waitlist": true
+      "requires_signup": false,
+      "class_full": true,
+      "join_waitlist": false
     },
     {
       "start_time": "10:00am",
@@ -268,7 +268,7 @@
       "end_time": "12:00pm",
       "class_name": "Vinyasa Yoga",
       "studio": "Multi Purpose Room",
-      "instructor": "Charlotte W",
+      "instructor": "",
       "location": "Glenarm",
       "category": "FIT",
       "cancelled": false,
@@ -284,7 +284,7 @@
       "instructor": "Veronica W",
       "location": "Eisenhower",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
