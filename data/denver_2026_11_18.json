@@ -14,7 +14,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "7:00am",
@@ -324,9 +324,9 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
-      "join_waitlist": true
+      "requires_signup": false,
+      "class_full": true,
+      "join_waitlist": false
     },
     {
       "start_time": "10:30am",
@@ -547,7 +547,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "12:00pm",
@@ -753,8 +753,8 @@
       "location": "Carla Madison",
       "category": "AOA",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -872,7 +872,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "6:00pm",
