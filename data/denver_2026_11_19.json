@@ -38,8 +38,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -866,12 +866,12 @@
       "end_time": "5:45pm",
       "class_name": "Total Body Conditioning",
       "studio": "Fitness Studio",
-      "instructor": "",
+      "instructor": "Katia M",
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -896,8 +896,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -931,7 +931,7 @@
       "end_time": "7:00pm",
       "class_name": "Zumba\u00ae",
       "studio": "Fitness Studio",
-      "instructor": "",
+      "instructor": "Katia M",
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,

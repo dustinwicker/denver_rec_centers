@@ -1,0 +1,57 @@
+{
+  "week_start": "2026-11-18",
+  "week_end": "2026-11-24",
+  "display_range": "November 18 - November 24, 2026",
+  "last_scraped": "2026-11-18T21:02:34.598878Z",
+  "days": [
+    {
+      "date": "2026-11-18",
+      "day_name": "Wednesday",
+      "display_date": "Wednesday, November 18, 2026",
+      "event_count": 73,
+      "file": "denver_2026_11_18.json"
+    },
+    {
+      "date": "2026-11-19",
+      "day_name": "Thursday",
+      "display_date": "Thursday, November 19, 2026",
+      "event_count": 80,
+      "file": "denver_2026_11_19.json"
+    },
+    {
+      "date": "2026-11-20",
+      "day_name": "Friday",
+      "display_date": "Friday, November 20, 2026",
+      "event_count": 58,
+      "file": "denver_2026_11_20.json"
+    },
+    {
+      "date": "2026-11-21",
+      "day_name": "Saturday",
+      "display_date": "Saturday, November 21, 2026",
+      "event_count": 25,
+      "file": "denver_2026_11_21.json"
+    },
+    {
+      "date": "2026-11-22",
+      "day_name": "Sunday",
+      "display_date": "Sunday, November 22, 2026",
+      "event_count": 7,
+      "file": "denver_2026_11_22.json"
+    },
+    {
+      "date": "2026-11-23",
+      "day_name": "Monday",
+      "display_date": "Monday, November 23, 2026",
+      "event_count": 68,
+      "file": "denver_2026_11_23.json"
+    },
+    {
+      "date": "2026-11-24",
+      "day_name": "Tuesday",
+      "display_date": "Tuesday, November 24, 2026",
+      "event_count": 85,
+      "file": "denver_2026_11_24.json"
+    }
+  ]
+}
