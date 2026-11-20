@@ -1,13 +1,12 @@
 name: Weekly Schedule Scrape
 
 on:
-  # Run every Monday, Wednesday, Friday, Sunday at 6 AM MST (13:00 UTC)
-  # Sunday = 0, Monday = 1, Wednesday = 3, Friday = 5
+  # 6:00 AM America/Denver on Sunday, Monday, Wednesday, and Friday.
+  # Thursday is not a scrape day. GitHub's scheduler can still start this
+  # hours late; the timezone only keeps 6:00 AM correct across daylight time.
   schedule:
-    - cron: '0 13 * * 0'  # Sunday at 6 AM MST
-    - cron: '0 13 * * 1'  # Monday at 6 AM MST
-    - cron: '0 13 * * 3'  # Wednesday at 6 AM MST
-    - cron: '0 13 * * 5'  # Friday at 6 AM MST
+    - cron: '0 6 * * 0,1,3,5'
+      timezone: America/Denver
   
   # Allow manual trigger from GitHub Actions UI
   workflow_dispatch:

@@ -28,6 +28,21 @@ except NameError:
     DATA_DIR = Path("/Users/dustinwicker/projects/denver_rec_centers/data")
 
 
+def current_week_file(weeks, today):
+    """Pick the newest saved window that still includes today.
+
+    Each scrape stores the next seven days starting that morning, so older
+    windows keep overlapping the scrape date. The later start is the file
+    this run should leave selected.
+    """
+    match = None
+    for week in weeks:
+        if week['week_start'] <= today <= week['week_end']:
+            if match is None or week['week_start'] > match['week_start']:
+                match = week
+    return match['file'] if match else None
+
+
 def get_week_start(date):
     """Get the Sunday that starts the week containing the given date."""
     # GroupExPro weeks start on Sunday
@@ -350,10 +365,7 @@ def save_master_manifest(all_weeks):
     
     # Identify current week
     today = datetime.now().date().isoformat()
-    for week in all_weeks_sorted:
-        if week['week_start'] <= today <= week['week_end']:
-            master['current_week'] = week['file']
-            break
+    master['current_week'] = current_week_file(all_weeks_sorted, today)
     
     # Also create/update week_manifest.json to point to current week for backwards compatibility
     if master['current_week']:
@@ -413,12 +425,9 @@ def scrape_schedule():
             # Sort weeks by start date
             master['weeks'] = sorted(master['weeks'], key=lambda w: w['week_start'])
             
-            # Update current week
+            # Update current week to the newest window that includes today
             today = datetime.now().date().isoformat()
-            for week in master['weeks']:
-                if week['week_start'] <= today <= week['week_end']:
-                    master['current_week'] = week['file']
-                    break
+            master['current_week'] = current_week_file(master['weeks'], today)
             
             # Update generated timestamp
             master['generated'] = datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')

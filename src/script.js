@@ -322,9 +322,14 @@
     const events = [];
 
     (poolSchedules.centers || []).forEach(center => {
-      const from = center.valid_from || poolSchedules.valid_from;
-      const through = center.valid_through || poolSchedules.valid_through;
-      if (!from || !through || date < from || date > through) return;
+      const seasons = (center.seasons && center.seasons.length)
+        ? center.seasons
+        : [{
+            valid_from: center.valid_from,
+            valid_through: center.valid_through,
+            pools: center.pools,
+            label: poolSchedules.season || ''
+          }];
 
       const centerClosure = (center.closures || []).find(c => date >= c.from && date <= c.through);
       const gymClasses = (dayData.events || []).filter(ev => (ev.location || ev.location_name) === center.gym);
@@ -332,7 +337,12 @@
       const cancelled = Boolean(closure) || Boolean(centerClosure) || gymClosed;
       const closureReason = closure?.reason || centerClosure?.reason || (gymClosed ? 'Recreation center is closed' : '');
 
-      (center.pools || []).forEach(pool => {
+      seasons.forEach(season => {
+      const from = season.valid_from || center.valid_from || poolSchedules.valid_from;
+      const through = season.valid_through || center.valid_through || poolSchedules.valid_through;
+      if (!from || !through || date < from || date > through) return;
+
+      (season.pools || center.pools || []).forEach(pool => {
         const blocks = pool.days?.[dayData.day_name] || [];
         blocks.forEach(block => {
           events.push({
@@ -352,10 +362,11 @@
             poolKind: block.kind || 'swim',
             note: block.note || '',
             scheduleUrl: center.url,
-            seasonLabel: poolSchedules.season || '',
+            seasonLabel: season.label || poolSchedules.season || '',
             closureReason
           });
         });
+      });
       });
     });
 
@@ -1575,12 +1586,7 @@
       const response = await fetch('data/master_manifest.json');
       if (response.ok) {
         masterManifest = await response.json();
-        
-        // Find current week index
-        if (masterManifest.current_week) {
-          currentWeekIndex = masterManifest.weeks.findIndex(w => w.file === masterManifest.current_week);
-          if (currentWeekIndex === -1) currentWeekIndex = 0;
-        }
+        currentWeekIndex = weekIndexForDenverToday();
         
         updateWeekNavButtons();
         return true;
@@ -1632,16 +1638,10 @@
       }
       weekManifest = await response.json();
       
-      // Use target date if provided (for day-by-day navigation across weeks), otherwise today or first day
-      if (targetDateStr) {
-        const targetIndex = weekManifest.days.findIndex(d => d.date === targetDateStr);
-        currentDayIndex = targetIndex !== -1 ? targetIndex : 0;
-      } else {
-        const today = new Date();
-        const todayStr = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
-        const todayIndex = weekManifest.days.findIndex(d => d.date === todayStr);
-        currentDayIndex = todayIndex !== -1 ? todayIndex : 0;
-      }
+      // Use the requested date, otherwise Denver's today. Never fall back to the first
+      // day of an older week when today is later than that week.
+      const preferredDate = targetDateStr || denverTodayStr();
+      currentDayIndex = dayIndexForDate(weekManifest.days, preferredDate);
       
       renderDayTabs();
       updateWeekNavButtons();
@@ -1673,14 +1673,7 @@
         }
         weekManifest = await response.json();
         
-        // Find today's date and set as current day if available
-        const today = new Date();
-        const todayStr = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
-        
-        const todayIndex = weekManifest.days.findIndex(d => d.date === todayStr);
-        if (todayIndex !== -1) {
-          currentDayIndex = todayIndex;
-        }
+        currentDayIndex = dayIndexForDate(weekManifest.days, denverTodayStr());
         
         renderDayTabs();
         updateWeekNavButtons();
@@ -1741,14 +1734,53 @@
     return d.toISOString().slice(0, 10);
   }
 
+  // Denver's calendar date. The rec centers follow this, not the viewer's timezone.
+  function denverTodayStr() {
+    return new Intl.DateTimeFormat('en-CA', {
+      timeZone: 'America/Denver',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit'
+    }).format(new Date());
+  }
+
+  // Latest saved week that includes this date. Scrapes overlap, and the later
+  // window is the one written most recently.
+  function bestWeekIndexForDate(dateStr) {
+    if (!masterManifest || !masterManifest.weeks || !dateStr) return -1;
+    let best = -1;
+    for (let i = 0; i < masterManifest.weeks.length; i++) {
+      const week = masterManifest.weeks[i];
+      if (dateStr >= week.week_start && dateStr <= week.week_end) {
+        if (best === -1 || week.week_start > masterManifest.weeks[best].week_start) best = i;
+      }
+    }
+    return best;
+  }
+
+  function weekIndexForDenverToday() {
+    const todayWeek = bestWeekIndexForDate(denverTodayStr());
+    if (todayWeek !== -1) return todayWeek;
+    if (masterManifest && masterManifest.weeks && masterManifest.weeks.length) {
+      return masterManifest.weeks.length - 1;
+    }
+    return 0;
+  }
+
+  function dayIndexForDate(days, dateStr) {
+    if (!days || !days.length) return 0;
+    const exact = days.findIndex(d => d.date === dateStr);
+    if (exact !== -1) return exact;
+    let closest = 0;
+    for (let i = 0; i < days.length; i++) {
+      if (days[i].date <= dateStr) closest = i;
+    }
+    return closest;
+  }
+
   // Find which week index in master manifest contains this date
   function findWeekIndexForDate(dateStr) {
-    if (!masterManifest || !masterManifest.weeks) return -1;
-    for (let i = 0; i < masterManifest.weeks.length; i++) {
-      const w = masterManifest.weeks[i];
-      if (dateStr >= w.week_start && dateStr <= w.week_end) return i;
-    }
-    return -1;
+    return bestWeekIndexForDate(dateStr);
   }
 
   // Navigate to a specific date (loads the week and selects that day)
