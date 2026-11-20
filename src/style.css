@@ -447,6 +447,7 @@
 /* Calendar root (grid) */
 #calendar-root{
   display:flex;
+  flex-direction:column;
   gap:0;
   padding:8px;
   height: calc(100vh - 340px);
@@ -458,6 +459,8 @@
   display:flex;
   overflow:auto;
   flex:1;
+  min-height:0;
+  min-width:0;
 }
   
 /* Time column - fixed width, scrolls with content */
@@ -563,14 +566,15 @@
   min-width:280px;
 }
 .pool-stale-banner{
-  margin: 0 12px 10px;
-  padding: 10px 12px;
-  border-radius: 8px;
-  background: #fff7ed;
-  color: #9a3412;
-  border: 1px solid #fdba74;
-  font-size: 13px;
-  line-height: 1.4;
+  flex:0 0 auto;
+  margin:0 4px 8px;
+  padding:8px 12px;
+  border-radius:8px;
+  background:#fff7ed;
+  color:#9a3412;
+  border:1px solid #fdba74;
+  font-size:13px;
+  line-height:1.4;
 }
 :root.dark .pool-stale-banner{
   background: #431407;
