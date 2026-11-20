@@ -473,21 +473,22 @@ def seasons_from_pages(pages, today_year=2026):
         if not grids:
             continue
         windows = date_ranges(" ".join(titles), revised)
+        dates_printed = bool(windows)
         if windows:
             start, end = max(windows, key=lambda item: (item[1] - item[0]).days)
             valid_from, valid_through = start.isoformat(), end.isoformat()
         elif re.search(r"winter\s+2026\s*[-–]\s*2027", " ".join(titles), re.I):
-            # These posters say winter 2026-2027 and do not print a start date.
-            # Fall canvases end November 14, so this season starts the next day.
+            # The poster says winter 2026-2027 and does not print dates.
+            # Start the day after the usual fall posters, and leave the end open.
             valid_from = f"{today_year}-11-15"
-            valid_through = f"{today_year + 1}-03-06"
+            valid_through = None
         elif re.search(r"winter\s+2026", " ".join(titles), re.I):
             valid_from = revised or f"{today_year}-11-01"
-            valid_through = f"{today_year}-12-31"
+            valid_through = None
         elif re.search(r"\bfall\b", " ".join(titles), re.I):
             year = int((revised or f"{today_year}-01-01")[:4])
             valid_from = revised or f"{year}-08-09"
-            valid_through = f"{year}-11-14"
+            valid_through = None
         else:
             continue
         if closed and date.fromisoformat(closed[0]) >= date.fromisoformat(valid_from):
@@ -532,13 +533,16 @@ def seasons_from_pages(pages, today_year=2026):
                             extra = "Slide subject to availability."
                             block["note"] = (block.get("note", "") + " " + extra).strip()
         label = next((title for title in titles if re.search(r"schedule", title, re.I)), "Pool schedule")
-        seasons.append({
+        season = {
             "label": re.sub(r"\s+", " ", label).strip(),
             "valid_from": valid_from,
-            "valid_through": valid_through,
             "revised": revised,
+            "dates_printed": dates_printed,
             "pools": pools,
-        })
+        }
+        if valid_through:
+            season["valid_through"] = valid_through
+        seasons.append(season)
     return _merge_same_window(seasons)
 
 
@@ -550,8 +554,8 @@ def _with_header(section_rows):
 def _merge_same_window(seasons):
     merged = []
     for season in seasons:
-        key = (season["valid_from"], season["valid_through"], bool(season.get("closed")))
-        match = next((item for item in merged if (item["valid_from"], item["valid_through"], bool(item.get("closed"))) == key), None)
+        key = (season.get("valid_from"), season.get("valid_through"), bool(season.get("closed")))
+        match = next((item for item in merged if (item.get("valid_from"), item.get("valid_through"), bool(item.get("closed"))) == key), None)
         if not match:
             merged.append(season)
             continue
@@ -583,19 +587,26 @@ def next_day(iso_day):
     return (date.fromisoformat(iso_day) + timedelta(days=1)).isoformat()
 
 
+def _through(season):
+    return season.get("valid_through") or "9999-12-31"
+
+
 def merge_seasons(existing, incoming):
     """Keep hours that end before the new poster starts, and add the new poster."""
+    incoming_through = _through(incoming)
     kept = []
     for old in existing:
-        if old["valid_through"] < incoming["valid_from"] or old["valid_from"] > incoming["valid_through"]:
+        old_through = _through(old)
+        if old_through < incoming["valid_from"] or old["valid_from"] > incoming_through:
             kept.append(old)
             continue
         if old["valid_from"] < incoming["valid_from"]:
             trimmed = dict(old)
             trimmed["valid_through"] = previous_day(incoming["valid_from"])
+            trimmed["dates_printed"] = True
             if trimmed["valid_from"] <= trimmed["valid_through"]:
                 kept.append(trimmed)
-        if old["valid_through"] > incoming["valid_through"]:
+        if incoming.get("valid_through") and old_through > incoming["valid_through"]:
             tail = dict(old)
             tail["valid_from"] = next_day(incoming["valid_through"])
             if tail["valid_from"] <= tail["valid_through"]:

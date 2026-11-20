@@ -806,7 +806,6 @@
         {
           "label": "WINTER 2026 LAP POOL SCHEDULE",
           "valid_from": "2026-11-03",
-          "valid_through": "2026-12-31",
           "revised": "2026-11-03",
           "pools": [
             {
@@ -1046,7 +1045,8 @@
                 ]
               }
             }
-          ]
+          ],
+          "dates_printed": false
         }
       ]
     },
@@ -1325,7 +1325,6 @@
         {
           "label": "Fall Athmar Pool Schedule",
           "valid_from": "2026-08-21",
-          "valid_through": "2026-11-14",
           "revised": "2026-08-21",
           "pools": [
             {
@@ -1555,7 +1554,8 @@
                 ]
               }
             }
-          ]
+          ],
+          "dates_printed": false
         }
       ]
     },
@@ -2810,7 +2810,6 @@
         {
           "label": "Fall 2026 INDOOR POOL SCHEDULE",
           "valid_from": "2026-08-03",
-          "valid_through": "2026-11-14",
           "revised": "2026-08-03",
           "pools": [
             {
@@ -2914,7 +2913,8 @@
                 ]
               }
             }
-          ]
+          ],
+          "dates_printed": false
         }
       ]
     },
@@ -4118,7 +4118,6 @@
         {
           "label": "Winter 2026-2027 LAP POOL SCHEDULE",
           "valid_from": "2026-11-15",
-          "valid_through": "2027-03-06",
           "revised": "2026-11-19",
           "pools": [
             {
@@ -4345,7 +4344,8 @@
                 ]
               }
             }
-          ]
+          ],
+          "dates_printed": false
         }
       ]
     },
@@ -4550,7 +4550,6 @@
         {
           "label": "Schedule subject to change.",
           "valid_from": "2026-11-02",
-          "valid_through": "2026-12-31",
           "revised": "2026-11-02",
           "pools": [
             {
@@ -4723,7 +4722,8 @@
                 ]
               }
             }
-          ]
+          ],
+          "dates_printed": false
         }
       ]
     },

@@ -314,6 +314,40 @@
     }
   }
 
+  function formatLongDate(iso) {
+    if (!iso) return '';
+    const [year, month, day] = iso.split('-').map(Number);
+    return new Date(Date.UTC(year, month - 1, day)).toLocaleDateString('en-US', {
+      timeZone: 'UTC',
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric'
+    });
+  }
+
+  function lanePhrase(note) {
+    if (!note) return '';
+    const match = note.match(/\b(?:no|\d+\s*[–-]\s*\d+|\d+|one|two|three|four|five|six)\s+(?:lap\s+)?lanes?\b/i);
+    if (!match) return '';
+    const lower = match[0].toLowerCase().replace(/\s+/g, ' ').trim();
+    const hasLap = /\blap\b/.test(lower);
+    return lower
+      .replace(/^(no|one|two|three|four|five|six)\b/, word => word.charAt(0).toUpperCase() + word.slice(1))
+      .replace(/\blanes?\b/, word => hasLap ? word : word.charAt(0).toUpperCase() + word.slice(1));
+  }
+
+  function poolEventTitle(item) {
+    const lanes = item.isPool ? lanePhrase(item.note) : '';
+    if (!lanes || /lane/i.test(item.className || '')) return item.className;
+    return `${item.className} (${lanes})`;
+  }
+
+  function seasonCovers(season, date) {
+    if (!season.valid_from || date < season.valid_from) return false;
+    if (!season.valid_through) return true;
+    return date <= season.valid_through;
+  }
+
   // Weekly pool blocks for the day being viewed. Posted on each rec center page, not GroupEx.
   function poolEventsForDay(dayData) {
     if (!poolSchedules || !dayData?.date || !dayData?.day_name) return [];
@@ -337,10 +371,15 @@
       const cancelled = Boolean(closure) || Boolean(centerClosure) || gymClosed;
       const closureReason = closure?.reason || centerClosure?.reason || (gymClosed ? 'Recreation center is closed' : '');
 
-      seasons.forEach(season => {
-      const from = season.valid_from || center.valid_from || poolSchedules.valid_from;
-      const through = season.valid_through || center.valid_through || poolSchedules.valid_through;
-      if (!from || !through || date < from || date > through) return;
+      const covering = seasons.filter(season => seasonCovers(season, date));
+      let season = covering.sort((a, b) => (b.valid_from || '').localeCompare(a.valid_from || ''))[0];
+      let staleThrough = '';
+      if (!season) {
+        const past = seasons.filter(item => item.valid_through && item.valid_through < date && !item.closed && (item.pools || []).length);
+        season = past.sort((a, b) => b.valid_through.localeCompare(a.valid_through))[0];
+        if (season) staleThrough = season.valid_through;
+      }
+      if (!season || season.closed) return;
 
       (season.pools || center.pools || []).forEach(pool => {
         const blocks = pool.days?.[dayData.day_name] || [];
@@ -363,10 +402,10 @@
             note: block.note || '',
             scheduleUrl: center.url,
             seasonLabel: season.label || poolSchedules.season || '',
+            staleThrough,
             closureReason
           });
         });
-      });
       });
     });
 
@@ -648,6 +687,10 @@
     const ev = el('div', 'event');
     if (item.isPool) {
       ev.classList.add('pool-event', item.pool === 'lap' ? 'pool-lap' : 'pool-leisure');
+      if (item.staleThrough) {
+        ev.classList.add('pool-stale');
+        ev.title = `Last posted schedule ended ${formatLongDate(item.staleThrough)}. No newer schedule is on the rec center page. Check the site or call to confirm.`;
+      }
     } else {
       ev.style.background = gymColor;
     }
@@ -663,7 +706,8 @@
 
     if (item.cancelled) ev.classList.add('cancelled');
 
-    ev.innerHTML = `<div class="title">${item.className}</div><div class="meta">${item.start} - ${item.end}</div>`;
+    const eventTitle = poolEventTitle(item);
+    ev.innerHTML = `<div class="title">${eventTitle}</div><div class="meta">${item.start} - ${item.end}</div>`;
     if (!item.isPool && item.studio) {
       ev.innerHTML += `<div class="studio">${item.studio}</div>`;
     }
@@ -713,6 +757,9 @@
       calendarRoot.innerHTML = '<div style="padding:20px">No events found.</div>';
       return;
     }
+
+    const staleBanner = buildStaleBanner(gyms);
+    if (staleBanner) calendarRoot.appendChild(staleBanner);
 
     const startHour = parseInt(startHourSel.value, 10) || 5;
     const endHour = parseInt(endHourSel.value, 10) || 22;
@@ -852,6 +899,28 @@
     scrollContainer.appendChild(timeCol);
     scrollContainer.appendChild(gymsWrapper);
     calendarRoot.appendChild(scrollContainer);
+  }
+
+  function buildStaleBanner(gyms) {
+    const groups = new Map();
+    gyms.forEach(gymData => {
+      (gymData.items || []).forEach(item => {
+        if (!item.staleThrough) return;
+        if (!groups.has(item.staleThrough)) groups.set(item.staleThrough, new Set());
+        groups.get(item.staleThrough).add(item.gym);
+      });
+    });
+    if (!groups.size) return null;
+    const sentences = [...groups.entries()].map(([through, names]) => {
+      const list = [...names];
+      const who = list.length === 1
+        ? list[0]
+        : `${list.slice(0, -1).join(', ')} and ${list[list.length - 1]}`;
+      return `${who} last posted a pool schedule through ${formatLongDate(through)}`;
+    });
+    const banner = el('div', 'pool-stale-banner');
+    banner.textContent = `${sentences.join('. ')}. No newer schedule is on the rec center page, so these hours may be out of date. Check the site or call to confirm.`;
+    return banner;
   }
   
   // Get class start as Date (for 72h check)
@@ -1008,14 +1077,18 @@
     const externalLabel = item.isPool ? 'View pool schedule' : 'See More on GroupExPro';
     
     const description = getClassDescription(item.className);
+    const shownTitle = poolEventTitle(item);
     const poolNote = item.isPool && item.note ? item.note : '';
+    const staleNote = item.isPool && item.staleThrough
+      ? `These hours are from the schedule that ended ${formatLongDate(item.staleThrough)}. No newer schedule is posted on the rec center page. Check the site or call to confirm before you go.`
+      : '';
     const seasonNote = item.isPool && item.seasonLabel
       ? `${item.seasonLabel} schedule from the ${gymName} rec center page. Subject to change.`
       : '';
     
     modal.innerHTML = `
       <button class="modal-close" title="Close">&times;</button>
-      <h2 class="modal-title">${item.className}</h2>
+      <h2 class="modal-title">${shownTitle}</h2>
       <div class="modal-date">${dateDisplay}</div>
       <div class="modal-time">${item.start} - ${item.end}</div>
       <div class="modal-details">
@@ -1035,6 +1108,7 @@
           <p><em>No description available. Click "See More" on GroupExPro for details.</em></p>
         </div>
       `}
+      ${staleNote ? `<div class="modal-signup-reminder-note">${staleNote}</div>` : ''}
       ${poolNote ? `<div class="modal-description-text"><strong>Schedule note:</strong><p>${poolNote}</p></div>` : ''}
       ${seasonNote ? `<div class="modal-signup-reminder-note">${seasonNote}</div>` : ''}
       ${showSignupReminder ? '<div class="modal-signup-reminder-note">Sign-up opens at the same time as class start, 72 hours (3 days) earlier. Add a calendar reminder for that time to get notified when it opens.</div>' : ''}

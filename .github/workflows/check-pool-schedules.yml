@@ -2,8 +2,9 @@ name: Check Pool Schedules
 
 on:
   # 6:10 AM Denver time, every day. A center is fetched once its poster is
-  # inside five business days of ending, or immediately once that date has
-  # passed. Glenarm and any pool marked closed are fetched every day.
+  # inside ten business days of a printed end date, or immediately once that
+  # date has passed. Posters with no printed end date, Glenarm, and any pool
+  # marked closed are fetched every day.
   schedule:
     - cron: '10 6 * * *'
       timezone: America/Denver

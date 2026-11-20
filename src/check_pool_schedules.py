@@ -1,8 +1,9 @@
 """Look for the next pool poster before the current one ends.
 
-Checking starts five business days before valid_through. The current hours stay
-on the calendar through that date. A spring poster can be another page of the
-same Canva design, or a new link, so the check reads the poster text and the
+Checking starts ten business days before a printed end date. The current hours
+stay on the calendar through that date. A poster that does not print an end
+date is checked every day. A spring poster can be another page of the same
+Canva design, or a new link, so the check reads the poster text and the
 printed dates instead of stopping when the design id is unchanged.
 """
 import argparse
@@ -24,7 +25,7 @@ from pool_poster import (
     seasons_from_pages,
 )
 
-NOTICE_BUSINESS_DAYS = 5
+NOTICE_BUSINESS_DAYS = 10
 PENDING_PATH = SCHEDULE_PATH.parent / "pool_schedule_pending.json"
 
 
@@ -49,10 +50,17 @@ def subtract_business_days(day, count):
     return current
 
 
-def latest_end(center, schedule):
+def latest_season(center, schedule):
     seasons = existing_seasons(center, schedule)
-    if seasons:
-        return max(season["valid_through"] for season in seasons)
+    if not seasons:
+        return None
+    return max(seasons, key=lambda season: season.get("valid_from") or "")
+
+
+def latest_end(center, schedule):
+    season = latest_season(center, schedule)
+    if season:
+        return season.get("valid_through")
     return center.get("valid_through") or schedule.get("valid_through")
 
 
@@ -60,8 +68,10 @@ def due_for_check(center, schedule, today):
     if center.get("awaiting_schedule"):
         return True, latest_end(center, schedule)
     end = latest_end(center, schedule)
+    # No printed end date, so there is no "ten weekdays before" mark.
+    # Check every day until a dated canvas replaces this poster.
     if not end:
-        return False, None
+        return True, None
     end_day = date.fromisoformat(end)
     if today > end_day:
         return True, end
@@ -75,7 +85,9 @@ def targets_for(schedule, today):
         needed, end = due_for_check(center, schedule, today)
         if not needed:
             continue
-        if end and today > date.fromisoformat(end):
+        if not end:
+            reason = "Poster does not print an end date. Checking for a new canvas."
+        elif today > date.fromisoformat(end):
             reason = f"Poster ended {end}. Looking for the next canvas."
         elif center.get("awaiting_schedule"):
             reason = "Waiting for the pool to reopen."
@@ -114,7 +126,12 @@ def apply_poster(center, schedule, pages, link):
         center["awaiting_schedule"] = True
     elif any(season.get("pools") for season in incoming):
         center.pop("awaiting_schedule", None)
-    windows = ", ".join(f"{season['valid_from']} to {season['valid_through']}" for season in incoming)
+    def window_text(season):
+        if season.get("valid_through"):
+            return f"{season['valid_from']} to {season['valid_through']}"
+        return f"{season['valid_from']} onward, no end date printed"
+
+    windows = ", ".join(window_text(season) for season in incoming)
     return True, f"Saved schedule for {windows}."
 
 
