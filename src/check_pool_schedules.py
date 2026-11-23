@@ -105,8 +105,8 @@ def apply_poster(center, schedule, pages, link):
     if digest and digest == center.get("poster_fingerprint") and not incoming:
         return False, "Same poster text is still up."
     if digest and digest == center.get("poster_fingerprint") and incoming:
-        same_windows = {(season["valid_from"], season["valid_through"]) for season in incoming}
-        stored = {(season["valid_from"], season["valid_through"]) for season in existing_seasons(center, schedule)}
+        same_windows = {(season.get("valid_from"), season.get("valid_through")) for season in incoming}
+        stored = {(season.get("valid_from"), season.get("valid_through")) for season in existing_seasons(center, schedule)}
         if same_windows <= stored:
             return False, "Same poster text is still up."
     if not incoming:

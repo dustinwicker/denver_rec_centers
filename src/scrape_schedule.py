@@ -369,9 +369,9 @@ def save_master_manifest(all_weeks):
     
     # Also create/update week_manifest.json to point to current week for backwards compatibility
     if master['current_week']:
-        current_week_file = DATA_DIR / master['current_week']
-        if current_week_file.exists():
-            with open(current_week_file, 'r') as f:
+        week_path = DATA_DIR / master['current_week']
+        if week_path.exists():
+            with open(week_path, 'r') as f:
                 current_week_data = json.load(f)
             with open(DATA_DIR / 'week_manifest.json', 'w') as f:
                 json.dump(current_week_data, f, indent=2)
@@ -439,9 +439,9 @@ def scrape_schedule():
             
             # Also update week_manifest.json for backwards compatibility
             if master['current_week']:
-                current_week_file = DATA_DIR / master['current_week']
-                if current_week_file.exists():
-                    with open(current_week_file, 'r') as f:
+                week_path = DATA_DIR / master['current_week']
+                if week_path.exists():
+                    with open(week_path, 'r') as f:
                         current_week_data = json.load(f)
                     with open(DATA_DIR / 'week_manifest.json', 'w') as f:
                         json.dump(current_week_data, f, indent=2)
