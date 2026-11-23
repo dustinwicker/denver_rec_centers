@@ -9,12 +9,39 @@ on:
     - cron: '10 6 * * *'
       timezone: America/Denver
   workflow_dispatch:
+    inputs:
+      reason:
+        description: manual, or missed-schedule when the 6:10 AM run was never created
+        default: manual
+        required: false
 
 permissions:
   contents: write
+  actions: read
+
+concurrency:
+  group: pool-schedules
+  cancel-in-progress: false
 
 jobs:
+  gate:
+    runs-on: ubuntu-latest
+    outputs:
+      skip: ${{ steps.decide.outputs.skip }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Skip when a run was already created this morning
+        id: decide
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REASON: ${{ inputs.reason }}
+        run: python .github/schedule_guard.py gate --workflow check-pool-schedules.yml --hour 6 --minute 10
+
   check:
+    needs: gate
+    if: needs.gate.outputs.skip != 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository

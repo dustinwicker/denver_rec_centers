@@ -8,14 +8,43 @@ on:
     - cron: '0 6 * * 0,1,3,5'
       timezone: America/Denver
   
-  # Allow manual trigger from GitHub Actions UI
+  # Allow manual trigger from GitHub Actions UI.
+  # reason=missed-schedule is the 7:10 AM makeup run.
   workflow_dispatch:
+    inputs:
+      reason:
+        description: manual, or missed-schedule when the 6:00 AM run was never created
+        default: manual
+        required: false
 
 permissions:
-  contents: write  # allow the action to push scraped data updates
+  contents: write
+  actions: read
+
+# A late scheduled run waits, then stops, if the makeup run already did the scrape.
+concurrency:
+  group: weekly-scrape
+  cancel-in-progress: false
 
 jobs:
+  gate:
+    runs-on: ubuntu-latest
+    outputs:
+      skip: ${{ steps.decide.outputs.skip }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Skip when a run was already created this morning
+        id: decide
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REASON: ${{ inputs.reason }}
+        run: python .github/schedule_guard.py gate --workflow weekly-scrape.yml --hour 6 --minute 0
+
   scrape:
+    needs: gate
+    if: needs.gate.outputs.skip != 'true'
     runs-on: ubuntu-latest
     
     steps:

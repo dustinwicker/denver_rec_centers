@@ -1,0 +1,26 @@
+name: Kick Missed Schedules
+
+on:
+  # 7:10 AM Denver time, every day. An hour after the morning schedules.
+  # If GitHub never created the 6:00 AM class scrape or the 6:10 AM pool
+  # check, this presses Run workflow. A manual run starts immediately.
+  schedule:
+    - cron: '10 7 * * *'
+      timezone: America/Denver
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  kick:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Start any schedule that was never created
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python .github/schedule_guard.py kick
