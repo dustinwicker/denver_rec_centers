@@ -25,8 +25,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -51,8 +51,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -102,19 +102,6 @@
       "instructor": "Pamela O",
       "location": "La Familia",
       "category": "AOA",
-      "cancelled": false,
-      "requires_signup": false,
-      "class_full": false,
-      "join_waitlist": false
-    },
-    {
-      "start_time": "8:45am",
-      "end_time": "10:30am",
-      "class_name": "Pickleball",
-      "studio": "Gym",
-      "instructor": "NA - No Instructor",
-      "location": "Washington Park",
-      "category": "CWS",
       "cancelled": false,
       "requires_signup": false,
       "class_full": false,
@@ -173,6 +160,19 @@
       "join_waitlist": false
     },
     {
+      "start_time": "9:00am",
+      "end_time": "10:00am",
+      "class_name": "Water Walking",
+      "studio": "Lap and Leisure Pool",
+      "instructor": "NA - No Instructor",
+      "location": "Washington Park",
+      "category": "AQ",
+      "cancelled": false,
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
+    },
+    {
       "start_time": "9:15am",
       "end_time": "10:15am",
       "class_name": "Current Channel Water Aerobics",
@@ -200,6 +200,19 @@
     },
     {
       "start_time": "9:15am",
+      "end_time": "10:30am",
+      "class_name": "Pickleball",
+      "studio": "Gym",
+      "instructor": "NA - No Instructor",
+      "location": "Washington Park",
+      "category": "CWS",
+      "cancelled": false,
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
+    },
+    {
+      "start_time": "9:15am",
       "end_time": "10:15am",
       "class_name": "AOA: Functional Fit 50+",
       "studio": "Multi Purpose Room",
@@ -220,8 +233,8 @@
       "location": "Carla Madison",
       "category": "AOA",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -232,7 +245,7 @@
       "instructor": "Lanita De L",
       "location": "Cook Park",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -493,8 +506,8 @@
       "location": "Carla Madison",
       "category": "AOA",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -622,7 +635,7 @@
       "instructor": "Ingrid V",
       "location": "Highland",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -823,6 +836,19 @@
       "join_waitlist": false
     },
     {
+      "start_time": "1:00pm",
+      "end_time": "2:00pm",
+      "class_name": "AOA: Beginner Karate",
+      "studio": "Ballroom",
+      "instructor": "",
+      "location": "Highland",
+      "category": "AOA",
+      "cancelled": false,
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
+    },
+    {
       "start_time": "1:30pm",
       "end_time": "2:30pm",
       "class_name": "AOA: Functional Fit 50+",
@@ -859,7 +885,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "4:00pm",
@@ -896,8 +922,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
@@ -961,8 +987,8 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
-      "class_full": false,
+      "requires_signup": false,
+      "class_full": true,
       "join_waitlist": false
     },
     {
