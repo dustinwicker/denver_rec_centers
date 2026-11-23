@@ -606,7 +606,7 @@ def merge_seasons(existing, incoming):
             trimmed["dates_printed"] = True
             if trimmed["valid_from"] <= trimmed["valid_through"]:
                 kept.append(trimmed)
-        if incoming.get("valid_through") and old_through > incoming["valid_through"]:
+        if old.get("valid_through") and incoming.get("valid_through") and old["valid_through"] > incoming["valid_through"]:
             tail = dict(old)
             tail["valid_from"] = next_day(incoming["valid_through"])
             if tail["valid_from"] <= tail["valid_through"]:
