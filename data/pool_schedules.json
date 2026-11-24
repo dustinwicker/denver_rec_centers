@@ -1055,7 +1055,7 @@
       "url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Parks-Recreation/Recreation-Centers-Pools-Activities/Recreation-Centers/Athmar-Recreation-Center",
       "schedule_id": "DAG98OnloSo",
       "canva_token": "FDXnc8She1gG0TcCCaxiKA",
-      "poster_fingerprint": "4ae29d8305434002",
+      "poster_fingerprint": "288a99dc45c5c07e",
       "seasons": [
         {
           "label": "Fall 2026",
@@ -1562,10 +1562,10 @@
           "label": "Closed",
           "valid_from": "2026-11-25",
           "valid_through": "2027-01-03",
-          "revised": "2026-11-20",
+          "revised": "2026-11-24",
           "closed": true,
           "pools": [],
-          "poster_fingerprint": "4ae29d8305434002"
+          "poster_fingerprint": "288a99dc45c5c07e"
         }
       ],
       "awaiting_schedule": true
@@ -1575,13 +1575,13 @@
       "url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Parks-Recreation/Recreation-Centers-Pools-Activities/Recreation-Centers/Central-Park-Recreation-Center",
       "schedule_id": "DAG98XxNrVQ",
       "canva_token": "Km5k8DWW3lOPbBUC_9Z2HQ",
-      "poster_fingerprint": "3f32ce932b255987",
+      "poster_fingerprint": "54a5166cdd5e1433",
       "seasons": [
         {
           "label": "Fall 2026 LAP POOL SCHEDULE 9/13-11/14",
           "valid_from": "2026-09-13",
-          "valid_through": "2026-11-14",
           "revised": "2026-10-26",
+          "dates_printed": true,
           "pools": [
             {
               "id": "lap",
@@ -1613,49 +1613,27 @@
                     "end": "10:00am"
                   },
                   {
-                    "name": "Swim Lessons/Lap Swim",
-                    "start": "10:00am",
-                    "end": "11:30am",
-                    "note": "Registration required.",
-                    "kind": "program"
-                  },
-                  {
                     "name": "Lap Swim",
-                    "start": "11:30am",
-                    "end": "5:00pm"
-                  },
-                  {
-                    "name": "Swim Lessons/Lap Swim",
-                    "start": "5:00pm",
-                    "end": "6:00pm",
-                    "note": "Registration required.",
-                    "kind": "program"
-                  },
-                  {
-                    "name": "Swim Lessons",
-                    "start": "6:00pm",
-                    "end": "7:00pm",
-                    "note": "Registration required.",
-                    "kind": "program"
+                    "start": "10:00am",
+                    "end": "7:30pm"
                   }
                 ],
                 "Wednesday": [
                   {
                     "name": "Lap Swim",
                     "start": "6:30am",
-                    "end": "5:00pm"
-                  },
-                  {
-                    "name": "Mermaid Lessons",
-                    "start": "5:00pm",
-                    "end": "5:45pm",
-                    "kind": "program"
+                    "end": "6:00pm"
                   },
                   {
                     "name": "Aqua Aerobics",
                     "start": "6:00pm",
                     "end": "7:00pm",
                     "kind": "program"
+                  },
+                  {
+                    "name": "Lap Swim",
+                    "start": "7:00pm",
+                    "end": "7:30pm"
                   }
                 ],
                 "Thursday": [
@@ -1670,30 +1648,9 @@
                     "end": "10:00am"
                   },
                   {
-                    "name": "Swim Lessons/Lap Swim",
-                    "start": "10:00am",
-                    "end": "11:30am",
-                    "note": "Registration required.",
-                    "kind": "program"
-                  },
-                  {
                     "name": "Lap Swim",
-                    "start": "11:30am",
-                    "end": "5:00pm"
-                  },
-                  {
-                    "name": "Swim Lessons/Lap Swim",
-                    "start": "5:00pm",
-                    "end": "6:00pm",
-                    "note": "Registration required.",
-                    "kind": "program"
-                  },
-                  {
-                    "name": "Swim Lessons",
-                    "start": "6:00pm",
-                    "end": "7:00pm",
-                    "note": "Registration required.",
-                    "kind": "program"
+                    "start": "10:00am",
+                    "end": "7:30pm"
                   }
                 ],
                 "Friday": [
@@ -1718,26 +1675,14 @@
                   {
                     "name": "Lap Swim",
                     "start": "8:00am",
-                    "end": "12:00pm"
-                  },
-                  {
-                    "name": "Open/Lap Swim",
-                    "start": "12:00pm",
-                    "end": "3:30pm",
-                    "note": "2 lap lanes"
+                    "end": "3:30pm"
                   }
                 ],
                 "Sunday": [
                   {
                     "name": "Lap Swim",
                     "start": "8:00am",
-                    "end": "12:00pm"
-                  },
-                  {
-                    "name": "Open/Lap Swim",
-                    "start": "12:00pm",
-                    "end": "3:30pm",
-                    "note": "2 lap lanes"
+                    "end": "3:30pm"
                   }
                 ]
               }
@@ -1764,31 +1709,12 @@
                   {
                     "name": "18+ Water Walking",
                     "start": "6:30am",
-                    "end": "9:00am",
-                    "kind": "program"
-                  },
-                  {
-                    "name": "Swim Lessons",
-                    "start": "9:00am",
-                    "end": "10:45am",
-                    "note": "Registration required.",
+                    "end": "10:00am",
                     "kind": "program"
                   },
                   {
                     "name": "Open Swim",
-                    "start": "10:45am",
-                    "end": "4:45pm"
-                  },
-                  {
-                    "name": "Swim Lessons",
-                    "start": "4:45pm",
-                    "end": "6:45pm",
-                    "note": "Registration required.",
-                    "kind": "program"
-                  },
-                  {
-                    "name": "Open Swim",
-                    "start": "6:45pm",
+                    "start": "10:30am",
                     "end": "7:30pm"
                   }
                 ],
@@ -1813,27 +1739,8 @@
                     "kind": "program"
                   },
                   {
-                    "name": "Swim Lessons",
-                    "start": "9:00am",
-                    "end": "10:45am",
-                    "note": "Registration required.",
-                    "kind": "program"
-                  },
-                  {
                     "name": "Open Swim",
-                    "start": "10:45am",
-                    "end": "4:45pm"
-                  },
-                  {
-                    "name": "Swim Lessons",
-                    "start": "4:45pm",
-                    "end": "6:45pm",
-                    "note": "Registration required.",
-                    "kind": "program"
-                  },
-                  {
-                    "name": "Open Swim",
-                    "start": "6:45pm",
+                    "start": "10:30am",
                     "end": "7:30pm"
                   }
                 ],
@@ -1884,7 +1791,9 @@
                 ]
               }
             }
-          ]
+          ],
+          "valid_through": "2026-11-14",
+          "poster_fingerprint": "54a5166cdd5e1433"
         }
       ]
     },
