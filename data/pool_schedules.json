@@ -1055,7 +1055,7 @@
       "url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Parks-Recreation/Recreation-Centers-Pools-Activities/Recreation-Centers/Athmar-Recreation-Center",
       "schedule_id": "DAG98OnloSo",
       "canva_token": "FDXnc8She1gG0TcCCaxiKA",
-      "poster_fingerprint": "288a99dc45c5c07e",
+      "poster_fingerprint": "90dad4e9ed212ab0",
       "seasons": [
         {
           "label": "Fall 2026",
@@ -1565,7 +1565,7 @@
           "revised": "2026-11-24",
           "closed": true,
           "pools": [],
-          "poster_fingerprint": "288a99dc45c5c07e"
+          "poster_fingerprint": "90dad4e9ed212ab0"
         }
       ],
       "awaiting_schedule": true
@@ -1575,7 +1575,7 @@
       "url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Parks-Recreation/Recreation-Centers-Pools-Activities/Recreation-Centers/Central-Park-Recreation-Center",
       "schedule_id": "DAG98XxNrVQ",
       "canva_token": "Km5k8DWW3lOPbBUC_9Z2HQ",
-      "poster_fingerprint": "54a5166cdd5e1433",
+      "poster_fingerprint": "28e400519b21e68b",
       "seasons": [
         {
           "label": "Fall 2026 LAP POOL SCHEDULE 9/13-11/14",
@@ -1794,6 +1794,224 @@
           ],
           "valid_through": "2026-11-14",
           "poster_fingerprint": "54a5166cdd5e1433"
+        },
+        {
+          "label": "Fall 2026 LAP POOL SCHEDULE 11/15-12/5",
+          "valid_from": "2026-11-15",
+          "revised": "2026-10-26",
+          "dates_printed": true,
+          "pools": [
+            {
+              "id": "lap",
+              "name": "Lap pool",
+              "revised": "2026-10-26",
+              "days": {
+                "Monday": [
+                  {
+                    "name": "Lap Swim",
+                    "start": "6:30am",
+                    "end": "6:00pm"
+                  },
+                  {
+                    "name": "Aqua Aerobics",
+                    "start": "6:30pm",
+                    "end": "7:30pm",
+                    "kind": "program"
+                  }
+                ],
+                "Tuesday": [
+                  {
+                    "name": "Lap Swim",
+                    "start": "6:30am",
+                    "end": "9:00am"
+                  },
+                  {
+                    "name": "Fitness Swim/Lap Swim",
+                    "start": "9:00am",
+                    "end": "10:00am"
+                  },
+                  {
+                    "name": "Lap Swim",
+                    "start": "10:00am",
+                    "end": "7:30pm"
+                  }
+                ],
+                "Wednesday": [
+                  {
+                    "name": "Lap Swim",
+                    "start": "6:30am",
+                    "end": "6:00pm"
+                  },
+                  {
+                    "name": "Aqua Aerobics",
+                    "start": "6:00pm",
+                    "end": "7:00pm",
+                    "kind": "program"
+                  },
+                  {
+                    "name": "Lap Swim",
+                    "start": "7:00pm",
+                    "end": "7:30pm"
+                  }
+                ],
+                "Thursday": [
+                  {
+                    "name": "Lap Swim",
+                    "start": "6:30am",
+                    "end": "9:00am"
+                  },
+                  {
+                    "name": "Fitness Swim/Lap Swim",
+                    "start": "9:00am",
+                    "end": "10:00am"
+                  },
+                  {
+                    "name": "Lap Swim",
+                    "start": "10:00am",
+                    "end": "7:30pm"
+                  }
+                ],
+                "Friday": [
+                  {
+                    "name": "Lap Swim",
+                    "start": "6:30am",
+                    "end": "6:00pm"
+                  },
+                  {
+                    "name": "Aqua Aerobics",
+                    "start": "6:00pm",
+                    "end": "7:00pm",
+                    "kind": "program"
+                  },
+                  {
+                    "name": "Lap Swim",
+                    "start": "7:00pm",
+                    "end": "7:30pm"
+                  }
+                ],
+                "Saturday": [
+                  {
+                    "name": "Lap Swim",
+                    "start": "8:00am",
+                    "end": "3:30pm"
+                  }
+                ],
+                "Sunday": [
+                  {
+                    "name": "Lap Swim",
+                    "start": "8:00am",
+                    "end": "3:30pm"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "leisure",
+              "name": "Leisure pool",
+              "revised": "2026-10-26",
+              "days": {
+                "Monday": [
+                  {
+                    "name": "18+ Water Walking",
+                    "start": "6:30am",
+                    "end": "10:15am",
+                    "kind": "program"
+                  },
+                  {
+                    "name": "Open Swim",
+                    "start": "10:30am",
+                    "end": "7:30pm"
+                  }
+                ],
+                "Tuesday": [
+                  {
+                    "name": "18+ Water Walking",
+                    "start": "6:30am",
+                    "end": "10:15am",
+                    "kind": "program"
+                  },
+                  {
+                    "name": "Open Swim",
+                    "start": "10:30am",
+                    "end": "7:30pm"
+                  }
+                ],
+                "Wednesday": [
+                  {
+                    "name": "18+ Water Walking",
+                    "start": "6:30am",
+                    "end": "10:15am",
+                    "kind": "program"
+                  },
+                  {
+                    "name": "Open Swim",
+                    "start": "10:30am",
+                    "end": "7:30pm"
+                  }
+                ],
+                "Thursday": [
+                  {
+                    "name": "18+ Water Walking",
+                    "start": "6:30am",
+                    "end": "10:15am",
+                    "kind": "program"
+                  },
+                  {
+                    "name": "Open Swim",
+                    "start": "10:30am",
+                    "end": "7:30pm"
+                  }
+                ],
+                "Friday": [
+                  {
+                    "name": "18+ Water Walking",
+                    "start": "6:30am",
+                    "end": "10:15am",
+                    "kind": "program"
+                  },
+                  {
+                    "name": "Open Swim",
+                    "start": "10:30am",
+                    "end": "7:30pm"
+                  }
+                ],
+                "Saturday": [
+                  {
+                    "name": "18+ Water Walking",
+                    "start": "8:00am",
+                    "end": "8:45am",
+                    "kind": "program"
+                  },
+                  {
+                    "name": "Aqua Aerobics",
+                    "start": "9:00am",
+                    "end": "10:00am",
+                    "kind": "program"
+                  },
+                  {
+                    "name": "Open Swim",
+                    "start": "10:30am",
+                    "end": "3:30pm"
+                  }
+                ],
+                "Sunday": [
+                  {
+                    "name": "18+ Water Walking",
+                    "start": "8:00am",
+                    "end": "10:15am",
+                    "kind": "program"
+                  },
+                  {
+                    "name": "Open Swim",
+                    "start": "10:30am",
+                    "end": "3:30pm"
+                  }
+                ]
+              }
+            }
+          ],
+          "valid_through": "2026-12-05",
+          "poster_fingerprint": "28e400519b21e68b"
         }
       ]
     },
@@ -3728,7 +3946,7 @@
       "url": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Parks-Recreation/Recreation-Centers-Pools-Activities/Recreation-Centers/Montclair-Recreation-Center",
       "schedule_id": "DAG98sls7I4",
       "canva_token": "IReJOwlSIM2QcO6ZyrEBTQ",
-      "poster_fingerprint": "936d54e5c86de0d5",
+      "poster_fingerprint": "d1e2060024ff4a06",
       "seasons": [
         {
           "label": "Fall 2026",
@@ -4039,6 +4257,7 @@
           "label": "Winter 2026-2027 LAP POOL SCHEDULE",
           "valid_from": "2026-11-15",
           "revised": "2026-11-19",
+          "dates_printed": false,
           "pools": [
             {
               "id": "lap",
@@ -4123,7 +4342,7 @@
                   {
                     "name": "Open Swim",
                     "start": "2:00pm",
-                    "end": "4:15pm",
+                    "end": "8:30pm",
                     "note": "3 lap lanes"
                   }
                 ],
@@ -4265,7 +4484,7 @@
               }
             }
           ],
-          "dates_printed": false
+          "poster_fingerprint": "d1e2060024ff4a06"
         }
       ]
     },
