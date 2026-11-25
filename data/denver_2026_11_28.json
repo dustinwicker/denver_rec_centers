@@ -53,7 +53,7 @@
       "cancelled": false,
       "requires_signup": true,
       "class_full": false,
-      "join_waitlist": false
+      "join_waitlist": true
     },
     {
       "start_time": "9:00am",
@@ -86,7 +86,7 @@
       "end_time": "10:15am",
       "class_name": "Zumba\u00ae",
       "studio": "Multi Purpose Room",
-      "instructor": "Jessalyn H",
+      "instructor": "",
       "location": "Montclair",
       "category": "FIT",
       "cancelled": false,
@@ -164,7 +164,7 @@
       "end_time": "11:00am",
       "class_name": "Barre",
       "studio": "Fitness Studio",
-      "instructor": "Melissa C",
+      "instructor": "",
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,

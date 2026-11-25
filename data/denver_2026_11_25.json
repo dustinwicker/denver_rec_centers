@@ -12,7 +12,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -51,7 +51,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -155,7 +155,7 @@
       "location": "Green Valley Ranch",
       "category": "AQ",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -207,7 +207,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -338,7 +338,7 @@
       "category": "FIT",
       "cancelled": false,
       "requires_signup": false,
-      "class_full": true,
+      "class_full": false,
       "join_waitlist": false
     },
     {
@@ -427,7 +427,7 @@
       "instructor": "Richard B",
       "location": "Twentieth Street",
       "category": "FIT",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -531,7 +531,7 @@
       "instructor": "Ingrid V",
       "location": "Platt Park",
       "category": "AOA",
-      "cancelled": false,
+      "cancelled": true,
       "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
@@ -558,7 +558,7 @@
       "location": "Carla Madison",
       "category": "FIT",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -740,7 +740,7 @@
       "location": "Carla Madison",
       "category": "AOA",
       "cancelled": false,
-      "requires_signup": true,
+      "requires_signup": false,
       "class_full": false,
       "join_waitlist": false
     },
@@ -767,7 +767,7 @@
       "category": "AOA",
       "cancelled": false,
       "requires_signup": false,
-      "class_full": true,
+      "class_full": false,
       "join_waitlist": false
     },
     {
@@ -890,19 +890,6 @@
     {
       "start_time": "6:00pm",
       "end_time": "7:00pm",
-      "class_name": "Yoga II",
-      "studio": "Fitness Studio",
-      "instructor": "Stephanie T",
-      "location": "Harvard Gulch",
-      "category": "FIT",
-      "cancelled": false,
-      "requires_signup": false,
-      "class_full": false,
-      "join_waitlist": false
-    },
-    {
-      "start_time": "6:00pm",
-      "end_time": "7:00pm",
       "class_name": "Total Body Conditioning",
       "studio": "Ballroom",
       "instructor": "Jeannie P",
@@ -920,6 +907,19 @@
       "studio": "Spin Studio",
       "instructor": "Natalie S",
       "location": "Central Park",
+      "category": "FIT",
+      "cancelled": false,
+      "requires_signup": false,
+      "class_full": false,
+      "join_waitlist": false
+    },
+    {
+      "start_time": "6:00pm",
+      "end_time": "7:00pm",
+      "class_name": "Vinyasa Yoga",
+      "studio": "Fitness Studio",
+      "instructor": "",
+      "location": "Harvard Gulch",
       "category": "FIT",
       "cancelled": false,
       "requires_signup": false,
